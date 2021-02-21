@@ -4,6 +4,28 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: var(--color-hightlight);
+    color: var(--color-text);
+  }
+}
+
+@mixin link() {
+  position: relative;
+  width: max-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 1.5px;
+    left: 0;
+    width: 0;
+    background-color: var(--color-hightlight);
+    transition: var(--transition);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
   }
 }

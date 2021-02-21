@@ -6,7 +6,6 @@
 
 html {
   font-size: 62.5%;
-
   @include media("<=xl") {
     font-size: 60%;
   }
@@ -19,6 +18,8 @@ html {
   @include media("<=sm") {
     font-size: 52.5%;
   }
+
+  scroll-behavior: smooth;
 }
 
 body {

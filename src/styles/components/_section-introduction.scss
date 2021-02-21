@@ -1,0 +1,35 @@
+.section-introduction {
+  margin-top: -3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  &__header {
+    @include container();
+
+    h2 {
+      font-style: italic;
+    }
+  }
+
+  &__inner {
+    @include container();
+
+    p {
+      width: 100%;
+      max-width: 65rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2rem;
+
+      a {
+        @include link();
+        white-space: nowrap;
+        overflow: hidden;
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+  }
+}

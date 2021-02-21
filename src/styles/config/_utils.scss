@@ -12,24 +12,3 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
-@mixin link() {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    height: 1.5px;
-    left: 0;
-    width: 0;
-    background-color: var(--color-hightlight);
-    transition: var(--transition);
-  }
-
-  &:hover {
-    &::after {
-      width: 100%;
-    }
-  }
-}
