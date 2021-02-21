@@ -1,7 +1,9 @@
-import "../styles/main.scss";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
-import { useEffect } from "react";
+
+import Layout from "src/components/layout";
+import "../styles/main.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,5 +40,9 @@ export default function MyApp({ Component, pageProps }) {
     );
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

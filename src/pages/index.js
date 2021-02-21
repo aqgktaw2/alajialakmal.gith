@@ -11,13 +11,14 @@ import RecentPosts from "src/components/recentPosts";
 import Introduction from "src/components/Introduction";
 import RecentSnippets from "src/components/recentSnippets";
 import RecentProjects from "src/components/recentProjects";
+import { Fragment } from "react";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Next.js Blog Example with {CMS_NAME}</title>
       </Head>
@@ -46,7 +47,7 @@ export default function Index({ allPosts }) {
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
-    </Layout>
+    </Fragment>
   );
 }
 

@@ -3,7 +3,6 @@ import PostCard from "./postCard";
 import SnippetCard from "./snippetCard";
 
 const RecentSnippets = ({ posts }) => {
-  console.log(posts);
   return (
     <section className="section-recent-snippets">
       <div className="section-recent-snippets__header">

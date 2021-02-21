@@ -1,25 +1,35 @@
-import { gsap } from "gsap";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
-import throttle from "src/utils/throttle";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import classNames from "classnames";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const NAV_ITEMS = [
+  { href: "/", label: "Home" },
+  { href: "/posts", label: "Blog" },
+  { href: "/snippets", label: "Snippets" },
+  { href: "/projects", label: "Projects" },
+  { href: "/about", label: "About" },
+];
 
 export default function Header() {
   const headerRef = useRef();
+  const router = useRouter();
 
   useEffect(() => {
-    const scrollHeader = throttle(function () {
-      if (window.scrollY > 30) {
-        headerRef.current.classList.add("scrolled");
-      } else {
-        headerRef.current.classList.remove("scrolled");
-      }
-    }, 100);
-
-    window.addEventListener("scroll", scrollHeader);
-
-    return () => {
-      window.removeEventListener("scroll", scrollHeader);
-    };
+    ScrollTrigger.create({
+      trigger: "main",
+      start: "top top-=50",
+      onToggle(self) {
+        if (self.isActive) {
+          return headerRef.current?.classList.add("scrolled");
+        }
+        headerRef.current?.classList.remove("scrolled");
+      },
+    });
   }, []);
 
   return (
@@ -35,26 +45,13 @@ export default function Header() {
 
         <nav className="global-header__row global-header__row--2">
           <ul>
-            <li>
-              <Link href="/..." passHref>
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/..." passHref>
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/..." passHref>
-                <a>Projects</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/..." passHref>
-                <a>About</a>
-              </Link>
-            </li>
+            {NAV_ITEMS.map(({ href, label }, idx) => (
+              <li key={idx}>
+                <Link href={href} passHref>
+                  <a className={classNames("", { active: router.pathname === href })}>{label}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

@@ -74,6 +74,12 @@
             text-transform: uppercase;
             font-weight: 500;
             padding: 0.5rem;
+
+            &.active {
+              &::after {
+                width: 100%;
+              }
+            }
           }
         }
       }

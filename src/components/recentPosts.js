@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecentPosts = ({ posts }) => {
-  console.log(posts);
   return (
     <section className="section-recent-posts">
       <div className="section-recent-posts__header">
