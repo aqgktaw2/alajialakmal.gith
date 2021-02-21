@@ -9,7 +9,6 @@ const postsDirectories = {
 };
 
 export function getPostsFilenames(postType) {
-  console.log("process.cwd()", process.cwd());
   return fs.readdirSync(postsDirectories[postType]);
 }
 

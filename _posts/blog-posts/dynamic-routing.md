@@ -8,7 +8,10 @@ author:
   picture: "/assets/blog/authors/jj.jpeg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
-tags: "JavaScript,HTML,CSS"
+tags:
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
 type: "posts"
 ---
 

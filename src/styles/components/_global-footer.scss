@@ -1,2 +1,144 @@
 .global-footer {
+  --waves-lower-height: 300px;
+  @include media("<=md") {
+    --waves-lower-height: 500px;
+  }
+
+  position: relative;
+  overflow-x: hidden;
+  min-height: calc(var(--waves-lower-height) + 200px);
+
+  &__content {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__inner {
+    @include container();
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+
+    @include media("<=md") {
+      flex-direction: column;
+    }
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  &__left {
+    margin-right: 3rem;
+
+    @include media("<=md") {
+      margin-right: initial;
+      margin-bottom: 3rem;
+    }
+
+    form {
+      width: 100%;
+      max-width: 450px;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--color-text);
+      box-shadow: 4px 4px 0px 0px var(--color-highlight);
+
+      h3 {
+        margin-top: 0;
+      }
+
+      input {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+
+    @include media("<=md") {
+      width: 100%;
+      max-width: 450px;
+      justify-content: space-between;
+    }
+
+    & > * {
+      flex: 1;
+    }
+  }
+
+  &__site-links,
+  &__social {
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    a {
+      @extend .h3;
+      @include link();
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__waves {
+    height: var(--waves-lower-height);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color-background-alt);
+  }
+
+  &__wave {
+    background: url("/assets/footer/wave.svg") repeat-x;
+    position: absolute;
+    z-index: 1;
+    bottom: calc(var(--waves-lower-height) - 25px);
+    width: 6400px;
+    height: 198px;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__wave:nth-of-type(2) {
+    bottom: calc(var(--waves-lower-height) - 50px);
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+      swell 7s ease -1.25s infinite;
+    opacity: 1;
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translate3d(0, -25px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+  }
 }

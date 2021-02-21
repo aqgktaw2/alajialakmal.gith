@@ -8,7 +8,10 @@ author:
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
-tags: "JavaScript,HTML,CSS"
+tags:
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
 type: "posts"
 ---
 

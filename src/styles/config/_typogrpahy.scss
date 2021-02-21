@@ -2,27 +2,36 @@ h1,
 .h1 {
   font-size: 7rem;
   font-weight: 800;
-  text-shadow: 3px 3px var(--color-hightlight);
+  text-shadow: 3px 3px var(--color-highlight);
   margin-top: 1rem;
   margin-bottom: 1rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 h2,
 .h2 {
   font-size: 3.25rem;
   font-weight: 700;
-  text-shadow: 3px 3px var(--color-hightlight);
+  text-shadow: 3px 3px var(--color-highlight);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 h3,
 .h3 {
   font-size: 2rem;
   font-weight: 500;
-  text-shadow: 3px 3px var(--color-hightlight);
+  text-shadow: 3px 3px var(--color-highlight);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 h4,
@@ -30,6 +39,9 @@ h4,
   font-weight: 500;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 h5,
@@ -38,6 +50,9 @@ h5,
   font-weight: 500;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 h6,
@@ -46,12 +61,30 @@ h6,
   font-weight: 500;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
 }
 
 p,
 .p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  &::selection {
+    background-color: var(--color-highlight-alt);
+  }
+}
+
+a,
+span,
+em,
+strong,
+code,
+input {
+  &::selection {
+    background-color: var(--color-highlight-alt);
+    color: var(--color-text);
+  }
 }
 
 em {
