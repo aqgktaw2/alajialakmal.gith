@@ -33,7 +33,9 @@ export default function MyApp({ Component, pageProps }) {
     // elements to a "y" of 100 solely for the animation in which would throw off the normal
     // positioning, so we use a "refreshInit" listener to reset the y temporarily. When we
     // return a gsap.set() in the listener, it'll automatically revert it after the refresh()!
-    ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".box", { y: 0 }));
+    ScrollTrigger.addEventListener("refreshInit", () =>
+      gsap.set('[data-gsap="reveal-bottom"]', { y: 0 })
+    );
   }, []);
 
   return <Component {...pageProps} />;

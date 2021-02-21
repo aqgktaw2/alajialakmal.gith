@@ -1,0 +1,52 @@
+.snippet-card {
+  position: relative;
+  padding: 6rem;
+
+  &:hover {
+    .snippet-card__body {
+      transform: scale(1.1);
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__body {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 5px solid var(--color-hightlight-alt);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    & > div {
+      height: 100%;
+      display: block !important;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(#07000b, 0.5);
+    text-align: center;
+  }
+}

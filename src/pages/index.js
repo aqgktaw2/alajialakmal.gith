@@ -9,6 +9,7 @@ import { CMS_NAME } from "../lib/constants";
 import CodeBanner from "src/components/CodeBanner";
 import RecentPosts from "src/components/recentPosts";
 import Introduction from "src/components/Introduction";
+import RecentSnippets from "src/components/recentSnippets";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -25,6 +26,8 @@ export default function Index({ allPosts }) {
       <Introduction />
 
       <RecentPosts posts={allPosts} />
+
+      <RecentSnippets posts={allPosts} />
 
       <Container>
         <Intro />

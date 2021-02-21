@@ -1,0 +1,17 @@
+.post-card {
+  padding: 2rem;
+  border: 1px solid var(--color-text);
+  border-radius: 2px;
+  box-shadow: 4px 4px 0px 0px var(--color-hightlight);
+
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+  }
+
+  &__link {
+    margin-top: auto;
+    @include link();
+  }
+}
