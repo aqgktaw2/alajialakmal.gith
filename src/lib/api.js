@@ -2,42 +2,37 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 
-const postsDirectory = join(process.cwd(), "_posts");
+const postsDirectories = {
+  posts: join(process.cwd(), "_posts", "blog-posts"),
+  snippets: join(process.cwd(), "_posts", "code-snippets"),
+  projects: join(process.cwd(), "_posts", "projects"),
+};
 
-export function getPostSlugs() {
-	return fs.readdirSync(postsDirectory);
+export function getPostsFilenames(postType) {
+  console.log("process.cwd()", process.cwd());
+  return fs.readdirSync(postsDirectories[postType]);
 }
 
-export function getPostBySlug(slug, fields = []) {
-	const realSlug = slug.replace(/\.md$/, "");
-	const fullPath = join(postsDirectory, `${realSlug}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
-	const { data, content } = matter(fileContents);
+export function getPostBySlug({ slug, fields = [], postType }) {
+  // If passed in a filename, need to parse real slug
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(postsDirectories[postType], `${realSlug}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const { data, content } = matter(fileContents);
 
-	const items = {};
-
-	// Ensure only the minimal needed data is exposed
-	fields.forEach((field) => {
-		if (field === "slug") {
-			items[field] = realSlug;
-		}
-		if (field === "content") {
-			items[field] = content;
-		}
-
-		if (data[field]) {
-			items[field] = data[field];
-		}
-	});
-
-	return items;
+  return fields.reduce((acc, field) => {
+    field === "slug" && (acc[field] = realSlug);
+    field === "content" && (acc[field] = content);
+    data[field] && (acc[field] = data[field]);
+    return acc;
+  }, {});
 }
 
-export function getAllPosts(fields = []) {
-	const slugs = getPostSlugs();
-	const posts = slugs
-		.map((slug) => getPostBySlug(slug, fields))
-		// sort posts by date in descending order
-		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
-	return posts;
+export function getAllPosts({ fields = [], postType = "posts" }) {
+  const filenames = getPostsFilenames(postType);
+  const posts = filenames
+    .map((filename) => getPostBySlug({ slug: filename, fields, postType }))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return posts;
 }
