@@ -8,6 +8,7 @@
 
     h2 {
       font-style: italic;
+      margin-bottom: 2rem;
     }
   }
 
@@ -15,7 +16,8 @@
     @include container();
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    column-gap: 3rem;
+    row-gap: 5rem;
 
     @include media("<=md") {
       grid-template-columns: repeat(2, 1fr);

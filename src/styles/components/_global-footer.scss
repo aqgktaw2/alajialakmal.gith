@@ -1,7 +1,7 @@
 .global-footer {
-  --waves-lower-height: 300px;
+  --waves-lower-height: 475px;
   @include media("<=md") {
-    --waves-lower-height: 500px;
+    --waves-lower-height: 650px;
   }
 
   position: relative;
@@ -96,20 +96,27 @@
     }
   }
 
+  &__lower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+
   &__waves {
     height: var(--waves-lower-height);
     width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
-    background: var(--color-background-alt);
+    background: #1a002a;
   }
 
   &__wave {
     background: url("/assets/footer/wave.svg") repeat-x;
     position: absolute;
     z-index: 1;
-    bottom: calc(var(--waves-lower-height) - 25px);
+    bottom: calc(var(--waves-lower-height) - 15px);
     width: 6400px;
     height: 198px;
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
@@ -117,7 +124,7 @@
   }
 
   &__wave:nth-of-type(2) {
-    bottom: calc(var(--waves-lower-height) - 50px);
+    bottom: calc(var(--waves-lower-height) - 30px);
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
       swell 7s ease -1.25s infinite;
     opacity: 1;

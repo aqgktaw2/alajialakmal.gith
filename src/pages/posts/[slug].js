@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
 import PostBody from "../../components/postBody";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
@@ -10,6 +9,7 @@ import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
+import { Fragment } from "react";
 
 export default function Post({ post }) {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Post({ post }) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout>
+    <Fragment>
       <Header />
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
@@ -38,7 +38,7 @@ export default function Post({ post }) {
           <PostBody content={post.content} />
         </article>
       )}
-    </Layout>
+    </Fragment>
   );
 }
 
