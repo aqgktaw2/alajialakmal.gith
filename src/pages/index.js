@@ -10,6 +10,7 @@ import CodeBanner from "src/components/CodeBanner";
 import RecentPosts from "src/components/recentPosts";
 import Introduction from "src/components/Introduction";
 import RecentSnippets from "src/components/recentSnippets";
+import RecentProjects from "src/components/recentProjects";
 
 export default function Index({ allPosts }) {
   const heroPost = allPosts[0];
@@ -28,6 +29,8 @@ export default function Index({ allPosts }) {
       <RecentPosts posts={allPosts} />
 
       <RecentSnippets posts={allPosts} />
+
+      <RecentProjects post={allPosts} />
 
       <Container>
         <Intro />

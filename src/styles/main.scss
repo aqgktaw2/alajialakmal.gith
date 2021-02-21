@@ -12,13 +12,18 @@
 @import "./config/links";
 @import "./config/buttons";
 
-// Component styles
+// Global
 @import "./components/gloabl-header";
+@import "./components/global-footer";
 
+// Sections
 @import "./components/section-code-banner";
 @import "./components/section-recent-posts";
 @import "./components/section-introduction";
 @import "./components/section-recent-snippets";
+@import "./components/section-recent-projects";
 
+// Components
 @import "./components/post-card";
 @import "./components/snippet-card";
+@import "./components/project-card";
