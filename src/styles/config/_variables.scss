@@ -1,0 +1,18 @@
+:root {
+  // Colors
+  --color-background: #07000b;
+  --color-background-alt: #11001c;
+  --color-hightlight: #a30292;
+  --color-hightlight-alt: #6f02b0;
+  --color-text: #fffafe;
+  --color-text-alt: #fbf6ff;
+
+  // Transition
+  --transition: 0.2s ease-out;
+}
+
+// Media
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1024px;

@@ -1,0 +1,9 @@
+a {
+  color: var(--color-text);
+  font: inherit;
+  text-decoration: none;
+
+  &:visited {
+    color: var(--color-hightlight);
+  }
+}

@@ -1,21 +1,17 @@
-@import "./config/normalize";
+// Settings
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/media";
 
-// https://coolors.co/f0d7ff-8d017f-35012c-290025-11001c
+// Utilities
+@import "./config/utils";
 
-:root {
-	--color-background: #11001c;
-	--color-background-alt: #290025;
-	--color-hightlight: #a30292;
-	--color-hightlight-alt: #6f02b0;
-	--color-text: #fffafe;
-	--color-text-alt: #fbf6ff;
-}
+// Element base styles
+@import "./config/base";
+@import "./config/typogrpahy";
+@import "./config/links";
+@import "./config/buttons";
 
-body {
-	margin: 0;
-	color: var(--color-text);
-	background-color: var(--color-background);
-	font-family: "Lato", sans-serif;
-}
-
+// Component styles
 @import "./components/code-banner";
+@import "./components/gloabl-header";
