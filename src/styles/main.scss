@@ -6,7 +6,7 @@
 // Utilities
 @import "./config/utils";
 
-// Element base styles
+// Base
 @import "./config/base";
 @import "./config/typogrpahy";
 @import "./config/links";
@@ -27,3 +27,4 @@
 @import "./components/post-card";
 @import "./components/snippet-card";
 @import "./components/project-card";
+@import "./components/post-body";
