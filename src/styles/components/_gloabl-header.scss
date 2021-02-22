@@ -1,88 +1,88 @@
 .global-header {
-  padding: 3rem 0;
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: var(--transition);
-  border-bottom: 2px solid transparent;
+	padding: 3rem 0;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: var(--transition);
+	border-bottom: 2px solid transparent;
 
-  &.scrolled {
-    padding: 1rem;
-    background-color: var(--color-background);
-    border-bottom: 2px solid var(--color-highlight);
+	&.scrolled {
+		padding: 1rem;
+		background-color: var(--color-background);
+		border-bottom: 2px solid var(--color-highlight);
 
-    .global-header__row {
-      &--1 {
-        margin-bottom: 0;
+		.global-header__row {
+			&--1 {
+				margin-bottom: 0;
 
-        a {
-          svg {
-            width: 5rem;
-            height: 5rem;
-          }
-        }
-      }
+				a {
+					svg {
+						width: 5rem;
+						height: 5rem;
+					}
+				}
+			}
 
-      &--2 {
-        ul {
-          li {
-            &:not(:last-child) {
-              margin-right: 0.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
+			&--2 {
+				ul {
+					li {
+						&:not(:last-child) {
+							margin-right: 0.5rem;
+						}
+					}
+				}
+			}
+		}
+	}
 
-  &__inner {
-    @include container();
-  }
+	&__inner {
+		@include container();
+	}
 
-  &__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	&__row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-    &--1 {
-      margin-bottom: 1rem;
-      transition: var(--transition);
+		&--1 {
+			margin-bottom: 1rem;
+			transition: var(--transition);
 
-      a {
-        svg {
-          transition: var(--transition);
-          width: 8.5rem;
-          height: 8.5rem;
-        }
-      }
-    }
+			a {
+				svg {
+					transition: var(--transition);
+					width: 8.5rem;
+					height: 8.5rem;
+				}
+			}
+		}
 
-    &--2 {
-      ul {
-        display: flex;
+		&--2 {
+			ul {
+				display: flex;
 
-        li {
-          &:not(:last-child) {
-            margin-right: 1.5rem;
-            transition: var(--transition);
-          }
+				li {
+					&:not(:last-child) {
+						margin-right: 1.5rem;
+						transition: var(--transition);
+					}
 
-          a {
-            @include link();
-            text-transform: uppercase;
-            font-weight: 500;
-            padding: 0.5rem;
+					a {
+						@include link();
+						text-transform: uppercase;
+						font-weight: 500;
+						padding: 0.5rem;
 
-            &.active {
-              &::after {
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+						&.active {
+							&::after {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

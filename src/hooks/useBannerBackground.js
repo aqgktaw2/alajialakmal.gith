@@ -68,9 +68,9 @@ const useBannerBackground = () => {
 			stars = [],
 			shootingStars = [],
 			layers = [
-				{ speed: 0.015, scale: 0.2, count: 320 },
-				{ speed: 0.03, scale: 0.5, count: 50 },
-				{ speed: 0.05, scale: 0.75, count: 30 },
+				{ speed: 0.015, scale: 0.2, count: 160 },
+				{ speed: 0.03, scale: 0.5, count: 25 },
+				{ speed: 0.05, scale: 0.75, count: 15 },
 			],
 			starsAngle = 145,
 			shootingStarSpeed = {
@@ -79,9 +79,9 @@ const useBannerBackground = () => {
 			},
 			shootingStarOpacityDelta = 0.01,
 			trailLengthDelta = 0.01,
-			shootingStarEmittingInterval = 2000,
+			shootingStarEmittingInterval = 1000,
 			shootingStarLifeTime = 500,
-			maxTrailLength = 300,
+			maxTrailLength = 350,
 			starBaseRadius = 2,
 			shootingStarRadius = 3,
 			paused = false;
@@ -180,7 +180,7 @@ const useBannerBackground = () => {
 		}
 
 		function drawStar(star) {
-			context.fillStyle = "rgba(255, 250, 254,0.9)";
+			context.fillStyle = "rgba(255, 250, 254,0.75)";
 			context.beginPath();
 			context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
 			context.fill();

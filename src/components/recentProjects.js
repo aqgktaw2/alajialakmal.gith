@@ -1,28 +1,26 @@
-import debounce from "@utils/debounce";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+
 import ProjectCard from "./projectCard";
 
 const RecentProjects = () => {
-  return (
-    <section className="section-recent-projects">
-      <div className="section-recent-projects__header">
-        <h2 data-gsap="reveal-bottom">Lastest projects</h2>
-        <Link href="/projects" passHref>
-          <a data-gsap="reveal-bottom" className="btn">
-            View More Projects
-          </a>
-        </Link>
-      </div>
+	return (
+		<section className="section-recent-projects">
+			<div className="section-recent-projects__header">
+				<h2 data-gsap="reveal-bottom">Lastest projects</h2>
+				<Link href="/projects" passHref>
+					<a data-gsap="reveal-bottom" className="btn">
+						View More Projects
+					</a>
+				</Link>
+			</div>
 
-      <div className="section-recent-projects__inner">
-        <ProjectCard />
-        <ProjectCard />
-      </div>
-    </section>
-  );
+			<div className="section-recent-projects__inner">
+				<ProjectCard />
+				<ProjectCard />
+			</div>
+		</section>
+	);
 };
 
 export default RecentProjects;
