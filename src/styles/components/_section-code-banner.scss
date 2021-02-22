@@ -1,124 +1,146 @@
 .section-code-banner {
-	@include section();
+  @include section();
 
-	padding-top: 20rem;
-	position: relative;
-	overflow: hidden;
-	background: var(--color-background);
-	background: radial-gradient(circle, rgba(17, 0, 28, 0.5) 10%, rgba(7, 0, 11, 1) 60%);
+  // padding-top: 20rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--color-background);
+  background: radial-gradient(circle, rgba(17, 0, 28, 0.5) 10%, rgba(7, 0, 11, 1) 60%);
 
-	&__inner {
-		@include container();
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
-		align-items: center;
-		position: relative;
-		z-index: 1;
+  &__inner {
+    @include container();
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
 
-		@include media("<=md") {
-			grid-template-columns: 1fr;
-		}
-	}
+    // gap: 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 
-	&__left {
-		align-self: flex-start;
-		padding-top: 6rem;
+    display: flex;
+    min-height: 100vh;
 
-		@include media("<=md") {
-			text-align: center;
-		}
+    & > * {
+      flex: 1;
+    }
 
-		h1 {
-			font-style: italic;
-		}
+    // @include media("<=md") {
+    //   grid-template-columns: 1fr;
+    // }
 
-		h2 {
-			font-style: italic;
-		}
-	}
+    @include media("<=md") {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
-	&__social {
-		display: flex;
-		margin-left: -1rem;
+  &__left {
+    // align-self: flex-start;
+    // padding-top: 6rem;
+    margin-bottom: 5rem;
 
-		@include media("<=md") {
-			justify-content: center;
-			margin-left: initial;
-		}
+    display: flex;
+    flex-direction: column;
+    @include media("<=md") {
+      justify-content: flex-end;
+      margin-bottom: 3rem;
+    }
 
-		a {
-			padding: 1rem;
-			color: var(--color-text);
-			transition: var(--transition);
+    @include media("<=md") {
+      text-align: center;
+    }
 
-			&:hover {
-				color: var(--color-highlight);
-			}
+    h1 {
+      font-style: italic;
+    }
 
-			&:not(:last-child) {
-				margin-right: 1rem;
-			}
-		}
-	}
+    h2 {
+      font-style: italic;
+    }
+  }
 
-	&__right {
-		svg {
-			width: 100%;
-			height: auto;
+  &__social {
+    display: flex;
+    margin-left: -1rem;
 
-			#background-illustration {
-				#Msg {
-					animation: floating 3s infinite alternate;
-				}
-				#BtnLeft {
-					animation: floating 3s 1s infinite alternate;
-				}
-				#BtnRight {
-					animation: floating 3s 2s infinite backwards alternate;
-				}
-				#Plus {
-					animation: blipping 3s infinite alternate;
-				}
-			}
-		}
+    @include media("<=md") {
+      justify-content: center;
+      margin-left: initial;
+    }
 
-		@keyframes floating {
-			0% {
-				transform: translateY(0);
-			}
-			100% {
-				transform: translateY(20px);
-			}
-		}
+    a {
+      padding: 1rem;
+      color: var(--color-text);
+      transition: var(--transition);
 
-		@keyframes blipping {
-			0% {
-				opacity: 0.3;
-			}
-			100% {
-				opacity: 0.1;
-			}
-		}
-	}
+      &:hover {
+        color: var(--color-highlight);
+      }
 
-	&__right-inner {
-		width: 100%;
-		max-width: 450px;
-		margin-left: auto;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
 
-		@include media("<=md") {
-			width: 90%;
-			margin-right: auto;
-		}
-	}
+  &__right {
+    svg {
+      width: 100%;
+      height: auto;
 
-	&__background {
-		position: absolute;
-		z-index: 0;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+      #background-illustration {
+        #Msg {
+          animation: floating 3s infinite alternate;
+        }
+        #BtnLeft {
+          animation: floating 3s 1s infinite alternate;
+        }
+        #BtnRight {
+          animation: floating 3s 2s infinite backwards alternate;
+        }
+        #Plus {
+          animation: blipping 3s infinite alternate;
+        }
+      }
+    }
+
+    @keyframes floating {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(20px);
+      }
+    }
+
+    @keyframes blipping {
+      0% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &__right-inner {
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+
+    @include media("<=md") {
+      width: 90%;
+      margin-right: auto;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
