@@ -145,7 +145,7 @@
   }
 
   // Mouse scroll indicator
-  .mouse {
+  &__mouse {
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -153,7 +153,7 @@
     cursor: pointer;
     z-index: 0;
   }
-  .mouse-icon {
+  &__mouse-icon {
     width: 25px;
     height: 45px;
     border: 2px solid rgba(#fffafe, 0.9);
@@ -162,7 +162,7 @@
     text-align: center;
     margin: 10px auto;
   }
-  .mouse-wheel {
+  &__mouse-wheel {
     height: 6px;
     margin: 2px auto 0;
     display: block;
@@ -213,13 +213,13 @@
       opacity: 0;
     }
   }
-  .arrow {
+  &__arrows {
     margin: 0 auto;
     width: 16px;
     // height: 70px;
     position: relative;
   }
-  .arrow__section {
+  &__arrow {
     position: relative;
     display: block;
     height: 10px;
@@ -229,31 +229,31 @@
     animation-name: opa;
     opacity: 0.25;
   }
-  .arrow__section:nth-child(1) {
+  &__arrow:nth-child(1) {
     -webkit-animation-delay: 0;
     animation-delay: 0;
   }
-  .arrow__section:nth-child(2) {
+  &__arrow:nth-child(2) {
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
   }
-  .arrow__section:nth-child(3) {
+  &__arrow:nth-child(3) {
     -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
   }
-  .arrow__section span {
+  &__arrow span {
     position: absolute;
     display: block;
     width: 10px;
     height: 2px;
     background-color: rgba(#fffafe, 0.9);
   }
-  .arrow__section span:nth-child(2n-1) {
+  &__arrow span:nth-child(2n-1) {
     left: 0px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-  .arrow__section span:nth-child(2n) {
+  &__arrow span:nth-child(2n) {
     right: 0px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);

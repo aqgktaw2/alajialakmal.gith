@@ -72,6 +72,14 @@ const CodeBanner = () => {
       .to(".section-code-banner__social a", { y: 0, opacity: 1, stagger: 0.15 }, 3.5);
   }, []);
 
+  const handleScroll = () =>
+    window.scrollTo({
+      top:
+        [...document.querySelectorAll("section")][0].getBoundingClientRect().height -
+        document.querySelector(".global-header").getBoundingClientRect().height,
+      behavior: "smooth",
+    });
+
   return (
     <section className="section-code-banner">
       <canvas className="section-code-banner__background" />
@@ -104,35 +112,25 @@ const CodeBanner = () => {
           </div>
         </div>
 
-        <div
-          class="mouse"
-          onClick={() =>
-            window.scrollTo({
-              top:
-                [...document.querySelectorAll("section")][0].getBoundingClientRect().height -
-                document.querySelector(".global-header").getBoundingClientRect().height,
-              behavior: "smooth",
-            })
-          }
-        >
-          <div class="mouse-icon">
-            <span class="mouse-wheel"></span>
+        <button className="section-code-banner__mouse" onClick={handleScroll}>
+          <div className="section-code-banner__mouse-icon">
+            <span className="section-code-banner__mouse-wheel"></span>
           </div>
-          <div class="arrow">
-            <div class="arrow__section">
+          <div className="section-code-banner__arrows">
+            <div className="section-code-banner__arrow">
               <span></span>
               <span></span>
             </div>
-            <div class="arrow__section">
+            <div className="section-code-banner__arrow">
               <span></span>
               <span></span>
             </div>
-            <div class="arrow__section">
+            <div className="section-code-banner__arrow">
               <span></span>
               <span></span>
             </div>
           </div>
-        </div>
+        </button>
       </div>
     </section>
   );
