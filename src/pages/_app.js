@@ -1,6 +1,6 @@
-import Layout from "src/components/layout";
-import useMobileViewport from "src/hooks/useMobileViewport";
-import useScrollReveal from "src/hooks/useScrollReveal";
+import Layout from "@/components/layout";
+import useMobileViewport from "@/hooks/useMobileViewport";
+import useScrollReveal from "@/hooks/useScrollReveal";
 import "../styles/main.scss";
 
 export default function MyApp({ Component, pageProps }) {
