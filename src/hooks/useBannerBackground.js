@@ -81,9 +81,9 @@ const useBannerBackground = () => {
       stars = [],
       shootingStars = [],
       layers = [
-        { speed: 0.015, scale: 0.2, count: 160 },
-        { speed: 0.03, scale: 0.5, count: 25 },
-        { speed: 0.05, scale: 0.75, count: 15 },
+        { speed: 0.03, scale: 0.2, count: 160 },
+        { speed: 0.06, scale: 0.5, count: 25 },
+        { speed: 0.1, scale: 0.75, count: 15 },
       ],
       starsAngle = 145,
       shootingStarSpeed = {
@@ -92,7 +92,7 @@ const useBannerBackground = () => {
       },
       shootingStarOpacityDelta = 0.01,
       trailLengthDelta = 0.01,
-      shootingStarEmittingInterval = 1500,
+      shootingStarEmittingInterval = 1750,
       shootingStarLifeTime = 500,
       maxTrailLength = 350,
       starBaseRadius = 2,
