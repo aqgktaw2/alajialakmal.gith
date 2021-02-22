@@ -103,6 +103,36 @@ const CodeBanner = () => {
             <SvgIllustration />
           </div>
         </div>
+
+        <div
+          class="mouse"
+          onClick={() =>
+            window.scrollTo({
+              top:
+                [...document.querySelectorAll("section")][0].getBoundingClientRect().height -
+                document.querySelector(".global-header").getBoundingClientRect().height,
+              behavior: "smooth",
+            })
+          }
+        >
+          <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </div>
+          <div class="arrow">
+            <div class="arrow__section">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="arrow__section">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="arrow__section">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
