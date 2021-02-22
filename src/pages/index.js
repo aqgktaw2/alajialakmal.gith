@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { getAllPosts } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";
 
-import CodeBanner from "@/components/CodeBanner";
+import HeroBanner from "@/components/heroBanner";
 import RecentPosts from "@/components/recentPosts";
 import Introduction from "@/components/Introduction";
 import RecentSnippets from "@/components/recentSnippets";
@@ -16,7 +16,7 @@ export default function Index({ allPosts }) {
         <title>Next.js Blog Example with {CMS_NAME}</title>
       </Head>
 
-      <CodeBanner />
+      <HeroBanner />
 
       <Introduction />
 

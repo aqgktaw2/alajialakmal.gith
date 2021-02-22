@@ -5,17 +5,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import classNames from "classnames";
 
+import { NAV_ITEMS } from "@/lib/constants";
+
 import SiteLogo from "./siteLogo";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const NAV_ITEMS = [
-  { href: "/", label: "Home" },
-  { href: "/posts", label: "Blog" },
-  { href: "/snippets", label: "Snippets" },
-  { href: "/projects", label: "Projects" },
-  { href: "/about", label: "About" },
-];
 
 export default function Header() {
   const headerRef = useRef();

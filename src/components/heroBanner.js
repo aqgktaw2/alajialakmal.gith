@@ -1,12 +1,11 @@
 import { forwardRef, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import IconGithub from "./IconGithub";
-import IconTwitter from "./IconTwitter";
-import IconEmail from "./IconEmail";
-import useBannerBackground from "@/hooks/useBannerBackground";
 
-const CodeBanner = () => {
+import useBannerBackground from "@/hooks/useBannerBackground";
+import { SOCIAL_ITEMS } from "@/lib/constants";
+
+const HeroBanner = () => {
   const h1 = useRef();
   const h2 = useRef();
   const illustration = useRef();
@@ -96,21 +95,13 @@ const CodeBanner = () => {
           <h1 ref={h1}>Denny Hong</h1>
           <h2 ref={h2}>Web & JavaScript Developer</h2>
           <div className="section-code-banner__social">
-            <Link href="/" passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <IconGithub width="3rem" height="3rem" />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <IconTwitter width="3rem" height="3rem" />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a target="_blank" rel="noopener noreferrer">
-                <IconEmail width="3rem" height="3rem" />
-              </a>
-            </Link>
+            {SOCIAL_ITEMS.map(({ href, icon }, idx) => (
+              <Link key={idx} href={href} passHref>
+                <a target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
 
@@ -144,7 +135,7 @@ const CodeBanner = () => {
   );
 };
 
-export default CodeBanner;
+export default HeroBanner;
 
 const SvgIllustration = forwardRef((ref, props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 730 830" {...props}>
