@@ -1,5 +1,8 @@
+import debounce from "@utils/debounce";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const shapes = [
   <svg viewBox="20 20 150 140" xmlns="http://www.w3.org/2000/svg">
@@ -33,14 +36,29 @@ const shapes = [
 ];
 
 const SnippetCard = ({ post }) => {
+  const imageContainerRef = useRef();
+
+  useEffect(() => {
+    const matchHeight = debounce(function () {
+      gsap.to(imageContainerRef.current, {
+        height: imageContainerRef.current.getBoundingClientRect().width,
+      });
+    }, 100);
+    matchHeight();
+    window.addEventListener("resize", matchHeight);
+    return () => {
+      window.removeEventListener("resize", matchHeight);
+    };
+  }, []);
+
   return (
     <div data-gsap="reveal-bottom" className="snippet-card">
       <div className="snippet-card__shape">{shapes[Math.floor(Math.random() * shapes.length)]}</div>
 
       <Link href={`/snippets/${post.slug}`} passHref>
         <a className="snippet-card__body">
-          <div className="snippet-card__image">
-            <Image src={post.coverImage} width={556} height={278} />
+          <div ref={imageContainerRef} className="snippet-card__image">
+            <Image src={post.coverImage} layout="fill" />
           </div>
 
           <div className="snippet-card__info">

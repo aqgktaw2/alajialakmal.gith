@@ -1,9 +1,9 @@
 import Link from "next/link";
 
+import SiteLogo from "./siteLogo";
 import IconGithub from "./IconGithub";
 import IconTwitter from "./IconTwitter";
 import IconEmail from "./IconEmail";
-import SiteLogo from "./siteLogo";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
@@ -22,13 +22,12 @@ const SOCIAL_ITEMS = [
 export default function Footer() {
   return (
     <footer className="global-footer">
-      <div class="global-footer__waves">
-        <div class="global-footer__wave" />
-        <div class="global-footer__wave" />
+      <div className="global-footer__waves">
+        <div className="global-footer__wave" />
+        <div className="global-footer__wave" />
       </div>
 
       <div className="global-footer__content">
-        {" "}
         <div className="global-footer__inner">
           <div className="global-footer__left">
             <form>

@@ -6,7 +6,7 @@
   box-shadow: 4px 4px 0px 0px var(--color-highlight);
 
   &:hover {
-    .project-card__image > div {
+    .project-card__image > img {
       transform: translateY(-50%);
     }
   }
@@ -33,12 +33,12 @@
   &__image {
     flex: 1;
     width: 100%;
-    aspect-ratio: 1 / 2;
+    height: 450px; // Temporary height for gsap reveal animation
+    overflow-y: hidden;
     border-radius: 2px;
-    overflow: hidden;
 
-    & > div {
-      transition: 6s ease-out;
+    & > img {
+      transition: 5s ease;
     }
   }
 }

@@ -25,14 +25,15 @@ export default function Header() {
     ScrollTrigger.create({
       trigger: "main",
       start: "top top-=50",
-      onToggle(self) {
-        if (self.isActive) {
+      end: "bottom top-=500",
+      onUpdate: (self) => {
+        if (self.progress > 0) {
           return headerRef.current?.classList.add("scrolled");
         }
         headerRef.current?.classList.remove("scrolled");
       },
     });
-  }, []);
+  }, [router.asPath]);
 
   return (
     <header ref={headerRef} className="global-header">

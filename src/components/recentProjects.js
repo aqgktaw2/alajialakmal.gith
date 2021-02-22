@@ -1,5 +1,9 @@
-import Link from "next/link";
+import debounce from "@utils/debounce";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import ProjectCard from "./projectCard";
 
 const RecentProjects = () => {
   return (
@@ -13,30 +17,18 @@ const RecentProjects = () => {
         </Link>
       </div>
 
-      <div data-gsap="reveal-bottom" className="section-recent-projects__inner">
-        <div className="project-card">
-          <div className="project-card__info">
-            <h3 className="project-card__title">Signals Analytics</h3>
-            <p>
-              <Link href="https://www.signals-analytics.com/">
-                <a target="_blank" rel="noopener noreferrer">
-                  Signals Analytics
-                </a>
-              </Link>{" "}
-              is a fast-growing business intelligence company that needs a new website with a modern
-              design that fits its brand. Together with my teammates, we delivered and are actively
-              maintaining a feature-complete website experience with futuristic looking UI elements.
-            </p>
-            <Link href={`/projects/signals-analytics`} passHref>
-              <a className="btn">Read More</a>
-            </Link>
-          </div>
-          <div className="project-card__image">
-            <Image src="/signals.png" width={2256} height={9582} />
-          </div>
-        </div>
+      <div className="section-recent-projects__inner">
+        <ProjectCard />
+        <ProjectCard />
+      </div>
+    </section>
+  );
+};
 
-        <div data-gsap="reveal-bottom" className="project-card">
+export default RecentProjects;
+
+/*
+ <div data-gsap="reveal-bottom" className="project-card">
           <div className="project-card__info">
             <h3>Cysiv</h3>
             <p>
@@ -58,9 +50,4 @@ const RecentProjects = () => {
             <Image src="/cysiv.png" width={2256} height={9208} />
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
-
-export default RecentProjects;
+*/
