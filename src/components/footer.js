@@ -14,9 +14,21 @@ const NAV_ITEMS = [
 ];
 
 const SOCIAL_ITEMS = [
-  { href: "/", icon: <IconGithub width="3rem" height="3rem" />, label: "Github" },
-  { href: "/", icon: <IconTwitter width="3rem" height="3rem" />, label: "Twitter" },
-  { href: "/", icon: <IconEmail width="3rem" height="3rem" />, label: "Email" },
+  {
+    href: "https://github.com/dennyhong96",
+    icon: <IconGithub width="3rem" height="3rem" />,
+    label: "Github",
+  },
+  {
+    href: "https://twitter.com/DennyHong3",
+    icon: <IconTwitter width="3rem" height="3rem" />,
+    label: "Twitter",
+  },
+  {
+    href: "mailto:hong961127@gmail.com",
+    icon: <IconEmail width="3rem" height="3rem" />,
+    label: "Email",
+  },
 ];
 
 export default function Footer() {

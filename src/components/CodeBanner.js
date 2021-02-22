@@ -4,7 +4,7 @@ import Link from "next/link";
 import IconGithub from "./IconGithub";
 import IconTwitter from "./IconTwitter";
 import IconEmail from "./IconEmail";
-import useBannerBackground from "../../src/hooks/useBannerBackground";
+import useBannerBackground from "@/hooks/useBannerBackground";
 
 const CodeBanner = () => {
   const h1 = useRef();
@@ -12,6 +12,16 @@ const CodeBanner = () => {
   const illustration = useRef();
 
   useBannerBackground();
+
+  const handleScroll = () => {
+    const heroBannerHeight = [...document.querySelectorAll("section")][0].getBoundingClientRect()
+      .height;
+    const headerHeight = document.querySelector(".global-header").getBoundingClientRect().height;
+    window.scrollTo({
+      top: heroBannerHeight - headerHeight,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     h1.current.innerHTML = h1.current.innerText
@@ -43,6 +53,7 @@ const CodeBanner = () => {
         opacity: 0,
       })
       .set(".section-code-banner__social a", { y: 25, opacity: 0 })
+      .set(".section-code-banner__mouse", { opacity: 0 })
       .to(
         illustration.current,
         {
@@ -69,16 +80,13 @@ const CodeBanner = () => {
       )
       .to(h1.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.1 }, 1.1)
       .to(h2.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 2.1)
-      .to(".section-code-banner__social a", { y: 0, opacity: 1, stagger: 0.15 }, 3.5);
+      .to(".section-code-banner__social a", { y: 0, opacity: 1, stagger: 0.15 }, 3.5)
+      .to(
+        ".section-code-banner__mouse",
+        { opacity: 1, duration: "1.25", ease: "power1.easeIn" },
+        "-=2"
+      );
   }, []);
-
-  const handleScroll = () =>
-    window.scrollTo({
-      top:
-        [...document.querySelectorAll("section")][0].getBoundingClientRect().height -
-        document.querySelector(".global-header").getBoundingClientRect().height,
-      behavior: "smooth",
-    });
 
   return (
     <section className="section-code-banner">
@@ -114,20 +122,20 @@ const CodeBanner = () => {
 
         <button className="section-code-banner__mouse" onClick={handleScroll}>
           <div className="section-code-banner__mouse-icon">
-            <span className="section-code-banner__mouse-wheel"></span>
+            <span className="section-code-banner__mouse-wheel" />
           </div>
           <div className="section-code-banner__arrows">
             <div className="section-code-banner__arrow">
-              <span></span>
-              <span></span>
+              <span />
+              <span />
             </div>
             <div className="section-code-banner__arrow">
-              <span></span>
-              <span></span>
+              <span />
+              <span />
             </div>
             <div className="section-code-banner__arrow">
-              <span></span>
-              <span></span>
+              <span />
+              <span />
             </div>
           </div>
         </button>
