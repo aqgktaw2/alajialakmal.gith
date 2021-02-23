@@ -5,8 +5,8 @@ coverImage: "/assets/projects/signals/cover.png"
 clientUrl: "https://www.signals-analytics.com/"
 date: "2020-03-16T05:35:07.322Z"
 author:
-    name: JJ Kasper
-    picture: "/assets/blog/authors/jj.jpeg"
+    name: Denny Hong
+    picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
     url: "/assets/projects/signals/cover.png"
 tags:

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import formatDate from "@/utils/formatDate";
+import Author from "./author";
 
 export default function PostHeader({ title, coverImage, date, author }) {
 	return (
@@ -18,9 +19,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
 			<div className="post-header__content">
 				<h1>{title}</h1>
 				<div className="post-header__meta">
-					<div className="post-header__author">
-						<img src={author.picture} alt={author.name} />
-					</div>
+					<Author author={author} />
 					<div>
 						<em>
 							<strong>Published on</strong>: {formatDate(date)}

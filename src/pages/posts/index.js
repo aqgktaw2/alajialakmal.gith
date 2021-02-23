@@ -21,6 +21,7 @@ const Posts = ({ allPosts }) => {
 				{/* Sidebar */}
 				<aside className="page-posts-listing__sidebar">
 					<h2>Topics:</h2>
+
 					<div className="page-posts-listing__tags">
 						{getherAllTags(allPosts).map((tag, idx) => (
 							<Link key={idx} href={`/tags/${tag}`} passHref>

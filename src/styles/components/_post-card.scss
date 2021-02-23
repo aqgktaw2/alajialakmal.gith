@@ -3,9 +3,16 @@
 	border: 1px solid var(--color-text);
 	border-radius: 2px;
 	box-shadow: 4px 4px 0px 0px var(--color-highlight);
+	background-color: var(--color-background);
 
 	display: flex;
 	flex-direction: column;
+
+	&__meta {
+		margin-top: 1rem;
+		display: flex;
+		align-items: center;
+	}
 
 	&__image {
 		& > div {
@@ -13,8 +20,28 @@
 		}
 	}
 
-	&__link {
+	&__lower {
 		margin-top: auto;
+	}
+
+	&__tags {
+		@extend .h5;
+		margin-top: 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		a {
+			@include link();
+			font-weight: 600;
+			font-style: italic;
+
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	&__link {
 		@include link();
 	}
 }

@@ -55,14 +55,4 @@
 		display: flex;
 		align-items: center;
 	}
-
-	&__author {
-		img {
-			width: 3.5rem;
-			height: 3.5rem;
-			border-radius: 50%;
-			box-shadow: 0 0 0 2px var(--color-highlight);
-			margin-right: 2rem;
-		}
-	}
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import formatDate from "@/utils/formatDate";
+import PostCard from "../postCard";
 
 const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog posts" }) => {
 	return (
@@ -16,21 +17,10 @@ const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog
 					</Link>
 				)}
 			</div>
+
 			<div className="section-recent-posts__inner">
 				{posts.map((post, idx) => (
-					<div key={idx} data-gsap="reveal-bottom" className="post-card">
-						<div className="post-card__image">
-							<Image src={post.coverImage} width={556} height={278} />
-						</div>
-						<p>{formatDate(post.date)}</p>
-						<Link href={`/posts/${post.slug}`} passHref>
-							<a className="h3">{post.title}</a>
-						</Link>
-						<p className="post-card__excerpt">{post.excerpt}</p>
-						<Link href={`/posts/${post.slug}`} passHref>
-							<a className="post-card__link">Read More</a>
-						</Link>
-					</div>
+					<PostCard post={post} key={idx} authorSize="sm" />
 				))}
 			</div>
 		</section>

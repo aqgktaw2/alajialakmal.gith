@@ -5,8 +5,8 @@ coverImage: "/assets/projects/cysiv/cover.png"
 clientUrl: "https://mea.cysiv.com/"
 date: "2020-03-16T05:35:07.322Z"
 author:
-    name: JJ Kasper
-    picture: "/assets/blog/authors/jj.jpeg"
+    name: Denny Hong
+    picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
     url: "/assets/projects/cysiv/cover.png"
 tags:
