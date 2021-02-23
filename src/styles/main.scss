@@ -16,15 +16,15 @@
 @import "./vendors/nprogress";
 
 // Global
-@import "./components/gloabl-header";
-@import "./components/global-footer";
+@import "./components/layout/gloabl-header";
+@import "./components/layout/global-footer";
 
 // Sections
-@import "./components/section-code-banner";
-@import "./components/section-recent-posts";
-@import "./components/section-introduction";
-@import "./components/section-recent-snippets";
-@import "./components/section-recent-projects";
+@import "./components/sections/section-code-banner";
+@import "./components/sections/section-recent-posts";
+@import "./components/sections/section-introduction";
+@import "./components/sections/section-recent-snippets";
+@import "./components/sections/section-recent-projects";
 
 // Components
 @import "./components/post-card";
