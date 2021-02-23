@@ -18,8 +18,7 @@ const PostArticle = ({ post }) => {
 				author={post.author}
 			/>
 			<PostBody content={post.content} />
-			{console.log(post)}
-			<EditPostButton post={post} />
+			{post.type !== "projects" && <EditPostButton post={post} />}
 		</article>
 	);
 };

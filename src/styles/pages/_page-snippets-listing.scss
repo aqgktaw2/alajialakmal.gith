@@ -1,4 +1,4 @@
-.page-projects-listing {
+.page-snippets-listing {
 	@include section();
 	padding-top: 20rem;
 	padding-bottom: 20rem;
@@ -27,9 +27,14 @@
 		}
 	}
 
-	&__posts {
+	&__snippets {
 		display: grid;
-		gap: 5rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+
+		@include media("<=sm") {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__sidebar {
