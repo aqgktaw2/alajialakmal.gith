@@ -5,6 +5,8 @@
   position: relative;
   z-index: 1;
 
+  background: var(--color-background) url("/bg-pattern.svg") no-repeat center center/cover;
+
   &__header {
     @include container();
 
