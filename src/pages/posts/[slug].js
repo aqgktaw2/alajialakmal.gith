@@ -9,7 +9,7 @@ import PostBody from "@/components/postBody";
 import PostHeader from "@/components/postHeader";
 import RecentPosts from "@/components/sections/recentPosts";
 
-export default function Post({ post, relatedPosts }) {
+const Post = ({ post, relatedPosts }) => {
 	const router = useRouter();
 
 	if (router.isFallback) {
@@ -45,7 +45,9 @@ export default function Post({ post, relatedPosts }) {
 			/>
 		</Fragment>
 	);
-}
+};
+
+export default Post;
 
 export async function getStaticProps({ params }) {
 	// Get the post

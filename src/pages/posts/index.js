@@ -2,8 +2,7 @@ import Link from "next/link";
 
 import PostCard from "@/components/postCard";
 import { getAllPosts } from "@/lib/api";
-
-const getherAllTags = (allPosts) => [...new Set(allPosts.map((post) => post.tags).flat())];
+import getherAllTags from "@/utils/getherAllTags";
 
 const Posts = ({ allPosts }) => {
 	return (
@@ -35,6 +34,8 @@ const Posts = ({ allPosts }) => {
 	);
 };
 
+export default Posts;
+
 export async function getStaticProps() {
 	// List all posts
 	const allPosts = getAllPosts({
@@ -46,5 +47,3 @@ export async function getStaticProps() {
 		props: { allPosts },
 	};
 }
-
-export default Posts;

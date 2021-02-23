@@ -13,7 +13,7 @@ tags:
     - "JavaScript"
     - "HTML"
     - "CSS"
-type: "posts"
+type: "projects"
 ---
 
 ## This is a Heading 2

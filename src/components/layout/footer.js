@@ -15,7 +15,7 @@ export default function Footer() {
 				<div className="global-footer__inner">
 					<div className="global-footer__left">
 						<form>
-							<h3>Get notified when new articles & snippets arrives.</h3>
+							<h3>Get notified when new articles & snippets arrive.</h3>
 							<input type="email" placeholder="example@email.com" />
 							<button className="btn">Subscribe</button>
 						</form>
