@@ -1,35 +1,7 @@
 import Link from "next/link";
 
 import SiteLogo from "./siteLogo";
-import IconGithub from "./IconGithub";
-import IconTwitter from "./IconTwitter";
-import IconEmail from "./IconEmail";
-
-const NAV_ITEMS = [
-	{ href: "/", label: "Home" },
-	{ href: "/posts", label: "Blog" },
-	{ href: "/snippets", label: "Snippets" },
-	{ href: "/projects", label: "Projects" },
-	{ href: "/about", label: "About" },
-];
-
-const SOCIAL_ITEMS = [
-	{
-		href: "https://github.com/dennyhong96",
-		icon: <IconGithub width="3rem" height="3rem" />,
-		label: "Github",
-	},
-	{
-		href: "https://twitter.com/DennyHong3",
-		icon: <IconTwitter width="3rem" height="3rem" />,
-		label: "Twitter",
-	},
-	{
-		href: "mailto:hong961127@gmail.com",
-		icon: <IconEmail width="3rem" height="3rem" />,
-		label: "Email",
-	},
-];
+import { SOCIAL_ITEMS, NAV_ITEMS } from "@/lib/constants";
 
 export default function Footer() {
 	return (

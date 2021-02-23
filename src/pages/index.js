@@ -1,41 +1,43 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import { getAllPosts } from "../lib/api";
-import { CMS_NAME } from "../lib/constants";
 
+import { getAllPosts } from "../lib/api";
 import HeroBanner from "@/components/heroBanner";
 import RecentPosts from "@/components/recentPosts";
 import Introduction from "@/components/Introduction";
 import RecentSnippets from "@/components/recentSnippets";
 import RecentProjects from "@/components/recentProjects";
 
-export default function Index({ allPosts }) {
-  return (
-    <Fragment>
-      <Head>
-        <title>Next.js Blog Example with {CMS_NAME}</title>
-      </Head>
+const Home = ({ allPosts }) => {
+	return (
+		<Fragment>
+			<Head>
+				<title>Next.js Blog Example</title>
+			</Head>
 
-      <HeroBanner />
+			<HeroBanner />
 
-      <Introduction />
+			<Introduction />
 
-      <RecentPosts posts={allPosts} />
+			<RecentPosts posts={allPosts} />
 
-      <RecentSnippets posts={allPosts} />
+			<RecentSnippets posts={allPosts} />
 
-      <RecentProjects post={allPosts} />
-    </Fragment>
-  );
-}
+			<RecentProjects post={allPosts} />
+		</Fragment>
+	);
+};
+
+export default Home;
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts({
-    fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
-    postType: "posts",
-  });
+	// List all posts
+	const allPosts = getAllPosts({
+		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
+		postType: "posts",
+	});
 
-  return {
-    props: { allPosts },
-  };
+	return {
+		props: { allPosts },
+	};
 }
