@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import SnippetCard from "./snippetCard";
+import SnippetCard from "../snippetCard";
 
 const RecentSnippets = ({ posts }) => {
 	return (

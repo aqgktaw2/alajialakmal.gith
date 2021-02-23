@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 import { NAV_ITEMS } from "@/lib/constants";
 
-import SiteLogo from "./siteLogo";
+import SiteLogo from "@/components/siteLogo";
 
 gsap.registerPlugin(ScrollTrigger);
 

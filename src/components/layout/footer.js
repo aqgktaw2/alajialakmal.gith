@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import SiteLogo from "./siteLogo";
+import SiteLogo from "../siteLogo";
 import { SOCIAL_ITEMS, NAV_ITEMS } from "@/lib/constants";
 
 export default function Footer() {

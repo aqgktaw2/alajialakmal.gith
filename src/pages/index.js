@@ -2,11 +2,11 @@ import Head from "next/head";
 import { Fragment } from "react";
 
 import { getAllPosts } from "../lib/api";
-import HeroBanner from "@/components/heroBanner";
-import RecentPosts from "@/components/recentPosts";
-import Introduction from "@/components/Introduction";
-import RecentSnippets from "@/components/recentSnippets";
-import RecentProjects from "@/components/recentProjects";
+import HeroBanner from "@/components/sections/heroBanner";
+import RecentPosts from "@/components/sections/recentPosts";
+import Introduction from "@/components/sections/introduction";
+import RecentSnippets from "@/components/sections/recentSnippets";
+import RecentProjects from "@/components/sections/recentProjects";
 
 const Home = ({ allPosts }) => {
 	return (

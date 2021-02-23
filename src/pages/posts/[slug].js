@@ -8,7 +8,7 @@ import markdownToHtml from "@/lib/markdownToHtml";
 import Header from "@/components/header";
 import PostBody from "@/components/postBody";
 import PostHeader from "@/components/postHeader";
-import RecentPosts from "@/components/recentPosts";
+import RecentPosts from "@/components/sections/recentPosts";
 
 export default function Post({ post, relatedPosts }) {
 	const router = useRouter();

@@ -2,9 +2,9 @@ import { Fragment } from "react";
 
 import Footer from "./footer";
 import Header from "./header";
-import Meta from "./meta";
+import Meta from "@/components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({ children }) {
 	return (
 		<Fragment>
 			<Meta />
