@@ -8,72 +8,87 @@ import PostArticle from "@/components/postArticle";
 import RecentPosts from "@/components/sections/recentPosts";
 
 const Post = ({ post, relatedPosts }) => {
-  const router = useRouter();
+	const router = useRouter();
 
-  if (router.isFallback) {
-    return <h1>Loading...</h1>;
-  }
+	if (router.isFallback) {
+		return <h1>Loading...</h1>;
+	}
 
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />;
-  }
+	if (!router.isFallback && !post?.slug) {
+		return <ErrorPage statusCode={404} />;
+	}
 
-  return (
-    <Fragment>
-      {/* Post */}
-      <PostArticle post={post} />
+	return (
+		<Fragment>
+			{/* Post */}
+			<PostArticle post={post} />
 
-      {/* Related Posts */}
-      <RecentPosts posts={relatedPosts} showListingLink={false} headerText="Similar Articles" />
-    </Fragment>
-  );
+			{/* Related Posts */}
+			<RecentPosts
+				posts={relatedPosts}
+				showListingLink={false}
+				headerText="Similar Articles"
+			/>
+		</Fragment>
+	);
 };
 
 export default Post;
 
 export async function getStaticProps({ params }) {
-  // Get the post
-  const post = getPostBySlug({
-    slug: params.slug,
-    fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags"],
-    postType: "posts",
-  });
-  const content = await markdownToHtml(post.content || "");
+	// Get the post
+	const post = getPostBySlug({
+		slug: params.slug,
+		fields: [
+			"title",
+			"date",
+			"slug",
+			"author",
+			"content",
+			"ogImage",
+			"coverImage",
+			"tags",
+			"type",
+		],
+		postType: "posts",
+	});
+	const content = await markdownToHtml(post.content || "");
 
-  // List at most 3 related posts
-  const relatedPosts = getAllPosts({
-    fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
-    postType: "posts",
-  })
-    .filter(
-      (otherPost) =>
-        otherPost.slug !== post.slug && otherPost.tags.find((tag) => otherPost.tags.includes(tag))
-    )
-    .slice(0, 3);
+	// List at most 3 related posts
+	const relatedPosts = getAllPosts({
+		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
+		postType: "posts",
+	})
+		.filter(
+			(otherPost) =>
+				otherPost.slug !== post.slug &&
+				otherPost.tags.find((tag) => otherPost.tags.includes(tag))
+		)
+		.slice(0, 3);
 
-  return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-      relatedPosts,
-    },
-  };
+	return {
+		props: {
+			post: {
+				...post,
+				content,
+			},
+			relatedPosts,
+		},
+	};
 }
 
 export async function getStaticPaths() {
-  // List all posts' slugs
-  const posts = getAllPosts({ fields: ["slug"], postType: "posts" });
+	// List all posts' slugs
+	const posts = getAllPosts({ fields: ["slug"], postType: "posts" });
 
-  return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.slug,
-        },
-      };
-    }),
-    fallback: false,
-  };
+	return {
+		paths: posts.map((post) => {
+			return {
+				params: {
+					slug: post.slug,
+				},
+			};
+		}),
+		fallback: false,
+	};
 }

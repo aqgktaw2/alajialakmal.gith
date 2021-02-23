@@ -24,8 +24,8 @@ const PostCard = ({ post, authorSize = "" }) => {
 
 			<div className="post-card__lower">
 				<div className="post-card__tags">
-					{post.tags.map((tag) => (
-						<Link href={`/tags/${tag}`} passHref>
+					{post.tags.map((tag, idx) => (
+						<Link key={idx} href={`/tags/${tag}`} passHref>
 							<a>#{tag}</a>
 						</Link>
 					))}

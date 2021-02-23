@@ -1,0 +1,14 @@
+.edit-post-btn {
+	@include container();
+	@include section();
+
+	.btn {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+
+		svg {
+			margin-left: 1rem;
+		}
+	}
+}
