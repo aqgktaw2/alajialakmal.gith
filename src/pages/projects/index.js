@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 import { getAllPosts } from "@/lib/api";
-import ProjectCard from "@/components/projectCard";
 import getherAllTags from "@/utils/getherAllTags";
+import ProjectCard from "@/components/projectCard";
 
 const Projects = ({ allProjects }) => {
 	return (

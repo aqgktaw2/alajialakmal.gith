@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import PostBody from "@/components/postBody";
 import PostHeader from "@/components/postHeader";
-import EditPostButton from "./editPostButton";
+import EditPostButton from "@/components/editPostButton";
 
 const PostArticle = ({ post }) => {
 	return (

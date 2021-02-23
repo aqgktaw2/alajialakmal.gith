@@ -8,7 +8,7 @@ import Introduction from "@/components/sections/introduction";
 import RecentSnippets from "@/components/sections/recentSnippets";
 import RecentProjects from "@/components/sections/recentProjects";
 
-const Home = ({ allPosts, allProjects }) => {
+const Home = ({ posts, projects, snippets }) => {
 	return (
 		<Fragment>
 			<Head>
@@ -19,11 +19,11 @@ const Home = ({ allPosts, allProjects }) => {
 
 			<Introduction />
 
-			<RecentPosts posts={allPosts} />
+			<RecentPosts posts={posts} />
 
-			<RecentSnippets posts={allPosts} />
+			<RecentSnippets posts={snippets} />
 
-			<RecentProjects projects={allProjects} />
+			<RecentProjects projects={projects} />
 		</Fragment>
 	);
 };
@@ -32,12 +32,12 @@ export default Home;
 
 export async function getStaticProps() {
 	// List all posts
-	const allPosts = getAllPosts({
+	const posts = getAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "posts",
 	});
 
-	const allProjects = getAllPosts({
+	const projects = getAllPosts({
 		fields: [
 			"title",
 			"date",
@@ -52,10 +52,16 @@ export async function getStaticProps() {
 		postType: "projects",
 	});
 
+	const snippets = getAllPosts({
+		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
+		postType: "snippets",
+	});
+
 	return {
 		props: {
-			allPosts,
-			allProjects,
+			posts,
+			projects,
+			snippets,
 		},
 	};
 }
