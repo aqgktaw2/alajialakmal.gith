@@ -1,50 +1,50 @@
 .post-body {
-  &__inner {
-    width: 100%;
-    max-width: 850px;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    margin: 0 auto;
+	&__inner {
+		width: 100%;
+		max-width: 850px;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		margin: 0 auto;
 
-    ul {
-      list-style: disc;
-      padding-left: 4rem;
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
+		ul {
+			list-style: disc;
+			padding-left: 2rem;
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+		}
 
-    ol {
-      list-style: decimal;
-      padding-left: 4rem;
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
+		ol {
+			list-style: decimal;
+			padding-left: 2rem;
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+		}
 
-    pre {
-      padding: 2rem;
-      background-color: var(--color-background-alt);
-      border: 1px solid var(--color-text);
-      box-shadow: 4px 4px 0px 0px var(--color-highlight);
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
+		pre {
+			padding: 2rem;
+			background-color: var(--color-background-alt);
+			border: 1px solid var(--color-text);
+			box-shadow: 4px 4px 0px 0px var(--color-highlight);
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+		}
 
-    hr {
-      border: none;
-      border-top: 2px solid var(--color-highlight-alt);
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-    }
+		hr {
+			border: none;
+			border-top: 2px solid var(--color-highlight-alt);
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
 
-    a {
-      @include link();
-      font-style: italic;
-      font-weight: 600;
-    }
+		a {
+			@include link();
+			font-style: italic;
+			font-weight: 600;
+		}
 
-    img {
-      margin-top: 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-  }
+		img {
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+		}
+	}
 }
