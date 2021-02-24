@@ -7,7 +7,10 @@ export default function Meta() {
 			<meta name="msapplication-TileColor" content="#07000b" />
 
 			<title>Denny Hong | Web & JavaScript Developer</title>
-			<meta name="description" content="Denny Hong | Web & JavaScript Developer" />
+			<meta
+				name="description"
+				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
+			/>
 			<meta property="og:image" content="/home-ogimg.jpg" />
 
 			<meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no" />
