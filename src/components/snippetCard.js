@@ -4,9 +4,15 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 import debounce from "@/utils/debounce";
-import { Blob1, Blob2, Blob3, Blob4, Blob5, Blob6 } from "@/components/blobs";
+import Blob1 from "./blobs/Blob1";
+import Blob2 from "./blobs/Blob2";
+import Blob3 from "./blobs/Blob3";
+import Blob4 from "./blobs/Blob4";
+import Blob5 from "./blobs/Blob5";
+import Blob6 from "./blobs/Blob6";
+// import { Blob1, Blob2, Blob3, Blob4, Blob5, Blob6 } from "@/components/blobs";
 
-const shapes = [<Blob1 />, <Blob2 />, <Blob3 />, <Blob4 />, <Blob4 />, <Blob5 />, <Blob6 />];
+const shapes = [<Blob1 />, <Blob2 />, <Blob3 />, <Blob4 />, <Blob5 />, <Blob6 />];
 
 const SnippetCard = ({ post }) => {
 	const imageContainerRef = useRef();
