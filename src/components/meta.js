@@ -1,6 +1,11 @@
 import Head from "next/head";
 
+import { useRouter } from "next/router";
+
 export default function Meta() {
+	const router = useRouter();
+	console.log(`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`);
+
 	return (
 		<Head>
 			<meta name="theme-color" content="#07000b" />
@@ -11,7 +16,7 @@ export default function Meta() {
 				name="description"
 				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
 			/>
-			<link rel="canonical" href={process.env.NEXT_PUBLIC_DOMAIN} />
+			<link rel="canonical" href={`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`} />
 
 			{/* Open Graph */}
 			<meta property="og:title" content="Denny Hong | Web & JavaScript Developer" />
@@ -20,7 +25,7 @@ export default function Meta() {
 				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
 			/>
 			<meta property="og:type" content="website" />
-			<meta property="og:url" href={process.env.NEXT_PUBLIC_DOMAIN} />
+			<meta property="og:url" href={`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`} />
 			<meta property="og:site_name" content="Denny Hong | Blog and Portfolio" />
 			<meta
 				property="og:image"
