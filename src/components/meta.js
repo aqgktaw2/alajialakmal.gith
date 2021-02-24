@@ -11,8 +11,28 @@ export default function Meta() {
 				name="description"
 				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
 			/>
-			<meta property="og:image" content="/home-ogimg.jpg" />
+			<link rel="canonical" href={process.env.NEXT_PUBLIC_DOMAIN} />
 
+			{/* Open Graph */}
+			<meta property="og:title" content="Denny Hong | Web & JavaScript Developer" />
+			<meta
+				property="og:description"
+				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
+			/>
+			<meta property="og:type" content="website" />
+			<meta property="og:url" href={process.env.NEXT_PUBLIC_DOMAIN} />
+			<meta property="og:site_name" content="Denny Hong's Blog and Portfolio" />
+			<meta
+				property="og:image"
+				content={`${process.env.NEXT_PUBLIC_DOMAIN}/home-ogimg.jpg`}
+			/>
+			<meta
+				property="og:image:secure_url"
+				content={`${process.env.NEXT_PUBLIC_DOMAIN}/home-ogimg.jpg`}
+			/>
+			<meta property="og:image:type" content="image/jpg" />
+
+			{/* Responsive Vewport */}
 			<meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no" />
 
 			{/* IOS Translucent Status Bar */}
