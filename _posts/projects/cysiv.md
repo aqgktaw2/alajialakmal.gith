@@ -5,14 +5,15 @@ coverImage: "/assets/projects/cysiv/cover.png"
 clientUrl: "https://mea.cysiv.com/"
 date: "2020-03-16T05:35:07.322Z"
 author:
-    name: Denny Hong
-    picture: "/assets/authors/denny-hong.jpeg"
+  name: Denny Hong
+  picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
-    url: "/assets/projects/cysiv/cover.png"
+  url: "/assets/projects/cysiv/cover.png"
 tags:
-    - "JavaScript"
-    - "HTML"
-    - "CSS"
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
+  - "Hubspot"
 type: "projects"
 ---
 
@@ -34,11 +35,11 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 4. Ordered Listitem
 5. Ordered Listitem
 
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
 
 ```JavaScript
 {

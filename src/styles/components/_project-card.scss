@@ -31,6 +31,36 @@
     }
   }
 
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+    & > a {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      background-color: var(--color-text);
+      border-radius: 5px;
+      box-shadow: 0 0 0 2px var(--color-highlight);
+      transform: scale(1) translate3d(0, 0, 0);
+      transition: var(--transition);
+
+      &:hover {
+        transform: scale(1.05) translate3d(0, 0, 0);
+      }
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      & > svg {
+        margin: auto;
+        width: 3rem;
+      }
+    }
+  }
+
   &__image {
     flex: 1;
     width: 100%;
