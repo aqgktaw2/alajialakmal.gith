@@ -38,7 +38,8 @@ export default function Meta() {
 			<meta property="og:image:type" content="image/jpg" />
 
 			{/* Responsive Vewport */}
-			<meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no" />
+			{/* <meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no" /> */}
+			<meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
 
 			{/* IOS Translucent Status Bar */}
 			<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

@@ -95,9 +95,9 @@ const HeroBanner = () => {
 					<h1 ref={h1}>Denny Hong</h1>
 					<h2 ref={h2}>Web & JavaScript Developer</h2>
 					<div className="section-code-banner__social">
-						{SOCIAL_ITEMS.map(({ href, icon }, idx) => (
+						{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
 							<Link key={idx} href={href} passHref>
-								<a target="_blank" rel="noopener noreferrer">
+								<a aria-label={label} target="_blank" rel="noopener noreferrer">
 									{icon}
 								</a>
 							</Link>
@@ -111,7 +111,11 @@ const HeroBanner = () => {
 					</div>
 				</div>
 
-				<button className="section-code-banner__mouse" onClick={handleScroll}>
+				<button
+					aria-label="proceed to next section"
+					className="section-code-banner__mouse"
+					onClick={handleScroll}
+				>
 					<div className="section-code-banner__mouse-icon">
 						<span className="section-code-banner__mouse-wheel" />
 					</div>
