@@ -16,7 +16,7 @@
     @include container();
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 
     @include media("<=md") {
       grid-template-columns: repeat(2, 1fr);

@@ -1,62 +1,62 @@
 .snippet-card {
-	position: relative;
-	padding: 5.5rem;
+  position: relative;
+  padding: 4.5rem;
 
-	&:hover {
-		.snippet-card__shape {
-			transform: rotate(15deg);
-		}
+  &:hover {
+    .snippet-card__shape {
+      transform: rotate(15deg);
+    }
 
-		.snippet-card__body {
-			transform: scale(1.1);
-		}
-	}
+    .snippet-card__body {
+      transform: scale(1.1);
+    }
+  }
 
-	&__shape {
-		position: absolute;
-		left: 0;
-		width: 100%;
-		top: 0;
-		height: 100%;
-		transition: var(--transition);
+  &__shape {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    transition: var(--transition);
 
-		svg {
-			width: 100%;
-			height: auto;
-		}
-	}
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
 
-	&__body {
-		display: block;
-		border-radius: 15px;
-		overflow: hidden;
-		box-shadow: 0 0 0 4px var(--color-highlight);
-		position: relative;
-		z-index: 1;
-		transition: var(--transition);
-	}
+  &__body {
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px var(--color-highlight);
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+  }
 
-	&__image {
-		width: 100%;
-		height: 225px; // Temporary height for gsap reveal animation
+  &__image {
+    width: 100%;
+    height: 225px; // Temporary height for gsap reveal animation
 
-		& > div {
-			width: 100% !important;
-			height: 100% !important;
-			& > img {
-				display: block !important;
-				width: 100% !important;
-				height: 100% !important;
-			}
-		}
-	}
+    & > div {
+      width: 100% !important;
+      height: 100% !important;
+      & > img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
 
-	&__info {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		background-color: rgba(#07000b, 0.5);
-		text-align: center;
-	}
+  &__info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(#07000b, 0.5);
+    text-align: center;
+  }
 }
