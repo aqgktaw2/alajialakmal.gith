@@ -45,6 +45,9 @@ export async function getStaticProps() {
 	});
 
 	return {
-		props: { allPosts },
+		props: {
+			allPosts,
+		},
+		revalidate: 1,
 	};
 }

@@ -74,6 +74,7 @@ export async function getStaticProps({ params }) {
 			},
 			relatedPosts,
 		},
+		revalidate: 1,
 	};
 }
 

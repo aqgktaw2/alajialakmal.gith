@@ -63,5 +63,6 @@ export async function getStaticProps() {
 			projects,
 			snippets,
 		},
+		revalidate: 1,
 	};
 }

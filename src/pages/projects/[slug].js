@@ -85,6 +85,7 @@ export async function getStaticProps({ params }) {
 			},
 			relatedProjects,
 		},
+		revalidate: 1,
 	};
 }
 
