@@ -7,11 +7,22 @@
 	right: 0;
 	transition: var(--transition);
 	border-bottom: 2px solid transparent;
+	transform: translate3d(0, 0, 0);
+
+	// Adjust for standalone mobile notch
+	@media screen and (display-mode: standalone) {
+		padding: 5.5rem 0 3rem;
+	}
 
 	&.scrolled {
-		padding: 1rem;
+		padding: 1rem 0;
 		background-color: var(--color-background);
 		border-bottom: 2px solid var(--color-highlight);
+
+		// Adjust for standalone mobile notch
+		@media screen and (display-mode: standalone) {
+			padding: 4rem 0 1rem;
+		}
 
 		.global-header__row {
 			&--1 {
@@ -49,9 +60,11 @@
 		&--1 {
 			margin-bottom: 1rem;
 			transition: var(--transition);
+			transform: translate3d(0, 0, 0);
 
 			a {
 				svg {
+					transform: translate3d(0, 0, 0);
 					transition: var(--transition);
 					width: 8.5rem;
 					height: 8.5rem;
@@ -64,6 +77,7 @@
 				display: flex;
 
 				li {
+					transform: translate3d(0, 0, 0);
 					&:not(:last-child) {
 						margin-right: 1.5rem;
 						transition: var(--transition);

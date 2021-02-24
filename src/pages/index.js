@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Fragment } from "react";
 
 import { getAllPosts } from "../lib/api";
@@ -11,10 +10,6 @@ import RecentProjects from "@/components/sections/recentProjects";
 const Home = ({ posts, projects, snippets }) => {
 	return (
 		<Fragment>
-			<Head>
-				<title>Next.js Blog Example</title>
-			</Head>
-
 			<HeroBanner />
 
 			<Introduction />

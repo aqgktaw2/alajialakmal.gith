@@ -1,27 +1,28 @@
 {
-  "name": "denny-hong",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "svg": "svgr -d src/components/icons src/components/icons/svgs"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "gray-matter": "4.0.2",
-    "gsap": "^3.6.0",
-    "next": "latest",
-    "nprogress": "^0.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "remark": "13.0.0",
-    "remark-html": "13.0.1",
-    "sanitize-html": "^2.3.2"
-  },
-  "devDependencies": {
-    "@svgr/cli": "^5.5.0",
-    "sass": "^1.32.8"
-  },
-  "license": "MIT"
+	"name": "denny-hong",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start",
+		"svg": "svgr -d src/components/icons src/components/icons/svgs",
+		"pwa": "npx pwa-asset-generator public/logo.svg public -m public/site.webmanifest --padding 'calc(50vh - 25%) calc(50vw - 25%)' -b 'linear-gradient(135deg, rgba(163, 2, 146,1) 30%, rgba(111, 2, 176,1) 90%)' -q 100 -i public/asset-generator-changes.html --favicon"
+	},
+	"dependencies": {
+		"classnames": "^2.2.6",
+		"gray-matter": "4.0.2",
+		"gsap": "^3.6.0",
+		"next": "latest",
+		"nprogress": "^0.2.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"remark": "13.0.0",
+		"remark-html": "13.0.1",
+		"sanitize-html": "^2.3.2"
+	},
+	"devDependencies": {
+		"@svgr/cli": "^5.5.0",
+		"sass": "^1.32.8"
+	},
+	"license": "MIT"
 }

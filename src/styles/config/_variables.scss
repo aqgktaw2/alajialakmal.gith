@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #16498a;
-  --color-primary-rgb: #{hexToRGB(#16498a)};
+	--color-primary: #16498a;
+	--color-primary-rgb: #{hexToRGB(#16498a)};
 }
 
 // Media
@@ -13,20 +13,20 @@ $break-xl: 1024px;
 $color-background: #07000b;
 $color-background-alt: #11001c;
 $color-highlight: #a30292;
-$color-highlight-alt: #6f02b0;
+$color-highlight-alt: #f9f9f9;
 $color-text: #fffafe;
 $color-text-alt: #fbf6ff;
 
 // CSS Props
 :root {
-  // Colors
-  --color-background: #07000b;
-  --color-background-alt: #11001c;
-  --color-highlight: #a30292;
-  --color-highlight-alt: #6f02b0;
-  --color-text: #fffafe;
-  --color-text-alt: #fbf6ff;
+	// Colors
+	--color-background: #07000b;
+	--color-background-alt: #11001c;
+	--color-highlight: #a30292;
+	--color-highlight-alt: #6f02b0;
+	--color-text: #fffafe;
+	--color-text-alt: #fbf6ff;
 
-  // Transition
-  --transition: 0.2s ease-out;
+	// Transition
+	--transition: 0.2s ease-out;
 }
