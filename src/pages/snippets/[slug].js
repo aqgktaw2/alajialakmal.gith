@@ -18,8 +18,6 @@ const Snippet = ({ snippet, relatedSnippets }) => {
 		return <ErrorPage statusCode={404} />;
 	}
 
-	console.log({ snippet }, { relatedSnippets });
-
 	return (
 		<Fragment>
 			{/* Post */}

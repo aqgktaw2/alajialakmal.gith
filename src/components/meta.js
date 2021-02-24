@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function Meta() {
 	const router = useRouter();
-	console.log(`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`);
 
 	return (
 		<Head>
