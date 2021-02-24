@@ -3,20 +3,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 import debounce from "@/utils/debounce";
-import {
-  IconCss,
-  IconFirebase,
-  IconGraphql,
-  IconHtml,
-  IconHubspot,
-  IconJs,
-  IconNextjs,
-  IconPhp,
-  IconReact,
-  IconSass,
-  IconShopify,
-  IconWordpress,
-} from "@/components/icons";
+import { TECH_ICONS } from "@/lib/constants";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {
   const imageContainerRef = useRef();
@@ -35,21 +22,6 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
     };
   }, []);
 
-  const TECH_ICONS = {
-    CSS: <IconCss />,
-    Sass: <IconSass />,
-    HTML: <IconHtml />,
-    JavaScript: <IconJs />,
-    NextJs: <IconNextjs />,
-    React: <IconReact />,
-    Hubspot: <IconHubspot />,
-    PHP: <IconPhp />,
-    Wordpress: <IconWordpress />,
-    Firebase: <IconFirebase />,
-    GraphQL: <IconGraphql />,
-    Shopify: <IconShopify />,
-  };
-
   return (
     <div data-gsap="reveal-bottom" className="project-card">
       <div ref={projectCardRef} className="project-card__info">
@@ -61,17 +33,19 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 
         <p>{excerpt}</p>
 
-        <div className="project-card__tech">
-          {tags.map((tag, idx) => (
-            <Link key={idx} href={`/tech/${tag}`} passHref>
-              <a data-gsap="reveal-bottom">{TECH_ICONS[tag]}</a>
-            </Link>
-          ))}
-        </div>
+        <div className="project-card__actions">
+          <div className="project-card__tech">
+            {tags.map((tag, idx) => (
+              <Link key={idx} href={`/tech/${tag}`} passHref>
+                <a>{TECH_ICONS[tag]}</a>
+              </Link>
+            ))}
+          </div>
 
-        <Link href={`/projects/${slug}`} passHref>
-          <a className="btn">Read More</a>
-        </Link>
+          <Link href={`/projects/${slug}`} passHref>
+            <a className="btn">Read More</a>
+          </Link>
+        </div>
       </div>
 
       <div ref={imageContainerRef} className="project-card__image">

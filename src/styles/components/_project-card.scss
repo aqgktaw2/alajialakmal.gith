@@ -18,10 +18,6 @@
     flex-direction: column;
     margin-right: 1rem;
 
-    .btn {
-      margin-top: auto;
-    }
-
     p {
       a {
         @include link();
@@ -31,10 +27,14 @@
     }
   }
 
+  &__actions {
+    margin-top: auto;
+  }
+
   &__tech {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin: 2rem 0;
 
     & > a {
       width: 4rem;
@@ -44,7 +44,9 @@
       border-radius: 5px;
       box-shadow: 0 0 0 2px var(--color-highlight);
       transform: scale(1) translate3d(0, 0, 0);
+      backface-visibility: hidden;
       transition: var(--transition);
+      margin-bottom: 1rem;
 
       &:hover {
         transform: scale(1.05) translate3d(0, 0, 0);
