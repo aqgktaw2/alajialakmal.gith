@@ -6,7 +6,6 @@ import PostCard from "@/components/postCard";
 const Topics = ({ posts }) => {
 	const router = useRouter();
 
-	console.log(posts);
 	return (
 		<div className="page-posts-by-topic">
 			<section className="page-posts-by-topic__header">

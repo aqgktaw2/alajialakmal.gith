@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { getAllPosts } from "@/lib/api";
 import SnippetCard from "@/components/snippetCard";
 
-const Topics = ({ snippets }) => {
+const Repositories = ({ snippets }) => {
 	const router = useRouter();
 
 	return (
@@ -20,7 +20,7 @@ const Topics = ({ snippets }) => {
 	);
 };
 
-export default Topics;
+export default Repositories;
 
 export const getStaticProps = async ({ params }) => {
 	const allSnippets = getAllPosts({
