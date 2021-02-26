@@ -24,7 +24,7 @@ const Posts = ({ allPosts }) => {
 
 					<div className="page-posts-listing__tags">
 						{getherAllTags(allPosts).map((tag, idx) => (
-							<Link key={idx} href={`/tags/${tag}`} passHref>
+							<Link key={idx} href={`/topics/${tag}`} passHref>
 								<a>#{tag}</a>
 							</Link>
 						))}

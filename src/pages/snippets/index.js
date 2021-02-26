@@ -25,7 +25,7 @@ const Snippets = ({ allSnippets }) => {
 
 					<div className="page-snippets-listing__tags">
 						{getherAllTags(allSnippets).map((tag, idx) => (
-							<Link key={idx} href={`/tags/${tag}`} passHref>
+							<Link key={idx} href={`/repositories/${tag}`} passHref>
 								<a>#{tag}</a>
 							</Link>
 						))}
