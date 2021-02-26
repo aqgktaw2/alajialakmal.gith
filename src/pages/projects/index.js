@@ -23,7 +23,7 @@ const Projects = ({ allProjects }) => {
 					<h2>Technologies:</h2>
 					<div className="page-projects-listing__tags">
 						{getherAllTags(allProjects).map((tag, idx) => (
-							<Link key={idx} href={`/tags/${tag}`} passHref>
+							<Link key={idx} href={`/technologies/${tag}`} passHref>
 								<a>#{tag}</a>
 							</Link>
 						))}
