@@ -8,7 +8,7 @@ const Author = ({ author, size = "" }) => {
 				"author--lg": size === "lg",
 			})}
 		>
-			<img src={author.picture} alt={author.name} />
+			<img loading="lazy" src={author.picture} alt={author.name} />
 		</div>
 	);
 };

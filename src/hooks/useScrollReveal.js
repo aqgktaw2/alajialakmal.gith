@@ -47,7 +47,7 @@ const useScrollReveal = () => {
 					ease: "elastic.out(1,1)",
 				});
 			},
-			start: "top bottom-=10%",
+			start: "top bottom-=5%",
 			end: "bottom top+=5%",
 		});
 	}, [router.asPath]);
