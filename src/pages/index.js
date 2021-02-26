@@ -12,13 +12,9 @@ const Home = ({ posts, projects, snippets }) => {
 	return (
 		<Fragment>
 			<HeroBanner />
-
 			<Introduction />
-
 			<RecentPosts posts={posts} />
-
 			<RecentSnippets posts={snippets} />
-
 			<RecentProjects projects={projects} />
 		</Fragment>
 	);
