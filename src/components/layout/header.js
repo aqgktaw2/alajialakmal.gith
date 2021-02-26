@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import classNames from "classnames";
 
 import { NAV_ITEMS } from "@/lib/constants";
-
 import SiteLogo from "@/components/siteLogo";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,8 +18,7 @@ export default function Header() {
 		ScrollTrigger.create({
 			trigger: "main",
 			start: "top top-=50",
-			end: "bottom top-=500",
-			onUpdate: self => {
+			onUpdate(self) {
 				if (self.progress > 0) {
 					return headerRef.current?.classList.add("scrolled");
 				}
