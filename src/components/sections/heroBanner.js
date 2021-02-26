@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
@@ -13,11 +13,9 @@ const HeroBanner = () => {
 	useBannerBackground();
 
 	const handleScroll = () => {
-		const heroBannerHeight = [
-			...document.querySelectorAll("section"),
-		][0].getBoundingClientRect().height;
-		const headerHeight = document.querySelector(".global-header").getBoundingClientRect()
+		const heroBannerHeight = [...document.querySelectorAll("section")][0].getBoundingClientRect()
 			.height;
+		const headerHeight = document.querySelector(".global-header").getBoundingClientRect().height;
 		window.scrollTo({
 			top: heroBannerHeight - headerHeight,
 			behavior: "smooth",
@@ -27,11 +25,11 @@ const HeroBanner = () => {
 	useEffect(() => {
 		h1.current.innerHTML = h1.current.innerText
 			.split("")
-			.map((ch) => (ch === " " ? `<span>&nbsp;</span>` : `<span>${ch}</span>`))
+			.map(ch => (ch === " " ? "<span>&nbsp;</span>" : `<span>${ch}</span>`))
 			.join("");
 		h2.current.innerHTML = h2.current.innerText
 			.split("")
-			.map((ch) => (ch === " " ? `<span>&nbsp;</span>` : `<span>${ch}</span>`))
+			.map(ch => (ch === " " ? "<span>&nbsp;</span>" : `<span>${ch}</span>`))
 			.join("");
 
 		const tl = gsap.timeline({
@@ -68,14 +66,16 @@ const HeroBanner = () => {
 						const tl2 = gsap.timeline({
 							defaults: { repeat: -1, yoyo: true, duration: 7.5 },
 						});
-						tl2.to(illustration.current, {
-							x: -15,
-							y: 15,
-							rotate: "1deg",
-						}).to(illustration.current, { x: 15, y: -15, rotate: "-1deg" });
+						tl2
+							.to(illustration.current, {
+								x: -15,
+								y: 15,
+								rotate: "1deg",
+							})
+							.to(illustration.current, { x: 15, y: -15, rotate: "-1deg" });
 					},
 				},
-				0.75
+				0.75,
 			)
 			.to(h1.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.1 }, 1.1)
 			.to(h2.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 2.1)
@@ -83,7 +83,7 @@ const HeroBanner = () => {
 			.to(
 				".section-code-banner__mouse",
 				{ opacity: 1, duration: "1.25", ease: "power1.easeIn" },
-				"-=2"
+				"-=2",
 			);
 	}, []);
 
@@ -141,7 +141,7 @@ const HeroBanner = () => {
 
 export default HeroBanner;
 
-const SvgIllustration = forwardRef((ref, props) => (
+const SvgIllustration = props => (
 	<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 730 830" {...props}>
 		<g id="background-illustration">
 			<path
@@ -174,11 +174,7 @@ const SvgIllustration = forwardRef((ref, props) => (
 				d="M145.2 12.237l170.9 98.7-.1 409.3-170.9-98.7.1-409.3z"
 				opacity="0.15"
 			></path>
-			<path
-				id="BtnLeft"
-				fill="#a30292"
-				d="M113.1 75.137l135.9 78.5v37.7l-135.9-78.5v-37.7z"
-			></path>
+			<path id="BtnLeft" fill="#a30292" d="M113.1 75.137l135.9 78.5v37.7l-135.9-78.5v-37.7z"></path>
 			<path
 				id="Vector_6"
 				fill="#fff"
@@ -215,11 +211,7 @@ const SvgIllustration = forwardRef((ref, props) => (
 				d="M355.2 391.737l170.9 98.7-.1 409.3-170.9-98.7.1-409.3z"
 				opacity="0.15"
 			></path>
-			<path
-				id="BtnRight"
-				fill="#a30292"
-				d="M335 450 l135.9 78.4v37.6l-136-78.4.1-37.6z"
-			></path>
+			<path id="BtnRight" fill="#a30292" d="M335 450 l135.9 78.4v37.6l-136-78.4.1-37.6z"></path>
 			<path
 				id="Vector_12"
 				fill="#fff"
@@ -417,4 +409,4 @@ const SvgIllustration = forwardRef((ref, props) => (
 			</linearGradient>
 		</defs>
 	</svg>
-));
+);

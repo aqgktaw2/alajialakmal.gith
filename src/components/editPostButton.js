@@ -12,12 +12,7 @@ const EditPostButton = ({ post }) => {
 	return (
 		<div className="edit-post-btn">
 			<Link href={`${REPO_POSTS_URL}/${POST_TYPE_PATH[post.type]}/${post.slug}.md`} passHref>
-				<a
-					data-gsap="reveal-bottom"
-					className="btn"
-					target="_blank"
-					rel="noopener rereferrer"
-				>
+				<a data-gsap="reveal-bottom" className="btn" target="_blank" rel="noopener rereferrer">
 					Edit this {post.type.slice(0, post.type.length - 1)}{" "}
 					<IconGithub width="2rem" height="2rem" />
 				</a>

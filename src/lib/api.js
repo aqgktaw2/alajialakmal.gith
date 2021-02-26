@@ -30,7 +30,7 @@ export function getPostBySlug({ slug, fields = [], postType }) {
 export function getAllPosts({ fields = [], postType = "posts" }) {
 	const filenames = getPostsFilenames(postType);
 	const posts = filenames
-		.map((filename) => getPostBySlug({ slug: filename, fields, postType }))
+		.map(filename => getPostBySlug({ slug: filename, fields, postType }))
 		// sort posts by date in descending order
 		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 	return posts;

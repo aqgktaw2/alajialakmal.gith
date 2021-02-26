@@ -20,7 +20,7 @@ export default function Header() {
 			trigger: "main",
 			start: "top top-=50",
 			end: "bottom top-=500",
-			onUpdate: (self) => {
+			onUpdate: self => {
 				if (self.progress > 0) {
 					return headerRef.current?.classList.add("scrolled");
 				}

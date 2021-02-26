@@ -4,14 +4,14 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
-    name: Denny Hong
-    picture: "/assets/authors/denny-hong.jpeg"
+  name: Denny Hong
+  picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
-    url: "/assets/blog/hello-world/cover.jpg"
+  url: "/assets/blog/hello-world/cover.jpg"
 tags:
-    - "JavaScript"
-    - "HTML"
-    - "CSS"
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
 type: "posts"
 ---
 

@@ -1,78 +1,78 @@
 h1,
 .h1 {
-  font-size: 6.64rem;
-  font-weight: 800;
-  text-shadow: 3px 3px var(--color-highlight);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-size: 6.64rem;
+	font-weight: 800;
+	text-shadow: 3px 3px var(--color-highlight);
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 h2,
 .h2 {
-  font-size: 2.94rem;
-  font-weight: 700;
-  text-shadow: 3px 3px var(--color-highlight);
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-size: 2.94rem;
+	font-weight: 700;
+	text-shadow: 3px 3px var(--color-highlight);
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 h3,
 .h3 {
-  font-size: 2rem;
-  font-weight: 500;
-  text-shadow: 3px 3px var(--color-highlight);
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-size: 2rem;
+	font-weight: 500;
+	text-shadow: 3px 3px var(--color-highlight);
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 h4,
 .h4 {
-  font-weight: 500;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-weight: 500;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 h5,
 .h5 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 h6,
 .h6 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 p,
 .p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  &::selection {
-    background-color: var(--color-highlight-alt);
-  }
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 }
 
 a,
@@ -81,20 +81,20 @@ em,
 strong,
 code,
 input {
-  &::selection {
-    background-color: var(--color-highlight-alt);
-    color: var(--color-text);
-  }
+	&::selection {
+		background-color: var(--color-highlight-alt);
+		color: var(--color-text);
+	}
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 strong {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 code {
-  font-family: "Source Code Pro", monospace;
+	font-family: "Source Code Pro", monospace;
 }

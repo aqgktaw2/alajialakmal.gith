@@ -2,11 +2,11 @@
 
 ## Overview
 
--   `src/pages/index.js` - Static generated home page
--   `src/pages/posts/*` - Static generated blog posts
--   `src/pages/snippets/*` - Static generated code snippets
--   `src/pages/projects/*` - Static generated projects portfolio
--   `src/pages/about.js` - Static about page
+- `src/pages/index.js` - Static generated home page
+- `src/pages/posts/*` - Static generated blog posts
+- `src/pages/snippets/*` - Static generated code snippets
+- `src/pages/projects/*` - Static generated projects portfolio
+- `src/pages/about.js` - Static about page
 
 ## Run the project locally
 
@@ -21,5 +21,5 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 
 ## Built With
 
--   [Next.js](https://nextjs.org/)
--   [Vercel](https://vercel.com)
+- [Next.js](https://nextjs.org/)
+- [Vercel](https://vercel.com)

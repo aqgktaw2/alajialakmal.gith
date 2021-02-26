@@ -20,10 +20,7 @@ const SEO = ({ title = "", description = "", ogImage = "" }) => {
 
 			{ogImage && (
 				<Fragment>
-					<meta
-						property="og:image"
-						content={`${process.env.NEXT_PUBLIC_DOMAIN}${ogImage}`}
-					/>
+					<meta property="og:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}${ogImage}`} />
 					<meta
 						property="og:image:secure_url"
 						content={`${process.env.NEXT_PUBLIC_DOMAIN}${ogImage}`}

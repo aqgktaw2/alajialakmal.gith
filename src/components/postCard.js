@@ -12,8 +12,7 @@ const PostCard = ({ post, authorSize = "" }) => {
 			</div>
 
 			<div className="post-card__meta">
-				<Author author={post.author} size={authorSize} />{" "}
-				<span>{formatDate(post.date)}</span>
+				<Author author={post.author} size={authorSize} /> <span>{formatDate(post.date)}</span>
 			</div>
 
 			<Link href={`/posts/${post.slug}`} passHref>

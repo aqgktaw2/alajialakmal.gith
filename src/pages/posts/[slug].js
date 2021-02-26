@@ -24,11 +24,7 @@ const Post = ({ post, relatedPosts }) => {
 			<PostArticle post={post} />
 
 			{/* Related Posts */}
-			<RecentPosts
-				posts={relatedPosts}
-				showListingLink={false}
-				headerText="Similar Articles"
-			/>
+			<RecentPosts posts={relatedPosts} showListingLink={false} headerText="Similar Articles" />
 		</Fragment>
 	);
 };
@@ -39,17 +35,7 @@ export async function getStaticProps({ params }) {
 	// Get the post
 	const post = getPostBySlug({
 		slug: params.slug,
-		fields: [
-			"title",
-			"date",
-			"slug",
-			"author",
-			"content",
-			"ogImage",
-			"coverImage",
-			"tags",
-			"type",
-		],
+		fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags", "type"],
 		postType: "posts",
 	});
 	const content = await markdownToHtml(post.content || "");
@@ -60,9 +46,8 @@ export async function getStaticProps({ params }) {
 		postType: "posts",
 	})
 		.filter(
-			(otherPost) =>
-				otherPost.slug !== post.slug &&
-				otherPost.tags.find((tag) => otherPost.tags.includes(tag))
+			otherPost =>
+				otherPost.slug !== post.slug && otherPost.tags.find(tag => otherPost.tags.includes(tag)),
 		)
 		.slice(0, 3);
 
@@ -83,7 +68,7 @@ export async function getStaticPaths() {
 	const posts = getAllPosts({ fields: ["slug"], postType: "posts" });
 
 	return {
-		paths: posts.map((post) => {
+		paths: posts.map(post => {
 			return {
 				params: {
 					slug: post.slug,

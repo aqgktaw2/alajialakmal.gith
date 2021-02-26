@@ -1,77 +1,77 @@
 .project-card {
-  padding: 2rem;
-  display: flex;
-  border: 1px solid var(--color-text);
-  border-radius: 2px;
-  box-shadow: 4px 4px 0px 0px var(--color-highlight);
-  background-color: var(--color-background);
+	padding: 2rem;
+	display: flex;
+	border: 1px solid var(--color-text);
+	border-radius: 2px;
+	box-shadow: 4px 4px 0px 0px var(--color-highlight);
+	background-color: var(--color-background);
 
-  &:hover {
-    .project-card__image > img {
-      transform: translateY(-50%);
-    }
-  }
+	&:hover {
+		.project-card__image > img {
+			transform: translateY(-50%);
+		}
+	}
 
-  &__info {
-    flex: 0.75;
-    display: flex;
-    flex-direction: column;
-    margin-right: 1rem;
+	&__info {
+		flex: 0.75;
+		display: flex;
+		flex-direction: column;
+		margin-right: 1rem;
 
-    p {
-      a {
-        @include link();
-        font-weight: 600;
-        font-style: italic;
-      }
-    }
-  }
+		p {
+			a {
+				@include link();
+				font-weight: 600;
+				font-style: italic;
+			}
+		}
+	}
 
-  &__actions {
-    margin-top: auto;
-  }
+	&__actions {
+		margin-top: auto;
+	}
 
-  &__tech {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem 0;
+	&__tech {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2rem 0;
 
-    & > a {
-      width: 4rem;
-      height: 4rem;
-      display: flex;
-      background-color: var(--color-text);
-      border-radius: 5px;
-      box-shadow: 0 0 0 2px var(--color-highlight);
-      transform: scale(1) translate3d(0, 0, 0);
-      backface-visibility: hidden;
-      transition: var(--transition);
-      margin-bottom: 1rem;
+		& > a {
+			width: 4rem;
+			height: 4rem;
+			display: flex;
+			background-color: var(--color-text);
+			border-radius: 5px;
+			box-shadow: 0 0 0 2px var(--color-highlight);
+			transform: scale(1) translate3d(0, 0, 0);
+			backface-visibility: hidden;
+			transition: var(--transition);
+			margin-bottom: 1rem;
 
-      &:hover {
-        transform: scale(1.05) translate3d(0, 0, 0);
-      }
+			&:hover {
+				transform: scale(1.05) translate3d(0, 0, 0);
+			}
 
-      &:not(:last-child) {
-        margin-right: 1rem;
-      }
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
 
-      & > svg {
-        margin: auto;
-        width: 3rem;
-      }
-    }
-  }
+			& > svg {
+				margin: auto;
+				width: 3rem;
+			}
+		}
+	}
 
-  &__image {
-    flex: 1;
-    width: 100%;
-    height: 450px; // Temporary height for gsap reveal animation
-    overflow-y: hidden;
-    border-radius: 2px;
+	&__image {
+		flex: 1;
+		width: 100%;
+		height: 450px; // Temporary height for gsap reveal animation
+		overflow-y: hidden;
+		border-radius: 2px;
 
-    & > img {
-      transition: 5s ease;
-    }
-  }
+		& > img {
+			transition: 5s ease;
+		}
+	}
 }

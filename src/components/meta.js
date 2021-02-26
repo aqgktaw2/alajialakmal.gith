@@ -26,10 +26,7 @@ export default function Meta() {
 			<meta property="og:type" content="website" />
 			<meta property="og:url" href={`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`} />
 			<meta property="og:site_name" content="Denny Hong | Blog and Portfolio" />
-			<meta
-				property="og:image"
-				content={`${process.env.NEXT_PUBLIC_DOMAIN}/home-ogimg.jpg`}
-			/>
+			<meta property="og:image" content={`${process.env.NEXT_PUBLIC_DOMAIN}/home-ogimg.jpg`} />
 			<meta
 				property="og:image:secure_url"
 				content={`${process.env.NEXT_PUBLIC_DOMAIN}/home-ogimg.jpg`}

@@ -40,17 +40,7 @@ export default Snippets;
 
 export const getStaticProps = async () => {
 	const allSnippets = getAllPosts({
-		fields: [
-			"title",
-			"excerpt",
-			"coverImage",
-			"date",
-			"author",
-			"ogImage",
-			"tags",
-			"type",
-			"slug",
-		],
+		fields: ["title", "excerpt", "coverImage", "date", "author", "ogImage", "tags", "type", "slug"],
 		postType: "snippets",
 	});
 

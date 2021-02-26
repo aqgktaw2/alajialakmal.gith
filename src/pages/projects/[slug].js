@@ -71,9 +71,9 @@ export async function getStaticProps({ params }) {
 		postType: "projects",
 	})
 		.filter(
-			(otherProject) =>
+			otherProject =>
 				otherProject.slug !== project.slug &&
-				otherProject.tags.find((tag) => otherProject.tags.includes(tag))
+				otherProject.tags.find(tag => otherProject.tags.includes(tag)),
 		)
 		.slice(0, 2);
 
@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 	const posts = getAllPosts({ fields: ["slug"], postType: "projects" });
 
 	return {
-		paths: posts.map((post) => {
+		paths: posts.map(post => {
 			return {
 				params: {
 					slug: post.slug,

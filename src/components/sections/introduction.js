@@ -8,8 +8,8 @@ const Introduction = () => {
 			</div>
 			<div className="section-introduction__inner">
 				<p data-gsap="reveal-bottom">
-					I am a web & JavaScript developer based in Seattle, WA. I'm currently focusing
-					on delivering{" "}
+					I&apos;m a web & JavaScript developer based in Seattle, WA. I&apos;m currently focusing on
+					delivering{" "}
 					<Link href="/projects" passHref>
 						<a>rich & responsive UI experiences</a>
 					</Link>{" "}

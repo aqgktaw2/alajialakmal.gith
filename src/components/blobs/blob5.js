@@ -1,11 +1,6 @@
-const Blob5 = (props) => {
+const Blob5 = props => {
 	return (
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			id="sw-js-blob-svg"
-			viewBox="0 0 100 100"
-			{...props}
-		>
+		<svg xmlns="http://www.w3.org/2000/svg" id="sw-js-blob-svg" viewBox="0 0 100 100" {...props}>
 			<defs>
 				<linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
 					<stop id="stop1" offset="0%" stopColor="rgba(111, 2, 176, 1)"></stop>

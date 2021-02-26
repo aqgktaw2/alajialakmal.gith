@@ -18,11 +18,7 @@ export default function Footer() {
 							<label htmlFor="email-subscribe">
 								<h3>Get notified when new articles & snippets arrive.</h3>
 							</label>
-							<input
-								id="email-subscribe"
-								type="email"
-								placeholder="example@email.com"
-							/>
+							<input id="email-subscribe" type="email" placeholder="example@email.com" />
 							<button className="btn">Subscribe</button>
 						</form>
 					</div>

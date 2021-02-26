@@ -17,10 +17,10 @@ const useBannerBackground = () => {
 
 	// Draw stars & shooting starts on banner canvas
 	useEffect(() => {
-		//Helpers
+		// Helpers
 		function lineToAngle(x1, y1, length, radians) {
-			let x2 = x1 + length * Math.cos(radians),
-				y2 = y1 + length * Math.sin(radians);
+			const x2 = x1 + length * Math.cos(radians);
+			const y2 = y1 + length * Math.sin(radians);
 			return { x: x2, y: y2 };
 		}
 
@@ -32,8 +32,8 @@ const useBannerBackground = () => {
 			return (degrees / 180) * Math.PI;
 		}
 
-		//Particle
-		let particle = {
+		// Particle
+		const particle = {
 			x: 0,
 			y: 0,
 			vx: 0,
@@ -41,7 +41,7 @@ const useBannerBackground = () => {
 			radius: 0,
 
 			create: function (x, y, speed, direction) {
-				let obj = Object.create(this);
+				const obj = Object.create(this);
 				obj.x = x;
 				obj.y = y;
 				obj.vx = Math.cos(direction) * speed;
@@ -54,7 +54,7 @@ const useBannerBackground = () => {
 			},
 
 			setSpeed: function (speed) {
-				let heading = this.getHeading();
+				const heading = this.getHeading();
 				this.vx = Math.cos(heading) * speed;
 				this.vy = Math.sin(heading) * speed;
 			},
@@ -64,7 +64,7 @@ const useBannerBackground = () => {
 			},
 
 			setHeading: function (heading) {
-				let speed = this.getSpeed();
+				const speed = this.getSpeed();
 				this.vx = Math.cos(heading) * speed;
 				this.vy = Math.sin(heading) * speed;
 			},
@@ -75,36 +75,36 @@ const useBannerBackground = () => {
 			},
 		};
 
-		//Canvas and settings
-		let canvas = document.querySelector(".section-code-banner__background"),
-			context = canvas.getContext("2d"),
-			width = (canvas.width = window.innerWidth),
-			height = (canvas.height = window.innerHeight),
-			stars = [],
-			shootingStars = [],
-			layers = [
-				{ speed: 0.03, scale: 0.2, count: 160 },
-				{ speed: 0.06, scale: 0.5, count: 25 },
-				{ speed: 0.1, scale: 0.75, count: 15 },
-			],
-			starsAngle = 145,
-			shootingStarSpeed = {
-				min: 15,
-				max: 20,
-			},
-			shootingStarOpacityDelta = 0.01,
-			trailLengthDelta = 0.01,
-			shootingStarEmittingInterval = 1750,
-			shootingStarLifeTime = 500,
-			maxTrailLength = 350,
-			starBaseRadius = 2,
-			shootingStarRadius = 3;
+		// Canvas and settings
+		const canvas = document.querySelector(".section-code-banner__background");
+		const context = canvas.getContext("2d");
+		const width = (canvas.width = window.innerWidth);
+		const height = (canvas.height = window.innerHeight);
+		const stars = [];
+		const shootingStars = [];
+		const layers = [
+			{ speed: 0.03, scale: 0.2, count: 160 },
+			{ speed: 0.06, scale: 0.5, count: 25 },
+			{ speed: 0.1, scale: 0.75, count: 15 },
+		];
+		const starsAngle = 145;
+		const shootingStarSpeed = {
+			min: 15,
+			max: 20,
+		};
+		const shootingStarOpacityDelta = 0.01;
+		const trailLengthDelta = 0.01;
+		const shootingStarEmittingInterval = 1750;
+		const shootingStarLifeTime = 500;
+		const maxTrailLength = 350;
+		const starBaseRadius = 2;
+		const shootingStarRadius = 3;
 
-		//Create all stars
+		// Create all stars
 		for (let j = 0; j < layers.length; j += 1) {
-			let layer = layers[j];
+			const layer = layers[j];
 			for (let i = 0; i < layer.count; i += 1) {
-				let star = particle.create(randomRange(0, width), randomRange(0, height), 0, 0);
+				const star = particle.create(randomRange(0, width), randomRange(0, height), 0, 0);
 				star.radius = starBaseRadius * layer.scale;
 				star.setSpeed(layer.speed);
 				star.setHeading(degreesToRads(starsAngle));
@@ -113,11 +113,11 @@ const useBannerBackground = () => {
 		}
 
 		function createShootingStar() {
-			let shootingStar = particle.create(
+			const shootingStar = particle.create(
 				randomRange(width / 2, width),
 				randomRange(0, height / 2),
 				0,
-				0
+				0,
 			);
 			shootingStar.setSpeed(randomRange(shootingStarSpeed.min, shootingStarSpeed.max));
 			shootingStar.setHeading(degreesToRads(starsAngle));
@@ -141,7 +141,7 @@ const useBannerBackground = () => {
 			context.fillRect(0, 0, width, height);
 			context.fill();
 			for (let i = 0; i < stars.length; i += 1) {
-				let star = stars[i];
+				const star = stars[i];
 				star.update();
 				drawStar(star);
 				if (star.x > width) {
@@ -159,7 +159,7 @@ const useBannerBackground = () => {
 			}
 
 			for (let i = 0; i < shootingStars.length; i += 1) {
-				let shootingStar = shootingStars[i];
+				const shootingStar = shootingStars[i];
 				if (shootingStar.isSpawning) {
 					shootingStar.opacity += shootingStarOpacityDelta;
 					if (shootingStar.opacity >= 1.0) {
@@ -182,7 +182,7 @@ const useBannerBackground = () => {
 				}
 			}
 
-			//Delete dead shooting shootingStars
+			// Delete dead shooting shootingStars
 			for (let i = shootingStars.length - 1; i >= 0; i--) {
 				if (shootingStars[i].isDead) {
 					shootingStars.splice(i, 1);
@@ -199,13 +199,13 @@ const useBannerBackground = () => {
 		}
 
 		function drawShootingStar(p) {
-			let x = p.x,
-				y = p.y,
-				currentTrailLength = maxTrailLength * p.trailLengthDelta,
-				pos = lineToAngle(x, y, -currentTrailLength, p.getHeading());
+			const x = p.x;
+			const y = p.y;
+			const currentTrailLength = maxTrailLength * p.trailLengthDelta;
+			const pos = lineToAngle(x, y, -currentTrailLength, p.getHeading());
 
 			context.fillStyle = "rgba(163, 2, 146, " + p.opacity + ")";
-			let starLength = 5;
+			const starLength = 5;
 			context.beginPath();
 			context.moveTo(x - 1, y + 1);
 
@@ -227,7 +227,7 @@ const useBannerBackground = () => {
 			context.closePath();
 			context.fill();
 
-			//trail
+			// trail
 			context.fillStyle = "rgba(163, 2, 146, " + p.opacity + ")";
 			context.beginPath();
 			context.moveTo(x - 1, y - 1);
@@ -237,10 +237,10 @@ const useBannerBackground = () => {
 			context.fill();
 		}
 
-		//Run
+		// Run
 		update();
 
-		//Shooting stars
+		// Shooting stars
 		setInterval(function () {
 			createShootingStar();
 		}, shootingStarEmittingInterval);

@@ -4,14 +4,14 @@ excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
 author:
-    name: Denny Hong
-    picture: "/assets/authors/denny-hong.jpeg"
+  name: Denny Hong
+  picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
-    url: "/assets/blog/dynamic-routing/cover.jpg"
+  url: "/assets/blog/dynamic-routing/cover.jpg"
 tags:
-    - "JavaScript"
-    - "HTML"
-    - "CSS"
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
 type: "posts"
 ---
 
@@ -33,11 +33,11 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 4. Ordered Listitem
 5. Ordered Listitem
 
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
--   Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
+- Unordered Listitem
 
 ```JavaScript
 {

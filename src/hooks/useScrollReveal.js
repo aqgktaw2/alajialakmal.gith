@@ -12,7 +12,7 @@ const useScrollReveal = () => {
 
 		ScrollTrigger.batch('[data-gsap="reveal-bottom"]', {
 			interval: 0.1, // time window (in seconds) for batching to occur.
-			onEnter: (batch) =>
+			onEnter: batch =>
 				gsap.to(batch, {
 					opacity: 1,
 					y: 0,
@@ -21,7 +21,7 @@ const useScrollReveal = () => {
 					duration: 3,
 					ease: "elastic.out(1.2, 0.4)",
 				}),
-			onLeave: (batch) =>
+			onLeave: batch =>
 				gsap.to(batch, {
 					opacity: 0,
 					y: -50,
@@ -29,7 +29,7 @@ const useScrollReveal = () => {
 					ease: "elastic.out(1.2, 0.4)",
 					overwrite: true,
 				}),
-			onEnterBack: (batch) =>
+			onEnterBack: batch =>
 				gsap.to(batch, {
 					opacity: 1,
 					y: 0,
@@ -38,7 +38,7 @@ const useScrollReveal = () => {
 					ease: "elastic.out(1.2, 0.4)",
 					overwrite: true,
 				}),
-			onLeaveBack: (batch) =>
+			onLeaveBack: batch =>
 				gsap.to(batch, {
 					opacity: 0,
 					y: 50,
@@ -51,7 +51,7 @@ const useScrollReveal = () => {
 		});
 
 		ScrollTrigger.addEventListener("refreshInit", () =>
-			gsap.set('[data-gsap="reveal-bottom"]', { y: 0, opacity: 1 })
+			gsap.set('[data-gsap="reveal-bottom"]', { y: 0, opacity: 1 }),
 		);
 	}, [router.asPath]);
 

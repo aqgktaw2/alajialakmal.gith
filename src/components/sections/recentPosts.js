@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import formatDate from "@/utils/formatDate";
 import PostCard from "../postCard";
 
 const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog posts" }) => {

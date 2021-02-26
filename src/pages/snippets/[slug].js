@@ -39,40 +39,20 @@ export async function getStaticProps({ params }) {
 	// Get the snippet
 	const snippet = getPostBySlug({
 		slug: params.slug,
-		fields: [
-			"title",
-			"date",
-			"slug",
-			"author",
-			"content",
-			"ogImage",
-			"coverImage",
-			"tags",
-			"type",
-		],
+		fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags", "type"],
 		postType: "snippets",
 	});
 	const content = await markdownToHtml(snippet.content || "");
 
 	// List at most 2 related snippets
 	const relatedSnippets = getAllPosts({
-		fields: [
-			"title",
-			"date",
-			"slug",
-			"author",
-			"content",
-			"ogImage",
-			"coverImage",
-			"tags",
-			"type",
-		],
+		fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags", "type"],
 		postType: "snippets",
 	})
 		.filter(
-			(otherSnippet) =>
+			otherSnippet =>
 				otherSnippet.slug !== snippet.slug &&
-				otherSnippet.tags.find((tag) => otherSnippet.tags.includes(tag))
+				otherSnippet.tags.find(tag => otherSnippet.tags.includes(tag)),
 		)
 		.slice(0, 3);
 
@@ -93,7 +73,7 @@ export async function getStaticPaths() {
 	const snippets = getAllPosts({ fields: ["slug"], postType: "snippets" });
 
 	return {
-		paths: snippets.map((snippet) => {
+		paths: snippets.map(snippet => {
 			return {
 				params: {
 					slug: snippet.slug,
