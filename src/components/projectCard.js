@@ -17,7 +17,7 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 				<div className="project-card__actions">
 					<div className="project-card__tech">
 						{tags.map((tag, idx) => (
-							<Link key={idx} href={`/tech/${tag}`} passHref>
+							<Link key={idx} href={`/technologies/${tag}`} passHref>
 								<a aria-label={tag}>{TECH_ICONS[tag]}</a>
 							</Link>
 						))}
