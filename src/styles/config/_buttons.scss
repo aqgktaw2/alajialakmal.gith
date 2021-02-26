@@ -35,4 +35,13 @@ button {
 	&:visited {
 		color: var(--color-text);
 	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		&:hover {
+			background-color: transparent;
+			color: var(--color-text) !important;
+		}
+	}
 }

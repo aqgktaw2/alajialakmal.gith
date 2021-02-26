@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
 import SnippetCard from "@/components/snippetCard";
+import { IconFolder } from "@/components/icons";
 
 const Snippets = ({ allSnippets }) => {
 	return (
@@ -21,12 +22,15 @@ const Snippets = ({ allSnippets }) => {
 
 				{/* Sidebar */}
 				<aside className="page-snippets-listing__sidebar">
-					<h2>Topics:</h2>
+					<h2>Repositories:</h2>
 
 					<div className="page-snippets-listing__tags">
 						{getherAllTags(allSnippets).map((tag, idx) => (
 							<Link key={idx} href={`/repositories/${tag}`} passHref>
-								<a>#{tag}</a>
+								<a>
+									<IconFolder />
+									{tag}
+								</a>
 							</Link>
 						))}
 					</div>

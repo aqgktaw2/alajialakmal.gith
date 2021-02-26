@@ -76,5 +76,12 @@
 			margin-top: 2rem;
 			margin-bottom: 2rem;
 		}
+
+		blockquote {
+			border-left: 3px solid var(--color-highlight);
+			padding: 2rem;
+			margin: 2.4rem 0;
+			background-color: lighten($color-background-alt, 2.5);
+		}
 	}
 }

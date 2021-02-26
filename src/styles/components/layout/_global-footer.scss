@@ -38,24 +38,6 @@
 			margin-right: initial;
 			margin-bottom: 3rem;
 		}
-
-		form {
-			width: 100%;
-			max-width: 450px;
-			padding: 4rem;
-			display: flex;
-			flex-direction: column;
-			border: 1px solid var(--color-text);
-			box-shadow: 4px 4px 0px 0px var(--color-highlight);
-
-			h3 {
-				margin-top: 0;
-			}
-
-			input {
-				margin-bottom: 2rem;
-			}
-		}
 	}
 
 	&__right {
