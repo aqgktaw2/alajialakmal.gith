@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import SiteLogo from "@/components/siteLogo";
 import { SOCIAL_ITEMS, NAV_ITEMS } from "@/lib/constants";
+import SubsribeForm from "../subscirbeForm";
 
 export default function Footer() {
 	return (
@@ -14,13 +15,7 @@ export default function Footer() {
 			<div className="global-footer__content">
 				<div className="global-footer__inner">
 					<div className="global-footer__left">
-						<form>
-							<label htmlFor="email-subscribe">
-								<h3>Get notified when new articles & snippets arrive.</h3>
-							</label>
-							<input id="email-subscribe" type="email" placeholder="example@email.com" />
-							<button className="btn">Subscribe</button>
-						</form>
+						<SubsribeForm />
 					</div>
 					<div className="global-footer__right">
 						<div className="global-footer__site-links">

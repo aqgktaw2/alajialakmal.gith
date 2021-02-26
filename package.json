@@ -12,6 +12,7 @@
 		"lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js,.jsx"
 	},
 	"dependencies": {
+		"@mailchimp/mailchimp_marketing": "^3.0.33",
 		"classnames": "^2.2.6",
 		"gray-matter": "4.0.2",
 		"gsap": "^3.6.0",

@@ -35,3 +35,22 @@ export function getAllPosts({ fields = [], postType = "posts" }) {
 		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 	return posts;
 }
+
+// Subscribe to newsletter
+export async function subscribe({ email, onSuccess, onError }) {
+	try {
+		const res = await fetch("/api/subscribe", {
+			method: "POST",
+			body: JSON.stringify({ email }),
+		});
+
+		const { success, message } = await res.json();
+		if (!success) {
+			throw new Error(message);
+		}
+
+		onSuccess(message);
+	} catch (error) {
+		onError(error.message);
+	}
+}

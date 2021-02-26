@@ -57,6 +57,14 @@
 			font-weight: 600;
 			font-style: italic;
 			padding: 0.25rem 0.5rem;
+			display: flex;
+			align-items: center;
+
+			svg {
+				height: 2rem;
+				width: 2rem;
+				margin-right: 0.5rem;
+			}
 		}
 	}
 }
