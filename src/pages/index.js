@@ -7,6 +7,7 @@ import Introduction from "@/components/sections/introduction";
 import RecentSnippets from "@/components/sections/recentSnippets";
 import RecentProjects from "@/components/sections/recentProjects";
 
+// Test linting
 const Home = ({ posts, projects, snippets }) => {
 	return (
 		<Fragment>
