@@ -75,6 +75,9 @@
 		&--2 {
 			ul {
 				display: flex;
+				list-style: none;
+				padding: 0;
+				margin: 0;
 
 				li {
 					transform: translate3d(0, 0, 0);
