@@ -1,10 +1,14 @@
 import Link from "next/link";
 
-const Introduction = () => {
+const Introduction = ({ useHeading1 = false }) => {
 	return (
 		<section className="section-introduction">
 			<div className="section-introduction__header">
-				<h2 data-gsap="reveal-bottom">Who am I? (the TL;DR version)</h2>
+				{useHeading1 ? (
+					<h1>About Me</h1>
+				) : (
+					<h2 data-gsap="reveal-bottom">Who am I? (the TL;DR version)</h2>
+				)}
 			</div>
 			<div className="section-introduction__inner">
 				<p data-gsap="reveal-bottom">
@@ -13,7 +17,7 @@ const Introduction = () => {
 					<Link href="/projects" passHref>
 						<a>rich & responsive UI experiences</a>
 					</Link>{" "}
-					for web projects across all scales. I am a JAM Stack advocate, and I enjoy{" "}
+					for web projects across all scales. I am passionate about the JAM Stack, enjoy{" "}
 					<Link href="/posts" passHref>
 						<a>writing articles</a>
 					</Link>{" "}
@@ -25,11 +29,13 @@ const Introduction = () => {
 				</p>
 
 				{/* More about me button */}
-				<Link href="/about" passHref>
-					<a data-gsap="reveal-bottom" className="btn">
-						More About Me
-					</a>
-				</Link>
+				{!useHeading1 && (
+					<Link href="/about" passHref>
+						<a data-gsap="reveal-bottom" className="btn">
+							More About Me
+						</a>
+					</Link>
+				)}
 			</div>
 		</section>
 	);

@@ -26,30 +26,6 @@
 			margin-bottom: 2rem;
 		}
 
-		ul {
-			list-style: disc;
-			padding-left: 2.8rem;
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-
-			li {
-				margin-top: 0.8rem;
-				margin-bottom: 0.8rem;
-			}
-		}
-
-		ol {
-			list-style: decimal;
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-			padding-left: 2.8rem;
-
-			li {
-				margin-top: 0.8rem;
-				margin-bottom: 0.8rem;
-			}
-		}
-
 		pre {
 			padding: 2rem;
 			background-color: var(--color-background-alt);
@@ -82,6 +58,18 @@
 			padding: 2rem;
 			margin: 2.4rem 0;
 			background-color: lighten($color-background-alt, 2.5);
+		}
+	}
+
+	ol {
+		list-style: decimal;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		padding-left: 2.8rem;
+
+		li {
+			margin-top: 0.8rem;
+			margin-bottom: 0.8rem;
 		}
 	}
 }
