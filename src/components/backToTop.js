@@ -26,6 +26,7 @@ const BackToTop = () => {
 
 	const handleScrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
+		if (window.innerWidth <= 768) return;
 		[...document.querySelectorAll("button, a, input")][0].focus();
 	};
 
