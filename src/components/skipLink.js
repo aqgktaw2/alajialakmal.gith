@@ -4,7 +4,7 @@ const SkipLink = () => {
 	const handleSkip = evt => {
 		evt.preventDefault();
 		const main = document.querySelector("#main-content");
-		[...main.querySelectorAll("a", "button", "input")][0]?.focus();
+		[...main.querySelectorAll("a, button, input")][0]?.focus();
 		return false;
 	};
 

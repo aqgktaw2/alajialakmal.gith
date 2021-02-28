@@ -29,7 +29,8 @@ const About = () => {
 		<Fragment>
 			<SEO title="About Me | Denny Hong" />
 			<div className="page-about">
-				<Introduction useHeading1 linkToEmbeded />
+				<Introduction useHeading1 linkToEmbeded noBg />
+
 				<div className="page-about__inner">
 					{/* TIMELINE */}
 					<Timeline className="page-about__timeline">

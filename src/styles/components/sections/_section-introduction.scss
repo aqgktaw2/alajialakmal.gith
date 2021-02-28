@@ -7,6 +7,10 @@
 
 	background: var(--color-background) url("/bg-pattern.svg") no-repeat center center/cover;
 
+	&--no-bg {
+		background: transparent;
+	}
+
 	&__header {
 		@include container();
 

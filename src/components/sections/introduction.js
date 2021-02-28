@@ -1,7 +1,9 @@
 import Link from "next/link";
+import classNames from "classnames";
+
 import { IconSpotify, IconTwitter } from "@/components/icons";
 
-const Introduction = ({ useHeading1 = false, linkToEmbeded = false }) => {
+const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false }) => {
 	const handleScroll = evt => {
 		evt.preventDefault();
 		const id = evt.target.closest("a").href.split("#")[1];
@@ -12,7 +14,9 @@ const Introduction = ({ useHeading1 = false, linkToEmbeded = false }) => {
 	};
 
 	return (
-		<section className="section-introduction">
+		<section
+			className={classNames("section-introduction", { "section-introduction--no-bg": noBg })}
+		>
 			<div className="section-introduction__header">
 				{useHeading1 ? (
 					<h1 data-gsap="reveal-bottom">About Me</h1>
