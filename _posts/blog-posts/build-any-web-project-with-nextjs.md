@@ -33,7 +33,7 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 4. Ordered Listitem
 5. Ordered Listitem
 
-- Unordered Listitem
+- Built custom video controls with html video api
 - Unordered Listitem
 - Unordered Listitem
 - Unordered Listitem
