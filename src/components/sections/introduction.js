@@ -1,11 +1,21 @@
 import Link from "next/link";
+import { IconSpotify, IconTwitter } from "@/components/icons";
 
-const Introduction = ({ useHeading1 = false }) => {
+const Introduction = ({ useHeading1 = false, linkToEmbeded = false }) => {
+	const handleScroll = evt => {
+		evt.preventDefault();
+		const id = evt.target.closest("a").href.split("#")[1];
+		const scrollToTarget = document.getElementById(id);
+		scrollToTarget.focus();
+		window.scrollTo({ top: scrollToTarget.getBoundingClientRect().top - 350, behavior: "smooth" });
+		return false;
+	};
+
 	return (
 		<section className="section-introduction">
 			<div className="section-introduction__header">
 				{useHeading1 ? (
-					<h1>About Me</h1>
+					<h1 data-gsap="reveal-bottom">About Me</h1>
 				) : (
 					<h2 data-gsap="reveal-bottom">Who am I? (the TL;DR version)</h2>
 				)}
@@ -35,6 +45,22 @@ const Introduction = ({ useHeading1 = false }) => {
 							More About Me
 						</a>
 					</Link>
+				)}
+
+				{/* Show link to twitter and spotify embed */}
+				{linkToEmbeded && (
+					<div className="section-introduction__embeded-links">
+						<Link href="#twitter-embeded" passHref>
+							<a data-gsap="reveal-bottom" onClick={handleScroll}>
+								<IconTwitter />
+							</a>
+						</Link>
+						<Link href="#spotify-embeded" passHref>
+							<a data-gsap="reveal-bottom" onClick={handleScroll}>
+								<IconSpotify />
+							</a>
+						</Link>
+					</div>
 				)}
 			</div>
 		</section>

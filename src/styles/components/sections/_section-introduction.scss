@@ -35,4 +35,25 @@
 			}
 		}
 	}
+
+	&__embeded-links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		a {
+			padding: 0.25rem 1rem;
+			svg {
+				height: 3rem;
+				width: 3rem;
+				transition: var(--transition);
+			}
+
+			&:hover {
+				svg {
+					color: var(--color-highlight);
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,43 @@
+.section-embeded {
+	@include section();
+
+	&__inner {
+		@include container();
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 5rem;
+
+		@include media("<=md") {
+			grid-template-columns: 1fr;
+		}
+
+		h2 {
+			text-align: center;
+			margin-bottom: 3rem;
+			font-style: italic;
+		}
+	}
+
+	&__twitter > div,
+	&__spotify {
+		position: relative;
+		border: 1px solid var(--color-text);
+		box-shadow: 4px 4px 0px 0px var(--color-highlight);
+		background-color: var(--color-background);
+		overflow: hidden;
+
+		& > iframe {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}

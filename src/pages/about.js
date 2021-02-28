@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import SEO from "@/components/SEO";
 import Timeline from "@/components/timeline";
 import {
@@ -20,17 +22,18 @@ import {
 	IconNode,
 } from "@/components/icons";
 import Introduction from "@/components/sections/introduction";
-import { Fragment } from "react";
+import Embeded from "@/components/sections/embeded";
 
 const About = () => {
 	return (
 		<Fragment>
 			<SEO title="About Me | Denny Hong" />
 			<div className="page-about">
-				<Introduction useHeading1 />
+				<Introduction useHeading1 linkToEmbeded />
 				<div className="page-about__inner">
-					<Timeline>
-						<Timeline.Item className="page-about__timeline" Icon={<IconWeb />}>
+					{/* TIMELINE */}
+					<Timeline className="page-about__timeline">
+						<Timeline.Item Icon={<IconWeb />}>
 							<h3>Web Developer @ Beacon Digital Marketing</h3>
 							<p>December 2020 - Present</p>
 							<ul>
@@ -163,16 +166,18 @@ const About = () => {
 								Systems.
 							</p>
 							<p>
-								They say the class of 2020 is &quot;cursed&quot;, but looking back at it, I
-								wouldn&apos;t have it any other way.
+								They say the class of 2020 is &quot;cursed&quot;. In retrospect, I wouldn&apos;t
+								have it any other way.
 							</p>
 							<p>
-								2020 had made me so much stronger mentally, and gave me the time I needed to gain
-								knowledge and experience with all my favorite toolings and technologies that
-								I&lsquo;m using every day on the job.
+								2020 had made me stronger mentally, and gave me the time I needed to gain knowledge
+								and experience with all my favorite toolings and technologies that I&lsquo;m using
+								every day on the job.
 							</p>
 						</Timeline.Item>
 					</Timeline>
+					{/* END TIMELINE */}
+					<Embeded />
 				</div>
 			</div>
 		</Fragment>
