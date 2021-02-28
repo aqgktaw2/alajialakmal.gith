@@ -24,10 +24,18 @@ const BackToTop = () => {
 		});
 	}, [router.asPath]);
 
-	const handleScrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+	const handleScrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+		[...document.querySelectorAll("button, a, input")][0].focus();
+	};
 
 	return (
-		<button ref={buttonRef} className="back-to-top" onClick={handleScrollToTop}>
+		<button
+			ref={buttonRef}
+			aria-label="back to top"
+			className="back-to-top"
+			onClick={handleScrollToTop}
+		>
 			<IconBackTop />
 		</button>
 	);
