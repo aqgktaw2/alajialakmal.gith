@@ -18,7 +18,7 @@
 	transition: var(--transition);
 
 	@include media("<=sm") {
-		bottom: 3.5rem;
+		bottom: 10rem;
 		right: 3.5rem;
 	}
 
