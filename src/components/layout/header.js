@@ -1,18 +1,23 @@
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import classNames from "classnames";
 
 import { NAV_ITEMS } from "@/lib/constants";
 import SiteLogo from "@/components/siteLogo";
+import { IconArrowRight } from "@/components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Header() {
+const ScrollContext = createContext(false);
+
+const Header = ({ children }) => {
 	const headerRef = useRef();
 	const router = useRouter();
+
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
 		ScrollTrigger.create({
@@ -20,42 +25,75 @@ export default function Header() {
 			start: "top top-=50",
 			onUpdate(self) {
 				if (self.progress > 0) {
-					return headerRef.current?.classList.add("scrolled");
+					return setIsScrolled(true);
 				}
-				headerRef.current?.classList.remove("scrolled");
+				setIsScrolled(false);
 			},
 		});
 	}, [router.asPath]);
 
 	return (
-		<header ref={headerRef} className="global-header">
-			<div className="global-header__inner">
-				<div className="global-header__row global-header__row--1">
-					<Link href="/" passHref>
-						<a>
-							<SiteLogo width="8.5rem" height="8.5rem" />
-						</a>
-					</Link>
-				</div>
+		<ScrollContext.Provider value={{ isScrolled }}>
+			{children}
+			<header
+				ref={headerRef}
+				className={classNames("global-header", {
+					scrolled: isScrolled,
+					"global-header--with-alert": !!children,
+				})}
+			>
+				<div className="global-header__inner">
+					<div className="global-header__row global-header__row--1">
+						<Link href="/" passHref>
+							<a>
+								<SiteLogo width="8.5rem" height="8.5rem" />
+							</a>
+						</Link>
+					</div>
 
-				<nav className="global-header__row global-header__row--2">
-					<ul>
-						{NAV_ITEMS.map(({ href, label }, idx) => (
-							<li key={idx}>
-								<Link href={href} passHref>
-									<a
-										className={classNames("", {
-											active: router.pathname === href,
-										})}
-									>
-										{label}
-									</a>
-								</Link>
-							</li>
-						))}
-					</ul>
-				</nav>
-			</div>
-		</header>
+					<nav className="global-header__row global-header__row--2">
+						<ul>
+							{NAV_ITEMS.map(({ href, label }, idx) => (
+								<li key={idx}>
+									<Link href={href} passHref>
+										<a
+											className={classNames("", {
+												active: router.pathname === href,
+											})}
+										>
+											{label}
+										</a>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</ScrollContext.Provider>
 	);
-}
+};
+
+const HeaderAlert = ({ children, linkHref, linkLabel }) => {
+	const { isScrolled } = useContext(ScrollContext);
+
+	return (
+		<div className={classNames("header-alert", { scrolled: isScrolled })}>
+			<div className="header-alert__inner">
+				<h4>
+					<span>{children}</span>
+					{linkHref && linkLabel && (
+						<Link href={linkHref} passHref>
+							<a>
+								{linkLabel} <IconArrowRight />
+							</a>
+						</Link>
+					)}
+				</h4>
+			</div>
+		</div>
+	);
+};
+Header.Alert = HeaderAlert;
+
+export default Header;

@@ -11,7 +11,11 @@ export default function Layout({ children }) {
 		<Fragment>
 			<Meta />
 			<SkipLink />
-			<Header />
+			<Header>
+				{/* <Header.Alert linkHref="/" linkLabel=" view it here!">
+					New article is alive,
+				</Header.Alert> */}
+			</Header>
 			<main id="main-content">{children}</main>
 			<Footer />
 			<BackToTop />
