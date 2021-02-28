@@ -9,6 +9,10 @@
 	border-bottom: 2px solid transparent;
 	transform: translate3d(0, 0, 0);
 
+	&--with-alert {
+		top: 3rem;
+	}
+
 	// Adjust for standalone mobile notch
 	@media screen and (display-mode: standalone) {
 		padding: 5.5rem 0 3rem;
@@ -98,6 +102,59 @@
 							}
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+.header-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3rem;
+	z-index: 999;
+	transition: var(--transition);
+	background-color: transparent;
+
+	&.scrolled {
+		background-color: var(--color-background);
+	}
+
+	&__inner {
+		@include container();
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+
+		h4 {
+			margin: 0;
+			padding: 0;
+			line-height: initial;
+			width: max-content;
+			display: flex;
+			align-items: center;
+
+			a {
+				@include link();
+				font-weight: 600;
+				display: flex;
+				align-items: center;
+				margin-left: 0.5ch;
+
+				&:hover {
+					svg {
+						transform: translate3d(3px, 0, 0);
+					}
+				}
+
+				svg {
+					height: 2rem;
+					width: 2rem;
+					margin-left: 0.5rem;
+					transition: var(--transition);
 				}
 			}
 		}

@@ -1,3 +1,4 @@
+export { default as IconArrowRight } from "./IconArrowRight";
 export { default as IconAws } from "./IconAws";
 export { default as IconBackTop } from "./IconBackTop";
 export { default as IconCode } from "./IconCode";
