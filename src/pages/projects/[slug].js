@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostArticle from "@/components/postArticle";
 import RecentProjects from "@/components/sections/recentProjects";
+import generateRssFeed from "@/lib/rss";
 
 const Project = ({ project, relatedProjects }) => {
 	const router = useRouter();
@@ -76,6 +77,8 @@ export async function getStaticProps({ params }) {
 				otherProject.tags.find(tag => otherProject.tags.includes(tag)),
 		)
 		.slice(0, 2);
+
+	await generateRssFeed();
 
 	return {
 		props: {

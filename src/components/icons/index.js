@@ -11,6 +11,7 @@ export { default as IconHtml } from "./IconHtml";
 export { default as IconHubspot } from "./IconHubspot";
 export { default as IconJsWhite } from "./IconJsWhite";
 export { default as IconJs } from "./IconJs";
+export { default as IconJson } from "./IconJson";
 export { default as IconMusic } from "./IconMusic";
 export { default as IconNextjs } from "./IconNextjs";
 export { default as IconNode } from "./IconNode";

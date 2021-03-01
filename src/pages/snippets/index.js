@@ -4,6 +4,7 @@ import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
 import SnippetCard from "@/components/snippetCard";
 import { IconFolder } from "@/components/icons";
+import generateRssFeed from "@/lib/rss";
 
 const Snippets = ({ allSnippets }) => {
 	return (
@@ -47,6 +48,8 @@ export const getStaticProps = async () => {
 		fields: ["title", "excerpt", "coverImage", "date", "author", "ogImage", "tags", "type", "slug"],
 		postType: "snippets",
 	});
+
+	await generateRssFeed();
 
 	return {
 		props: {
