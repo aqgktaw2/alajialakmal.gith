@@ -6,6 +6,7 @@ import RecentPosts from "@/components/sections/recentPosts";
 import Introduction from "@/components/sections/introduction";
 import RecentSnippets from "@/components/sections/recentSnippets";
 import RecentProjects from "@/components/sections/recentProjects";
+import generateRssFeed from "@/lib/rss";
 
 // Test linting
 const Home = ({ posts, projects, snippets }) => {
@@ -48,6 +49,8 @@ export async function getStaticProps() {
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "snippets",
 	});
+
+	await generateRssFeed();
 
 	return {
 		props: {

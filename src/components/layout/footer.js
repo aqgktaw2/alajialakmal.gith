@@ -2,7 +2,26 @@ import Link from "next/link";
 
 import SiteLogo from "@/components/siteLogo";
 import { SOCIAL_ITEMS, NAV_ITEMS } from "@/lib/constants";
-import SubsribeForm from "../subscirbeForm";
+import SubsribeForm from "@/components/subscirbeForm";
+import { IconRss, IconJson } from "@/components/icons";
+
+const FEED_LINKS = [
+	{
+		href: "/rss/feed.xml",
+		label: "RSS Feed",
+		Icon: <IconRss />,
+	},
+	{
+		href: "/rss/atom.xml",
+		label: "Atom Feed",
+		Icon: <IconRss />,
+	},
+	{
+		href: "/rss/feed.json",
+		label: "JSON Feed",
+		Icon: <IconJson />,
+	},
+];
 
 export default function Footer() {
 	return (
@@ -55,6 +74,19 @@ export default function Footer() {
 						</a>
 					</Link>
 					<p>© {new Date().getFullYear()} DENNY HONG | ALL RIGHTS RESERVED</p>
+					<div className="">
+						<ul>
+							{FEED_LINKS.map(({ Icon, label, href }, idx) => (
+								<li key={idx}>
+									<Link href={href} passHref>
+										<a target="_blank" rel="noopener noreferrer">
+											{Icon} {label}
+										</a>
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
 				</div>
 			</div>
 		</footer>

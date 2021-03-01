@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.dennyh.me</id>
+    <title>Denny Hong's Blog</title>
+    <updated>2021-03-01T01:38:25.722Z</updated>
+    <generator>Next.js, using Feed for Node.js</generator>
+    <author>
+        <name>Denny Hong</name>
+        <email>hong961127@gmail.com</email>
+        <uri>https://twitter.com/DennyHong3</uri>
+    </author>
+    <link rel="alternate" href="https://www.dennyh.me"/>
+    <link rel="self" href="https://www.dennyh.me/rss/atom.xml"/>
+    <subtitle>Welcome to Denny Hong's blog!</subtitle>
+    <logo>https://www.dennyh.me/logo.svg</logo>
+    <icon>https://www.dennyh.me/favicon-196.png</icon>
+    <rights>All rights reserved 2021, Denny Hong.</rights>
+    <entry>
+        <title type="html"><![CDATA[Build any web project with Next.js]]></title>
+        <id>https://www.dennyh.me/posts/build-any-web-project-with-nextjs</id>
+        <link href="https://www.dennyh.me/posts/build-any-web-project-with-nextjs"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+<p><em>This is a paragraph.</em> <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<ol>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+</ol>
+<ul>
+<li>Built custom video controls with html video api</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+</ul>
+<pre><code class="language-JavaScript">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre>
+<hr>
+<p><a href="https://www.example.com">title</a></p>
+<p><img src="/assets/blog/preview/cover.jpg" alt="alt text"></p>
+<blockquote>
+<p>At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+</blockquote>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Make your Next.js app feel more natvie]]></title>
+        <id>https://www.dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</id>
+        <link href="https://www.dennyh.me/posts/make-your-nextjs-app-feel-more-natvie"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<p>Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+<h2>Lorem Ipsum</h2>
+<p>Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.</p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Why JAMstack?]]></title>
+        <id>https://www.dennyh.me/posts/why-jamstack</id>
+        <link href="https://www.dennyh.me/posts/why-jamstack"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>What is JAM Stack</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<p>Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.</p>
+<h2>Lorem Ipsum</h2>
+<p>Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.</p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Trick #1]]></title>
+        <id>https://www.dennyh.me/snippets/css-trick-1</id>
+        <link href="https://www.dennyh.me/snippets/css-trick-1"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+<p><em>This is a paragraph.</em> <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<ol>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+</ol>
+<ul>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+</ul>
+<pre><code class="language-JavaScript">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre>
+<hr>
+<p><a href="https://www.example.com">title</a></p>
+<p><img src="/assets/blog/preview/cover.jpg" alt="alt text"></p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CSS Trick #1]]></title>
+        <id>https://www.dennyh.me/snippets/css-trick-2</id>
+        <link href="https://www.dennyh.me/snippets/css-trick-2"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+<p><em>This is a paragraph.</em> <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<ol>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+</ol>
+<ul>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+</ul>
+<pre><code class="language-JavaScript">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre>
+<hr>
+<p><a href="https://www.example.com">title</a></p>
+<p><img src="/assets/blog/preview/cover.jpg" alt="alt text"></p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JS Trick #1]]></title>
+        <id>https://www.dennyh.me/snippets/js-trick-1</id>
+        <link href="https://www.dennyh.me/snippets/js-trick-1"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+<p><em>This is a paragraph.</em> <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<ol>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+</ol>
+<ul>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+</ul>
+<pre><code class="language-JavaScript">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre>
+<hr>
+<p><a href="https://www.example.com">title</a></p>
+<p><img src="/assets/blog/preview/cover.jpg" alt="alt text"></p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JS Trick #1]]></title>
+        <id>https://www.dennyh.me/snippets/js-trick-2</id>
+        <link href="https://www.dennyh.me/snippets/js-trick-2"/>
+        <updated>2020-03-16T05:35:07.322Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></summary>
+        <content type="html"><![CDATA[<h2>This is a Heading 2</h2>
+<h3>This is a Heading 3</h3>
+<h4>This is a Heading 4</h4>
+<h5>This is a Heading 5</h5>
+<h6>This is a Heading 6</h6>
+<p><em>This is a paragraph.</em> <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
+<ol>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+<li>Ordered Listitem</li>
+</ol>
+<ul>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+<li>Unordered Listitem</li>
+</ul>
+<pre><code class="language-JavaScript">{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+</code></pre>
+<hr>
+<p><a href="https://www.example.com">title</a></p>
+<p><img src="/assets/blog/preview/cover.jpg" alt="alt text"></p>
+]]></content>
+        <author>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </author>
+        <contributor>
+            <name>Denny Hong</name>
+            <email>hong961127@gmail.com</email>
+            <uri>https://twitter.com/DennyHong3</uri>
+        </contributor>
+    </entry>
+</feed>

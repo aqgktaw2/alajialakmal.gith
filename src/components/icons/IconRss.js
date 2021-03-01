@@ -4,16 +4,20 @@ function SvgIconRss(props) {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
+			aria-hidden="true"
+			width="1em"
+			height="1em"
+			style={{
+				msTransform: "rotate(360deg)",
+				WebkitTransform: "rotate(360deg)",
+			}}
+			viewBox="0 0 16 16"
+			transform="rotate(360)"
 			{...props}
 		>
 			<path
-				strokeLinecap="round"
-				strokeLinejoin="round"
-				strokeWidth={2}
-				d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z"
+				d="M2 0a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 11-2 0 8 8 0 00-8-8 1 1 0 010-2zm0 4a6 6 0 016 6 1 1 0 11-2 0 4 4 0 00-4-4 1 1 0 010-2zm.5 7a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"
+				fill="currentColor"
 			/>
 		</svg>
 	);

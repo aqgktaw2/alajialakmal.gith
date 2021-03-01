@@ -3,6 +3,7 @@ import Link from "next/link";
 import PostCard from "@/components/postCard";
 import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
+import generateRssFeed from "@/lib/rss";
 
 const Posts = ({ allPosts }) => {
 	return (
@@ -43,6 +44,8 @@ export async function getStaticProps() {
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "posts",
 	});
+
+	await generateRssFeed();
 
 	return {
 		props: {
