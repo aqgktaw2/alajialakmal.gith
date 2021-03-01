@@ -6,7 +6,6 @@ import { getPostBySlug, getAllPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostArticle from "@/components/postArticle";
 import RecentPosts from "@/components/sections/recentPosts";
-import generateRssFeed from "@/lib/rss";
 
 const Post = ({ post, relatedPosts }) => {
 	const router = useRouter();
@@ -51,8 +50,6 @@ export async function getStaticProps({ params }) {
 				otherPost.slug !== post.slug && otherPost.tags.find(tag => otherPost.tags.includes(tag)),
 		)
 		.slice(0, 3);
-
-	await generateRssFeed();
 
 	return {
 		props: {

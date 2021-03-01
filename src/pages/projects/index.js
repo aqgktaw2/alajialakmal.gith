@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
 import ProjectCard from "@/components/projectCard";
-import generateRssFeed from "@/lib/rss";
 
 const Projects = ({ allProjects }) => {
 	return (
@@ -53,8 +52,6 @@ export async function getStaticProps() {
 		],
 		postType: "projects",
 	});
-
-	await generateRssFeed();
 
 	return {
 		props: {

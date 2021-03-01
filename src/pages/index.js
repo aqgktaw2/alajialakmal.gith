@@ -7,6 +7,7 @@ import Introduction from "@/components/sections/introduction";
 import RecentSnippets from "@/components/sections/recentSnippets";
 import RecentProjects from "@/components/sections/recentProjects";
 import generateRssFeed from "@/lib/rss";
+import generateSitemap from "@/lib/sitemap";
 
 // Test linting
 const Home = ({ posts, projects, snippets }) => {
@@ -51,6 +52,7 @@ export async function getStaticProps() {
 	});
 
 	await generateRssFeed();
+	await generateSitemap();
 
 	return {
 		props: {

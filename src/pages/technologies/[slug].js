@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 
 import { getAllPosts } from "@/lib/api";
 import ProjectCard from "@/components/projectCard";
-import generateRssFeed from "@/lib/rss";
 
 const Technologies = ({ projects }) => {
 	const router = useRouter();
@@ -39,8 +38,6 @@ export const getStaticProps = async ({ params }) => {
 		postType: "projects",
 	});
 	const projects = allProjects.filter(project => project.tags.includes(params.slug));
-
-	await generateRssFeed();
 
 	return {
 		props: {

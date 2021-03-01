@@ -3,8 +3,8 @@ import { join } from "path";
 import matter from "gray-matter";
 
 const postsDirectories = {
-	posts: join(process.cwd(), "_posts", "blog-posts"),
-	snippets: join(process.cwd(), "_posts", "code-snippets"),
+	posts: join(process.cwd(), "_posts", "posts"),
+	snippets: join(process.cwd(), "_posts", "snippets"),
 	projects: join(process.cwd(), "_posts", "projects"),
 };
 
@@ -35,6 +35,19 @@ export function getAllPosts({ fields = [], postType = "posts" }) {
 		.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 	return posts;
 }
+
+export const getAllTags = ({ postType }) => {
+	return [
+		...new Set(
+			getAllPosts({
+				fields: ["tags"],
+				postType,
+			})
+				.map(post => post.tags)
+				.flat(),
+		),
+	];
+};
 
 // Subscribe to newsletter
 export async function subscribe({ email, onSuccess, onError }) {

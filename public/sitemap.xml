@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://dennyh.me/about</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/projects/cysiv</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/projects/signals</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/posts/build-any-web-project-with-nextjs</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/posts/why-jamstack</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/snippets/css-trick-1</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/snippets/css-trick-2</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/snippets/js-trick-1</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/snippets/js-trick-2</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/posts</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/projects</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/snippets</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/topics/JavaScript</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/topics/HTML</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/topics/CSS</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/repositories/CSS</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/repositories/JavsScript</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/technologies/JavaScript</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/technologies/HTML</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/technologies/CSS</loc>
+	</url>
+
+	<url>
+		<loc>https://dennyh.me/technologies/Hubspot</loc>
+	</url>
+</urlset>

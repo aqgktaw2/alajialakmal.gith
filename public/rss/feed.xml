@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Denny Hong's Blog</title>
-        <link>https://www.dennyh.me</link>
+        <link>https://dennyh.me</link>
         <description>Welcome to Denny Hong's blog!</description>
-        <lastBuildDate>Mon, 01 Mar 2021 01:38:25 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Mar 2021 03:11:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Next.js, using Feed for Node.js</generator>
         <language>en</language>
         <image>
             <title>Denny Hong's Blog</title>
-            <url>https://www.dennyh.me/logo.svg</url>
-            <link>https://www.dennyh.me</link>
+            <url>https://dennyh.me/logo.svg</url>
+            <link>https://dennyh.me</link>
         </image>
         <copyright>All rights reserved 2021, Denny Hong.</copyright>
         <item>
             <title><![CDATA[Build any web project with Next.js]]></title>
-            <link>https://www.dennyh.me/posts/build-any-web-project-with-nextjs</link>
-            <guid>https://www.dennyh.me/posts/build-any-web-project-with-nextjs</guid>
+            <link>https://dennyh.me/posts/build-any-web-project-with-nextjs</link>
+            <guid>https://dennyh.me/posts/build-any-web-project-with-nextjs</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>This is a Heading 2</h2>
@@ -57,8 +57,8 @@
         </item>
         <item>
             <title><![CDATA[Make your Next.js app feel more natvie]]></title>
-            <link>https://www.dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</link>
-            <guid>https://www.dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</guid>
+            <link>https://dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</link>
+            <guid>https://dennyh.me/posts/make-your-nextjs-app-feel-more-natvie</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.</p>
@@ -70,8 +70,8 @@
         </item>
         <item>
             <title><![CDATA[Why JAMstack?]]></title>
-            <link>https://www.dennyh.me/posts/why-jamstack</link>
-            <guid>https://www.dennyh.me/posts/why-jamstack</guid>
+            <link>https://dennyh.me/posts/why-jamstack</link>
+            <guid>https://dennyh.me/posts/why-jamstack</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>What is JAM Stack</h2>
@@ -84,8 +84,8 @@
         </item>
         <item>
             <title><![CDATA[CSS Trick #1]]></title>
-            <link>https://www.dennyh.me/snippets/css-trick-1</link>
-            <guid>https://www.dennyh.me/snippets/css-trick-1</guid>
+            <link>https://dennyh.me/snippets/css-trick-1</link>
+            <guid>https://dennyh.me/snippets/css-trick-1</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>This is a Heading 2</h2>
@@ -122,8 +122,8 @@
         </item>
         <item>
             <title><![CDATA[CSS Trick #1]]></title>
-            <link>https://www.dennyh.me/snippets/css-trick-2</link>
-            <guid>https://www.dennyh.me/snippets/css-trick-2</guid>
+            <link>https://dennyh.me/snippets/css-trick-2</link>
+            <guid>https://dennyh.me/snippets/css-trick-2</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>This is a Heading 2</h2>
@@ -160,8 +160,8 @@
         </item>
         <item>
             <title><![CDATA[JS Trick #1]]></title>
-            <link>https://www.dennyh.me/snippets/js-trick-1</link>
-            <guid>https://www.dennyh.me/snippets/js-trick-1</guid>
+            <link>https://dennyh.me/snippets/js-trick-1</link>
+            <guid>https://dennyh.me/snippets/js-trick-1</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>This is a Heading 2</h2>
@@ -198,8 +198,8 @@
         </item>
         <item>
             <title><![CDATA[JS Trick #1]]></title>
-            <link>https://www.dennyh.me/snippets/js-trick-2</link>
-            <guid>https://www.dennyh.me/snippets/js-trick-2</guid>
+            <link>https://dennyh.me/snippets/js-trick-2</link>
+            <guid>https://dennyh.me/snippets/js-trick-2</guid>
             <pubDate>Mon, 16 Mar 2020 05:35:07 GMT</pubDate>
             <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.]]></description>
             <content:encoded><![CDATA[<h2>This is a Heading 2</h2>
