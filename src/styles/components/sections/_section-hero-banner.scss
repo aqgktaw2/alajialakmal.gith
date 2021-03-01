@@ -10,6 +10,7 @@
 	background: radial-gradient(circle, rgba(17, 0, 28, 0.5) 10%, rgba(7, 0, 11, 1) 60%);
 
 	&__inner {
+		// opacity: 0;
 		@include container();
 		// display: grid;
 		// grid-template-columns: repeat(2, 1fr);
@@ -164,6 +165,7 @@
 		position: relative;
 		text-align: center;
 		margin: 10px auto;
+		background-color: var(--color-background);
 	}
 	&__mouse-wheel {
 		height: 6px;

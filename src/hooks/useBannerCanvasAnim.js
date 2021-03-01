@@ -1,102 +1,100 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-import debounce from "@/utils/debounce";
+import useWindowResize from "./useWindowResize";
 
-const useBannerBackground = () => {
-	// Re-initialize canvas on window resize
-	const [windowInnerWidth, setWindowInnerWidth] = useState(0);
-	useEffect(() => {
-		const resize = debounce(function () {
-			setWindowInnerWidth(window.innerWidth);
-		}, 100);
-		window.addEventListener("resize", resize);
-		return () => {
-			window.removeEventListener("resize", resize);
-		};
-	}, []);
+const userBannerCanvasAnim = () => {
+	const { windowSize } = useWindowResize();
+
+	// Helpers
+	function lineToAngle(x1, y1, length, radians) {
+		const x2 = x1 + length * Math.cos(radians);
+		const y2 = y1 + length * Math.sin(radians);
+		return { x: x2, y: y2 };
+	}
+
+	function randomRange(min, max) {
+		return min + Math.random() * (max - min);
+	}
+
+	function degreesToRads(degrees) {
+		return (degrees / 180) * Math.PI;
+	}
+
+	// Particle
+	const particle = {
+		x: 0,
+		y: 0,
+		vx: 0,
+		vy: 0,
+		radius: 0,
+
+		create: function (x, y, speed, direction) {
+			const obj = Object.create(this);
+			obj.x = x;
+			obj.y = y;
+			obj.vx = Math.cos(direction) * speed;
+			obj.vy = Math.sin(direction) * speed;
+			return obj;
+		},
+
+		getSpeed: function () {
+			return Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+		},
+
+		setSpeed: function (speed) {
+			const heading = this.getHeading();
+			this.vx = Math.cos(heading) * speed;
+			this.vy = Math.sin(heading) * speed;
+		},
+
+		getHeading: function () {
+			return Math.atan2(this.vy, this.vx);
+		},
+
+		setHeading: function (heading) {
+			const speed = this.getSpeed();
+			this.vx = Math.cos(heading) * speed;
+			this.vy = Math.sin(heading) * speed;
+		},
+
+		update: function () {
+			this.x += this.vx;
+			this.y += this.vy;
+		},
+	};
 
 	// Draw stars & shooting starts on banner canvas
 	useEffect(() => {
-		// Helpers
-		function lineToAngle(x1, y1, length, radians) {
-			const x2 = x1 + length * Math.cos(radians);
-			const y2 = y1 + length * Math.sin(radians);
-			return { x: x2, y: y2 };
-		}
-
-		function randomRange(min, max) {
-			return min + Math.random() * (max - min);
-		}
-
-		function degreesToRads(degrees) {
-			return (degrees / 180) * Math.PI;
-		}
-
-		// Particle
-		const particle = {
-			x: 0,
-			y: 0,
-			vx: 0,
-			vy: 0,
-			radius: 0,
-
-			create: function (x, y, speed, direction) {
-				const obj = Object.create(this);
-				obj.x = x;
-				obj.y = y;
-				obj.vx = Math.cos(direction) * speed;
-				obj.vy = Math.sin(direction) * speed;
-				return obj;
-			},
-
-			getSpeed: function () {
-				return Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-			},
-
-			setSpeed: function (speed) {
-				const heading = this.getHeading();
-				this.vx = Math.cos(heading) * speed;
-				this.vy = Math.sin(heading) * speed;
-			},
-
-			getHeading: function () {
-				return Math.atan2(this.vy, this.vx);
-			},
-
-			setHeading: function (heading) {
-				const speed = this.getSpeed();
-				this.vx = Math.cos(heading) * speed;
-				this.vy = Math.sin(heading) * speed;
-			},
-
-			update: function () {
-				this.x += this.vx;
-				this.y += this.vy;
-			},
-		};
-
 		// Canvas and settings
 		const canvas = document.querySelector(".section-code-banner__background");
 		const context = canvas.getContext("2d");
-		const width = (canvas.width = window.innerWidth);
-		const height = (canvas.height = window.innerHeight);
+		const width = (canvas.width = windowSize.width);
+		const height = (canvas.height = windowSize.height);
 		const stars = [];
 		const shootingStars = [];
-		const layers = [
-			{ speed: 0.03, scale: 0.2, count: 160 },
-			{ speed: 0.06, scale: 0.5, count: 25 },
-			{ speed: 0.1, scale: 0.75, count: 15 },
-		];
-		const starsAngle = 145;
+		const layers =
+			windowSize.width <= 768
+				? [
+						{ speed: 0.03, scale: 0.2, count: 120 },
+						{ speed: 0.06, scale: 0.5, count: 40 },
+						{ speed: 0.1, scale: 0.75, count: 10 },
+				  ]
+				: [
+						{ speed: 0.045, scale: 0.2, count: 240 },
+						{ speed: 0.075, scale: 0.5, count: 80 },
+						{ speed: 0.1, scale: 0.75, count: 20 },
+				  ];
+
+		const starsAngle = 160;
 		const shootingStarSpeed = {
 			min: 15,
-			max: 20,
+			max: 17.5,
 		};
-		const shootingStarOpacityDelta = 0.01;
-		const trailLengthDelta = 0.01;
-		const shootingStarEmittingInterval = 1750;
-		const shootingStarLifeTime = 500;
-		const maxTrailLength = 350;
+		const shootingStarOpacityDelta = 0.0125;
+		const trailLengthDelta = 0.0125;
+		const shootingStarEmittingInterval = 1250;
+		const shootingStarLifeTime = 550;
+		const maxTrailLength = 375;
 		const starBaseRadius = 2;
 		const shootingStarRadius = 3;
 
@@ -237,16 +235,31 @@ const useBannerBackground = () => {
 			context.fill();
 		}
 
-		// Run
-		update();
+		// Run Scene
+		let intervalId;
+		function cancelShootingStars() {
+			if (intervalId) {
+				clearInterval(intervalId);
+			}
+		}
+		function periodicShootingStars() {
+			cancelShootingStars();
+			intervalId = setInterval(function () {
+				createShootingStar();
+			}, shootingStarEmittingInterval);
+		}
 
-		// Shooting stars
-		setInterval(function () {
-			createShootingStar();
-		}, shootingStarEmittingInterval);
-	}, [windowInnerWidth]);
+		update();
+		periodicShootingStars();
+		window.addEventListener("blur", cancelShootingStars);
+		window.addEventListener("focus", periodicShootingStars);
+		return () => {
+			window.removeEventListener("blur", cancelShootingStars);
+			window.removeEventListener("focus", periodicShootingStars);
+		};
+	}, [windowSize.width, windowSize.height]);
 
 	return null;
 };
 
-export default useBannerBackground;
+export default userBannerCanvasAnim;

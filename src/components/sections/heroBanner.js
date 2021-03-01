@@ -2,59 +2,50 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
-import useBannerBackground from "@/hooks/useBannerBackground";
+import userBannerCanvasAnim from "@/hooks/useBannerCanvasAnim";
 import { SOCIAL_ITEMS } from "@/lib/constants";
 
 const HeroBanner = () => {
-	const h1 = useRef();
-	const h2 = useRef();
-	const illustration = useRef();
+	userBannerCanvasAnim();
 
-	useBannerBackground();
-
-	const handleScroll = () => {
-		const heroBannerHeight = [...document.querySelectorAll("section")][0].getBoundingClientRect()
-			.height;
-		const headerHeight = document.querySelector(".global-header").getBoundingClientRect().height;
-		window.scrollTo({
-			top: heroBannerHeight - headerHeight,
-			behavior: "smooth",
-		});
-	};
+	const headingOne = useRef();
+	const headingTwo = useRef();
+	const illustrationWrapper = useRef();
 
 	useEffect(() => {
-		h1.current.innerHTML = h1.current.innerText
+		headingOne.current.innerHTML = headingOne.current.innerText
 			.split("")
 			.map(ch => (ch === " " ? "<span>&nbsp;</span>" : `<span>${ch}</span>`))
 			.join("");
-		h2.current.innerHTML = h2.current.innerText
+		headingTwo.current.innerHTML = headingTwo.current.innerText
 			.split("")
 			.map(ch => (ch === " " ? "<span>&nbsp;</span>" : `<span>${ch}</span>`))
 			.join("");
 
 		const tl = gsap.timeline({
-			defaults: { ease: "elastic.out(1.2, 0.4)", duration: 2.5 },
+			defaults: { ease: "elastic.out(1.15,0.85)", duration: 1.5 },
 		});
-		tl.set(h1.current.querySelectorAll("span"), {
+		tl.set(headingOne.current.querySelectorAll("span"), {
 			display: "inline-block",
 			opacity: 0,
-			y: 25,
+			y: 65,
 		})
-			.set(h2.current.querySelectorAll("span"), {
+			.set(headingTwo.current.querySelectorAll("span"), {
 				display: "inline-block",
 				opacity: 0,
-				y: 25,
+				y: 55,
 			})
-			.set(illustration.current, {
-				x: -50,
+			.set(illustrationWrapper.current, {
+				x: -75,
 				y: 75,
-				scale: 0.9,
+				scale: 0.85,
 				opacity: 0,
 			})
-			.set(".section-code-banner__social a", { y: 25, opacity: 0 })
+			.set(".section-code-banner__social a", { y: 50, opacity: 0, transition: "initial" })
 			.set(".section-code-banner__mouse", { opacity: 0 })
+			.set(".section-code-banner__inner", { opacity: 1 })
 			.to(
-				illustration.current,
+				illustrationWrapper.current,
 				{
 					x: 0,
 					y: 0,
@@ -67,33 +58,52 @@ const HeroBanner = () => {
 							defaults: { repeat: -1, yoyo: true, duration: 7.5 },
 						});
 						tl2
-							.to(illustration.current, {
+							.to(illustrationWrapper.current, {
 								x: -15,
 								y: 15,
 								rotate: "1deg",
 							})
-							.to(illustration.current, { x: 15, y: -15, rotate: "-1deg" });
+							.to(illustrationWrapper.current, { x: 15, y: -15, rotate: "-1deg" });
 					},
 				},
-				0.75,
+				0.65,
 			)
-			.to(h1.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.1 }, 1.1)
-			.to(h2.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 2.1)
-			.to(".section-code-banner__social a", { y: 0, opacity: 1, stagger: 0.15 }, 3.5)
+			.to(headingOne.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.08 }, 0.75)
+			.to(headingTwo.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 1.65)
 			.to(
-				".section-code-banner__mouse",
-				{ opacity: 1, duration: "1.25", ease: "power1.easeIn" },
-				"-=2",
-			);
+				".section-code-banner__social a",
+				{
+					y: 0,
+					opacity: 1,
+					stagger: 0.15,
+					onComplete() {
+						document
+							.querySelectorAll(".section-code-banner__social a")
+							.forEach(a => (a.style.transition = "var(--transition)"));
+					},
+				},
+				3.1,
+			)
+			.to(".section-code-banner__mouse", { opacity: 1 }, "-=1.05");
 	}, []);
+
+	const handleScrollToNextSection = () => {
+		const heroBannerHeight = [...document.querySelectorAll("section")][0].getBoundingClientRect()
+			.height;
+		const headerHeight = document.querySelector(".global-header").getBoundingClientRect().height;
+		window.scrollTo({
+			top: heroBannerHeight - headerHeight,
+			behavior: "smooth",
+		});
+	};
 
 	return (
 		<section className="section-code-banner">
 			<canvas className="section-code-banner__background" />
-			<div className="section-code-banner__inner">
+			<div className="section-code-banner__inner" style={{ opacity: 0 }}>
 				<div className="section-code-banner__left">
-					<h1 ref={h1}>Denny Hong</h1>
-					<h2 ref={h2}>Web & JavaScript Developer</h2>
+					<h1 ref={headingOne}>Denny Hong</h1>
+					<h2 ref={headingTwo}>Web & JavaScript Developer</h2>
 					<div className="section-code-banner__social">
 						{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
 							<Link key={idx} href={href} passHref>
@@ -106,7 +116,7 @@ const HeroBanner = () => {
 				</div>
 
 				<div className="section-code-banner__right">
-					<div className="section-code-banner__right-inner" ref={illustration}>
+					<div className="section-code-banner__right-inner" ref={illustrationWrapper}>
 						<SvgIllustration />
 					</div>
 				</div>
@@ -114,7 +124,7 @@ const HeroBanner = () => {
 				<button
 					aria-label="proceed to next section"
 					className="section-code-banner__mouse"
-					onClick={handleScroll}
+					onClick={handleScrollToNextSection}
 				>
 					<div className="section-code-banner__mouse-icon">
 						<span className="section-code-banner__mouse-wheel" />
@@ -143,7 +153,7 @@ export default HeroBanner;
 
 const SvgIllustration = props => (
 	<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 730 830" {...props}>
-		<g id="background-illustration">
+		<g id="background-illustrationWrapper">
 			<path
 				id="Vector"
 				fill="url(#paint0_linear)"
