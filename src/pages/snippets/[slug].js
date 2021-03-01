@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostArticle from "@/components/postArticle";
 import RecentSnippets from "@/components/sections/recentSnippets";
+import BlogProgress from "@/components/blogProgress";
 
 const Snippet = ({ snippet, relatedSnippets }) => {
 	const router = useRouter();
@@ -20,6 +21,8 @@ const Snippet = ({ snippet, relatedSnippets }) => {
 
 	return (
 		<Fragment>
+			<BlogProgress />
+
 			{/* Post */}
 			<PostArticle post={snippet} />
 

@@ -6,6 +6,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostArticle from "@/components/postArticle";
 import RecentPosts from "@/components/sections/recentPosts";
+import BlogProgress from "@/components/blogProgress";
 
 const Post = ({ post, relatedPosts }) => {
 	const router = useRouter();
@@ -20,6 +21,8 @@ const Post = ({ post, relatedPosts }) => {
 
 	return (
 		<Fragment>
+			<BlogProgress />
+
 			{/* Post */}
 			<PostArticle post={post} />
 
