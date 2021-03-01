@@ -23,7 +23,6 @@ import {
 } from "@/components/icons";
 import Introduction from "@/components/sections/introduction";
 import Embeded from "@/components/sections/embeded";
-import generateRssFeed from "@/lib/rss";
 
 const About = () => {
 	return (
@@ -187,11 +186,3 @@ const About = () => {
 };
 
 export default About;
-
-export const getStaticProps = async () => {
-	await generateRssFeed();
-	return {
-		props: {},
-		revalidate: 1,
-	};
-};

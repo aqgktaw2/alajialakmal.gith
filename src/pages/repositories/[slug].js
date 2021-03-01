@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 
 import { getAllPosts } from "@/lib/api";
 import SnippetCard from "@/components/snippetCard";
-import generateRssFeed from "@/lib/rss";
 
 const Repositories = ({ snippets }) => {
 	const router = useRouter();
@@ -30,8 +29,6 @@ export const getStaticProps = async ({ params }) => {
 	});
 	const snippets = allSnippets.filter(snippet => snippet.tags.includes(params.slug));
 
-	await generateRssFeed();
-
 	return {
 		props: {
 			snippets,
@@ -41,12 +38,6 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-	const paths1 = getAllPosts({
-		fields: ["tags"],
-		postType: "snippets",
-	});
-	console.log("----->", paths1);
-
 	const paths = getAllPosts({
 		fields: ["tags"],
 		postType: "snippets",
