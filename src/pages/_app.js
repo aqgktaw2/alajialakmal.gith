@@ -7,9 +7,18 @@ import Layout from "@/components/layout";
 import "../styles/main.scss";
 
 // Progress bar
-Router.events.on("routeChangeStart", () => NProgress.start());
-Router.events.on("routeChangeComplete", () => NProgress.done());
-Router.events.on("routeChangeError", () => NProgress.done());
+Router.events.on("routeChangeStart", () => {
+	document.documentElement.style.scrollBehavior = "initial";
+	NProgress.start();
+});
+Router.events.on("routeChangeComplete", () => {
+	document.documentElement.style.scrollBehavior = "smooth";
+	NProgress.done();
+});
+Router.events.on("routeChangeError", () => {
+	document.documentElement.style.scrollBehavior = "smooth";
+	NProgress.done();
+});
 
 export default function MyApp({ Component, pageProps }) {
 	useScrollReveal();
