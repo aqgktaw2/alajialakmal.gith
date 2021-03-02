@@ -53,6 +53,7 @@ export async function getStaticProps({ params }) {
 			"tags",
 			"type",
 			"clientUrl",
+			"readTime",
 		],
 		postType: "projects",
 	});
@@ -70,6 +71,7 @@ export async function getStaticProps({ params }) {
 			"type",
 			"tags",
 			"clientUrl",
+			"readTime",
 		],
 		postType: "projects",
 	})

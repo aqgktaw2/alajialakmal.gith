@@ -1,7 +1,6 @@
 .section-code-banner {
 	@include section();
 
-	// padding-top: 20rem;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
@@ -9,13 +8,15 @@
 	background: var(--color-background);
 	background: radial-gradient(circle, rgba(17, 0, 28, 0.5) 10%, rgba(7, 0, 11, 1) 60%);
 
-	&__inner {
-		// opacity: 0;
-		@include container();
-		// display: grid;
-		// grid-template-columns: repeat(2, 1fr);
+	@media (max-height: 725px) {
+		// Screen too short for full height banner
+		min-height: initial;
+	}
 
-		// gap: 2rem;
+	&__inner {
+		// opacity: 0; // Prevent gsap flicker on load
+		@include container();
+
 		align-items: center;
 		position: relative;
 		z-index: 1;
@@ -27,19 +28,18 @@
 			flex: 1;
 		}
 
-		// @include media("<=md") {
-		//   grid-template-columns: 1fr;
-		// }
-
 		@include media("<=md") {
 			flex-direction: column;
 			justify-content: center;
 		}
+
+		@media (max-height: 725px) {
+			padding: 15rem 0;
+			min-height: initial;
+		}
 	}
 
 	&__left {
-		// align-self: flex-start;
-		// padding-top: 6rem;
 		margin-bottom: 5rem;
 
 		display: flex;

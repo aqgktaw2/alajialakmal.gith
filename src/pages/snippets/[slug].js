@@ -42,7 +42,18 @@ export async function getStaticProps({ params }) {
 	// Get the snippet
 	const snippet = getPostBySlug({
 		slug: params.slug,
-		fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags", "type"],
+		fields: [
+			"title",
+			"date",
+			"slug",
+			"author",
+			"content",
+			"ogImage",
+			"coverImage",
+			"tags",
+			"type",
+			"readTime",
+		],
 		postType: "snippets",
 	});
 	const content = await markdownToHtml(snippet.content || "");

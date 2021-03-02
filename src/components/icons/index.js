@@ -1,6 +1,7 @@
 export { default as IconArrowRight } from "./IconArrowRight";
 export { default as IconAws } from "./IconAws";
 export { default as IconBackTop } from "./IconBackTop";
+export { default as IconClock } from "./IconClock";
 export { default as IconCode } from "./IconCode";
 export { default as IconCss } from "./IconCss";
 export { default as IconFirebase } from "./IconFirebase";

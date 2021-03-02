@@ -18,7 +18,10 @@ html {
 		font-size: 55%;
 	}
 	@include media("<=sm") {
-		font-size: 52.5%;
+		font-size: 50%;
+	}
+	@include media("<=365") {
+		font-size: 45%;
 	}
 
 	scroll-behavior: smooth;

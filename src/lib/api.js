@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import readingTime from "reading-time";
 
 const postsDirectories = {
 	posts: join(process.cwd(), "_posts", "posts"),
@@ -23,6 +24,7 @@ export function getPostBySlug({ slug, fields = [], postType }) {
 		field === "slug" && (acc[field] = realSlug);
 		field === "content" && (acc[field] = content);
 		data[field] && (acc[field] = data[field]);
+		field === "readTime" && (acc[field] = readingTime(content).text);
 		return acc;
 	}, {});
 }

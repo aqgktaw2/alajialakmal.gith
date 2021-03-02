@@ -3,7 +3,7 @@
 	padding: 25rem 0 15rem;
 
 	@include media("<=sm") {
-		padding: 15rem 0 5rem;
+		padding: 20rem 0 10rem;
 	}
 
 	&__cover {
@@ -37,9 +37,62 @@
 		}
 	}
 
+	&__share {
+		display: flex;
+		align-items: center;
+
+		svg {
+			margin-right: 0.5rem;
+		}
+	}
+
+	&__author {
+		img {
+			width: 3.5rem;
+			height: 3.5rem;
+			border-radius: 50%;
+			box-shadow: 0 0 0 2px var(--color-highlight);
+			margin-right: 2rem;
+		}
+	}
+
 	&__meta {
 		display: flex;
 		align-items: center;
+		margin-bottom: 2rem;
+
+		@include media("<=sm") {
+			flex-direction: column;
+			align-items: center;
+
+			& > *:not(:last-of-type) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.author {
+			@include media("<=sm") {
+				margin-right: 0;
+			}
+		}
+
+		& > div:last-of-type {
+			display: flex;
+			align-items: center;
+			margin-left: 0.5rem;
+
+			& > span {
+				@include media("<=sm") {
+					display: none;
+				}
+			}
+
+			svg {
+				height: 2rem;
+				width: 2rem;
+				margin: 0 0.25rem 0 0.5rem;
+			}
+		}
 	}
 
 	&__content {
@@ -59,16 +112,6 @@
 			width: 100%;
 			max-width: 850px;
 			text-align: center;
-		}
-	}
-
-	&__author {
-		img {
-			width: 3.5rem;
-			height: 3.5rem;
-			border-radius: 50%;
-			box-shadow: 0 0 0 2px var(--color-highlight);
-			margin-right: 2rem;
 		}
 	}
 }
