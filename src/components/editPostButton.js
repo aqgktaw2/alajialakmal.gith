@@ -2,10 +2,10 @@ import Link from "next/link";
 
 import IconGithub from "./icons/IconGithub";
 
-const REPO_POSTS_URL = "https://github.com/dennyhong96/portfolio-2021/blob/master/_posts";
+const REPO_POSTS_URL = "https://github.com/dennyhong96/dennyh.me/blob/master/_posts";
 const POST_TYPE_PATH = {
-	posts: "blog-posts",
-	snippets: "code-snippets",
+	posts: "posts",
+	snippets: "snippets",
 };
 
 const EditPostButton = ({ post }) => {
