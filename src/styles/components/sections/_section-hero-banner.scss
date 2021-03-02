@@ -1,6 +1,5 @@
 .section-code-banner {
 	@include section();
-
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
@@ -8,13 +7,7 @@
 	background: var(--color-background);
 	background: radial-gradient(circle, rgba(17, 0, 28, 0.5) 10%, rgba(7, 0, 11, 1) 60%);
 
-	@media (max-height: 725px) {
-		// Screen too short for full height banner
-		min-height: initial;
-	}
-
 	&__inner {
-		// opacity: 0; // Prevent gsap flicker on load
 		@include container();
 
 		align-items: center;
@@ -22,7 +15,9 @@
 		z-index: 1;
 
 		display: flex;
-		min-height: 100vh;
+
+		min-height: calc(100% - 10rem);
+		min-height: calc((var(--vh, 1vh) * 100) - 10rem);
 
 		& > * {
 			flex: 1;
@@ -31,11 +26,6 @@
 		@include media("<=md") {
 			flex-direction: column;
 			justify-content: center;
-		}
-
-		@media (max-height: 725px) {
-			padding: 15rem 0;
-			min-height: initial;
 		}
 	}
 
@@ -47,14 +37,20 @@
 		@include media("<=md") {
 			justify-content: flex-end;
 			margin-bottom: 3rem;
-		}
-
-		@include media("<=md") {
 			text-align: center;
+			margin-top: 12rem;
+
+			@media (min-height: 925px) {
+				margin-bottom: 9rem;
+			}
 		}
 
 		h1 {
 			font-style: italic;
+
+			@include media("<=365px") {
+				font-size: 4rem;
+			}
 		}
 
 		h2 {
@@ -88,6 +84,10 @@
 	}
 
 	&__right {
+		@include media("<=md") {
+			margin-bottom: 5rem;
+		}
+
 		svg {
 			width: 100%;
 			height: auto;
@@ -152,10 +152,13 @@
 		position: absolute;
 		left: 50%;
 		bottom: 0;
-		transform: translate(-50%, -50%) scale(0.75);
+		transform: translate3d(-50%, 25%, 0) scale(0.75);
 		cursor: pointer;
 		z-index: 0;
 		padding: 0 1rem;
+		&:hover {
+			transform: translate3d(-50%, 25%, 0) scale(0.8);
+		}
 	}
 	&__mouse-icon {
 		width: 25px;

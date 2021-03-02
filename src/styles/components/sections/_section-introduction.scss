@@ -1,5 +1,4 @@
 .section-introduction {
-	margin-top: -3rem;
 	padding-bottom: 5rem;
 	text-align: center;
 	position: relative;
@@ -9,6 +8,7 @@
 
 	&--no-bg {
 		background: transparent;
+		margin-top: initial;
 	}
 
 	&__header {
