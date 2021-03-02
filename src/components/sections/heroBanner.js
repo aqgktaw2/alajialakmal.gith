@@ -102,7 +102,9 @@ const HeroBanner = () => {
 			<canvas className="section-code-banner__background" />
 			<div className="section-code-banner__inner" style={{ opacity: 0 }}>
 				<div className="section-code-banner__left">
-					<h1 ref={headingOne}>Denny Hong</h1>
+					<h1 className="hero" ref={headingOne}>
+						Denny Hong
+					</h1>
 					<h2 ref={headingTwo}>Web & JavaScript Developer</h2>
 					<div className="section-code-banner__social">
 						{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (

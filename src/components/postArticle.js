@@ -16,6 +16,9 @@ const PostArticle = ({ post }) => {
 				coverImage={post.coverImage}
 				date={post.date}
 				author={post.author}
+				readTime={post.readTime}
+				tags={post.tags}
+				type={post.type}
 			/>
 			<PostBody content={post.content} />
 			{post.type !== "projects" && <EditPostButton post={post} />}

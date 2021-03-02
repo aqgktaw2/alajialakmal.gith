@@ -23,6 +23,7 @@ const Embeded = () => {
 							noFooter
 							noScrollbar // BAD PRACTICE
 							// linkColor="#fff" // NOT WORKING
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -41,6 +42,7 @@ const Embeded = () => {
 							frameBorder="0"
 							allowtransparency="true"
 							allow="encrypted-media"
+							loading="lazy"
 						></iframe>
 					</div>
 				</div>
