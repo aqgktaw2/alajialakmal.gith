@@ -20,8 +20,8 @@ html {
 	@include media("<=sm") {
 		font-size: 50%;
 	}
-	@include media("<=365") {
-		font-size: 45%;
+	@include media("<=365px") {
+		font-size: 47.5%;
 	}
 
 	scroll-behavior: smooth;

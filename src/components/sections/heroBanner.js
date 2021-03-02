@@ -100,7 +100,11 @@ const HeroBanner = () => {
 	return (
 		<section className="section-code-banner">
 			<canvas className="section-code-banner__background" />
-			<div className="section-code-banner__inner" style={{ opacity: 0 }}>
+			<div
+				className="section-code-banner__inner"
+				// Prevent gsap flicker on load
+				style={{ opacity: 0 }}
+			>
 				<div className="section-code-banner__left">
 					<h1 className="hero" ref={headingOne}>
 						Denny Hong
