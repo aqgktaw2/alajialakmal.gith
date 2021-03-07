@@ -1,8 +1,12 @@
 import Link from "next/link";
 
 import { TECH_ICONS } from "@/lib/constants";
+import useWindowResize from "@/hooks/useWindowResize";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {
+	const {
+		windowSize: { width },
+	} = useWindowResize();
 	return (
 		<div data-gsap="reveal-bottom" className="project-card">
 			<div className="project-card__info">
@@ -12,7 +16,7 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 					</a>
 				</Link>
 
-				<p>{excerpt}</p>
+				{width > 768 ? <p>{excerpt}</p> : <p>{`${excerpt.slice(0, 100)}...`}</p>}
 
 				<div className="project-card__actions">
 					<div className="project-card__tech">

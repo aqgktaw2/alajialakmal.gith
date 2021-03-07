@@ -17,4 +17,6 @@ tags:
 type: "projects"
 ---
 
+At his current role as a web developer at Beacon, Denny Hong and his teamates worked on Signals Analytics' website. Signals Analytics is a fast-growing business intelligence company that needed to scale up their website quickly with new features and content. Here's a look at how he and his teamates helped reimagine their existing brand guide and execute a number of new web styles across their website.
+
 ## Project details coming soon...
