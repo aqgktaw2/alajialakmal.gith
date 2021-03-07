@@ -36,7 +36,7 @@ const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false
 						<a>writing articles</a>
 					</Link>{" "}
 					and{" "}
-					<Link href="/posts" passHref>
+					<Link href="/snippets" passHref>
 						<a>sharing code snippets</a>
 					</Link>{" "}
 					with fellow developers.
