@@ -73,7 +73,7 @@ So, what's the technique, and what's so special about this type of architecture?
 <!-- WHY I LOVE JAM STACK -->
 <h2 id="Why I love JAM Stack?">Why I love JAM Stack?</h2>
 
-Now we know what JAM Stack is and have a general idea of how it works. Let's talk about it's advantages and why I came to love this archetecture choice. As mentioned, the key differnece between a JAM Stack site and a traditional monolith website is that, your server is not involved in any type of way when a user requests to view a JAM Stack website. Give that, I think it's easy for us to come to agreement on the following advantages:
+Now we know what JAM Stack is and have a general idea of how it works. Let's talk about it's advantages and why I came to love this archetecture choice. As mentioned, the key differnece between a JAM Stack site and a traditional monolith website is that, your server is not involved in any type of way when a user requests to view a JAM Stack website. Given that, I think it's easy for us to come to agreement on the following advantages:
 
 - ### More Available & Scalable
 
