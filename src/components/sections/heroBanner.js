@@ -105,11 +105,17 @@ const HeroBanner = () => {
 				// Prevent gsap flicker on load
 				style={{ opacity: 0 }}
 			>
+				{/* HEADING TEXT */}
 				<div className="section-code-banner__left">
-					<h1 className="hero" ref={headingOne}>
-						Denny Hong
+					<h1>
+						<span className="hero h1" ref={headingOne}>
+							Denny Hong
+						</span>
+						<span className="h2" ref={headingTwo}>
+							Web & JavaScript Developer
+						</span>
 					</h1>
-					<h2 ref={headingTwo}>Web & JavaScript Developer</h2>
+
 					<div className="section-code-banner__social">
 						{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
 							<Link key={idx} href={href} passHref>
