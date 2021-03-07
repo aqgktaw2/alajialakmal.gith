@@ -3,17 +3,18 @@ import { useRouter } from "next/router";
 import { getAllPosts } from "@/lib/api";
 import PostCard from "@/components/postCard";
 import { Fragment } from "react";
-import SEO from "@/components/SEO";
+import Meta from "@/components/meta";
 
 const Topics = ({ posts }) => {
 	const router = useRouter();
 
 	return (
 		<Fragment>
-			<SEO
+			<Meta
 				title={`My web development articles on ${router.query.slug} | Denny Hong`}
 				description={`View a list of web development articles written by Denny Hong that talks about ${router.query.slug}.`}
 			/>
+
 			<div className="page-posts-by-topic">
 				<section className="page-posts-by-topic__header">
 					<h1>My articles on {router.query.slug}</h1>

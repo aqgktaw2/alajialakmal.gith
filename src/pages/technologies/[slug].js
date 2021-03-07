@@ -3,17 +3,18 @@ import { Fragment } from "react";
 
 import { getAllPosts } from "@/lib/api";
 import ProjectCard from "@/components/projectCard";
-import SEO from "@/components/SEO";
+import Meta from "@/components/meta";
 
 const Technologies = ({ projects }) => {
 	const router = useRouter();
 
 	return (
 		<Fragment>
-			<SEO
+			<Meta
 				title={`My web development projects with ${router.query.slug} | Denny Hong`}
 				description={`View a list of web development projects by Denny Hong that uses ${router.query.slug}.`}
 			/>
+
 			<div className="page-projects-by-technology">
 				<section className="page-projects-by-technology__header">
 					<h1>My projects with {router.query.slug}</h1>

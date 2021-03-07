@@ -9,4 +9,5 @@
 	background-color: var(--color-highlight-alt);
 	background: linear-gradient(90deg, var(--color-highlight) 24%, var(--color-highlight-alt) 72%);
 	transition: var(--transition);
+	transform: translate3d(0, 0, 0);
 }

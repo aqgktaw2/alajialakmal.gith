@@ -5,15 +5,16 @@ import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
 import SnippetCard from "@/components/snippetCard";
 import { IconFolder } from "@/components/icons";
-import SEO from "@/components/SEO";
+import Meta from "@/components/meta";
 
 const Snippets = ({ allSnippets }) => {
 	return (
 		<Fragment>
-			<SEO
+			<Meta
 				title="My web development code snippets | Denny Hong"
 				description="View a list of helpful web development code snippets by Denny Hong."
 			/>
+
 			<div className="page-snippets-listing">
 				<div className="page-snippets-listing__header">
 					<h1>My Code Snippets</h1>

@@ -8,11 +8,13 @@ import RecentSnippets from "@/components/sections/recentSnippets";
 import RecentProjects from "@/components/sections/recentProjects";
 import generateRssFeed from "@/lib/rss";
 import generateSitemap from "@/lib/sitemap";
+import Meta from "@/components/meta";
 
 // Test linting
 const Home = ({ posts, projects, snippets }) => {
 	return (
 		<Fragment>
+			<Meta />
 			<HeroBanner />
 			<Introduction />
 			<RecentPosts posts={posts} />

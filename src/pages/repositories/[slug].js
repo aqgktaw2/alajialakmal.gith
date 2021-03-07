@@ -3,17 +3,18 @@ import { Fragment } from "react";
 
 import { getAllPosts } from "@/lib/api";
 import SnippetCard from "@/components/snippetCard";
-import SEO from "@/components/SEO";
+import Meta from "@/components/meta";
 
 const Repositories = ({ snippets }) => {
 	const router = useRouter();
 
 	return (
 		<Fragment>
-			<SEO
+			<Meta
 				title={`My web development code snippets on ${router.query.slug} | Denny Hong`}
 				description={`View a list of web development code snippets shared by Denny Hong that talks about ${router.query.slug}.`}
 			/>
+
 			<div className="page-snippets-by-repository">
 				<section className="page-snippets-by-repository__header">
 					<h1>My {router.query.slug} code snippets</h1>
