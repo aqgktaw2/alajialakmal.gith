@@ -32,7 +32,7 @@ export default function SubsribeForm() {
 	};
 
 	return (
-		<form className="subscribe-form" onSubmit={handleSubscribe}>
+		<form id="subscribe" className="subscribe-form" onSubmit={handleSubscribe}>
 			<label htmlFor="email-subscribe">
 				<h3>Get notified when new Webdev articles & code snippets arrive.</h3>
 			</label>

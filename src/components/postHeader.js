@@ -1,26 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import Author from "./author";
 import formatDate from "@/utils/formatDate";
-import useTwitterShare from "@/hooks/useTwitterShare";
-import { IconClock, IconTwitter } from "@/components/icons";
+import { IconClock } from "@/components/icons";
+import TwitterShareButton from "@/components/twitterShareButton";
 
 export default function PostHeader({ title, coverImage, date, author, readTime, tags, type }) {
-	const { twitterShareUrl } = useTwitterShare({ title, tags });
-
 	return (
 		<div className="post-header">
 			<div className="post-header__cover">
 				{/* COVER IMAGE */}
-				<Image
-					src={coverImage}
-					alt={`Cover Image for ${title}`}
-					className=""
-					layout="responsive"
-					height={620}
-					width={1240}
-				/>
+				<Image src={coverImage} alt={`Cover Image for ${title}`} layout="fill" />
 			</div>
 			<div className="post-header__content">
 				<h1>{title}</h1>
@@ -42,12 +32,7 @@ export default function PostHeader({ title, coverImage, date, author, readTime, 
 				</div>
 
 				{/* TWITTER SHARE BUTTON */}
-				<Link href={twitterShareUrl} passHref>
-					<a className="btn post-header__share" target="_blank" rel="noreferrer noopener">
-						<IconTwitter /> Share this {type.endsWith("s") ? type.slice(0, type.length - 1) : type}
-					</a>
-				</Link>
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<TwitterShareButton title={title} tags={tags} type={type} />
 			</div>
 		</div>
 	);

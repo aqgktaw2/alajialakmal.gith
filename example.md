@@ -1,5 +1,5 @@
 ---
-title: "JS Trick #1"
+title: "Build any web project with Next.js"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2020-03-16T05:35:07.322Z"
@@ -9,9 +9,13 @@ author:
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 tags:
-  - "JavsScript"
-type: "snippets"
+  - "JavaScript"
+  - "HTML"
+  - "CSS"
+type: "posts"
 ---
+
+# This is a Heading 1
 
 ## This is a Heading 2
 
@@ -31,7 +35,7 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 4. Ordered Listitem
 5. Ordered Listitem
 
-- Unordered Listitem
+- Built custom video controls with html video api
 - Unordered Listitem
 - Unordered Listitem
 - Unordered Listitem
@@ -40,7 +44,7 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 ```JavaScript
 {
   "firstName": "John",
-  "lastName": "Smith",
+  "lastName": "Doe",
   "age": 25
 }
 ```
@@ -50,3 +54,5 @@ _This is a paragraph._ **Lorem ipsum dolor sit amet**, consectetur adipiscing el
 [title](https://www.example.com)
 
 ![alt text](/assets/blog/preview/cover.jpg)
+
+> At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

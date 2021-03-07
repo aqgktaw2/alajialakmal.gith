@@ -27,7 +27,9 @@ const Post = ({ post, relatedPosts }) => {
 			<PostArticle post={post} />
 
 			{/* Related Posts */}
-			<RecentPosts posts={relatedPosts} showListingLink={false} headerText="Similar Articles" />
+			{!!relatedPosts.length && (
+				<RecentPosts posts={relatedPosts} showListingLink={false} headerText="Similar Articles" />
+			)}
 		</Fragment>
 	);
 };
@@ -48,6 +50,7 @@ export async function getStaticProps({ params }) {
 			"coverImage",
 			"tags",
 			"type",
+			"excerpt",
 			"readTime",
 		],
 		postType: "posts",

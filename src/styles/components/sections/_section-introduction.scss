@@ -3,8 +3,8 @@
 	text-align: center;
 	position: relative;
 	z-index: 1;
-
-	background: var(--color-background) url("/bg-pattern.svg") no-repeat center center/cover;
+	overflow: hidden;
+	background: linear-gradient(180deg, rgba(7, 0, 11, 1) 0%, rgba(7, 0, 11, 0) 100%);
 
 	&--no-bg {
 		background: transparent;

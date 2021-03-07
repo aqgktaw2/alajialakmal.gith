@@ -10,18 +10,18 @@ export default function Meta() {
 			<meta name="theme-color" content="#07000b" />
 			<meta name="msapplication-TileColor" content="#07000b" />
 
-			<title>Denny Hong | Web & JavaScript Developer</title>
+			<title>Denny Hong | Web and JavaScript Developer</title>
 			<meta
 				name="description"
-				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
+				content="Denny Hong is a web developer and JavaScript developer based in Seattle, WA."
 			/>
 			<link rel="canonical" href={`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`} />
 
 			{/* Open Graph */}
-			<meta property="og:title" content="Denny Hong | Web & JavaScript Developer" />
+			<meta property="og:title" content="Denny Hong | Web and JavaScript Developer" />
 			<meta
 				property="og:description"
-				content="Denny Hong is a web developer & JavaScript developer based in Seattle, WA."
+				content="Denny Hong is a web developer and JavaScript developer based in Seattle, WA."
 			/>
 			<meta property="og:type" content="website" />
 			<meta property="og:url" href={`${process.env.NEXT_PUBLIC_DOMAIN}${router.asPath}`} />

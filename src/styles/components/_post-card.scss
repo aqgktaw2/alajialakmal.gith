@@ -15,8 +15,16 @@
 	}
 
 	&__image {
-		& > div {
-			width: 100%;
+		position: relative;
+
+		img {
+			object-fit: cover;
+		}
+
+		&::after {
+			padding-bottom: 50%;
+			content: "";
+			display: block;
 		}
 	}
 

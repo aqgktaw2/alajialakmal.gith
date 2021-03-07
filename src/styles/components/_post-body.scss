@@ -1,4 +1,6 @@
 .post-body {
+	background: linear-gradient(180deg, rgba(7, 0, 11, 1) 0%, rgba(7, 0, 11, 0) 10%);
+
 	&__inner {
 		width: 100%;
 		max-width: 850px;
@@ -33,13 +35,18 @@
 			box-shadow: 4px 4px 0px 0px var(--color-highlight);
 			margin-top: 2.4rem;
 			margin-bottom: 2.4rem;
-		}
 
-		hr {
-			border: none;
-			border-top: 2px solid var(--color-highlight-alt);
-			margin-top: 2rem;
-			margin-bottom: 2rem;
+			code {
+				tab-size: 4;
+				width: 100%;
+				display: block;
+				overflow-x: auto;
+				line-height: 1.75;
+
+				@include media("<=md") {
+					tab-size: 2;
+				}
+			}
 		}
 
 		a {
@@ -51,12 +58,16 @@
 		img {
 			margin-top: 2rem;
 			margin-bottom: 2rem;
+			border-radius: 3px;
 		}
 
 		blockquote {
+			& > *:first-child {
+				margin-top: 0;
+			}
+
 			border-left: 3px solid var(--color-highlight);
 			padding: 2rem;
-			margin: 2.4rem 0;
 			background-color: lighten($color-background-alt, 2.5);
 		}
 	}
@@ -65,7 +76,7 @@
 		list-style: decimal;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
-		padding-left: 2.8rem;
+		padding-left: 2.25rem;
 
 		li {
 			margin-top: 0.8rem;

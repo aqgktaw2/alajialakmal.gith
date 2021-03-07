@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import ProjectCard from "@/components/projectCard";
 
-const RecentProjects = ({ projects, showListingLink = true, headerText = "Lastest projects" }) => {
+const RecentProjects = ({ projects, showListingLink = true, headerText = "My projects" }) => {
 	return (
 		<section className="section-recent-projects">
 			<div className="section-recent-projects__header">

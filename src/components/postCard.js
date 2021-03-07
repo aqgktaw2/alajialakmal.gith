@@ -8,7 +8,7 @@ const PostCard = ({ post, authorSize = "" }) => {
 	return (
 		<div data-gsap="reveal-bottom" className="post-card">
 			<div className="post-card__image">
-				<Image src={post.coverImage} width={556} height={278} />
+				<Image src={post.coverImage} layout="fill" />
 			</div>
 
 			<div className="post-card__meta">

@@ -24,7 +24,7 @@ const SnippetCard = ({ post }) => {
 					</div>
 
 					<div className="snippet-card__info">
-						<h3>Test Snippet Title</h3>
+						<h3>{post.title}</h3>
 					</div>
 				</a>
 			</Link>

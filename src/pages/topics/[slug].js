@@ -2,21 +2,29 @@ import { useRouter } from "next/router";
 
 import { getAllPosts } from "@/lib/api";
 import PostCard from "@/components/postCard";
+import { Fragment } from "react";
+import SEO from "@/components/SEO";
 
 const Topics = ({ posts }) => {
 	const router = useRouter();
 
 	return (
-		<div className="page-posts-by-topic">
-			<section className="page-posts-by-topic__header">
-				<h1>My articles on {router.query.slug}</h1>
-			</section>
-			<section className="page-posts-by-topic__inner">
-				{posts.map((post, idx) => (
-					<PostCard key={idx} post={post} />
-				))}
-			</section>
-		</div>
+		<Fragment>
+			<SEO
+				title={`My web development articles on ${router.query.slug} | Denny Hong`}
+				description={`View a list of web development articles written by Denny Hong that talks about ${router.query.slug}.`}
+			/>
+			<div className="page-posts-by-topic">
+				<section className="page-posts-by-topic__header">
+					<h1>My articles on {router.query.slug}</h1>
+				</section>
+				<section className="page-posts-by-topic__inner">
+					{posts.map((post, idx) => (
+						<PostCard key={idx} post={post} />
+					))}
+				</section>
+			</div>
+		</Fragment>
 	);
 };
 
