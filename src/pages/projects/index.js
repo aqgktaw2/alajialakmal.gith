@@ -4,15 +4,16 @@ import { Fragment } from "react";
 import { getAllPosts } from "@/lib/api";
 import getherAllTags from "@/utils/getherAllTags";
 import ProjectCard from "@/components/projectCard";
-import SEO from "@/components/SEO";
+import Meta from "@/components/meta";
 
 const Projects = ({ allProjects }) => {
 	return (
 		<Fragment>
-			<SEO
+			<Meta
 				title="My web development projects | Denny Hong"
 				description="View a list of Denny Hong's projects on web development."
 			/>
+
 			<div className="page-projects-listing">
 				<div className="page-projects-listing__header">
 					<h1>Commercial & Personal Projects</h1>

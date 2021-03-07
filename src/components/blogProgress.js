@@ -23,6 +23,10 @@ const BlogProgress = () => {
 		handleProgress();
 
 		window.addEventListener("scroll", handleProgress);
+
+		return () => {
+			window.removeEventListener("scroll", handleProgress);
+		};
 	}, []);
 
 	return <div className="blog-progress" style={{ width: progress }} />;

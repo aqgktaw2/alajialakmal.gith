@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 
-import SEO from "@/components/SEO";
 import Timeline from "@/components/timeline";
 import {
 	IconGrad,
@@ -23,11 +22,13 @@ import {
 } from "@/components/icons";
 import Introduction from "@/components/sections/introduction";
 import Embeded from "@/components/sections/embeded";
+import Meta from "@/components/meta";
 
 const About = () => {
 	return (
 		<Fragment>
-			<SEO title="About Me | Denny Hong" />
+			<Meta title="About Me | Denny Hong" />
+
 			<div className="page-about">
 				<Introduction useHeading1 linkToEmbeded noBg />
 

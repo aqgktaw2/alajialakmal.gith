@@ -74,26 +74,26 @@ const Header = ({ children }) => {
 	);
 };
 
-const HeaderAlert = ({ children, linkHref, linkLabel }) => {
+const HeaderAlert = ({ children, linkHref }) => {
 	const { isScrolled } = useContext(ScrollContext);
 
 	return (
 		<div className={classNames("header-alert", { scrolled: isScrolled })}>
 			<div className="header-alert__inner">
-				<h4>
-					<span>{children}</span>
-					{linkHref && linkLabel && (
+				<p>
+					{linkHref && (
 						<Link href={linkHref} passHref>
 							<a>
-								{linkLabel} <IconArrowRight />
+								{children} <IconArrowRight />
 							</a>
 						</Link>
 					)}
-				</h4>
+				</p>
 			</div>
 		</div>
 	);
 };
+
 Header.Alert = HeaderAlert;
 
 export default Header;

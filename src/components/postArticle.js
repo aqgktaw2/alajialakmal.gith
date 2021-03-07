@@ -3,12 +3,12 @@ import { Fragment } from "react";
 import PostBody from "@/components/postBody";
 import PostHeader from "@/components/postHeader";
 import PostFooter from "@/components/postFooter";
-import SEO from "@/components/SEO";
+import Meta from "./meta";
 
 const PostArticle = ({ post }) => {
 	return (
 		<Fragment>
-			<SEO title={`${post.title} | Denny Hong`} description={post.excerpt} />
+			<Meta title={`${post.title} | Denny Hong`} description={post.excerpt} />
 
 			<article>
 				<PostHeader

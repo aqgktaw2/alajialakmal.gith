@@ -10,7 +10,10 @@
 	transform: translate3d(0, 0, 0);
 
 	&--with-alert {
-		top: 3rem;
+		top: 0.5rem;
+	}
+	&--with-alert.scrolled {
+		top: 0;
 	}
 
 	// Adjust for standalone mobile notch
@@ -114,12 +117,17 @@
 	left: 0;
 	right: 0;
 	height: 3rem;
-	z-index: 999;
+	opacity: 1;
+	z-index: 99999;
 	transition: var(--transition);
 	background-color: transparent;
+	transform: translate(0, 0, 0);
 
 	&.scrolled {
 		background-color: var(--color-background);
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
 	}
 
 	&__inner {
@@ -129,20 +137,21 @@
 		justify-content: center;
 		height: 100%;
 
-		h4 {
+		p {
 			margin: 0;
 			padding: 0;
 			line-height: initial;
 			width: max-content;
 			display: flex;
 			align-items: center;
+			font-size: 1.2rem;
 
 			a {
 				@include link();
-				font-weight: 600;
+				font-weight: normal;
+				font-size: inherit;
 				display: flex;
 				align-items: center;
-				margin-left: 0.5ch;
 
 				&:hover {
 					svg {
@@ -151,10 +160,11 @@
 				}
 
 				svg {
-					height: 2rem;
-					width: 2rem;
+					height: 1.75rem;
+					width: 1.75rem;
 					margin-left: 0.5rem;
 					transition: var(--transition);
+					transform: translate3d(0, 0, 0);
 				}
 			}
 		}
