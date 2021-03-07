@@ -33,5 +33,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Dynamic rss feed and sitemap generation
 public/rss/*
 public/sitemap.xml
+
+# eslint cache
+.eslintcache
