@@ -27,11 +27,9 @@ const Snippet = ({ snippet, relatedSnippets }) => {
 			<PostArticle post={snippet} />
 
 			{/* Related Posts */}
-			<RecentSnippets
-				posts={relatedSnippets}
-				showListingLink={false}
-				headerText="Similar Articles"
-			/>
+			{!relatedSnippets.length && (
+				<RecentSnippets title="Similar Snippets" posts={relatedSnippets} />
+			)}
 		</Fragment>
 	);
 };

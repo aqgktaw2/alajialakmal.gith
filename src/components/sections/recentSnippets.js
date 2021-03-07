@@ -2,16 +2,18 @@ import Link from "next/link";
 
 import SnippetCard from "../snippetCard";
 
-const RecentSnippets = ({ posts }) => {
+const RecentSnippets = ({ posts, showListingLink = true, title = "Lastest code snippets" }) => {
 	return (
 		<section className="section-recent-snippets">
 			<div className="section-recent-snippets__header">
-				<h2 data-gsap="reveal-bottom">Lastest code snippets</h2>
-				<Link href="/snippets" passHref>
-					<a data-gsap="reveal-bottom" className="btn">
-						View More Snippets
-					</a>
-				</Link>
+				<h2 data-gsap="reveal-bottom">{title}</h2>
+				{showListingLink && (
+					<Link href="/snippets" passHref>
+						<a data-gsap="reveal-bottom" className="btn">
+							View More Snippets
+						</a>
+					</Link>
+				)}
 			</div>
 			<div className="section-recent-snippets__inner">
 				{posts.map((post, idx) => (

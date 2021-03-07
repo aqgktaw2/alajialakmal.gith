@@ -27,9 +27,7 @@ const Post = ({ post, relatedPosts }) => {
 			<PostArticle post={post} />
 
 			{/* Related Posts */}
-			{!!relatedPosts.length && (
-				<RecentPosts posts={relatedPosts} showListingLink={false} headerText="Similar Articles" />
-			)}
+			<RecentPosts posts={relatedPosts} headerText="Similar Articles" />
 		</Fragment>
 	);
 };
