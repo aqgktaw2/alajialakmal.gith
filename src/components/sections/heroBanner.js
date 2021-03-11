@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
-import userBannerCanvasAnim from "@/hooks/useBannerCanvasAnim";
+// import userBannerCanvasAnim from "@/hooks/useBannerCanvasAnim";
 import { SOCIAL_ITEMS } from "@/lib/constants";
 
 const HeroBanner = () => {
-	userBannerCanvasAnim();
+	// userBannerCanvasAnim();
 
 	const headingOne = useRef();
 	const headingTwo = useRef();
