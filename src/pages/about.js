@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import dynamic from "next/dynamic";
 
 import Timeline from "@/components/timeline";
 import {
@@ -21,8 +22,9 @@ import {
 	IconFirebase,
 } from "@/components/icons";
 import Introduction from "@/components/sections/introduction";
-import Embeded from "@/components/sections/embeded";
 import Meta from "@/components/meta";
+
+const Embeded = dynamic(() => import("@/components/sections/embeded"));
 
 const About = () => {
 	return (

@@ -1,12 +1,14 @@
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
 import ErrorPage from "next/error";
 import { Fragment } from "react";
 
 import { getPostBySlug, getAllPosts } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PostArticle from "@/components/postArticle";
-import RecentPosts from "@/components/sections/recentPosts";
 import BlogProgress from "@/components/blogProgress";
+
+const RecentPosts = dynamic(() => import("@/components/sections/recentPosts"));
 
 const Post = ({ post, relatedPosts }) => {
 	const router = useRouter();
