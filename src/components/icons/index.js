@@ -4,6 +4,7 @@ export { default as IconBackTop } from "./IconBackTop";
 export { default as IconClock } from "./IconClock";
 export { default as IconCode } from "./IconCode";
 export { default as IconCss } from "./IconCss";
+export { default as IconExternal } from "./IconExternal";
 export { default as IconFirebase } from "./IconFirebase";
 export { default as IconFolder } from "./IconFolder";
 export { default as IconGrad } from "./IconGrad";

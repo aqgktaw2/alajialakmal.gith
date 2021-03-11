@@ -31,7 +31,7 @@ export async function getStaticProps() {
 	const posts = getAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "posts",
-	});
+	}).slice(0, 3);
 
 	const projects = getAllPosts({
 		fields: [
@@ -46,13 +46,14 @@ export async function getStaticProps() {
 			"clientUrl",
 		],
 		postType: "projects",
-	});
+	}).slice(0, 2);
 
 	const snippets = getAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "snippets",
-	});
+	}).slice(0, 3);
 
+	// Generate RSS Feed and Sitemap
 	await generateRssFeed();
 	await generateSitemap();
 

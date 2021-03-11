@@ -27,6 +27,17 @@
 		}
 	}
 
+	&__title {
+		display: flex;
+		align-items: center;
+
+		svg {
+			height: 1.5rem;
+			width: 1.5rem;
+			margin-left: 0.5rem;
+		}
+	}
+
 	&__actions {
 		margin-top: auto;
 	}
