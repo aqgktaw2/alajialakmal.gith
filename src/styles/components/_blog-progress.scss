@@ -4,10 +4,8 @@
 	top: 0;
 	left: 0;
 	height: 0.75rem;
-	width: 100%;
+	width: 0;
 	border-radius: 100rem;
 	background-color: var(--color-highlight-alt);
 	background: linear-gradient(90deg, var(--color-highlight) 24%, var(--color-highlight-alt) 72%);
-	transition: var(--transition);
-	transform: translate3d(0, 0, 0);
 }

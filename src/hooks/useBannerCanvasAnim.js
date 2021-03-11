@@ -253,6 +253,7 @@ const userBannerCanvasAnim = () => {
 		periodicShootingStars();
 		window.addEventListener("blur", cancelShootingStars);
 		window.addEventListener("focus", periodicShootingStars);
+
 		return () => {
 			window.removeEventListener("blur", cancelShootingStars);
 			window.removeEventListener("focus", periodicShootingStars);

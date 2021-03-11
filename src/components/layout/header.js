@@ -20,7 +20,7 @@ const Header = ({ children }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
-		ScrollTrigger.create({
+		const trigger = ScrollTrigger.create({
 			trigger: "main",
 			start: "top top-=50",
 			onUpdate(self) {
@@ -30,7 +30,11 @@ const Header = ({ children }) => {
 				setIsScrolled(false);
 			},
 		});
-	}, [router.asPath]);
+
+		return () => {
+			trigger.kill();
+		};
+	}, []);
 
 	return (
 		<ScrollContext.Provider value={{ isScrolled }}>
