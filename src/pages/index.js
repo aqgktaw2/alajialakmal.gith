@@ -1,14 +1,16 @@
 import { Fragment } from "react";
+import dynamic from "next/dynamic";
 
-import { getAllPosts } from "../lib/api";
-import HeroBanner from "@/components/sections/heroBanner";
-import RecentPosts from "@/components/sections/recentPosts";
-import Introduction from "@/components/sections/introduction";
-import RecentSnippets from "@/components/sections/recentSnippets";
-import RecentProjects from "@/components/sections/recentProjects";
+import { getAllPosts } from "@/lib/api";
 import generateRssFeed from "@/lib/rss";
 import generateSitemap from "@/lib/sitemap";
+import HeroBanner from "@/components/sections/heroBanner";
+import Introduction from "@/components/sections/introduction";
 import Meta from "@/components/meta";
+
+const RecentPosts = dynamic(() => import("@/components/sections/recentPosts"));
+const RecentSnippets = dynamic(() => import("@/components/sections/recentSnippets"));
+const RecentProjects = dynamic(() => import("@/components/sections/recentProjects"));
 
 // Test linting
 const Home = ({ posts, projects, snippets }) => {
