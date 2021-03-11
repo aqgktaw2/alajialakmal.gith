@@ -18,7 +18,7 @@ type: "snippets"
 
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-  <h3>Table of content:</h3>
+   <h3>Table of contents:</h3>
   <ul>
     <li>
       <h5><a href='#Generating a Mailchimp API Key'>Generating a Mailchimp API Key</a></h5>

@@ -19,7 +19,7 @@ type: "projects"
 
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-  <h3>Table of content:</h3>
+  <h3>Table of contents:</h3>
   <ul>
     <li>
       <h5><a href='#Architecture Choice'>Architecture Choice</a></h5>

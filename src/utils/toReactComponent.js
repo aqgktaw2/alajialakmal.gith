@@ -21,7 +21,7 @@ const processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
 // 	}, {});
 
 const processingInstructions = [
-	// PROCESS VIDEOS
+	// PROCESS NEXT IMAGE
 	{
 		shouldProcessNode(node) {
 			return node.type === "tag" && node.name === "img";

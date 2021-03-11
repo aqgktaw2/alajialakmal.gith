@@ -16,7 +16,7 @@ type: "posts"
 
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-  <h3>Table of content:</h3>
+  <h3>Table of contents:</h3>
   <ul>
     <li>
       <h5><a href='#What is the term "JAM Stack"?'>What is the term "JAM Stack"?</a></h5>
