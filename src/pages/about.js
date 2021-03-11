@@ -126,7 +126,7 @@ const About = () => {
 							<p>July 2020 - September 2020</p>
 							<ul>
 								<li>
-									Developed and shipped an Organizational Charts builder and visualiser webapp using
+									Developed and shipped an Organizational Charts builder/visualiser webapp using
 									React, and Node.js.
 								</li>
 								<li>
@@ -169,7 +169,7 @@ const About = () => {
 							<p>
 								Admittedly, 2020 might not be the greatest year to graduate, but it had made me much
 								stronger mentally, and I&apos;m glad I&apos;ve developed a passion for web
-								development and made my first little step into my career.
+								development and made my first little steps into my career.
 							</p>
 						</Timeline.Item>
 					</Timeline>
