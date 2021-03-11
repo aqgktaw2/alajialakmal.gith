@@ -12,6 +12,8 @@ tags:
   - "JavsScript"
   - "React"
   - "ReactHooks"
+  - "UI"
+  - "Animation"
 type: "snippets"
 ---
 

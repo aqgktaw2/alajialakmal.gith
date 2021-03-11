@@ -10,7 +10,7 @@ const useScrollReveal = () => {
 	useEffect(() => {
 		gsap.set('[data-gsap="reveal-bottom"]', { y: 75, opacity: 0 });
 
-		ScrollTrigger.batch('[data-gsap="reveal-bottom"]', {
+		const triggers = ScrollTrigger.batch('[data-gsap="reveal-bottom"]', {
 			onEnter(batch) {
 				gsap.to(batch, {
 					opacity: 1,
@@ -47,9 +47,13 @@ const useScrollReveal = () => {
 					ease: "elastic.out(1,1)",
 				});
 			},
-			// start: "top bottom-=5%",
-			// end: "bottom top+=5%",
+			start: "top bottom-=2.5%",
+			end: "bottom top+=2.5%",
 		});
+
+		return () => {
+			triggers.forEach(trigger => trigger.kill());
+		};
 	}, [router.asPath]);
 
 	return null;
