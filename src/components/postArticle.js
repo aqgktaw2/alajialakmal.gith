@@ -4,6 +4,7 @@ import PostBody from "@/components/postBody";
 import PostHeader from "@/components/postHeader";
 import PostFooter from "@/components/postFooter";
 import Meta from "./meta";
+import toReactComponent from "@/utils/toReactComponent";
 
 const PostArticle = ({ post }) => {
 	return (
@@ -20,7 +21,7 @@ const PostArticle = ({ post }) => {
 					tags={post.tags}
 					type={post.type}
 				/>
-				<PostBody content={post.content} />
+				<PostBody content={toReactComponent(post.content)} />
 
 				<PostFooter post={post} />
 			</article>

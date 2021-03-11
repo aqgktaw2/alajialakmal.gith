@@ -24,7 +24,8 @@ export default function PostBody({ content }) {
 
 	return (
 		<div className="post-body" ref={postBodyRef}>
-			<div className="post-body__inner" dangerouslySetInnerHTML={{ __html: content }} />
+			<div className="post-body__inner">{content}</div>
+			{/* <div className="post-body__inner" dangerouslySetInnerHTML={{ __html: content }} /> */}
 		</div>
 	);
 }

@@ -1,6 +1,18 @@
 .post-body {
 	background: linear-gradient(180deg, rgba(7, 0, 11, 1) 0%, rgba(7, 0, 11, 0) 10%);
 
+	.next-image {
+		position: relative;
+		img {
+			object-fit: cover;
+		}
+		&::after {
+			display: block;
+			content: "";
+			padding-bottom: 56.25%;
+		}
+	}
+
 	&__inner {
 		width: 100%;
 		max-width: 850px;

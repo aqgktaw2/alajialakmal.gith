@@ -23,12 +23,12 @@ type: "projects"
 
 <br>
 
-<img src="/assets/projects/cysiv/screenshots/home.png"/>
+<img data-process="true" src="/assets/projects/cysiv/screenshots/home.png" alt="cysiv project"/>
 
 <br>
 
-<img src="/assets/projects/cysiv/screenshots/inner.png"/>
+<img data-process="true" src="/assets/projects/cysiv/screenshots/inner.png" alt="cysiv project"/>
 
 <br>
 
-<img src="/assets/projects/cysiv/screenshots/resources.png"/>
+<img data-process="true" src="/assets/projects/cysiv/screenshots/resources.png" alt="cysiv project"/>
