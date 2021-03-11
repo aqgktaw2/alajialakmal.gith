@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
 const useScrollReveal = () => {
 	const router = useRouter();
+	console.log(router);
 
 	// Batch stagger animate any element with data-gsap="reveal-bottom"
 	useEffect(() => {
@@ -47,8 +48,8 @@ const useScrollReveal = () => {
 					ease: "elastic.out(1,1)",
 				});
 			},
-			start: "top bottom-=5%",
-			end: "bottom top+=5%",
+			// start: "top bottom-=5%",
+			// end: "bottom top+=5%",
 		});
 	}, [router.asPath]);
 
