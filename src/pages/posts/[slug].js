@@ -35,7 +35,7 @@ const Post = ({ post, relatedPosts }) => {
 export default Post;
 
 export async function getStaticProps({ params }) {
-	// Get the post
+	// Get the content and meta of current post
 	const post = getPostBySlug({
 		slug: params.slug,
 		fields: [
@@ -68,10 +68,7 @@ export async function getStaticProps({ params }) {
 
 	return {
 		props: {
-			post: {
-				...post,
-				content,
-			},
+			post: { ...post, content },
 			relatedPosts,
 		},
 		revalidate: 1,
@@ -85,9 +82,7 @@ export async function getStaticPaths() {
 	return {
 		paths: posts.map(post => {
 			return {
-				params: {
-					slug: post.slug,
-				},
+				params: { slug: post.slug },
 			};
 		}),
 		fallback: false,

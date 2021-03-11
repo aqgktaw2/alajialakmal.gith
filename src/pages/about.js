@@ -12,13 +12,13 @@ import {
 	IconReact,
 	IconWordpress,
 	IconHubspot,
-	IconPhp,
 	IconNextjs,
 	IconGraphql,
 	IconSass,
 	IconAws,
 	IconRedux,
 	IconNode,
+	IconFirebase,
 } from "@/components/icons";
 import Introduction from "@/components/sections/introduction";
 import Embeded from "@/components/sections/embeded";
@@ -39,14 +39,11 @@ const About = () => {
 							<h3>Web Developer @ Beacon Digital Marketing</h3>
 							<p>December 2020 - Present</p>
 							<ul>
+								<li>Developing and maintaining various web projects at scale for clients.</li>
 								<li>
-									Developing and maintaining various web projects at scale on WordPress and Hubspot
-									CMS.
+									Developing and maintaining internal tools and applications with React and Next.js.
 								</li>
-								<li>
-									Developing and maintaining internal toolings/applications with React and Next.js.
-								</li>
-								<li>Explorations around Headless CMS and JAM Stack technologies/services.</li>
+								<li>Explorations around Headless CMS and JAM Stack integrations/services.</li>
 							</ul>
 							<div className="page-about__timeline-tech">
 								<span>
@@ -68,13 +65,13 @@ const About = () => {
 									<IconNextjs />
 								</span>
 								<span>
-									<IconWordpress />
-								</span>
-								<span>
-									<IconPhp />
+									<IconFirebase />
 								</span>
 								<span>
 									<IconHubspot />
+								</span>
+								<span>
+									<IconWordpress />
 								</span>
 							</div>
 						</Timeline.Item>
@@ -87,7 +84,7 @@ const About = () => {
 									using React, and Nextjs.
 								</li>
 								<li>Developed WRLDS&apos; Node.js-based GraphQL API server on AWS EC2.</li>
-								<li>Integrated AWS Cognito for authentication and DynamoDB for NoSQL Datastore.</li>
+								<li>Integrated AWS Cognito and DynamoDB for authentication and database.</li>
 							</ul>
 							<div className="page-about__timeline-tech">
 								<span>
@@ -127,7 +124,7 @@ const About = () => {
 							<p>July 2020 - September 2020</p>
 							<ul>
 								<li>
-									Developed and shipped an Organization Charts builder and visualiser webapp using
+									Developed and shipped an Organizational Charts builder and visualiser webapp using
 									React, and Node.js.
 								</li>
 								<li>
@@ -168,13 +165,9 @@ const About = () => {
 								Systems.
 							</p>
 							<p>
-								They say the class of 2020 is &quot;cursed&quot;. In retrospect, I wouldn&apos;t
-								have it any other way.
-							</p>
-							<p>
-								2020 had made me stronger mentally, and gave me the time I needed to gain knowledge
-								and experience with all my favorite toolings and technologies that I&lsquo;m using
-								every day on the job.
+								Admittedly, 2020 might not be the greatest year to graduate, but it had made me much
+								stronger mentally, and I&apos;m glad I&apos;ve developed a passion for web
+								development and made my first little step into my career.
 							</p>
 						</Timeline.Item>
 					</Timeline>

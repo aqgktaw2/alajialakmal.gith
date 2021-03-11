@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { TECH_ICONS } from "@/lib/constants";
 import useWindowResize from "@/hooks/useWindowResize";
+import { IconExternal } from "./icons";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {
 	const {
@@ -12,7 +13,7 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 			<div className="project-card__info">
 				<Link href={clientUrl} passHref>
 					<a className="project-card__title" target="_blank" rel="noopener noreferrer">
-						<h3>{title}</h3>
+						<h3>{title}</h3> <IconExternal />
 					</a>
 				</Link>
 

@@ -10,6 +10,7 @@ import {
 	IconHubspot,
 	IconJs,
 	IconNextjs,
+	IconNode,
 	IconPhp,
 	IconReact,
 	IconSass,
@@ -58,4 +59,5 @@ export const TECH_ICONS = {
 	Firebase: <IconFirebase />,
 	GraphQL: <IconGraphql />,
 	Shopify: <IconShopify />,
+	NodeJs: <IconNode />,
 };

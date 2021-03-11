@@ -4,8 +4,8 @@ const Embeded = () => {
 	return (
 		<section className="section-embeded">
 			<div className="section-embeded__inner">
-				<div className="">
-					<h2>My discussions, inspirations, and source of knowledge.</h2>
+				<div>
+					<h2 data-gsap="reveal-bottom">My discussions, inspirations, and source of knowledge.</h2>
 					<div
 						tabIndex="-1"
 						data-gsap="reveal-bottom"
@@ -27,8 +27,10 @@ const Embeded = () => {
 						/>
 					</div>
 				</div>
-				<div className="">
-					<h2>Late night hacking? Here&apos;s my playlist to get you in your zone!</h2>
+				<div>
+					<h2 data-gsap="reveal-bottom">
+						Coding alone at night? Well you&apos;ve found the playlist!
+					</h2>
 					<div
 						tabIndex="-1"
 						data-gsap="reveal-bottom"

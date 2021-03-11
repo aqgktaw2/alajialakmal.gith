@@ -1,9 +1,9 @@
 ---
-title: "Signals Analytics"
-excerpt: "At his current role as a web developer at Beacon, Denny Hong and his teamates worked on Signals Analytics' website. Signals Analytics is a fast-growing business intelligence company that needed to scale up their website quickly with new features and content. Here's a look at how he and his teamates helped reimagine their existing brand guide and execute a number of new web styles across their website."
+title: "signals-analytics.com"
+excerpt: "Signals Analytics is a fast-growing business intelligence company. In my current role, I'm tasked with maintaining and developing new features / UI experiences to scale up their website."
 coverImage: "/assets/projects/signals/cover.png"
 clientUrl: "https://www.signals-analytics.com/"
-date: "2021-03-06T18:43:31.186Z"
+date: "2021-03-07T18:43:31.186Z"
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"

@@ -5,6 +5,7 @@ import useMobileViewport from "@/hooks/useMobileViewport";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import Layout from "@/components/layout";
 import "../styles/main.scss";
+import Head from "next/head";
 
 // Progress bar
 Router.events.on("routeChangeStart", () => {
@@ -26,6 +27,10 @@ export default function MyApp({ Component, pageProps }) {
 
 	return (
 		<Layout>
+			<Head>
+				{/* Responsive Vewport, can't be defined in _document.js */}
+				<meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width" />
+			</Head>
 			<Component {...pageProps} />
 		</Layout>
 	);
