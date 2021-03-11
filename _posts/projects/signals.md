@@ -23,12 +23,12 @@ type: "projects"
 
 <br>
 
-<img width="100%" height="auto" src="/assets/projects/signals/screenshots/home.png"/>
+<img data-process="true" src="/assets/projects/signals/screenshots/home.png" alt="signals analytics project"/>
 
 <br>
 
-<img width="100%" height="auto" src="/assets/projects/signals/screenshots/platform.png"/>
+<img data-process="true" src="/assets/projects/signals/screenshots/platform.png" alt="signals analytics project"/>
 
 <br>
 
-<img width="100%" height="auto" src="/assets/projects/signals/screenshots/resource.png"/>
+<img data-process="true" src="/assets/projects/signals/screenshots/resource.png" alt="signals analytics project"/>

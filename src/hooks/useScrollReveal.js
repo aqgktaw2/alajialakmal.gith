@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
 const useScrollReveal = () => {
 	const router = useRouter();
-	console.log(router);
 
 	// Batch stagger animate any element with data-gsap="reveal-bottom"
 	useEffect(() => {
