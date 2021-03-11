@@ -141,4 +141,5 @@ I also utilized the "API Route" feature of Next.js and built a newsletter subscr
 
 If you are looking for a similar site and don't want to start from scratch, you can use this site as a starting point.
 You can deploy this exact site with Vercel in seconds -
-<a target="_blank" ref="noreferrer noopener" href="https://vercel.com/new/git/external?repository-url=https://github.com/dennyhong96/denny-hong" rel="nofollow"><img src="https://camo.githubusercontent.com/5e471e99e8e022cf454693e38ec843036ec6301e27ee1e1fa10325b1cb720584/68747470733a2f2f76657263656c2e636f6d2f627574746f6e" alt="Deploy with Vercel" data-canonical-src="https://vercel.com/button" style="max-width:100%;"></a>
+
+<a target="_blank" rel="noreferrer noopener" href="https://vercel.com/new/git/external?repository-url=https://github.com/dennyhong96/denny-hong" rel="nofollow"><img src="https://camo.githubusercontent.com/5e471e99e8e022cf454693e38ec843036ec6301e27ee1e1fa10325b1cb720584/68747470733a2f2f76657263656c2e636f6d2f627574746f6e" alt="Deploy with Vercel" data-canonical-src="https://vercel.com/button" style="max-width:100%;"></a>
