@@ -2,7 +2,7 @@ import { Router } from "next/router";
 import NProgress from "nprogress";
 
 import useMobileViewport from "@/hooks/useMobileViewport";
-import useScrollReveal from "@/hooks/useScrollReveal";
+// import useScrollReveal from "@/hooks/useScrollReveal";
 import Layout from "@/components/layout";
 import "../styles/main.scss";
 import Head from "next/head";
@@ -22,7 +22,7 @@ Router.events.on("routeChangeError", () => {
 });
 
 export default function MyApp({ Component, pageProps }) {
-	useScrollReveal();
+	// useScrollReveal();
 	useMobileViewport();
 
 	return (

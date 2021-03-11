@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 import throttle from "@/utils/throttle";
 
 const BlogProgress = () => {
-	const [progress, setProgress] = useState(0);
+	const progressbarRef = useRef(null);
 
 	useEffect(() => {
 		const handleProgress = throttle(function () {
@@ -18,18 +19,17 @@ const BlogProgress = () => {
 			const scrollTop = window.pageYOffset;
 			const windowHeight = window.innerHeight;
 			const progress = `${(scrollTop / (documentHeight - windowHeight)) * 100}%`;
-			setProgress(progress);
+			gsap.to(progressbarRef.current, { width: progress });
 		}, 50);
 		handleProgress();
 
 		window.addEventListener("scroll", handleProgress);
-
 		return () => {
 			window.removeEventListener("scroll", handleProgress);
 		};
 	}, []);
 
-	return <div className="blog-progress" style={{ width: progress }} />;
+	return <div className="blog-progress" ref={progressbarRef} />;
 };
 
 export default BlogProgress;
