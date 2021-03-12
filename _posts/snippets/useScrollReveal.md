@@ -49,11 +49,11 @@ Now, there are definitely libraries that provide this type of animation out of t
 1. GSAP takes care of all the frustrating browser inconsistencies when it comes to animation, such as transform-origin, etc.
 2. GSAP provides an intuitive and standard syntax for developers.
 3. GSAP has silky smooth hardware accelerated animation by using JavaScript and requestAnimationFrame() under the hood by default, instead of CSS (of which you need to manually use rules like "transform3d(0,0,0);" to trigger hardware acceleration).
-4. This way you can use all the other great animation/utility features GSAP provides and only needing to import one package/library. Let's first look at the tool we'll be utilizing, which is the ScrollTrigger from GSAP. Its sole purpose is to help minimize the code needed to create scroll-based animations that are otherwise be done with intersection observers or, even the unoptimized "scroll" event listener(please don't do this).
+4. This way you can use all the other great animation/utility features GSAP provides and only needing to import one package/library.
 
 <h2 id="ScrollTrigger.batch(), gsap.to(), gsap.set()">ScrollTrigger.batch(), gsap.to(), gsap.set()</h2>
 
-Let's first look at the tool we'll be utilizing, which is the ScrollTrigger from GSAP. Its sole purpose is to help minimize the code needed to create scroll-based animations that are otherwise be done with intersection observers or, even the unoptimized "scroll" event listener(please don't do this).
+Let's first look at the main tool we'll use, which is the "ScrollTrigger" from GSAP. Its sole purpose is to help minimize the code needed when creating scroll-based animations that are otherwise done with intersection observers or "scroll" event listener.
 
 Now let's import our tools -
 
@@ -62,7 +62,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 ```
 
-If you want to animate a one-off element when it enters the viewport, you would use the "create" method on ScrollTrigger. But what we want to achieve is for the elements that are near each other to reveal in a staggered manner. So in this case we need to utilize the "batch" method on ScrollTrigger. (New for GSAP 3)
+If you want to animate a one-off element when it enters the viewport, you would use the "create" method on ScrollTrigger. But what we want to achieve is for a batch of elements that are close to each other to reveal in a staggered manner. So in this case we need to utilize the "batch" method on ScrollTrigger. (New for GSAP 3)
 
 Now let's create the animation logic -
 
@@ -110,15 +110,13 @@ ScrollTrigger.batch('[data-gsap="reveal-bottom"]', {
 });
 ```
 
-"ScrollTrigger.batch" method takes in a query selector/elements as the first parameter, which is the query selector you'll apply on every element that you'd like them to reveal on scroll. In our case, we'll give the elements a custom attribute "data-gsap" and the value of "reveal-bottom".
+"ScrollTrigger.batch" method takes in a query selector as the first parameter. That query selector will be put on all elements you want to enable scroll reveal. In our case, we'll use an attribute selector. Here we give the elements a custom attribute "data-gsap" and the value of "reveal-bottom".
 
-For the 2nd argument, we can pass in an object that has a few callback functions nested in it, those callbacks get the current batch of elements as arguments, and there you can hook into the events when that batch of elements enter the viewport(onEnter), leave the viewport(onLeave), enter the viewport again(onEnterBack), and leave the viewport again(onLeaveBack). And within each callback we could define any logic we want, in our case, we will just animate the batch of elements.
+For the 2nd argument, we can pass in an object that has a few useful callback functions nested in it, those callbacks will get the current batch of elements as arguments, and there you can hook into the events when that batch of elements enter the viewport(onEnter), leave the viewport(onLeave), enter the viewport again(onEnterBack), and leave the viewport again(onLeaveBack). Within each callback we could define any logic we want. In our case, we will animate the batch of elements to "reveal" them.
 
-"gsap.to" is one of the most common methods when using the GSAP library, it also takes a query selector/elements as the first argument and some configuration options as an object for the 2nd argument. As the method name suggests, it animates the element(s) to a destination. Let's note the option "stagger: 0.15" within the options object. This is the key for our use case because this makes the batch of elements stagger when they reveal.
+"gsap.to" is one of the most common methods of the GSAP library, it also takes a query selector as the first argument and some configuration object for the 2nd argument. As the method name suggests, it animates element(s) to a destination. Let's note the option "stagger: 0.15" within the config object. This is the key for our use case because this makes the batch of elements stagger 0.15 secondary apart from each other when they reveal.
 
-After you registered a Mailchimp account and first landed on the dashboard, if you are like me, you are probably a bit lost. But don't worry, simply follow these steps to generate your API key.
-
-There's still one key piece missing in our logic there - we need to actually go in and set up the elements first before any of the animations in the callbacks run. Otherwise, the elements won't look like they are "revealing". Now to do this is very simple with GSAP with a "gsap.set" method that accepts the same arguments as "gsap.to", the difference is that "gsap.set" is instant, it doesn't have any transition. So this is exactly what we are looking for.
+There's still one key piece missing in our logic there - we need to actually go in and "set up" the elements first before any of the animations in the callbacks run. Otherwise, the elements won't look like they are "revealing". It is very simple to do this with GSAP using the "gsap.set" method. It accepts the same arguments as "gsap.to", the difference is that "gsap.set" is instant, it doesn't have any transition. So this is exactly what we are looking for.
 
 ```JavaScript
 gsap.set('[data-gsap="reveal-bottom"]', { y: 75, opacity: 0 });
@@ -225,11 +223,9 @@ export default useScrollReveal;
 
 ```
 
-Note that right now we have an empty dependency array for "useEffect", which means the logic inside will run once the component you used this hook on is mounted, and it'll only run once. Ideally, we should be able to drop this useScrollReveal into "App.js" for CRA projects, or "\_app.js" for Next.js projects, but right now it won't work if we are working on an app/site with multiple routes since changes routes in single page application will not re-load the app, it's just switching the components under the hood.
+Ideally, we should be able to drop this useScrollReveal into "App.js" for CRA projects, or "\_app.js" for Next.js project. But right now it won't work if we are working on an app/site with multiple routes. And that's because we have an empty dependency array for "useEffect", which means the logic inside will only run once on the component mount. Since route changes in single-page applications will not re-load the app, we need to tell the hook to re-run whenever the route is changed.
 
-We need to add a dependence to the "useEffect" dependency array so it re-runs the logic inside whenever the route changes. And for Next.js project like this blog, we could use the "router.asPath". (For CRA apps with react-router, it would be router.location.pathname).
-
-Complete code for the hook -
+We need to add a dependence to the "useEffect" dependency array so it re-runs the logic inside whenever the route changes. And for Next.js project like this blog, we could import "next router" and use the "router.asPath". (For CRA apps with react-router, it would be router.location.pathname).
 
 ```JavaScript
 import { useRouter } from "next/router";
@@ -291,7 +287,7 @@ export default useScrollReveal;
 ```
 
 <h2 id="Using our useScrollReveal hook">Using our useScrollReveal hook</h2>
-With this, we have setup our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "\_app.js"
+With this, we have setup our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "_app.js"
 
 ```JavaScript
 export default function MyApp({ Component, pageProps }) {
@@ -305,10 +301,10 @@ export default function MyApp({ Component, pageProps }) {
 }
 ```
 
-And from here, you can give any element you want in any page/component to reveal on scroll a data-gsap="reveal-bottom" attribute.
+And from here, you can give the elements/components you want to scroll reveal a data-gsap="reveal-bottom" attribute.
 
 ```JavaScript
-import Comp = () => {
+const Comp = () => {
   return <>
   <div data-gsap="reveal-bottom">Box</div>
   <div data-gsap="reveal-bottom">Box</div>
@@ -318,6 +314,8 @@ import Comp = () => {
 export default Comp;
 ```
 
-On app load, our hook will grab all elements with that data attribute on the current page, set them up(hide them initially). Then it will stagger reveal them when their original position is within the current viewport, and keep on revealing as you scroll. The elements that position near each other will be batched and staggered. When you change a route, the above logic will re-run.
+On app load, our hook will grab all elements with that data attribute on the current page, set them up(hide them initially). Then it will batch them into groups and stagger reveal them when their original position is within the current viewport, and keep on revealing as you scroll. When you change a route, the above logic will re-run.
 
-Note that I've used a very common "fade in from bottom" type reveal animation, if you don't like that you can play around with the code and adjust the animation options to your liking. And just like that, we've got ourselves a re-usable "useScrollReveal" animation hook that we can bring into any React-based project!
+Note that here I've used a very common "fade in from bottom" type reveal animation, you can play around with the code and adjust the animation options to your liking.
+
+And just like that, we've got ourselves a re-usable "useScrollReveal" animation hook that we can bring into any React-based project!
