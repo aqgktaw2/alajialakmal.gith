@@ -2,12 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
-// import userBannerCanvasAnim from "@/hooks/useBannerCanvasAnim";
 import { SOCIAL_ITEMS } from "@/lib/constants";
 
 const HeroBanner = () => {
-	// userBannerCanvasAnim();
-
 	const headingOne = useRef();
 	const headingTwo = useRef();
 	const illustrationWrapper = useRef();
@@ -68,6 +65,7 @@ const HeroBanner = () => {
 				},
 				0.65,
 			)
+			.to(".section-code-banner__dot", { scale: 1 }, 0.65)
 			.to(headingOne.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.08 }, 0.75)
 			.to(headingTwo.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 1.65)
 			.to(
@@ -99,7 +97,6 @@ const HeroBanner = () => {
 
 	return (
 		<section className="section-code-banner">
-			<canvas className="section-code-banner__background" />
 			<div
 				className="section-code-banner__inner"
 				// Prevent gsap flicker on load
@@ -107,6 +104,7 @@ const HeroBanner = () => {
 			>
 				{/* HEADING TEXT */}
 				<div className="section-code-banner__left">
+					<div className="section-code-banner__dot" />
 					<h1>
 						<span className="hero h1" ref={headingOne}>
 							Denny Hong
