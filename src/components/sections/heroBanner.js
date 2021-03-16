@@ -65,7 +65,6 @@ const HeroBanner = () => {
 				},
 				0.65,
 			)
-			.to(".section-code-banner__dot", { scale: 1 }, 0.65)
 			.to(headingOne.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.08 }, 0.75)
 			.to(headingTwo.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 1.65)
 			.to(
@@ -104,7 +103,6 @@ const HeroBanner = () => {
 			>
 				{/* HEADING TEXT */}
 				<div className="section-code-banner__left">
-					<div className="section-code-banner__dot" />
 					<h1>
 						<span className="hero h1" ref={headingOne}>
 							Denny Hong

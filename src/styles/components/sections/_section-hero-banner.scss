@@ -66,22 +66,6 @@
 		}
 	}
 
-	&__dot {
-		position: absolute;
-		left: 0;
-		top: 0;
-		transform: translate3d(-27.5%, -25%, 0) scale(0);
-		position: absolute;
-		width: 25rem;
-		height: 25rem;
-		background: url("/design/dot.svg") repeat bottom right;
-		opacity: 0.125;
-
-		@include media("<=sm") {
-			display: none;
-		}
-	}
-
 	&__social {
 		display: flex;
 		margin-left: -1rem;
@@ -110,6 +94,9 @@
 		@include media("<=md") {
 			margin-bottom: 5rem;
 		}
+
+		position: relative;
+		z-index: 5;
 
 		svg {
 			width: 100%;
@@ -179,6 +166,7 @@
 		cursor: pointer;
 		z-index: 0;
 		padding: 0 1rem;
+		opacity: 0;
 		&:hover {
 			transform: translate3d(-50%, 25%, 0) scale(0.8);
 		}
