@@ -123,7 +123,7 @@ const About = () => {
 						</Timeline.Item>
 						<Timeline.Item Icon={<IconCode />}>
 							<h3>Fullstack Development Intern @ Harmonize</h3>
-							<p>July 2020 - September 2020</p>
+							<p>June 2020 - September 2020</p>
 							<ul>
 								<li>
 									Developed and shipped an Organizational Charts builder/visualiser webapp using
