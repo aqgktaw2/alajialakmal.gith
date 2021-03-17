@@ -31,7 +31,7 @@ const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false
 					<Link href="/projects" passHref>
 						<a>rich & responsive UI experiences</a>
 					</Link>{" "}
-					for web projects across all scales. I am passionate about the JAM Stack, enjoy{" "}
+					for web projects at scale. I am passionate about the JAM Stack, enjoy{" "}
 					<Link href="/posts" passHref>
 						<a>writing articles</a>
 					</Link>{" "}

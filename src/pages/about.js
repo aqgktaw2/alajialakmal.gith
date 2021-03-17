@@ -41,11 +41,17 @@ const About = () => {
 							<h3>Web Developer @ Beacon Digital Marketing</h3>
 							<p>December 2020 - Present</p>
 							<ul>
-								<li>Developing and maintaining various web projects at scale for clients.</li>
 								<li>
-									Developing and maintaining internal tools and applications with React and Next.js.
+									Developing customer-facing frontend UI for various web projects at scale using
+									JavaScript, HTML, and CSS.
 								</li>
-								<li>Explorations around Headless CMS and JAM Stack integrations/services.</li>
+								<li>
+									Developing reusable components & implementing features for internal
+									tools/applications using React, Next.js, and Styled Components.
+								</li>
+								<li>
+									Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+								</li>
 							</ul>
 							<div className="page-about__timeline-tech">
 								<span>
@@ -82,11 +88,14 @@ const About = () => {
 							<p>September 2020 - December 2020</p>
 							<ul>
 								<li>
-									Developed and shipped early iterations of WRLDS&apos; frontend website and webapp
-									using React, and Nextjs.
+									Developed reusable UI components for WRLDS&apos;s web application using React,
+									Next.js, and Sass.
 								</li>
-								<li>Developed WRLDS&apos; Node.js-based GraphQL API server on AWS EC2.</li>
-								<li>Integrated AWS Cognito and DynamoDB for authentication and database.</li>
+								<li>
+									Implemented customer-facing features such as user authentication, and email
+									notification.
+								</li>
+								<li>Participated in deploying a Node.js-based GraphQL API server on AWS EC2.</li>
 							</ul>
 							<div className="page-about__timeline-tech">
 								<span>
@@ -126,14 +135,11 @@ const About = () => {
 							<p>June 2020 - September 2020</p>
 							<ul>
 								<li>
-									Developed and shipped an Organizational Charts builder/visualiser webapp using
-									React, and Node.js.
+									Developed UI components for &quot;OrgChart&quot; - a web application that helps
+									visualize organizational structures, using React, Redux, and Bootstrap.
 								</li>
-								<li>
-									Integrated Passport.js for user authentication, MongoDB and Mongoose to persist
-									user&apos;s chart data.
-								</li>
-								<li>Deployed on AWS Elastic Beanstalk.</li>
+								<li>Developed CRUD API endpoints on a Node.js API server.</li>
+								<li>Participated in deploying the Node.js API server to AWS Elastic Beanstalk.</li>
 							</ul>
 							<div className="page-about__timeline-tech">
 								<span>
@@ -168,8 +174,8 @@ const About = () => {
 							</p>
 							<p>
 								Admittedly, 2020 might not be the greatest year to graduate, but it had made me much
-								stronger mentally, and I&apos;m glad I&apos;ve developed a passion for web
-								development and made my first little steps into my career.
+								stronger mentally. I&apos;m glad I&apos;ve developed a passion for web development
+								and made my first little steps into my career.
 							</p>
 						</Timeline.Item>
 					</Timeline>
