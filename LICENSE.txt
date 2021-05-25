@@ -1,3 +1,1 @@
-1. You are free to use this project as a starting point for your own blog / portfolio.
-2. Crediting is appreciated.
-3. Share and grow togehter.
+You are free to use this project as a starting point for your own blog / portfolio.
