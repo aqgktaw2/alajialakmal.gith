@@ -7,7 +7,7 @@ const useMobileViewport = () => {
 	useEffect(() => {
 		const setVH = debounce(function () {
 			document.documentElement.style.setProperty("--vh", `${window.innerHeight / 100}px`);
-		}, 100);
+		}, 25);
 		setVH();
 		window.addEventListener("resize", setVH);
 		return () => {
