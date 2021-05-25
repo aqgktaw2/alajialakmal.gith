@@ -1,41 +1,43 @@
 ---
-title: "Newsletter Subscribe Cloud Function"
-excerpt: "In this Snippet, we are going to utilize Mailchimp API to build a cloud function that you could call on any of your projects where you want your audience to subscribe to your newsletter."
+title: Newsletter Subscribe Cloud Function
+excerpt: In this Snippet, we are going to utilize Mailchimp API to build a cloud function
+  that you could call on any of your projects where you want your audience to subscribe
+  to your newsletter.
 coverImage: "/assets/snippets/mailchimp-subscribe/mailchimp.jpg"
-date: "2021-03-07T00:39:37.956Z"
+date: 2021-03-07T00:39:37.956Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
   url: "/assets/snippets/mailchimp-subscribe/mailchimp.jpg"
 tags:
-  - "JavsScript"
-  - "Nodejs"
-  - "JAMStack"
-  - "CloudFunction"
-type: "snippets"
----
+- JavsScript
+- Nodejs
+- JAMStack
+- CloudFunction
+type: snippets
 
+---
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-   <h3>Table of contents:</h3>
-  <ul>
-    <li>
-      <h5><a href='#Generating a Mailchimp API Key'>Generating a Mailchimp API Key</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Retrieving your audience list_id">Retrieving your audience list_id</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Setting up your cloud function">Setting up your cloud function</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Setting up single welcome email">Setting up single welcome email</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Calling your cloud function">Calling your cloud function</a></h5>
-    </li>
-  </ul>
+<h3>Table of contents:</h3>
+<ul>
+<li>
+<h5><a href='#Generating a Mailchimp API Key'>Generating a Mailchimp API Key</a></h5>
+</li>
+<li>
+<h5><a href="#Retrieving your audience list_id">Retrieving your audience list_id</a></h5>
+</li>
+<li>
+<h5><a href="#Setting up your cloud function">Setting up your cloud function</a></h5>
+</li>
+<li>
+<h5><a href="#Setting up single welcome email">Setting up single welcome email</a></h5>
+</li>
+<li>
+<h5><a href="#Calling your cloud function">Calling your cloud function</a></h5>
+</li>
+</ul>
 </blockquote>
 <!-- END ARTICLE OVERVIEW -->
 
@@ -61,9 +63,7 @@ I haven't found a way to find list_id of a list from the Mailchimp dashboard, bu
 
 Open Postman, or any other API Development tools, copy and paste the following endpoint URL.
 
-```
-https://us19.api.mailchimp.com/3.0/lists
-```
+    https://us19.api.mailchimp.com/3.0/lists
 
 In the headers section, set the "Authorization" header to be "basic" and input your MailChimp username and password.
 
@@ -77,11 +77,9 @@ At this point, you should have a Mailchimp API key, Mailchimp server name, and a
 
 To keep things secure, the first thing is to set environment variables.
 
-```
-MAILCHIMP_API_KEY=xxx
-MAILCHIMP_SERVER=xxx
-MAILCHIMP_LIST_ID=xxx
-```
+    MAILCHIMP_API_KEY=xxx
+    MAILCHIMP_SERVER=xxx
+    MAILCHIMP_LIST_ID=xxx
 
 You should be able to run the code block below with minimal on AWS Lambda, Google Cloud Functions, or any cloud function service that supports a Node.js runtime environment. For me, it was used in an API route of this blog. Which is built with Next.js and deployed on Vercel.
 
@@ -144,7 +142,7 @@ Head to your Mailchimp Dashboard, click on the "Automation" icon button on the f
 
 <h2 id="Calling your cloud function">Calling your cloud function</h2>
 
-Now once we have the cloud function in place, we can call it. For payload, we need to pass it an object with a key named "email" and the email you are looking to subscribe as value.
+Now once we have the cloud function in place, we can call it. For payload, we need to pass it an object with a key named "email" and the email you are looking to subscribe to as value.
 
 ```JavaScript
 // Subscribe to newsletter
