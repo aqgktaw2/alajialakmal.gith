@@ -5,9 +5,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import classNames from "classnames";
 
-import { NAV_ITEMS } from "@/lib/constants";
-import SiteLogo from "@/components/siteLogo";
-import { IconArrowRight } from "@/components/icons";
+import { NAV_ITEMS } from "@lib/constants";
+import SiteLogo from "@components/siteLogo";
+import { IconArrowRight } from "@components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
 
-import { SOCIAL_ITEMS } from "@/lib/constants";
+import { SOCIAL_ITEMS } from "@lib/constants";
 
 const HeroBanner = () => {
 	const headingOne = useRef();

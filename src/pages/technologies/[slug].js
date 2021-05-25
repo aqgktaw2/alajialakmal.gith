@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@/lib/api";
-import ProjectCard from "@/components/projectCard";
-import Meta from "@/components/meta";
+import { getAllPosts } from "@lib/api";
+import ProjectCard from "@components/projectCard";
+import Meta from "@components/meta";
 
 const Technologies = ({ projects }) => {
 	const router = useRouter();

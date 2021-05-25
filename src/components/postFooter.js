@@ -1,5 +1,5 @@
-import TwitterShareButton from "@/components/twitterShareButton";
-import EditPostButton from "@/components/editPostButton";
+import TwitterShareButton from "@components/twitterShareButton";
+import EditPostButton from "@components/editPostButton";
 
 const postFooter = ({ post }) => {
 	return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Blob1, Blob2, Blob3, Blob4, Blob5, Blob6 } from "@/components/blobs";
+import { Blob1, Blob2, Blob3, Blob4, Blob5, Blob6 } from "@components/blobs";
 
 const shapes = [
 	<Blob1 key={1} />,

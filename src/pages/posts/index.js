@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import PostCard from "@/components/postCard";
-import { getAllPosts } from "@/lib/api";
-import getherAllTags from "@/utils/getherAllTags";
-import Meta from "@/components/meta";
+import PostCard from "@components/postCard";
+import { getAllPosts } from "@lib/api";
+import getherAllTags from "@utils/getherAllTags";
+import Meta from "@components/meta";
 
 const Posts = ({ allPosts }) => {
 	return (

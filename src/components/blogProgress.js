@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-import throttle from "@/utils/throttle";
+import throttle from "@utils/throttle";
 
 const BlogProgress = () => {
 	const progressbarRef = useRef(null);

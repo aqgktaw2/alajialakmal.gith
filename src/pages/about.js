@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import Timeline from "@/components/timeline";
+import Timeline from "@components/timeline";
 import {
 	IconGrad,
 	IconCode,
@@ -20,11 +20,11 @@ import {
 	IconRedux,
 	IconNode,
 	IconFirebase,
-} from "@/components/icons";
-import Introduction from "@/components/sections/introduction";
-import Meta from "@/components/meta";
+} from "@components/icons";
+import Introduction from "@components/sections/introduction";
+import Meta from "@components/meta";
 
-const Embeded = dynamic(() => import("@/components/sections/embeded"));
+const Embeded = dynamic(() => import("@components/sections/embeded"));
 
 const About = () => {
 	return (

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-import useTwitterShare from "@/hooks/useTwitterShare";
-import { IconTwitter } from "@/components/icons";
+import useTwitterShare from "@hooks/useTwitterShare";
+import { IconTwitter } from "@components/icons";
 
 const twitterShareButton = ({ title, tags, type }) => {
 	const { twitterShareUrl } = useTwitterShare({ title, tags });

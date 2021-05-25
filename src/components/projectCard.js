@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { TECH_ICONS } from "@/lib/constants";
-import useWindowResize from "@/hooks/useWindowResize";
+import { TECH_ICONS } from "@lib/constants";
+import useWindowResize from "@hooks/useWindowResize";
 import { IconExternal } from "./icons";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
-import { IconBackTop } from "@/components/icons";
+import { IconBackTop } from "@components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 

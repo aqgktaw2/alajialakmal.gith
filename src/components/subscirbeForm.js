@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Loader from "@/components/loader";
-import { subscribe } from "@/lib/api";
+import Loader from "@components/loader";
+import { subscribe } from "@lib/api";
 
 export default function SubsribeForm() {
 	const [email, setEmail] = useState("");

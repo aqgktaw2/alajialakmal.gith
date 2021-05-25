@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import Author from "./author";
-import formatDate from "@/utils/formatDate";
-import { IconClock } from "@/components/icons";
-import TwitterShareButton from "@/components/twitterShareButton";
+import formatDate from "@utils/formatDate";
+import { IconClock } from "@components/icons";
+import TwitterShareButton from "@components/twitterShareButton";
 
 export default function PostHeader({ title, coverImage, date, author, readTime, tags, type }) {
 	return (

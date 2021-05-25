@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import SiteLogo from "@/components/siteLogo";
-import { SOCIAL_ITEMS, NAV_ITEMS } from "@/lib/constants";
-import SubsribeForm from "@/components/subscirbeForm";
-import { IconRss, IconJson } from "@/components/icons";
+import SiteLogo from "@components/siteLogo";
+import { SOCIAL_ITEMS, NAV_ITEMS } from "@lib/constants";
+import SubsribeForm from "@components/subscirbeForm";
+import { IconRss, IconJson } from "@components/icons";
 
 const FEED_LINKS = [
 	{

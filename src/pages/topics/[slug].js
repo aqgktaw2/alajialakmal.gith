@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 
-import { getAllPosts } from "@/lib/api";
-import PostCard from "@/components/postCard";
+import { getAllPosts } from "@lib/api";
+import PostCard from "@components/postCard";
 import { Fragment } from "react";
-import Meta from "@/components/meta";
+import Meta from "@components/meta";
 
 const Topics = ({ posts }) => {
 	const router = useRouter();

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ProjectCard from "@/components/projectCard";
+import ProjectCard from "@components/projectCard";
 
 const RecentProjects = ({ projects, showListingLink = true, headerText = "Projects" }) => {
 	return (

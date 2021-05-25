@@ -2,8 +2,8 @@ import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
 import Header from "./header";
-import SkipLink from "@/components/skipLink";
-import BackToTop from "@/components/backToTop";
+import SkipLink from "@components/skipLink";
+import BackToTop from "@components/backToTop";
 
 const Footer = dynamic(() => import("./footer"));
 

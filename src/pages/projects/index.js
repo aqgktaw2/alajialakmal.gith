@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@/lib/api";
-import getherAllTags from "@/utils/getherAllTags";
-import ProjectCard from "@/components/projectCard";
-import Meta from "@/components/meta";
+import { getAllPosts } from "@lib/api";
+import getherAllTags from "@utils/getherAllTags";
+import ProjectCard from "@components/projectCard";
+import Meta from "@components/meta";
 
 const Projects = ({ allProjects }) => {
 	return (

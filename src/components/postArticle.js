@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 
-import PostBody from "@/components/postBody";
-import PostHeader from "@/components/postHeader";
-import PostFooter from "@/components/postFooter";
+import PostBody from "@components/postBody";
+import PostHeader from "@components/postHeader";
+import PostFooter from "@components/postFooter";
 import Meta from "./meta";
-import toReactComponent from "@/utils/toReactComponent";
+import toReactComponent from "@utils/toReactComponent";
 
 const PostArticle = ({ post }) => {
 	return (

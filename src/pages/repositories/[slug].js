@@ -1,9 +1,9 @@
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@/lib/api";
-import SnippetCard from "@/components/snippetCard";
-import Meta from "@/components/meta";
+import { getAllPosts } from "@lib/api";
+import SnippetCard from "@components/snippetCard";
+import Meta from "@components/meta";
 
 const Repositories = ({ snippets }) => {
 	const router = useRouter();

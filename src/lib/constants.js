@@ -1,6 +1,6 @@
-import IconGithub from "@/components/icons/IconGithub";
-import IconTwitter from "@/components/icons/IconTwitter";
-import IconEmail from "@/components/icons/IconEmail";
+import IconGithub from "@components/icons/IconGithub";
+import IconTwitter from "@components/icons/IconTwitter";
+import IconEmail from "@components/icons/IconEmail";
 
 import {
 	IconCss,
@@ -16,7 +16,7 @@ import {
 	IconSass,
 	IconShopify,
 	IconWordpress,
-} from "@/components/icons";
+} from "@components/icons";
 
 export const EXAMPLE_PATH = "blog-starter";
 

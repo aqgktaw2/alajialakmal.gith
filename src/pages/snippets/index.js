@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@/lib/api";
-import getherAllTags from "@/utils/getherAllTags";
-import SnippetCard from "@/components/snippetCard";
-import { IconFolder } from "@/components/icons";
-import Meta from "@/components/meta";
+import { getAllPosts } from "@lib/api";
+import getherAllTags from "@utils/getherAllTags";
+import SnippetCard from "@components/snippetCard";
+import { IconFolder } from "@components/icons";
+import Meta from "@components/meta";
 
 const Snippets = ({ allSnippets }) => {
 	return (

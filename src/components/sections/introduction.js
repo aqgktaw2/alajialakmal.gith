@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classNames from "classnames";
 
-import { IconSpotify, IconTwitter } from "@/components/icons";
+import { IconSpotify, IconTwitter } from "@components/icons";
 
 const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false }) => {
 	const handleScroll = evt => {
