@@ -4,36 +4,41 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The title of the blog post.
 - type: textarea
   name: excerpt
-  label: excerpt
+  label: Excerpt
+  description: The description of the blog post.
 - type: file
   name: coverImage
-  label: coverImage
+  label: Cover Image
+  description: The cover image of the blog post.
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    display_utc: false
 - type: field_group
   name: author
-  label: author
+  label: Author
   fields:
   - type: text
     name: name
-    label: name
+    label: Author Name
   - type: file
     name: picture
-    label: picture
+    label: Author Profile Photo
 - type: field_group
   name: ogImage
-  label: ogImage
+  label: Open Graph Image
   fields:
   - type: file
     name: url
-    label: url
+    label: Open Graph Image Url
 - type: list
   name: tags
-  label: tags
+  label: Tags
 - type: text
   name: type
-  label: type
+  label: Type
