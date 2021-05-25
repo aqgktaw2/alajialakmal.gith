@@ -4,39 +4,39 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: textarea
   name: excerpt
-  label: excerpt
+  label: Excerpt
 - type: file
   name: coverImage
-  label: coverImage
+  label: Cover Image
 - type: text
   name: clientUrl
-  label: clientUrl
+  label: Project URL
 - type: datetime
   name: date
-  label: date
+  label: Date
 - type: field_group
   name: author
-  label: author
+  label: Author
   fields:
   - type: text
     name: name
-    label: name
+    label: Author Name
   - type: file
     name: picture
-    label: picture
+    label: Author Profile Photo
 - type: field_group
   name: ogImage
-  label: ogImage
+  label: Open Graph Image
   fields:
   - type: file
     name: url
-    label: url
+    label: Open Graph Image URL
 - type: list
   name: tags
-  label: tags
+  label: Tags
 - type: text
   name: type
-  label: type
+  label: Type
