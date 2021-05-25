@@ -16,6 +16,8 @@ sections:
   label: snippets
   create: all
   match: "**/*"
+  templates:
+  - snippets
 - type: directory
   path: _posts/posts
   label: posts
