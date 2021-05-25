@@ -41,7 +41,7 @@ type: projects
 
 <h2 id="Architecture Choice">Architecture Choice</h2>
 
-For my site, I bacially wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might noticed I also tried to integrate some animation here and there to spice up the experience.
+For my site, I basically wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might notice I also tried to integrate some animation here and there to spice up the experience.
 
 An example of fetching blog article content data at built time -
 
@@ -96,7 +96,7 @@ I tried to take advantage of the accessibility-related knowledge that I've learn
 
 <h2 id="SEO">SEO</h2>
 
-My knowledge of SEO has also been broadened on the job, and I want to reflect that on this project. Thanks to the Static Site Generation feature of Next.js, and Vercel's edge network, this whole site's markup is pre-built and cached at the CDN layer and sent to the user's browser on request. So out of the box, the SEO is already better than "Vanilla" create react app type of Client Side Rendering(CSR) projects.
+My knowledge of SEO has also been broadened on the job, and I want to reflect that on this project. Thanks to the Static Site Generation feature of Next.js, and Vercel's edge network, this whole site's markup is pre-built and cached at the CDN layer, and sent to the user's browser on request. So out of the box, the SEO is already better than "Vanilla" create react app type of Client-Side Rendering(CSR) projects.
 
 Moreover, I created a "Meta" component that wraps around the "Head" component provided by Next.js, including a list of default meta information such as title, meta description, canonical URL, and open graph tags, etc. On any page (or component), I can import that "Meta" component and dynamically pass in props to overwrite the default and meta information. I used this technique for dynamic routes such as blog articles, code snippets, and project pages.
 
@@ -139,7 +139,7 @@ export default function Meta({
 
 <h2 id="API Route">API Route</h2>
 
-I also utilized the "API Route" feature of Next.js and built a newsletter subscribe cloud function with Mailchimp's "members" API. I have a detailed ["Code Snippet"](https://dennyh.me/snippets/mailchimp-subscribe) that walks through the steps on how I built it out. Vercel has really made deploying cloud functions in Next.js project a breeze. (No more configuring API Gateways!😀)
+I also utilized the "API Route" feature of Next.js and built a newsletter subscribe cloud function with Mailchimp's "members" API. I have a detailed ["Code Snippet"](https://dennyh.me/snippets/mailchimp-subscribe) that walks through the steps on how I built it out. Vercel has really made deploying cloud functions in Next.js projects a breeze. (No more configuring API Gateways!😀)
 
 If you are looking for a similar site and don't want to start from scratch, you can use this site as a starting point.
 You can deploy this exact site with Vercel in seconds -
