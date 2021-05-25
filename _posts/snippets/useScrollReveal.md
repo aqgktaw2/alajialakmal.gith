@@ -1,42 +1,43 @@
 ---
-title: "useScrollReveal React Hook w/ GSAP"
-excerpt: "In this Snippet, we are going to build a re-usable useScrollReveal React hook that is going to animate any element on scroll."
+title: useScrollReveal React Hook w/ GSAP
+excerpt: In this Snippet, we are going to build a re-usable useScrollReveal React
+  hook that is going to animate any element on scroll.
 coverImage: "/assets/snippets/useScrollReveal/gsap.jpg"
-date: "2021-03-11T05:14:34.929Z"
+date: 2021-03-11T05:14:34.929Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
   url: "/assets/snippets/useScrollReveal/gsap.jpg"
 tags:
-  - "JavsScript"
-  - "React"
-  - "ReactHooks"
-  - "UI"
-  - "Animation"
-type: "snippets"
----
+- JavsScript
+- React
+- ReactHooks
+- UI
+- Animation
+type: snippets
 
+---
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-   <h3>Table of contents:</h3>
-  <ul>
-    <li>
-      <h5><a href='#What are we building?'>What are we building?</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Why use GSAP to build it?">Why use GSAP to build it?</a></h5>
-    </li>
-    <li>
-      <h5><a href="#ScrollTrigger.batch(), gsap.to(), gsap.set()">ScrollTrigger.batch(), gsap.to(), gsap.set()</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Hookify the animation logic">Hookify the animation logic</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Using our useScrollReveal hook">Using our useScrollReveal hook</a></h5>
-    </li>
-  </ul>
+<h3>Table of contents:</h3>
+<ul>
+<li>
+<h5><a href='#What are we building?'>What are we building?</a></h5>
+</li>
+<li>
+<h5><a href="#Why use GSAP to build it?">Why use GSAP to build it?</a></h5>
+</li>
+<li>
+<h5><a href="#ScrollTrigger.batch(), gsap.to(), gsap.set()">ScrollTrigger.batch(), gsap.to(), gsap.set()</a></h5>
+</li>
+<li>
+<h5><a href="#Hookify the animation logic">Hookify the animation logic</a></h5>
+</li>
+<li>
+<h5><a href="#Using our useScrollReveal hook">Using our useScrollReveal hook</a></h5>
+</li>
+</ul>
 </blockquote>
 <!-- END ARTICLE OVERVIEW -->
 
@@ -220,10 +221,9 @@ const useScrollReveal = () => {
 };
 
 export default useScrollReveal;
-
 ```
 
-Ideally, we should be able to drop this useScrollReveal into "App.js" for CRA projects, or "\_app.js" for Next.js project. But right now it won't work if we are working on an app/site with multiple routes. And that's because we have an empty dependency array for "useEffect", which means the logic inside will only run once on the component mount. Since route changes in single-page applications will not re-load the app, we need to tell the hook to re-run whenever the route is changed.
+Ideally, we should be able to drop this useScrollReveal into "App.js" for CRA projects, or "_app.js" for Next.js project. But right now it won't work if we are working on an app/site with multiple routes. And that's because we have an empty dependency array for "useEffect", which means the logic inside will only run once on the component mount. Since route changes in single-page applications will not re-load the app, we need to tell the hook to re-run whenever the route is changed.
 
 We need to add a dependence to the "useEffect" dependency array so it re-runs the logic inside whenever the route changes. And for Next.js project like this blog, we could import "next router" and use the "router.asPath". (For CRA apps with react-router, it would be router.location.pathname).
 
@@ -286,8 +286,7 @@ const useScrollReveal = () => {
 export default useScrollReveal;
 ```
 
-<h2 id="Using our useScrollReveal hook">Using our useScrollReveal hook</h2>
-With this, we have setup our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "_app.js"
+<h2 id="Using our useScrollReveal hook">Using our useScrollReveal hook</h2> With this, we have set up our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "_app.js"
 
 ```JavaScript
 export default function MyApp({ Component, pageProps }) {
