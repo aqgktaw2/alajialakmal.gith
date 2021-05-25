@@ -9,21 +9,21 @@ sections:
 - type: directory
   path: _posts/projects
   label: projects
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - projects
 - type: directory
   path: _posts/snippets
   label: snippets
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - snippets
 - type: directory
   path: _posts/posts
   label: posts
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - posts
