@@ -21,6 +21,8 @@ sections:
   label: posts
   create: all
   match: "**/*"
+  templates:
+  - posts
 upload_dir: public
 public_path: ''
 front_matter_path: ''
