@@ -19,6 +19,7 @@
 		"gray-matter": "4.0.2",
 		"gsap": "^3.6.0",
 		"html-to-react": "^1.4.5",
+		"js-yaml": "^3.14.1",
 		"next": "^10.0.8-canary.9",
 		"nprogress": "^0.2.0",
 		"react": "^17.0.1",
