@@ -15,8 +15,14 @@ front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
+  preview_env:
+  - NEXT_PUBLIC_DOMAIN=https://dennyh.me
+  - NEXT_PUBLIC_MAILCHIMP_API_KEY=0d4c5e8d313ba8975cbd8deedde289f6-us19
+  - NEXT_PUBLIC_MAILCHIMP_SERVER=us19
+  - NEXT_PUBLIC_MAILCHIMP_LIST_ID=000061ca08
+  preview_output_directory: ".next"
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run dev
