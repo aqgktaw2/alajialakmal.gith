@@ -41,7 +41,7 @@ type: projects
 
 <h2 id="Architecture Choice">Architecture Choice</h2>
 
-For my site! I bacially wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might noticed I also tried to integrate some animation here and there to spice up the experience.
+For my site, I bacially wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might noticed I also tried to integrate some animation here and there to spice up the experience.
 
 An example of fetching blog article content data at built time -
 
