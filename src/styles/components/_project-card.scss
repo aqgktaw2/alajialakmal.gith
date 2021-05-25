@@ -54,7 +54,7 @@
 			box-shadow: 0 0 0 2px var(--color-highlight);
 			transform: scale(1) translate3d(0, 0, 0);
 			backface-visibility: hidden;
-			transition: var(--transition);
+			transition: var(--transition-standard);
 			margin-bottom: 1rem;
 
 			&:hover {

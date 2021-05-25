@@ -76,7 +76,7 @@ const HeroBanner = () => {
 					onComplete() {
 						document
 							.querySelectorAll(".section-code-banner__social a")
-							.forEach(a => (a.style.transition = "var(--transition)"));
+							.forEach(a => (a.style.transition = "var(--transition-standard)"));
 					},
 				},
 				3.1,

@@ -7,7 +7,7 @@
 	z-index: 1001;
 	top: 0;
 	left: 0;
-	transition: var(--transition);
+	transition: var(--transition-standard);
 	transform: translate3d(0, calc(-100% - 2rem), 0);
 
 	&:focus {

@@ -3,7 +3,7 @@ a {
 	font: inherit;
 	text-decoration: none;
 	outline: 2px solid transparent;
-	transition: var(--transition);
+	transition: var(--transition-standard);
 
 	&:visited {
 		color: var(--color-text);
@@ -26,7 +26,7 @@ a {
 		left: 0;
 		width: 0;
 		background-color: var(--color-highlight);
-		transition: var(--transition);
+		transition: var(--transition-standard);
 	}
 
 	&:hover {
