@@ -2,6 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import yaml from "js-yaml";
 
 const postsDirectories = {
 	posts: join(process.cwd(), "_posts", "posts"),
@@ -18,7 +19,13 @@ export function getPostBySlug({ slug, fields = [], postType }) {
 	const realSlug = slug.replace(/\.md$/, "");
 	const fullPath = join(postsDirectories[postType], `${realSlug}.md`);
 	const fileContents = fs.readFileSync(fullPath, "utf8");
-	const { data, content } = matter(fileContents);
+
+	// https://github.com/jonschlinkert/gray-matter/issues/62#issuecomment-577628177
+	const { data, content } = matter(fileContents, {
+		engines: {
+			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
+		},
+	});
 
 	return fields.reduce((acc, field) => {
 		field === "slug" && (acc[field] = realSlug);

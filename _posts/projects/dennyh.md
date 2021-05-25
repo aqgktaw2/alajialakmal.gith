@@ -3,7 +3,7 @@ title: "dennyh.me"
 excerpt: "At the beginning of 2021, I re-built this site with Next.js, Sass, and Markdown to include blogging functionalities. I want to start sharing my interests and grow my technical communication skills through the process."
 coverImage: "/assets/projects/dennyh/dennyh.png"
 clientUrl: "https://dennyh.me"
-date: "2021-03-11T02:12:58.650Z"
+date: 2021-03-11T02:12:58.650Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
