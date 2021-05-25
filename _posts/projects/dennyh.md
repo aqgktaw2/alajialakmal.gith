@@ -1,45 +1,47 @@
 ---
-title: "dennyh.me"
-excerpt: "At the beginning of 2021, I re-built this site with Next.js, Sass, and Markdown to include blogging functionalities. I want to start sharing my interests and grow my technical communication skills through the process."
+title: dennyh.me
+excerpt: At the beginning of 2021, I re-built this site with Next.js, Sass, and Markdown
+  to include blogging functionalities. I want to start sharing my interests and grow
+  my technical communication skills through the process.
 coverImage: "/assets/projects/dennyh/dennyh.png"
-clientUrl: "https://dennyh.me"
-date: 2021-03-11T02:12:58.650Z
+clientUrl: https://dennyh.me
+date: 2021-03-11T02:12:58.650+00:00
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
   url: "/assets/projects/dennyh/dennyh.png"
 tags:
-  - "React"
-  - "NextJs"
-  - "Sass"
-  - "NodeJs"
-type: "projects"
----
+- React
+- NextJs
+- Sass
+- NodeJs
+type: projects
 
+---
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
-  <h3>Table of contents:</h3>
-  <ul>
-    <li>
-      <h5><a href='#Architecture Choice'>Architecture Choice</a></h5>
-    </li>
-    <li>
-      <h5><a href="#Accessibility">Accessibility</a></h5>
-    </li>
-    <li>
-      <h5><a href="#SEO">SEO</a></h5>
-    </li>
-    <li>
-      <h5><a href="#API Route">API Route</a></h5>
-    </li>
-  </ul>
+<h3>Table of contents:</h3>
+<ul>
+<li>
+<h5><a href='#Architecture Choice'>Architecture Choice</a></h5>
+</li>
+<li>
+<h5><a href="#Accessibility">Accessibility</a></h5>
+</li>
+<li>
+<h5><a href="#SEO">SEO</a></h5>
+</li>
+<li>
+<h5><a href="#API Route">API Route</a></h5>
+</li>
+</ul>
 </blockquote>
 <!-- END ARTICLE OVERVIEW -->
 
 <h2 id="Architecture Choice">Architecture Choice</h2>
 
-For my site, I bacially wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might noticed I also tried to integrate some animation here and there to spice up the experience.
+For my site! I bacially wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might noticed I also tried to integrate some animation here and there to spice up the experience.
 
 An example of fetching blog article content data at built time -
 
