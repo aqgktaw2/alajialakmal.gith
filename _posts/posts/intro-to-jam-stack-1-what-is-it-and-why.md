@@ -35,7 +35,7 @@ type: posts
 <!-- WHAT IS JAM STACK -->
 <h2 id='#What is the term "JAM Stack"?'>What is the term "JAM Stack"?</h2>
 
-Let's talk about the term "JAM Stack" first! You most likely already know JAM Stack stands for JavaScript, API, and Markups. In that sense, you may find it doesn't really feel like one of those "stacks" we commonly refer to. When one talks about JAM Stack, he/she is typically not referring to a specific combination of technologies, such as LAMP (Linux, Apache, MySQL, PHP), or MERN (MongoDB, Express, React, Node). JAM Stack is a much broader term, it's rather a technique/architecture choice of which you could utilize to build performant and robust websites/web apps.
+Let's talk about the term "JAM Stack" first. You most likely already know JAM Stack stands for JavaScript, API, and Markups. In that sense, you may find it doesn't really feel like one of those "stacks" we commonly refer to. When one talks about JAM Stack, he/she is typically not referring to a specific combination of technologies, such as LAMP (Linux, Apache, MySQL, PHP), or MERN (MongoDB, Express, React, Node). JAM Stack is a much broader term, it's rather a technique/architecture choice of which you could utilize to build performant and robust websites/web apps.
 
 <!-- END WHAT IS JAM STACK -->
 
