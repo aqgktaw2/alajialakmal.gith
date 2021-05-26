@@ -6,6 +6,7 @@ import variables from "./variables";
 import base from "./base";
 import typography from "./typography";
 import link from "./link";
+import button from "./button";
 
 const GlobalStyles = createGlobalStyle`
   /* --------------- RESET CSS --------------- */
@@ -23,8 +24,11 @@ const GlobalStyles = createGlobalStyle`
   /* --------------- TYPOGRAPHY --------------- */
   ${typography}
 
-  /* --------------- TYPOGRAPHY --------------- */
+  /* --------------- LINK --------------- */
   ${link}
+
+  /* --------------- BUTTON --------------- */
+  ${button}
 `;
 
 export default GlobalStyles;

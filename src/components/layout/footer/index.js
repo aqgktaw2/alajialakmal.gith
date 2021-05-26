@@ -87,7 +87,9 @@ export default function Footer() {
 							<SiteLogo width="8.5rem" height="8.5rem" />
 						</a>
 					</Link>
+
 					<p>© {new Date().getFullYear()} DENNY HONG | ALL RIGHTS RESERVED</p>
+
 					<div>
 						<ul>
 							{FEED_LINKS.map(({ Icon, label, href }, idx) => (
