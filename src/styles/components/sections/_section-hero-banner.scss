@@ -171,6 +171,7 @@
 			transform: translate3d(-50%, 25%, 0) scale(0.8);
 		}
 	}
+
 	&__mouse-icon {
 		width: 25px;
 		height: 45px;
@@ -181,6 +182,7 @@
 		margin: 10px auto;
 		background-color: var(--color-background);
 	}
+
 	&__mouse-wheel {
 		height: 6px;
 		margin: 2px auto 0;
@@ -206,6 +208,7 @@
 			opacity: 0;
 		}
 	}
+
 	@-moz-keyframes wheel-up-down {
 		0% {
 			margin-top: 2px;
@@ -219,6 +222,7 @@
 			opacity: 0;
 		}
 	}
+
 	@keyframes wheel-up-down {
 		0% {
 			margin-top: 2px;
@@ -232,12 +236,14 @@
 			opacity: 0;
 		}
 	}
+
 	&__arrows {
 		margin: 0 auto;
 		width: 16px;
 		// height: 70px;
 		position: relative;
 	}
+
 	&__arrow {
 		position: relative;
 		display: block;
@@ -248,18 +254,22 @@
 		animation-name: opa;
 		opacity: 0.25;
 	}
+
 	&__arrow:nth-child(1) {
 		-webkit-animation-delay: 0;
 		animation-delay: 0;
 	}
+
 	&__arrow:nth-child(2) {
 		-webkit-animation-delay: 0.25s;
 		animation-delay: 0.25s;
 	}
+
 	&__arrow:nth-child(3) {
 		-webkit-animation-delay: 0.5s;
 		animation-delay: 0.5s;
 	}
+
 	&__arrow span {
 		position: absolute;
 		display: block;
@@ -267,16 +277,19 @@
 		height: 2px;
 		background-color: rgba(#fffafe, 0.9);
 	}
+
 	&__arrow span:nth-child(2n-1) {
 		left: 0px;
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
+
 	&__arrow span:nth-child(2n) {
 		right: 0px;
 		-webkit-transform: rotate(-45deg);
 		transform: rotate(-45deg);
 	}
+
 	@-webkit-keyframes opa {
 		0% {
 			opacity: 0.25;
@@ -289,6 +302,7 @@
 			opacity: 0.25;
 		}
 	}
+
 	@keyframes opa {
 		0% {
 			opacity: 0.25;

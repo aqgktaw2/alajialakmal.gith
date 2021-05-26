@@ -25,8 +25,6 @@ Router.events.on("routeChangeError", () => {
 });
 
 export default function MyApp({ Component, pageProps }) {
-	console.log({ GlobalStyles });
-
 	useScrollReveal();
 	useMobileViewport();
 
