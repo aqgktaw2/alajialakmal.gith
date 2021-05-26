@@ -23,3 +23,7 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
+
+TODO:
+
+- Extract fancyLink into own component, with isActive prop

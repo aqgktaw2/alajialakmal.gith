@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+
+
 `;
 
 export default GlobalStyles;

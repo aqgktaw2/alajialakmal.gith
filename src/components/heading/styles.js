@@ -45,16 +45,16 @@ const styles = {
 	},
 };
 
-export const StyledHeading = styled`
-    ${({ level }) => css`
-			font-size: ${styles[level].fontSize};
-			font-weight: ${styles[level].fontWeight};
-			text-shadow: ${styles[level].textShadow};
-			margin-top: ${styles[level].marginTop};
-			margin-bottom: ${styles[level].marginBottom};
-		`}
+export const StyledHeading = styled.h1`
+	${({ level }) => css`
+		font-size: ${styles[level].fontSize};
+		font-weight: ${styles[level].fontWeight};
+		text-shadow: ${styles[level].textShadow};
+		margin-top: ${styles[level].marginTop};
+		margin-bottom: ${styles[level].marginBottom};
+	`}
 
-    &::selection {
-      background-color: var(--color-highlight-alt);
-    }
+	&::selection {
+		background-color: var(--color-highlight-alt);
+	}
 `;

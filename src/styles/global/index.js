@@ -5,6 +5,7 @@ import fonts from "./fonts";
 import variables from "./variables";
 import base from "./base";
 import typography from "./typography";
+import link from "./link";
 
 const GlobalStyles = createGlobalStyle`
   /* --------------- RESET CSS --------------- */
@@ -21,6 +22,9 @@ const GlobalStyles = createGlobalStyle`
 
   /* --------------- TYPOGRAPHY --------------- */
   ${typography}
+
+  /* --------------- TYPOGRAPHY --------------- */
+  ${link}
 `;
 
 export default GlobalStyles;
