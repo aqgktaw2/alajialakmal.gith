@@ -1,9 +1,21 @@
 import Link from "next/link";
 
-import SiteLogo from "@components/siteLogo";
 import { SOCIAL_ITEMS, NAV_ITEMS } from "@lib/constants";
 import SubsribeForm from "@components/subscirbeForm";
+import Heading from "@components/heading";
+import SiteLogo from "@components/siteLogo";
 import { IconRss, IconJson } from "@components/icons";
+
+import {
+	StyledFooter,
+	StyledFooterWaves,
+	StyledFooterContent,
+	StyledFooterTop,
+	StyledFooterLeft,
+	StyledFooterRight,
+	StyledSiteLinks,
+	StyledFooterBottom,
+} from "./styles";
 
 const FEED_LINKS = [
 	{
@@ -25,56 +37,58 @@ const FEED_LINKS = [
 
 export default function Footer() {
 	return (
-		<footer className="global-footer">
-			<div className="global-footer__waves">
-				<div className="global-footer__wave" />
-				<div className="global-footer__wave" />
-			</div>
+		<StyledFooter>
+			<StyledFooterWaves />
 
-			<div className="global-footer__content">
-				<div className="global-footer__inner">
-					<div className="global-footer__left">
+			<StyledFooterContent>
+				<StyledFooterTop>
+					<StyledFooterLeft>
 						<SubsribeForm />
-					</div>
-					<div className="global-footer__right">
-						<div className="global-footer__site-links">
-							<h2>Site Links</h2>
+					</StyledFooterLeft>
+
+					<StyledFooterRight>
+						<StyledSiteLinks>
+							<Heading level={2}>Site Links</Heading>
 							<nav>
 								<ul>
 									{NAV_ITEMS.map(({ href, label }, idx) => (
 										<li key={idx}>
 											<Link href={href} passHref>
-												<a>{label}</a>
+												<Heading level={3} as="a">
+													{label}
+												</Heading>
 											</Link>
 										</li>
 									))}
 								</ul>
 							</nav>
-						</div>
-						<div className="global-footer__social">
-							<h2>Get in touch</h2>
+						</StyledSiteLinks>
+
+						<StyledSiteLinks>
+							<Heading level={2}>Get in touch</Heading>
 							<ul>
 								{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
 									<li key={idx}>
 										<Link href={href} passHref>
-											<a target="_blank" rel="noopener noreferrer">
+											<Heading level={3} as="a" target="_blank" rel="noopener noreferrer">
 												{icon} {label}
-											</a>
+											</Heading>
 										</Link>
 									</li>
 								))}
 							</ul>
-						</div>
-					</div>
-				</div>
-				<div className="global-footer__lower">
+						</StyledSiteLinks>
+					</StyledFooterRight>
+				</StyledFooterTop>
+
+				<StyledFooterBottom>
 					<Link href="/" passHref>
 						<a>
 							<SiteLogo width="8.5rem" height="8.5rem" />
 						</a>
 					</Link>
 					<p>© {new Date().getFullYear()} DENNY HONG | ALL RIGHTS RESERVED</p>
-					<div className="">
+					<div>
 						<ul>
 							{FEED_LINKS.map(({ Icon, label, href }, idx) => (
 								<li key={idx}>
@@ -87,8 +101,8 @@ export default function Footer() {
 							))}
 						</ul>
 					</div>
-				</div>
-			</div>
-		</footer>
+				</StyledFooterBottom>
+			</StyledFooterContent>
+		</StyledFooter>
 	);
 }
