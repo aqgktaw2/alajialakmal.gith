@@ -23,3 +23,8 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
+
+TODO:
+
+- Next Image Wrapper with aspect ratios
+- Search for sass rgba() calles and fix
