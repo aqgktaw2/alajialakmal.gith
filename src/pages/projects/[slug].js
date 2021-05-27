@@ -8,7 +8,7 @@ import markdownToHtml from "@lib/markdownToHtml";
 import PostArticle from "@components/postArticle";
 import BlogProgress from "@components/blogProgress";
 
-const RecentProjects = dynamic(() => import("@components/sections/recentProjects"));
+const RecentProjects = dynamic(() => import("@components/sections/_recentProjects"));
 
 const Project = ({ project, relatedProjects }) => {
 	const router = useRouter();
