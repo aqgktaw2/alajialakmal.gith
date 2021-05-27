@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledAuthor = styled.div`
 	width: 3.5rem;
