@@ -1,13 +1,13 @@
-import Link from "next/link";
-
 import { IconSpotify, IconTwitter } from "@components/icons";
 import Heading from "@components/heading";
+import Link from "@components/link";
 
 import {
 	IntroductionSection,
 	IntroductionHeader,
 	IntroductionInner,
 	IntroductionLinks,
+	IntroductionLink,
 } from "./styles";
 import Button from "@components/button";
 
@@ -39,41 +39,47 @@ const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false
 				<p data-gsap="reveal-bottom">
 					I&apos;m a web & JavaScript developer based in Seattle, WA. I&apos;m currently focusing on
 					delivering{" "}
-					<Link href="/projects" passHref>
-						<a>rich & responsive UI experiences</a>
-					</Link>{" "}
+					<IntroductionLink href="/projects" passHref>
+						rich & responsive UI experiences
+					</IntroductionLink>{" "}
 					for web projects at scale. I am passionate about the JAM Stack, enjoy{" "}
-					<Link href="/posts" passHref>
-						<a>writing articles</a>
-					</Link>{" "}
+					<IntroductionLink href="/posts" passHref>
+						writing articles
+					</IntroductionLink>{" "}
 					and{" "}
-					<Link href="/snippets" passHref>
-						<a>sharing code snippets</a>
-					</Link>{" "}
+					<IntroductionLink href="/snippets" passHref>
+						sharing code snippets
+					</IntroductionLink>{" "}
 					with fellow developers.
 				</p>
 
 				{/* More about me button */}
 				{!useHeading1 && (
-					<Link href="/about" passHref>
-						<Button as="a" data-gsap="reveal-bottom">
-							More About Me
-						</Button>
+					<Link href="/about" passHref underLine={false} data-gsap="reveal-bottom">
+						<Button as="span">More About Me</Button>
 					</Link>
 				)}
 
 				{/* Show link to twitter and spotify embed */}
 				{linkToEmbeded && (
 					<IntroductionLinks>
-						<Link href="#twitter-embeded" passHref>
-							<a data-gsap="reveal-bottom" onClick={handleScroll}>
-								<IconTwitter />
-							</a>
+						<Link
+							href="#twitter-embeded"
+							passHref
+							data-gsap="reveal-bottom"
+							onClick={handleScroll}
+							underLine={false}
+						>
+							<IconTwitter />
 						</Link>
-						<Link href="#spotify-embeded" passHref>
-							<a data-gsap="reveal-bottom" onClick={handleScroll}>
-								<IconSpotify />
-							</a>
+						<Link
+							href="#spotify-embeded"
+							passHref
+							data-gsap="reveal-bottom"
+							onClick={handleScroll}
+							underLine={false}
+						>
+							<IconSpotify />
 						</Link>
 					</IntroductionLinks>
 				)}

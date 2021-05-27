@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import Link from "@components/link";
+
 export const StyledHeader = styled.header`
 	padding: 3rem 0;
 	position: fixed;
@@ -101,12 +103,7 @@ export const StyledHeaderBottom = styled.nav`
 		`}
 `;
 
-export const StyledNavLink = styled.a`
-	${({ theme }) =>
-		css`
-			${theme.utils.fancyLink}
-		`}
-
+export const StyledNavLink = styled(Link)`
 	text-transform: uppercase;
 	font-weight: 500;
 	padding: 0.5rem;
@@ -161,31 +158,26 @@ export const StyledAlertInner = styled.div`
 		display: flex;
 		align-items: center;
 		font-size: 1.2rem;
+	}
+`;
 
-		a {
-			${({ theme }) =>
-				css`
-					${theme.utils.fancyLink}
-				`}
+export const AlertLink = styled(Link)`
+	font-weight: normal;
+	font-size: inherit;
+	display: flex;
+	align-items: center;
 
-			font-weight: normal;
-			font-size: inherit;
-			display: flex;
-			align-items: center;
-
-			&:hover {
-				svg {
-					transform: translate3d(3px, 0, 0);
-				}
-			}
-
-			svg {
-				height: 1.75rem;
-				width: 1.75rem;
-				margin-left: 0.5rem;
-				transition: var(--transition-standard);
-				transform: translate3d(0, 0, 0);
-			}
+	&:hover {
+		svg {
+			transform: translate3d(3px, 0, 0);
 		}
+	}
+
+	svg {
+		height: 1.75rem;
+		width: 1.75rem;
+		margin-left: 0.5rem;
+		transition: var(--transition-standard);
+		transform: translate3d(0, 0, 0);
 	}
 `;

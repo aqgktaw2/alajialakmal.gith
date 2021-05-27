@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import formatDate from "@utils/formatDate";
 import Heading from "@components/heading";
 import Author from "@components/author";
+import Link from "@components/link";
 
 import {
 	StyledPostCard,
@@ -11,7 +11,7 @@ import {
 	StyledCardMeta,
 	StyledCardBottom,
 	StyledCardTags,
-	ReadMoreLink,
+	TagLink,
 } from "./styles";
 
 const PostCard = ({ post, authorSize = "" }) => {
@@ -25,8 +25,8 @@ const PostCard = ({ post, authorSize = "" }) => {
 				<Author author={post.author} size={authorSize} /> <span>{formatDate(post.date)}</span>
 			</StyledCardMeta>
 
-			<Link href={`/posts/${post.slug}`} passHref>
-				<Heading level={3} as="a">
+			<Link href={`/posts/${post.slug}`} passHref underLine={false}>
+				<Heading level={3} as="span">
 					{post.title}
 				</Heading>
 			</Link>
@@ -37,15 +37,15 @@ const PostCard = ({ post, authorSize = "" }) => {
 				<StyledCardTags>
 					<Heading level={5} as="div">
 						{post.tags.map((tag, idx) => (
-							<Link key={idx} href={`/topics/${tag}`} passHref>
-								<a>#{tag}</a>
-							</Link>
+							<TagLink key={idx} href={`/topics/${tag}`} passHref>
+								#{tag}
+							</TagLink>
 						))}
 					</Heading>
 				</StyledCardTags>
 
 				<Link href={`/posts/${post.slug}`} passHref>
-					<ReadMoreLink>Read More</ReadMoreLink>
+					Read More
 				</Link>
 			</StyledCardBottom>
 		</StyledPostCard>

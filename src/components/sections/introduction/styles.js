@@ -1,3 +1,4 @@
+import Link from "@components/link";
 import styled, { css } from "styled-components";
 
 export const IntroductionSection = styled.section`
@@ -38,19 +39,14 @@ export const IntroductionInner = styled.div`
 		margin-right: auto;
 		font-size: 2rem;
 		margin-bottom: 2rem;
-
-		a {
-			${({ theme }) =>
-				css`
-					${theme.utils.fancyLink}
-				`}
-
-			white-space: nowrap;
-			overflow: hidden;
-			font-style: italic;
-			font-weight: 600;
-		}
 	}
+`;
+
+export const IntroductionLink = styled(Link)`
+	white-space: nowrap;
+	overflow: hidden;
+	font-style: italic;
+	font-weight: 600;
 `;
 
 export const IntroductionLinks = styled.div`

@@ -1,9 +1,9 @@
 import { createContext, useContext, useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 
+import Link from "@components/link";
 import { NAV_ITEMS } from "@lib/constants";
 import SiteLogo from "@components/siteLogo";
 import { IconArrowRight } from "@components/icons";
@@ -16,6 +16,7 @@ import {
 	StyledHeaderAlert,
 	StyledAlertInner,
 	StyledNavLink,
+	AlertLink,
 } from "./styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -51,10 +52,8 @@ const Header = ({ children }) => {
 			<StyledHeader ref={headerRef} isScrolled={isScrolled} widthAlert={!!children}>
 				<StyledHeaderInner>
 					<StyledHeaderTop isScrolled={isScrolled}>
-						<Link href="/" passHref>
-							<a>
-								<SiteLogo width="8.5rem" height="8.5rem" />
-							</a>
+						<Link href="/" passHref underLine={false}>
+							<SiteLogo width="8.5rem" height="8.5rem" />
 						</Link>
 					</StyledHeaderTop>
 
@@ -62,9 +61,9 @@ const Header = ({ children }) => {
 						<ul>
 							{NAV_ITEMS.map(({ href, label }, idx) => (
 								<li key={idx}>
-									<Link href={href} passHref>
-										<StyledNavLink isActive={router.pathname === href}>{label}</StyledNavLink>
-									</Link>
+									<StyledNavLink href={href} passHref isActive={router.pathname === href}>
+										{label}
+									</StyledNavLink>
 								</li>
 							))}
 						</ul>
@@ -83,11 +82,9 @@ const HeaderAlert = ({ children, linkHref }) => {
 			<StyledAlertInner>
 				<p>
 					{linkHref && (
-						<Link href={linkHref} passHref>
-							<a>
-								{children} <IconArrowRight />
-							</a>
-						</Link>
+						<AlertLink href={linkHref} passHref>
+							{children} <IconArrowRight />
+						</AlertLink>
 					)}
 				</p>
 			</StyledAlertInner>

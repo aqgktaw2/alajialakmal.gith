@@ -1,9 +1,8 @@
-import Link from "next/link";
-
 import { SOCIAL_ITEMS, NAV_ITEMS } from "@lib/constants";
 import SubsribeForm from "@components/subscirbeForm";
 import Heading from "@components/heading";
 import SiteLogo from "@components/siteLogo";
+import Link from "@components/link";
 import { IconRss, IconJson } from "@components/icons";
 
 import {
@@ -15,6 +14,7 @@ import {
 	StyledFooterRight,
 	StyledSiteLinks,
 	StyledFooterBottom,
+	FeedLink,
 } from "./styles";
 
 const FEED_LINKS = [
@@ -54,7 +54,7 @@ export default function Footer() {
 									{NAV_ITEMS.map(({ href, label }, idx) => (
 										<li key={idx}>
 											<Link href={href} passHref>
-												<Heading level={3} as="a">
+												<Heading level={3} as="span" noMargin>
 													{label}
 												</Heading>
 											</Link>
@@ -69,8 +69,8 @@ export default function Footer() {
 							<ul>
 								{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
 									<li key={idx}>
-										<Link href={href} passHref>
-											<Heading level={3} as="a" target="_blank" rel="noopener noreferrer">
+										<Link href={href} passHref target="_blank" rel="noopener noreferrer">
+											<Heading level={3} as="span">
 												{icon} {label}
 											</Heading>
 										</Link>
@@ -82,10 +82,8 @@ export default function Footer() {
 				</StyledFooterTop>
 
 				<StyledFooterBottom>
-					<Link href="/" passHref>
-						<a>
-							<SiteLogo width="8.5rem" height="8.5rem" />
-						</a>
+					<Link href="/" passHref underLine={false}>
+						<SiteLogo width="8.5rem" height="8.5rem" />
 					</Link>
 
 					<p>© {new Date().getFullYear()} DENNY HONG | ALL RIGHTS RESERVED</p>
@@ -94,11 +92,9 @@ export default function Footer() {
 						<ul>
 							{FEED_LINKS.map(({ Icon, label, href }, idx) => (
 								<li key={idx}>
-									<Link href={href} passHref>
-										<a target="_blank" rel="noopener noreferrer">
-											{Icon} {label}
-										</a>
-									</Link>
+									<FeedLink href={href} passHref target="_blank" rel="noopener noreferrer">
+										{Icon} {label}
+									</FeedLink>
 								</li>
 							))}
 						</ul>

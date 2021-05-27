@@ -1,3 +1,4 @@
+import Link from "@components/link";
 import styled, { keyframes, css } from "styled-components";
 
 export const StyledFooter = styled.footer`
@@ -78,20 +79,6 @@ export const StyledSiteLinks = styled.div`
 			margin-bottom: 1.5rem;
 		}
 	}
-
-	a {
-		${({ theme }) =>
-			css`
-				${theme.utils.fancyLink}
-			`}
-
-		display: flex;
-		align-items: center;
-
-		svg {
-			margin-right: 1rem;
-		}
-	}
 `;
 
 export const StyledFooterBottom = styled.div`
@@ -107,25 +94,18 @@ export const StyledFooterBottom = styled.div`
 		margin: 0;
 		font-size: 1.25rem;
 
-		li {
-			a {
-				${({ theme }) =>
-					css`
-						${theme.utils.fancyLink}
-					`}
-
-				display: flex;
-				align-items: center;
-
-				svg {
-					margin-right: 0.25rem;
-				}
-			}
-		}
-
 		li:not(:last-of-type) {
 			margin-right: 1rem;
 		}
+	}
+`;
+
+export const FeedLink = styled(Link)`
+	display: flex;
+	align-items: center;
+
+	svg {
+		margin-right: 0.5rem;
 	}
 `;
 

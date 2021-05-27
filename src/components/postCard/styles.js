@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import Link from "@components/link";
+import styled from "styled-components";
 
 export const StyledPostCard = styled.div`
 	padding: 2rem;
@@ -38,24 +39,13 @@ export const StyledCardTags = styled.div`
 	margin-top: 0;
 	display: flex;
 	flex-wrap: wrap;
-
-	a {
-		${({ theme }) =>
-			css`
-				${theme.utils.fancyLink}
-			`}
-		font-weight: 600;
-		font-style: italic;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
 `;
 
-export const ReadMoreLink = styled.a`
-	${({ theme }) =>
-		css`
-			${theme.utils.fancyLink}
-		`}
+export const TagLink = styled(Link)`
+	font-weight: 600;
+	font-style: italic;
+
+	&:not(:last-child) {
+		margin-right: 1rem;
+	}
 `;
