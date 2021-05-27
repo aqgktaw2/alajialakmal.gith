@@ -24,8 +24,12 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com)
 
-TODO:
+StyledComponents Migration TODO:
 
 - Next Image Wrapper with aspect ratios
 - Search for sass rgba() calles and fix
 - Search for include media calls and fix
+- Import orders
+- Search for querySelector(.some-class-name) and fix
+- Check for breakpoints
+- Fix nav item link underlines on small screen

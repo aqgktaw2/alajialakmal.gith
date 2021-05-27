@@ -9,10 +9,12 @@ export const IntroductionSection = styled.section`
 	overflow: hidden;
 	background: linear-gradient(180deg, rgba(7, 0, 11, 1) 0%, rgba(7, 0, 11, 0) 100%);
 
-	${({ transparent }) => css`
-		background: transparent;
-		margin-top: initial;
-	`}
+	${({ transparent }) =>
+		transparent &&
+		css`
+			background: transparent;
+			margin-top: initial;
+		`}
 `;
 
 export const IntroductionHeader = styled.div`

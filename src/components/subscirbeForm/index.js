@@ -1,7 +1,10 @@
 import { useState } from "react";
 
-import Loader from "@components/loader";
 import { subscribe } from "@lib/api";
+import Button from "@components/button";
+import Loader from "@components/loader";
+
+import { LabelHeading, StyledForm, StyledInput } from "./styles";
 
 export default function SubsribeForm() {
 	const [email, setEmail] = useState("");
@@ -32,22 +35,27 @@ export default function SubsribeForm() {
 	};
 
 	return (
-		<form id="subscribe" className="subscribe-form" onSubmit={handleSubscribe}>
+		<StyledForm id="subscribe" className="subscribe-form" onSubmit={handleSubscribe}>
 			<label htmlFor="email-subscribe">
-				<h3>Get notified when new Webdev articles & code snippets arrive.</h3>
+				<LabelHeading level={3}>
+					Get notified when new Webdev articles & code snippets arrive.
+				</LabelHeading>
 			</label>
-			<input
+
+			<StyledInput
 				id="email-subscribe"
 				type="email"
 				placeholder="example@email.com"
 				value={email}
 				onChange={handleEmailChange}
 			/>
-			<button disabled={!email || isLoading || error} className="btn">
+
+			<Button disabled={!email || isLoading || error}>
 				{isLoading ? <Loader /> : "Subscribe"}
-			</button>
+			</Button>
+
 			{error && <p>{error}</p>}
 			{msg && <p>{msg}</p>}
-		</form>
+		</StyledForm>
 	);
 }

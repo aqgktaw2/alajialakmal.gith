@@ -108,7 +108,7 @@ const HeroBanner = () => {
 	const handleScrollToNextSection = () => {
 		const heroBannerHeight = [...document.querySelectorAll("section")][0].getBoundingClientRect()
 			.height;
-		const headerHeight = document.querySelector(".global-header").getBoundingClientRect().height;
+		const headerHeight = document.querySelector("#global-header").getBoundingClientRect().height;
 		window.scrollTo({
 			top: heroBannerHeight - headerHeight,
 			behavior: "smooth",

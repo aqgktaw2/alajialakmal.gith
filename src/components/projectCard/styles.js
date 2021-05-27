@@ -1,5 +1,6 @@
-import Link from "@components/link";
 import styled from "styled-components";
+
+import Link from "@components/link";
 
 export const StyledProjectCard = styled.div`
 	padding: 2rem;
@@ -82,5 +83,9 @@ export const StyledProjectImage = styled.div`
 		content: "";
 		display: block;
 		padding-bottom: 200%;
+	}
+
+	${StyledProjectCard}:hover & img {
+		transform: translateY(-50%);
 	}
 `;

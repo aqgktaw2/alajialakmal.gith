@@ -49,7 +49,12 @@ const Header = ({ children }) => {
 	return (
 		<ScrollContext.Provider value={{ isScrolled }}>
 			{children}
-			<StyledHeader ref={headerRef} isScrolled={isScrolled} widthAlert={!!children}>
+			<StyledHeader
+				ref={headerRef}
+				id="global-header"
+				isScrolled={isScrolled}
+				widthAlert={!!children}
+			>
 				<StyledHeaderInner>
 					<StyledHeaderTop isScrolled={isScrolled}>
 						<Link href="/" passHref underLine={false}>

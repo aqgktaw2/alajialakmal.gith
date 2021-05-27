@@ -14,8 +14,8 @@ const RecentProjects = ({ projects, showListingLink = true, headerText = "Projec
 				</Heading>
 
 				{showListingLink && (
-					<Link href="/projects" passHref data-gsap="reveal-bottom">
-						<Button>View More Projects</Button>
+					<Link href="/projects" passHref data-gsap="reveal-bottom" underLine={false}>
+						<Button as="span">View More Projects</Button>
 					</Link>
 				)}
 			</RecentProjectsHeader>

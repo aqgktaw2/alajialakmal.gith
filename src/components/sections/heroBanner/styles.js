@@ -189,7 +189,7 @@ const scrollWheelAnim = keyframes`
 export const StyledScrollIcon = styled.div`
 	width: 25px;
 	height: 45px;
-	border: 2px solid rgba(#fffafe, 0.9);
+	border: 2px solid rgba(255, 250, 254, 0.9);
 	border-radius: 15px;
 	position: relative;
 	text-align: center;
@@ -201,7 +201,7 @@ export const StyledScrollIcon = styled.div`
 		margin: 2px auto 0;
 		display: block;
 		width: 3px;
-		background-color: rgba(#fffafe, 0.9);
+		background-color: rgba(255, 250, 254, 0.9);
 		border-radius: 50%;
 		animation: 1.6s ease infinite ${scrollWheelAnim};
 	}
@@ -246,7 +246,7 @@ export const StyledScrollArrows = styled.div`
 			display: block;
 			width: 10px;
 			height: 2px;
-			background-color: rgba(#fffafe, 0.9);
+			background-color: rgba(255, 250, 254, 0.9);
 
 			&:nth-child(2n-1) {
 				left: 0px;
