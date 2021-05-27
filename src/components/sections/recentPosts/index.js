@@ -1,27 +1,30 @@
-import Link from "next/link";
+import Link from "@components/link";
+import Button from "@components/button";
+import PostCard from "@components/postCard";
 
-import PostCard from "../postCard";
+import { SectionRecentPosts, RecentPostsHeader, RecentPostsInner, StyledHeading } from "./styles";
 
 const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog posts" }) => {
 	return (
-		<section className="section-recent-posts">
-			<div className="section-recent-posts__header">
-				<h2 data-gsap="reveal-bottom">{headerText}</h2>
+		<SectionRecentPosts>
+			<RecentPostsHeader>
+				<StyledHeading level={2} data-gsap="reveal-bottom">
+					{headerText}
+				</StyledHeading>
+
 				{showListingLink && (
-					<Link href="/posts" passHref>
-						<a data-gsap="reveal-bottom" className="btn">
-							View More Articles
-						</a>
+					<Link href="/posts" passHref data-gsap="reveal-bottom" underLine={false}>
+						<Button as="span">View More Articles</Button>
 					</Link>
 				)}
-			</div>
+			</RecentPostsHeader>
 
-			<div className="section-recent-posts__inner">
+			<RecentPostsInner>
 				{posts.map((post, idx) => (
 					<PostCard post={post} key={idx} authorSize="sm" />
 				))}
-			</div>
-		</section>
+			</RecentPostsInner>
+		</SectionRecentPosts>
 	);
 };
 
