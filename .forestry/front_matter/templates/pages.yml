@@ -3,17 +3,10 @@ label: Pages
 hide_body: true
 fields:
 - name: page_sections
-  type: field_group_list
-  fields:
-  - name: section
-    type: blocks
-    label: Section
-    template_types: []
-    config:
-      min: 
-      max: 
+  type: blocks
+  label: Page Sections
+  template_types:
+  - test
   config:
     min: 
     max: 
-    labelField: 
-  label: Page Sections
