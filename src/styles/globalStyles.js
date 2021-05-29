@@ -21,6 +21,24 @@ const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
+/*
+  Resources
+  Svg Brand Logos
+  https://iconify.design/icon-sets
+
+  Svg Blob Shapes
+  https://www.softr.io/tools/svg-shape-generator
+  https://www.blobmaker.app/
+
+  Background Patterns
+  http://www.heropatterns.com/
+  https://www.flaticon.com/pattern/
+  https://philiprogers.com/svgpatterns/#honeycomb
+  http://btmills.github.io/geopattern/
+
+  Svg Waves
+  https://getwaves.io/
+*/
 
 `;
 
