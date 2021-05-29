@@ -43,13 +43,19 @@ export const StyledPostInner = styled.div`
 		margin-bottom: 2rem;
 	}
 
-	pre {
-		padding: 2rem;
+	& > pre {
 		background-color: var(--color-background-alt);
 		border: 1px solid var(--color-text);
 		box-shadow: 4px 4px 0px 0px var(--color-highlight);
 		margin-top: 2.4rem;
 		margin-bottom: 2.4rem;
+
+		/* For Syntax Highlighter generated pre tag */
+		& > pre {
+			margin: 0 !important;
+			padding: 2rem 2rem 0.5rem 2rem !important;
+			background-color: var(--color-background-alt) !important;
+		}
 
 		code {
 			tab-size: 4;

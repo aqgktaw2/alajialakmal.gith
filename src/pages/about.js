@@ -1,31 +1,46 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import {
-	IconGrad,
-	IconCode,
-	IconJsWhite,
-	IconWeb,
-	IconHtml,
-	IconCss,
-	IconJs,
-	IconReact,
-	IconWordpress,
-	IconHubspot,
-	IconNextjs,
-	IconGraphql,
-	IconSass,
-	IconAws,
-	IconRedux,
-	IconNode,
-	IconFirebase,
-} from "@components/icons";
+import { IconGrad, IconCode, IconJsWhite, IconWeb } from "@components/icons";
 import Introduction from "@components/sections/introduction";
 import Meta from "@components/meta";
 
-import { AboutPage, StyledTimeline, AboutPageInner, TechIcons } from "@styles/pages/about";
+import {
+	AboutPage,
+	StyledTimeline,
+	AboutPageInner,
+	TechIcons,
+	StyledTechIcon,
+} from "@styles/pages/about";
 
 const Embeded = dynamic(() => import("@components/sections/embeded"));
+
+const BDMTechs = [
+	"JavaScript",
+	"HTML",
+	"CSS",
+	"Sass",
+	"React",
+	"NextJs",
+	"Firebase",
+	"Wordpress",
+	"Hubspot",
+];
+
+const WRLDSTechs = [
+	"JavaScript",
+	"HTML",
+	"CSS",
+	"Sass",
+	"React",
+	"Redux",
+	"NextJs",
+	"NodeJs",
+	"GraphQL",
+	"AWS",
+];
+
+const HarmonizeTechs = ["JavaScript", "HTML", "CSS", "Sass", "React", "Redux", "NodeJs"];
 
 const About = () => {
 	return (
@@ -55,33 +70,9 @@ const About = () => {
 								</li>
 							</ul>
 							<TechIcons>
-								<span>
-									<IconJs />
-								</span>
-								<span>
-									<IconHtml />
-								</span>
-								<span>
-									<IconCss />
-								</span>
-								<span>
-									<IconSass />
-								</span>
-								<span>
-									<IconReact />
-								</span>
-								<span>
-									<IconNextjs />
-								</span>
-								<span>
-									<IconFirebase />
-								</span>
-								<span>
-									<IconHubspot />
-								</span>
-								<span>
-									<IconWordpress />
-								</span>
+								{BDMTechs.map(tech => (
+									<StyledTechIcon key={tech} techName={tech} />
+								))}
 							</TechIcons>
 						</StyledTimeline.Item>
 
@@ -100,36 +91,9 @@ const About = () => {
 								<li>Participated in deploying a Node.js-based GraphQL API server on AWS EC2.</li>
 							</ul>
 							<TechIcons>
-								<span>
-									<IconJs />
-								</span>
-								<span>
-									<IconHtml />
-								</span>
-								<span>
-									<IconCss />
-								</span>
-								<span>
-									<IconSass />
-								</span>
-								<span>
-									<IconReact />
-								</span>
-								<span>
-									<IconRedux />
-								</span>
-								<span>
-									<IconNextjs />
-								</span>
-								<span>
-									<IconNode />
-								</span>
-								<span>
-									<IconGraphql />
-								</span>
-								<span>
-									<IconAws />
-								</span>
+								{WRLDSTechs.map(tech => (
+									<StyledTechIcon key={tech} techName={tech} />
+								))}
 							</TechIcons>
 						</StyledTimeline.Item>
 
@@ -145,27 +109,9 @@ const About = () => {
 								<li>Participated in deploying the Node.js API server to AWS Elastic Beanstalk.</li>
 							</ul>
 							<TechIcons>
-								<span>
-									<IconJs />
-								</span>
-								<span>
-									<IconHtml />
-								</span>
-								<span>
-									<IconCss />
-								</span>
-								<span>
-									<IconSass />
-								</span>
-								<span>
-									<IconReact />
-								</span>
-								<span>
-									<IconRedux />
-								</span>
-								<span>
-									<IconNode />
-								</span>
+								{HarmonizeTechs.map(tech => (
+									<StyledTechIcon key={tech} techName={tech} />
+								))}
 							</TechIcons>
 						</StyledTimeline.Item>
 

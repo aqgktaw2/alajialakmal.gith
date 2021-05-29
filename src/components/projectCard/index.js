@@ -1,6 +1,5 @@
 import Link from "@components/link";
 
-import { TECH_ICONS } from "@lib/constants";
 import useWindowResize from "@hooks/useWindowResize";
 import { IconExternal } from "@components/icons";
 
@@ -9,13 +8,13 @@ import {
 	StyledProjectInfo,
 	StyledProjectActions,
 	StyledProjectTech,
-	TechIconWrapper,
 	StyledProjectImage,
 	InfoLink,
 	TechLink,
 } from "./styles";
 import Heading from "@components/heading";
 import Button from "@components/button";
+import TechIcon from "@components/techIcon";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {
 	const {
@@ -44,7 +43,7 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 								aria-label={tag}
 								underLine={false}
 							>
-								<TechIconWrapper>{TECH_ICONS[tag]}</TechIconWrapper>
+								<TechIcon techName={tag} />
 							</TechLink>
 						))}
 					</StyledProjectTech>

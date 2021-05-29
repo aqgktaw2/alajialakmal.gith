@@ -3,6 +3,7 @@ import IconTwitter from "@components/icons/IconTwitter";
 import IconEmail from "@components/icons/IconEmail";
 
 import {
+	IconAws,
 	IconCss,
 	IconFirebase,
 	IconGraphql,
@@ -60,4 +61,5 @@ export const TECH_ICONS = {
 	GraphQL: <IconGraphql />,
 	Shopify: <IconShopify />,
 	NodeJs: <IconNode />,
+	AWS: <IconAws />,
 };
