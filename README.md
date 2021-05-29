@@ -33,3 +33,5 @@ StyledComponents Migration TODO:
 - Search for querySelector(.some-class-name) and fix
 - Check for breakpoints
 - Fix nav item link underlines on small screen
+- Tech Icon Link Component
+- Add prism for code syntax highligting

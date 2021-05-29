@@ -1,10 +1,20 @@
-import Link from "next/link";
 import { Fragment } from "react";
 
-import PostCard from "@components/postCard";
 import { getAllPosts } from "@lib/api";
 import getherAllTags from "@utils/getherAllTags";
+import PostCard from "@components/postCard";
 import Meta from "@components/meta";
+
+import {
+	PostsListsing,
+	PostListingHeader,
+	PostListingInner,
+	PostListsingItems,
+	PostListingSidebar,
+	PostListingTags,
+	TagLink,
+} from "../../styles/pages/posts";
+import Heading from "@components/heading";
 
 const Posts = ({ allPosts }) => {
 	return (
@@ -14,32 +24,33 @@ const Posts = ({ allPosts }) => {
 				description="View a list of Denny Hong's articles on web development."
 			/>
 
-			<div className="page-posts-listing">
-				<div className="page-posts-listing__header">
-					<h1>My Articles</h1>
-				</div>
-				<div className="page-posts-listing__inner">
+			<PostsListsing>
+				<PostListingHeader>
+					<Heading level={1}>My Articles</Heading>
+				</PostListingHeader>
+
+				<PostListingInner>
 					{/* Posts */}
-					<section className="page-posts-listing__posts">
+					<PostListsingItems>
 						{allPosts.map((post, idx) => (
 							<PostCard key={idx} post={post} />
 						))}
-					</section>
+					</PostListsingItems>
 
 					{/* Sidebar */}
-					<aside className="page-posts-listing__sidebar">
+					<PostListingSidebar>
 						<h2>Topics:</h2>
 
-						<div className="page-posts-listing__tags">
+						<PostListingTags>
 							{getherAllTags(allPosts).map((tag, idx) => (
-								<Link key={idx} href={`/topics/${tag}`} passHref>
-									<a>#{tag}</a>
-								</Link>
+								<TagLink key={idx} href={`/topics/${tag}`} passHref>
+									#{tag}
+								</TagLink>
 							))}
-						</div>
-					</aside>
-				</div>
-			</div>
+						</PostListingTags>
+					</PostListingSidebar>
+				</PostListingInner>
+			</PostsListsing>
 		</Fragment>
 	);
 };

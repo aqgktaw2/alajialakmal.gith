@@ -6,6 +6,7 @@ const postFooter = ({ post }) => {
 		<div className="post-footer">
 			<div className="post-footer__inner">
 				<hr />
+
 				<p data-gsap="reveal-bottom">
 					Thanks for reading this {post.type.slice(0, post.type.length - 1)}! Help spread it or
 					start a conversation by sharing it on Twitter!{" "}

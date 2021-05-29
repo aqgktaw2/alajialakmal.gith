@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import PostBody from "@components/postBody";
 import PostHeader from "@components/postHeader";
 import PostFooter from "@components/postFooter";
-import Meta from "./meta";
+import Meta from "@components/meta";
 import toReactComponent from "@utils/toReactComponent";
 
 const PostArticle = ({ post }) => {
@@ -21,6 +21,7 @@ const PostArticle = ({ post }) => {
 					tags={post.tags}
 					type={post.type}
 				/>
+
 				<PostBody content={toReactComponent(post.content)} />
 
 				<PostFooter post={post} />
