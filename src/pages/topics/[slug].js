@@ -18,12 +18,12 @@ const Topics = ({ posts }) => {
 				description={`View a list of web development articles written by Denny Hong that talks about ${router.query.slug}.`}
 			/>
 
-			<TopicContainer>
-				<TopicHeader>
+			<TopicContainer as="div">
+				<TopicHeader as="section">
 					<Heading level={1}>My articles on {router.query.slug}</Heading>
 				</TopicHeader>
 
-				<TopicPosts>
+				<TopicPosts as="section">
 					{posts.map((post, idx) => (
 						<PostCard key={idx} post={post} />
 					))}

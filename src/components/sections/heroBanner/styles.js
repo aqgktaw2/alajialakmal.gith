@@ -1,11 +1,9 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const StyledCodeBanner = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
+import { StyledContainer } from "@components/container/styles";
+import { StyledSection } from "@components/section/styles";
 
+export const StyledCodeBanner = styled(StyledSection)`
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
@@ -14,12 +12,7 @@ export const StyledCodeBanner = styled.section`
 	background: radial-gradient(ellipse, rgba(17, 0, 28, 0.25) 5%, rgba(7, 0, 11, 1) 35%);
 `;
 
-export const StyledBannerInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const StyledBannerInner = styled(StyledContainer)`
 	align-items: center;
 	position: relative;
 	z-index: 1;

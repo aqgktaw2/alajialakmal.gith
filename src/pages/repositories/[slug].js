@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import { getAllPosts } from "@lib/api";
 import SnippetCard from "@components/snippetCard";
 import Meta from "@components/meta";
+import Heading from "@components/heading";
 
 import { RepoContainer, RepoHeader, RepoPosts } from "@styles/pages/repositories";
 
@@ -17,12 +18,12 @@ const Repositories = ({ snippets }) => {
 				description={`View a list of web development code snippets shared by Denny Hong that talks about ${router.query.slug}.`}
 			/>
 
-			<RepoContainer>
-				<RepoHeader>
-					<h1>My {router.query.slug} code snippets</h1>
+			<RepoContainer as="div">
+				<RepoHeader as="section">
+					<Heading level={1}>My {router.query.slug} code snippets</Heading>
 				</RepoHeader>
 
-				<RepoPosts>
+				<RepoPosts as="section">
 					{snippets.map((snippet, idx) => (
 						<SnippetCard key={idx} post={snippet} />
 					))}

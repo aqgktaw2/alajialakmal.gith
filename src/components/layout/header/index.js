@@ -10,7 +10,6 @@ import { IconArrowRight } from "@components/icons";
 
 import {
 	StyledHeader,
-	StyledHeaderInner,
 	StyledHeaderTop,
 	StyledHeaderBottom,
 	StyledHeaderAlert,
@@ -18,6 +17,7 @@ import {
 	StyledNavLink,
 	AlertLink,
 } from "./styles";
+import Container from "@components/container";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +55,7 @@ const Header = ({ children }) => {
 				isScrolled={isScrolled}
 				widthAlert={!!children}
 			>
-				<StyledHeaderInner>
+				<Container>
 					<StyledHeaderTop isScrolled={isScrolled}>
 						<Link href="/" passHref underLine={false}>
 							<SiteLogo width="8.5rem" height="8.5rem" />
@@ -73,7 +73,7 @@ const Header = ({ children }) => {
 							))}
 						</ul>
 					</StyledHeaderBottom>
-				</StyledHeaderInner>
+				</Container>
 			</StyledHeader>
 		</ScrollContext.Provider>
 	);

@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import Author from "@components/author";
+import { StyledContainer } from "@components/container/styles";
 
 export const StyledPostHeader = styled.div`
 	position: relative;
@@ -42,12 +43,7 @@ export const StyledPostCover = styled.div`
 	}
 `;
 
-export const StyledHeaderContent = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const StyledHeaderContent = styled(StyledContainer)`
 	width: 100%;
 	height: 100%;
 	position: relative;

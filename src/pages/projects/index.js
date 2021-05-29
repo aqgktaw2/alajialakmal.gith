@@ -24,7 +24,7 @@ const Projects = ({ allProjects }) => {
 				description="View a list of Denny Hong's projects on web development."
 			/>
 
-			<ProjectsListing>
+			<ProjectsListing as="div">
 				<ProjectsListingHeader>
 					<Heading level={1}>Commercial & Personal Projects</Heading>
 				</ProjectsListingHeader>

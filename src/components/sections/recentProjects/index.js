@@ -2,13 +2,14 @@ import Link from "@components/link";
 import ProjectCard from "@components/projectCard";
 import Heading from "@components/heading";
 import Button from "@components/button";
+import Section from "@components/section";
 
-import { RecentProjectsSection, RecentProjectsHeader, RecentProjectsInner } from "./styles";
+import { RecentProjectsHeader, RecentProjectsInner } from "./styles";
 
 const RecentProjects = ({ projects, showListingLink = true, headerText = "Projects" }) => {
 	return (
-		<RecentProjectsSection className="section-recent-projects">
-			<RecentProjectsHeader className="section-recent-projects__header">
+		<Section>
+			<RecentProjectsHeader>
 				<Heading level={2} data-gsap="reveal-bottom">
 					{headerText}
 				</Heading>
@@ -20,12 +21,12 @@ const RecentProjects = ({ projects, showListingLink = true, headerText = "Projec
 				)}
 			</RecentProjectsHeader>
 
-			<RecentProjectsInner className="section-recent-projects__inner">
+			<RecentProjectsInner>
 				{projects.map((project, idx) => (
 					<ProjectCard project={project} key={idx} />
 				))}
 			</RecentProjectsInner>
-		</RecentProjectsSection>
+		</Section>
 	);
 };
 

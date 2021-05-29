@@ -1,5 +1,8 @@
+import styled, { keyframes } from "styled-components";
+
 import Link from "@components/link";
-import styled, { keyframes, css } from "styled-components";
+
+import { StyledContainer } from "@components/container/styles";
 
 export const StyledFooter = styled.footer`
 	--waves-lower-height: 475px;
@@ -21,12 +24,7 @@ export const StyledFooterContent = styled.div`
 	width: 100%;
 `;
 
-export const StyledFooterTop = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const StyledFooterTop = styled(StyledContainer)`
 	padding-bottom: 3rem;
 	display: flex;
 	align-items: center;

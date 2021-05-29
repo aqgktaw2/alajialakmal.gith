@@ -1,5 +1,7 @@
-import Link from "@components/link";
 import styled, { css } from "styled-components";
+
+import Link from "@components/link";
+import { StyledContainer } from "@components/container/styles";
 
 export const IntroductionSection = styled.section`
 	padding-bottom: 5rem;
@@ -17,23 +19,13 @@ export const IntroductionSection = styled.section`
 		`}
 `;
 
-export const IntroductionHeader = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const IntroductionHeader = styled(StyledContainer)`
 	h2 {
 		font-style: italic;
 	}
 `;
 
-export const IntroductionInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const IntroductionInner = styled(StyledContainer)`
 	p {
 		width: 100%;
 		max-width: 65rem;

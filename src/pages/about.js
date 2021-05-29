@@ -32,7 +32,7 @@ const About = () => {
 		<Fragment>
 			<Meta title="About Me | Denny Hong" />
 
-			<AboutPage className="page-about">
+			<AboutPage as="div">
 				<Introduction useHeading1 linkToEmbeded noBg />
 
 				{/* TIMELINE */}

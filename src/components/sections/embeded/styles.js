@@ -1,19 +1,9 @@
-import { StyledHeading } from "@components/heading/styles";
 import styled, { css } from "styled-components";
 
-export const StyledEmbeded = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
-`;
+import { StyledContainer } from "@components/container/styles";
+import { StyledHeading } from "@components/heading/styles";
 
-export const StyledEmbededInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const StyledEmbededInner = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 5rem;

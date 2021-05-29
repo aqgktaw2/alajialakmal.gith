@@ -1,30 +1,18 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const TechContainer = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
+import { StyledContainer } from "@components/container/styles";
+import { StyledSection } from "@components/section/styles";
 
+export const TechContainer = styled(StyledSection)`
 	padding-top: 20rem;
 `;
 
-export const TechHeader = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const TechHeader = styled(StyledContainer)`
 	text-align: center;
 	margin-bottom: 5rem;
 `;
 
-export const TechPosts = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const TechPosts = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 5rem;

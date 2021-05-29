@@ -26,11 +26,8 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 
 StyledComponents Migration TODO:
 
-- Next Image Wrapper with aspect ratios
 - Tech Icon Link Component
-- Container & Section component
 - Add prism for code syntax highligting
 - Forestry blocks
-- Import orders
 - Fix nav item link underlines on small screen
 - Search for TODO

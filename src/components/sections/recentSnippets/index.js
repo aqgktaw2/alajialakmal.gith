@@ -1,13 +1,13 @@
 import Button from "@components/button";
 import Link from "@components/link";
-
+import Section from "@components/section";
 import SnippetCard from "@components/snippetCard";
 
-import { RecentSnippetsSection, SnippetsHeader, SinppetsInner } from "./styles";
+import { SnippetsHeader, SinppetsInner } from "./styles";
 
 const RecentSnippets = ({ posts, showListingLink = true, title = "Lastest code snippets" }) => {
 	return (
-		<RecentSnippetsSection>
+		<Section>
 			<SnippetsHeader>
 				<h2 data-gsap="reveal-bottom">{title}</h2>
 				{showListingLink && (
@@ -22,7 +22,7 @@ const RecentSnippets = ({ posts, showListingLink = true, title = "Lastest code s
 					<SnippetCard post={post} key={idx} />
 				))}
 			</SinppetsInner>
-		</RecentSnippetsSection>
+		</Section>
 	);
 };
 

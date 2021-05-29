@@ -1,11 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const StyledTimeline = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
+import { StyledSection } from "@components/section/styles";
 
+export const StyledTimeline = styled(StyledSection)`
 	position: relative;
 
 	&::after {

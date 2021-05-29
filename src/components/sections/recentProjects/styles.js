@@ -1,17 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const RecentProjectsSection = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
-`;
+import { StyledContainer } from "@components/container/styles";
 
-export const RecentProjectsHeader = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
+export const RecentProjectsHeader = styled(StyledContainer)`
 	text-align: center;
 	margin-bottom: 3rem;
 
@@ -21,12 +12,7 @@ export const RecentProjectsHeader = styled.div`
 	}
 `;
 
-export const RecentProjectsInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const RecentProjectsInner = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 3rem;

@@ -1,18 +1,13 @@
+import Section from "@components/section";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-import {
-	StyledEmbeded,
-	StyledEmbededInner,
-	StyledTwitterEmbed,
-	StyledSpotifyEmbed,
-	EmbedHeading,
-} from "./styles";
+import { StyledEmbededInner, StyledTwitterEmbed, StyledSpotifyEmbed, EmbedHeading } from "./styles";
 
 const SPOTIFY_IFRAME_SRC = "https://open.spotify.com/embed/playlist/3zpnaMi4PIcXSXCmxdLAN1";
 
 const Embeded = () => {
 	return (
-		<StyledEmbeded>
+		<Section>
 			<StyledEmbededInner>
 				<div>
 					<EmbedHeading level={2} data-gsap="reveal-bottom">
@@ -54,7 +49,7 @@ const Embeded = () => {
 					</StyledSpotifyEmbed>
 				</div>
 			</StyledEmbededInner>
-		</StyledEmbeded>
+		</Section>
 	);
 };
 
