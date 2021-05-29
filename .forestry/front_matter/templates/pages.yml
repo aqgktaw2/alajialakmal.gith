@@ -1,4 +1,19 @@
 ---
 label: Pages
 hide_body: true
-fields: []
+fields:
+- name: page_sections
+  type: field_group_list
+  fields:
+  - name: section
+    type: blocks
+    label: Section
+    template_types: []
+    config:
+      min: 
+      max: 
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Page Sections
