@@ -27,7 +27,6 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 StyledComponents Migration TODO:
 
 - Next Image Wrapper with aspect ratios
-- Check for breakpoints
 - Tech Icon Link Component
 - Container & Section component
 - Add prism for code syntax highligting

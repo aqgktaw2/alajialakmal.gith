@@ -1,9 +1,10 @@
+import Image from "@components/Image";
 import { StyledAuthor } from "./styles";
 
 const Author = ({ author, size = "", ...restProps }) => {
 	return (
 		<StyledAuthor {...restProps} size={size}>
-			<img loading="lazy" src={author.picture} alt={author.name} />
+			<Image aspectRatio={1 / 1} src={author.picture} alt={author.name} />
 		</StyledAuthor>
 	);
 };

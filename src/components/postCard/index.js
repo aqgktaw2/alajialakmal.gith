@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 import formatDate from "@utils/formatDate";
 import Heading from "@components/heading";
@@ -7,19 +7,17 @@ import Link from "@components/link";
 
 import {
 	StyledPostCard,
-	StyledCardImage,
 	StyledCardMeta,
 	StyledCardBottom,
 	StyledCardTags,
 	TagLink,
 } from "./styles";
+import Image from "@components/Image";
 
 const PostCard = ({ post, authorSize = "" }) => {
 	return (
 		<StyledPostCard data-gsap="reveal-bottom">
-			<StyledCardImage>
-				<Image src={post.coverImage} layout="fill" />
-			</StyledCardImage>
+			<Image aspectRatio={2 / 1} src={post.coverImage} alt={`Cover Image for ${post.title}`} />
 
 			<StyledCardMeta>
 				<Author author={post.author} size={authorSize} /> <span>{formatDate(post.date)}</span>
