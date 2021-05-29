@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
+import { Fragment } from "react";
 
 import { getAllPosts } from "@lib/api";
 import PostCard from "@components/postCard";
-import { Fragment } from "react";
 import Meta from "@components/meta";
+import Heading from "@components/heading";
+
+import { TopicContainer, TopicHeader, TopicPosts } from "@styles/pages/topics";
 
 const Topics = ({ posts }) => {
 	const router = useRouter();
@@ -15,16 +18,17 @@ const Topics = ({ posts }) => {
 				description={`View a list of web development articles written by Denny Hong that talks about ${router.query.slug}.`}
 			/>
 
-			<div className="page-posts-by-topic">
-				<section className="page-posts-by-topic__header">
-					<h1>My articles on {router.query.slug}</h1>
-				</section>
-				<section className="page-posts-by-topic__inner">
+			<TopicContainer>
+				<TopicHeader>
+					<Heading level={1}>My articles on {router.query.slug}</Heading>
+				</TopicHeader>
+
+				<TopicPosts>
 					{posts.map((post, idx) => (
 						<PostCard key={idx} post={post} />
 					))}
-				</section>
-			</div>
+				</TopicPosts>
+			</TopicContainer>
 		</Fragment>
 	);
 };

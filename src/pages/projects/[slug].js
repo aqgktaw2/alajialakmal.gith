@@ -9,7 +9,7 @@ import PostArticle from "@components/postArticle";
 import BlogProgress from "@components/blogProgress";
 import Heading from "@components/heading";
 
-const RecentProjects = dynamic(() => import("@components/sections/_recentProjects"));
+const RecentProjects = dynamic(() => import("@components/sections/recentProjects"));
 
 const Project = ({ project, relatedProjects }) => {
 	const router = useRouter();
