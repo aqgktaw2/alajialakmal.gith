@@ -64,7 +64,7 @@ export const StyledTimelineItem = styled.div`
 	&:not(:first-of-type) {
 		margin-top: -7.5rem;
 
-		@include media("<=md") {
+		@media (max-width: 768px) {
 			margin-top: 5rem;
 		}
 	}

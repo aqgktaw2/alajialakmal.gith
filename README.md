@@ -27,9 +27,6 @@ Create a `.env.local` file similar to [`.env.example`](.env.example).
 StyledComponents Migration TODO:
 
 - Next Image Wrapper with aspect ratios
-- Search for sass rgba() calles and fix
-- Search for include media calls and fix
-- Search for querySelector(.some-class-name) and fix
 - Check for breakpoints
 - Tech Icon Link Component
 - Container & Section component
