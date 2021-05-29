@@ -52,7 +52,7 @@ export const StyledPostInner = styled.div`
 
 		/* For Syntax Highlighter generated pre tag */
 		& > pre {
-			margin-top: 0 !important;
+			margin: 0 !important;
 			padding: 2rem !important;
 			background-color: var(--color-background-alt) !important;
 		}

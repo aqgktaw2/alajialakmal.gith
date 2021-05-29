@@ -10,7 +10,7 @@ export default css`
 
 		/* SCROLL BAR */
 		scrollbar-width: thin;
-		scrollbar-color: var(--color-background-alt-light) var(--color-background);
+		scrollbar-color: var(--color-highlight-alt-dark) transparent;
 	}
 
 	/* SCROLL BAR */
@@ -20,10 +20,10 @@ export default css`
 	}
 
 	::-webkit-scrollbar-track {
-		background: var(--color-background);
+		background: transparent;
 	}
 	::-webkit-scrollbar-thumb {
-		background-color: var(--color-background-alt-light);
+		background-color: var(--color-highlight-alt-dark);
 		border: none;
 	}
 	::-webkit-scrollbar-button {
