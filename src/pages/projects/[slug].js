@@ -7,6 +7,7 @@ import { getPostBySlug, getAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
 import PostArticle from "@components/postArticle";
 import BlogProgress from "@components/blogProgress";
+import Heading from "@components/heading";
 
 const RecentProjects = dynamic(() => import("@components/sections/_recentProjects"));
 
@@ -14,7 +15,7 @@ const Project = ({ project, relatedProjects }) => {
 	const router = useRouter();
 
 	if (router.isFallback) {
-		return <h1>Loading...</h1>;
+		return <Heading level={1}>Loading...</Heading>;
 	}
 
 	if (!router.isFallback && !project?.slug) {
