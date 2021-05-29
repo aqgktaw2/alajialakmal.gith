@@ -1,12 +1,8 @@
+import { StyledSection } from "@components/section/styles";
 import Timeline from "@components/timeline";
 import styled, { css } from "styled-components";
 
-export const AboutPage = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
-
+export const AboutPage = styled(StyledSection)`
 	padding-top: 20rem;
 `;
 

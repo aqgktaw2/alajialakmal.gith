@@ -25,7 +25,7 @@ const Snippets = ({ allSnippets }) => {
 				description="View a list of helpful web development code snippets by Denny Hong."
 			/>
 
-			<SnippetsListsing>
+			<SnippetsListsing as="div">
 				<SnippetsListsingHeader>
 					<Heading level={1}>My Code Snippets</Heading>
 				</SnippetsListsingHeader>

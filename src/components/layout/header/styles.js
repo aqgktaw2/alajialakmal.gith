@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import Link from "@components/link";
+import { StyledContainer } from "@components/container/styles";
 
 export const StyledHeader = styled.header`
 	padding: 3rem 0;
@@ -29,13 +30,6 @@ export const StyledHeader = styled.header`
 			@media screen and (display-mode: standalone) {
 				padding: 4rem 0 1rem;
 			}
-		`}
-`;
-
-export const StyledHeaderInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
 		`}
 `;
 
@@ -139,12 +133,7 @@ export const StyledHeaderAlert = styled.div`
 		`}
 `;
 
-export const StyledAlertInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const StyledAlertInner = styled(StyledContainer)`
 	display: flex;
 	align-items: center;
 	justify-content: center;

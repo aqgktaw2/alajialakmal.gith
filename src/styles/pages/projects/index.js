@@ -1,23 +1,15 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import Link from "@components/link";
+import { StyledContainer } from "@components/container/styles";
+import { StyledSection } from "@components/section/styles";
 
-export const ProjectsListing = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
-
+export const ProjectsListing = styled(StyledSection)`
 	padding-top: 20rem;
 	padding-bottom: 20rem;
 `;
 
-export const ProjectsListingHeader = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const ProjectsListingHeader = styled(StyledContainer)`
 	text-align: center;
 	margin-bottom: 5rem;
 
@@ -26,12 +18,7 @@ export const ProjectsListingHeader = styled.div`
 	}
 `;
 
-export const ProjectsListingInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const ProjectsListingInner = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-columns: 1.75fr 1fr;

@@ -125,9 +125,7 @@ const HeroBanner = () => {
 				{/* HEADING TEXT */}
 				<StyledBannerLeft>
 					<Heading level={1}>
-						<span className="hero h1" ref={headingOne}>
-							Denny Hong
-						</span>
+						<span ref={headingOne}>Denny Hong</span>
 						<Heading level={2} as="span" forwardedRef={headingTwo}>
 							Web & JavaScript Developer
 						</Heading>

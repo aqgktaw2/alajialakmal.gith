@@ -37,16 +37,6 @@ export const StyledSnippetBody = styled.a`
 	}
 `;
 
-export const StyledSnippetImage = styled.div`
-	width: 100%;
-
-	&::after {
-		content: "";
-		display: block;
-		padding-bottom: 100%;
-	}
-`;
-
 export const StyledSnippetInfo = styled.div`
 	position: absolute;
 	left: 0;

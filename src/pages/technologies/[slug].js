@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import { Fragment } from "react";
+import { useRouter } from "next/router";
 
 import { getAllPosts } from "@lib/api";
 import ProjectCard from "@components/projectCard";
@@ -18,12 +18,12 @@ const Technologies = ({ projects }) => {
 				description={`View a list of web development projects by Denny Hong that uses ${router.query.slug}.`}
 			/>
 
-			<TechContainer>
-				<TechHeader>
+			<TechContainer as="div">
+				<TechHeader as="section">
 					<Heading level={1}>My projects with {router.query.slug}</Heading>
 				</TechHeader>
 
-				<TechPosts>
+				<TechPosts as="section">
 					{projects.map((project, idx) => (
 						<ProjectCard project={project} key={idx} />
 					))}

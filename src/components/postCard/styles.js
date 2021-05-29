@@ -11,20 +11,6 @@ export const StyledPostCard = styled.div`
 	flex-direction: column;
 `;
 
-export const StyledCardImage = styled.div`
-	position: relative;
-
-	img {
-		object-fit: cover;
-	}
-
-	&::after {
-		padding-bottom: 50%;
-		content: "";
-		display: block;
-	}
-`;
-
 export const StyledCardMeta = styled.div`
 	margin-top: 1rem;
 	display: flex;

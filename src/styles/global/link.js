@@ -1,17 +1,19 @@
-export default `
-  a {
-    color: var(--color-text);
-    font: inherit;
-    text-decoration: none;
-    outline: 2px solid transparent;
-    transition: var(--transition-standard);
+import { css } from "styled-components";
 
-    &:visited {
-      color: var(--color-text);
-    }
+export default css`
+	a {
+		color: var(--color-text);
+		font: inherit;
+		text-decoration: none;
+		outline: 2px solid transparent;
+		transition: var(--transition-standard);
 
-    &:focus {
-      outline: 2px solid var(--color-highlight-alt);
-    }
-  }
+		&:visited {
+			color: var(--color-text);
+		}
+
+		&:focus {
+			outline: 2px solid var(--color-highlight-alt);
+		}
+	}
 `;

@@ -24,7 +24,7 @@ const Posts = ({ allPosts }) => {
 				description="View a list of Denny Hong's articles on web development."
 			/>
 
-			<PostsListsing>
+			<PostsListsing as="div">
 				<PostListingHeader>
 					<Heading level={1}>My Articles</Heading>
 				</PostListingHeader>

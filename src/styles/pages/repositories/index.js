@@ -1,30 +1,18 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const RepoContainer = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
+import { StyledContainer } from "@components/container/styles";
+import { StyledSection } from "@components/section/styles";
 
+export const RepoContainer = styled(StyledSection)`
 	padding-top: 20rem;
 `;
 
-export const RepoHeader = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const RepoHeader = styled(StyledContainer)`
 	text-align: center;
 	margin-bottom: 5rem;
 `;
 
-export const RepoPosts = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
-
+export const RepoPosts = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 5rem;

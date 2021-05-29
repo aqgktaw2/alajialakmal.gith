@@ -1,12 +1,13 @@
 import Link from "@components/link";
 import Button from "@components/button";
 import PostCard from "@components/postCard";
+import Section from "@components/section";
 
-import { SectionRecentPosts, RecentPostsHeader, RecentPostsInner, StyledHeading } from "./styles";
+import { RecentPostsHeader, RecentPostsInner, StyledHeading } from "./styles";
 
 const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog posts" }) => {
 	return (
-		<SectionRecentPosts>
+		<Section>
 			<RecentPostsHeader>
 				<StyledHeading level={2} data-gsap="reveal-bottom">
 					{headerText}
@@ -24,7 +25,7 @@ const RecentPosts = ({ posts, showListingLink = true, headerText = "Lastest blog
 					<PostCard post={post} key={idx} authorSize="sm" />
 				))}
 			</RecentPostsInner>
-		</SectionRecentPosts>
+		</Section>
 	);
 };
 

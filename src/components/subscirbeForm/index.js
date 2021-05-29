@@ -35,7 +35,7 @@ export default function SubsribeForm() {
 	};
 
 	return (
-		<StyledForm id="subscribe" className="subscribe-form" onSubmit={handleSubscribe}>
+		<StyledForm id="subscribe" onSubmit={handleSubscribe}>
 			<label htmlFor="email-subscribe">
 				<LabelHeading level={3}>
 					Get notified when new Webdev articles & code snippets arrive.

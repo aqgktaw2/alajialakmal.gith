@@ -1,11 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const StyledTimeline = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
+import { StyledSection } from "@components/section/styles";
 
+export const StyledTimeline = styled(StyledSection)`
 	position: relative;
 
 	&::after {
@@ -64,7 +61,7 @@ export const StyledTimelineItem = styled.div`
 	&:not(:first-of-type) {
 		margin-top: -7.5rem;
 
-		@include media("<=md") {
+		@media (max-width: 768px) {
 			margin-top: 5rem;
 		}
 	}

@@ -1,17 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const RecentSnippetsSection = styled.section`
-	${({ theme }) =>
-		css`
-			${theme.utils.section}
-		`}
-`;
+import { StyledContainer } from "@components/container/styles";
 
-export const SnippetsHeader = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
+export const SnippetsHeader = styled(StyledContainer)`
 	text-align: center;
 	margin-bottom: 3rem;
 
@@ -21,11 +12,7 @@ export const SnippetsHeader = styled.div`
 	}
 `;
 
-export const SinppetsInner = styled.div`
-	${({ theme }) =>
-		css`
-			${theme.utils.container}
-		`}
+export const SinppetsInner = styled(StyledContainer)`
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 2rem;
