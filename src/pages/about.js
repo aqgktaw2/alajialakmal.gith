@@ -180,6 +180,7 @@ const About = () => {
 						</Timeline.Item>
 					</Timeline>
 					{/* END TIMELINE */}
+
 					<Embeded />
 				</div>
 			</div>
