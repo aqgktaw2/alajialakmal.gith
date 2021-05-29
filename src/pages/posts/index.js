@@ -39,7 +39,7 @@ const Posts = ({ allPosts }) => {
 
 					{/* Sidebar */}
 					<PostListingSidebar>
-						<h2>Topics:</h2>
+						<Heading level={2}>Topics:</Heading>
 
 						<PostListingTags>
 							{getherAllTags(allPosts).map((tag, idx) => (

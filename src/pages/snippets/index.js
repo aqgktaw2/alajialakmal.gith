@@ -1,11 +1,21 @@
-import Link from "next/link";
 import { Fragment } from "react";
 
 import { getAllPosts } from "@lib/api";
 import getherAllTags from "@utils/getherAllTags";
 import SnippetCard from "@components/snippetCard";
 import { IconFolder } from "@components/icons";
+import Heading from "@components/heading";
 import Meta from "@components/meta";
+
+import {
+	SnippetsListsing,
+	SnippetsListsingHeader,
+	SnippetsListsingInner,
+	SnippetsListsingItems,
+	SnippetsListsingSidebar,
+	SnippetsListsingTags,
+	TagLink,
+} from "@styles/pages/snippets";
 
 const Snippets = ({ allSnippets }) => {
 	return (
@@ -15,36 +25,34 @@ const Snippets = ({ allSnippets }) => {
 				description="View a list of helpful web development code snippets by Denny Hong."
 			/>
 
-			<div className="page-snippets-listing">
-				<div className="page-snippets-listing__header">
-					<h1>My Code Snippets</h1>
-				</div>
+			<SnippetsListsing>
+				<SnippetsListsingHeader>
+					<Heading level={1}>My Code Snippets</Heading>
+				</SnippetsListsingHeader>
 
-				<div className="page-snippets-listing__inner">
+				<SnippetsListsingInner>
 					{/* Posts */}
-					<section className="page-snippets-listing__snippets">
+					<SnippetsListsingItems>
 						{allSnippets.map((post, idx) => (
 							<SnippetCard key={idx} post={post} />
 						))}
-					</section>
+					</SnippetsListsingItems>
 
 					{/* Sidebar */}
-					<aside className="page-snippets-listing__sidebar">
-						<h2>Repositories:</h2>
+					<SnippetsListsingSidebar>
+						<Heading level={2}>Repositories:</Heading>
 
-						<div className="page-snippets-listing__tags">
+						<SnippetsListsingTags>
 							{getherAllTags(allSnippets).map((tag, idx) => (
-								<Link key={idx} href={`/repositories/${tag}`} passHref>
-									<a>
-										<IconFolder />
-										{tag}
-									</a>
-								</Link>
+								<TagLink key={idx} href={`/repositories/${tag}`} passHref>
+									<IconFolder />
+									{tag}
+								</TagLink>
 							))}
-						</div>
-					</aside>
-				</div>
-			</div>
+						</SnippetsListsingTags>
+					</SnippetsListsingSidebar>
+				</SnippetsListsingInner>
+			</SnippetsListsing>
 		</Fragment>
 	);
 };
