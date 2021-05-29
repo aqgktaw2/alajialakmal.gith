@@ -1,10 +1,20 @@
-import Link from "next/link";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@/lib/api";
-import getherAllTags from "@/utils/getherAllTags";
-import ProjectCard from "@/components/projectCard";
-import Meta from "@/components/meta";
+import { getAllPosts } from "@lib/api";
+import getherAllTags from "@utils/getherAllTags";
+import ProjectCard from "@components/projectCard";
+import Meta from "@components/meta";
+import Heading from "@components/heading";
+
+import {
+	ProjectsListing,
+	ProjectsListingHeader,
+	ProjectsListingInner,
+	PostListsingItems,
+	ProjectsListingSidebar,
+	ProjectsListingTags,
+	TagLink,
+} from "@styles/pages/projects";
 
 const Projects = ({ allProjects }) => {
 	return (
@@ -14,31 +24,32 @@ const Projects = ({ allProjects }) => {
 				description="View a list of Denny Hong's projects on web development."
 			/>
 
-			<div className="page-projects-listing">
-				<div className="page-projects-listing__header">
-					<h1>Commercial & Personal Projects</h1>
-				</div>
-				<div className="page-projects-listing__inner">
-					{/* Projects */}
-					<section className="page-projects-listing__posts">
+			<ProjectsListing>
+				<ProjectsListingHeader>
+					<Heading level={1}>Commercial & Personal Projects</Heading>
+				</ProjectsListingHeader>
+
+				{/* Projects */}
+				<ProjectsListingInner>
+					<PostListsingItems>
 						{allProjects.map((project, idx) => (
 							<ProjectCard key={idx} project={project} />
 						))}
-					</section>
+					</PostListsingItems>
 
 					{/* Sidebar */}
-					<aside className="page-projects-listing__sidebar">
-						<h2>Technologies:</h2>
-						<div className="page-projects-listing__tags">
+					<ProjectsListingSidebar>
+						<Heading level={2}>Technologies:</Heading>
+						<ProjectsListingTags>
 							{getherAllTags(allProjects).map((tag, idx) => (
-								<Link key={idx} href={`/technologies/${tag}`} passHref>
-									<a>#{tag}</a>
-								</Link>
+								<TagLink key={idx} href={`/technologies/${tag}`} passHref>
+									#{tag}
+								</TagLink>
 							))}
-						</div>
-					</aside>
-				</div>
-			</div>
+						</ProjectsListingTags>
+					</ProjectsListingSidebar>
+				</ProjectsListingInner>
+			</ProjectsListing>
 		</Fragment>
 	);
 };

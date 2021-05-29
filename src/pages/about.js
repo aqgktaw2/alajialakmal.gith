@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import Timeline from "@/components/timeline";
 import {
 	IconGrad,
 	IconCode,
@@ -20,24 +19,26 @@ import {
 	IconRedux,
 	IconNode,
 	IconFirebase,
-} from "@/components/icons";
-import Introduction from "@/components/sections/introduction";
-import Meta from "@/components/meta";
+} from "@components/icons";
+import Introduction from "@components/sections/introduction";
+import Meta from "@components/meta";
 
-const Embeded = dynamic(() => import("@/components/sections/embeded"));
+import { AboutPage, StyledTimeline, AboutPageInner, TechIcons } from "@styles/pages/about";
+
+const Embeded = dynamic(() => import("@components/sections/embeded"));
 
 const About = () => {
 	return (
 		<Fragment>
 			<Meta title="About Me | Denny Hong" />
 
-			<div className="page-about">
+			<AboutPage className="page-about">
 				<Introduction useHeading1 linkToEmbeded noBg />
 
-				<div className="page-about__inner">
-					{/* TIMELINE */}
-					<Timeline className="page-about__timeline">
-						<Timeline.Item Icon={<IconWeb />}>
+				{/* TIMELINE */}
+				<AboutPageInner>
+					<StyledTimeline>
+						<StyledTimeline.Item Icon={<IconWeb />}>
 							<h3>Web Developer @ Beacon Digital Marketing</h3>
 							<p>December 2020 - Present</p>
 							<ul>
@@ -53,7 +54,7 @@ const About = () => {
 									Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
 								</li>
 							</ul>
-							<div className="page-about__timeline-tech">
+							<TechIcons>
 								<span>
 									<IconJs />
 								</span>
@@ -81,9 +82,10 @@ const About = () => {
 								<span>
 									<IconWordpress />
 								</span>
-							</div>
-						</Timeline.Item>
-						<Timeline.Item Icon={<IconJsWhite />}>
+							</TechIcons>
+						</StyledTimeline.Item>
+
+						<StyledTimeline.Item Icon={<IconJsWhite />}>
 							<h3>JavaScript Developer @ WRLDS</h3>
 							<p>September 2020 - December 2020</p>
 							<ul>
@@ -97,7 +99,7 @@ const About = () => {
 								</li>
 								<li>Participated in deploying a Node.js-based GraphQL API server on AWS EC2.</li>
 							</ul>
-							<div className="page-about__timeline-tech">
+							<TechIcons>
 								<span>
 									<IconJs />
 								</span>
@@ -128,9 +130,10 @@ const About = () => {
 								<span>
 									<IconAws />
 								</span>
-							</div>
-						</Timeline.Item>
-						<Timeline.Item Icon={<IconCode />}>
+							</TechIcons>
+						</StyledTimeline.Item>
+
+						<StyledTimeline.Item Icon={<IconCode />}>
 							<h3>Fullstack Development Intern @ Harmonize</h3>
 							<p>June 2020 - September 2020</p>
 							<ul>
@@ -141,7 +144,7 @@ const About = () => {
 								<li>Developed CRUD API endpoints on a Node.js API server.</li>
 								<li>Participated in deploying the Node.js API server to AWS Elastic Beanstalk.</li>
 							</ul>
-							<div className="page-about__timeline-tech">
+							<TechIcons>
 								<span>
 									<IconJs />
 								</span>
@@ -163,9 +166,10 @@ const About = () => {
 								<span>
 									<IconNode />
 								</span>
-							</div>
-						</Timeline.Item>
-						<Timeline.Item Icon={<IconGrad />}>
+							</TechIcons>
+						</StyledTimeline.Item>
+
+						<StyledTimeline.Item Icon={<IconGrad />}>
 							<h3>Graduated from University of Washington 🎉</h3>
 							<p>June 2020</p>
 							<p>
@@ -177,12 +181,13 @@ const About = () => {
 								stronger mentally. I&apos;m glad I&apos;ve developed a passion for web development
 								and made my first little steps into my career.
 							</p>
-						</Timeline.Item>
-					</Timeline>
+						</StyledTimeline.Item>
+					</StyledTimeline>
 					{/* END TIMELINE */}
+
 					<Embeded />
-				</div>
-			</div>
+				</AboutPageInner>
+			</AboutPage>
 		</Fragment>
 	);
 };

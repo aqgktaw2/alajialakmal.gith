@@ -3,18 +3,19 @@ import dynamic from "next/dynamic";
 import ErrorPage from "next/error";
 import { Fragment } from "react";
 
-import { getPostBySlug, getAllPosts } from "@/lib/api";
-import markdownToHtml from "@/lib/markdownToHtml";
-import PostArticle from "@/components/postArticle";
-import BlogProgress from "@/components/blogProgress";
+import { getPostBySlug, getAllPosts } from "@lib/api";
+import markdownToHtml from "@lib/markdownToHtml";
+import PostArticle from "@components/postArticle";
+import BlogProgress from "@components/blogProgress";
+import Heading from "@components/heading";
 
-const RecentSnippets = dynamic(() => import("@/components/sections/recentSnippets"));
+const RecentSnippets = dynamic(() => import("@components/sections/recentSnippets"));
 
 const Snippet = ({ snippet, relatedSnippets }) => {
 	const router = useRouter();
 
 	if (router.isFallback) {
-		return <h1>Loading...</h1>;
+		return <Heading level={1}>Loading...</Heading>;
 	}
 
 	if (!router.isFallback && !snippet?.slug) {

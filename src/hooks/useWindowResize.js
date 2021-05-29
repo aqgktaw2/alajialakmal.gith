@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import debounce from "@/utils/debounce";
+import debounce from "@utils/debounce";
 
 const useWindowResize = () => {
 	const [windowSize, setWindowSize] = useState({
