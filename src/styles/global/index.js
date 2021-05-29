@@ -1,13 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 import { reset } from "styled-reset";
 
-import fonts from "./fonts";
-import variables from "./variables";
-import base from "./base";
-import typography from "./typography";
-import link from "./link";
-import button from "./button";
-import vendors from "./vendors";
+import fonts from "./_fonts";
+import variables from "./_variables";
+import base from "./_base";
+import typography from "./_typography";
+import link from "./_link";
+import button from "./_button";
+import vendors from "./_vendors";
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -26,24 +26,24 @@ const GlobalStyles = createGlobalStyle`
 
   ${vendors}
 
-/*
-  Resources
-  Svg Brand Logos
-  https://iconify.design/icon-sets
+  /*
+    Resources
+    Svg Brand Logos
+    https://iconify.design/icon-sets
 
-  Svg Blob Shapes
-  https://www.softr.io/tools/svg-shape-generator
-  https://www.blobmaker.app/
+    Svg Blob Shapes
+    https://www.softr.io/tools/svg-shape-generator
+    https://www.blobmaker.app/
 
-  Background Patterns
-  http://www.heropatterns.com/
-  https://www.flaticon.com/pattern/
-  https://philiprogers.com/svgpatterns/#honeycomb
-  http://btmills.github.io/geopattern/
+    Background Patterns
+    http://www.heropatterns.com/
+    https://www.flaticon.com/pattern/
+    https://philiprogers.com/svgpatterns/#honeycomb
+    http://btmills.github.io/geopattern/
 
-  Svg Waves
-  https://getwaves.io/
-*/
+    Svg Waves
+    https://getwaves.io/
+  */
 `;
 
 export default GlobalStyles;
