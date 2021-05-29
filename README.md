@@ -29,12 +29,12 @@ StyledComponents Migration TODO:
 - Next Image Wrapper with aspect ratios
 - Search for sass rgba() calles and fix
 - Search for include media calls and fix
-- Import orders
 - Search for querySelector(.some-class-name) and fix
 - Check for breakpoints
-- Fix nav item link underlines on small screen
 - Tech Icon Link Component
-- Add prism for code syntax highligting
 - Container & Section component
-- Search for TODO
+- Add prism for code syntax highligting
 - Forestry blocks
+- Import orders
+- Fix nav item link underlines on small screen
+- Search for TODO
