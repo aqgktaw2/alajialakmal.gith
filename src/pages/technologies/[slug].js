@@ -4,6 +4,9 @@ import { Fragment } from "react";
 import { getAllPosts } from "@lib/api";
 import ProjectCard from "@components/projectCard";
 import Meta from "@components/meta";
+import Heading from "@components/heading";
+
+import { TechContainer, TechHeader, TechPosts } from "@styles/pages/technologies";
 
 const Technologies = ({ projects }) => {
 	const router = useRouter();
@@ -15,16 +18,17 @@ const Technologies = ({ projects }) => {
 				description={`View a list of web development projects by Denny Hong that uses ${router.query.slug}.`}
 			/>
 
-			<div className="page-projects-by-technology">
-				<section className="page-projects-by-technology__header">
-					<h1>My projects with {router.query.slug}</h1>
-				</section>
-				<section className="page-projects-by-technology__inner">
+			<TechContainer>
+				<TechHeader>
+					<Heading level={1}>My projects with {router.query.slug}</Heading>
+				</TechHeader>
+
+				<TechPosts>
 					{projects.map((project, idx) => (
 						<ProjectCard project={project} key={idx} />
 					))}
-				</section>
-			</div>
+				</TechPosts>
+			</TechContainer>
 		</Fragment>
 	);
 };
