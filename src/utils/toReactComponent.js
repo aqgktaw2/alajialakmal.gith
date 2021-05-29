@@ -1,6 +1,7 @@
 import React from "react";
 import HtmlToReact from "html-to-react";
 import Image from "next/image";
+import Highlighter from "@components/highlighter";
 
 const htmlToReactParser = new HtmlToReact.Parser();
 const processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
@@ -34,6 +35,16 @@ const processingInstructions = [
 			) : (
 				<img src={node.attribs.src} alt={node.attribs.alt} />
 			);
+		},
+	},
+
+	// Syntax Highlight Code
+	{
+		shouldProcessNode(node) {
+			return node.type === "tag" && node.name === "code";
+		},
+		processNode(node, children) {
+			return <Highlighter codeString={children} />;
 		},
 	},
 
