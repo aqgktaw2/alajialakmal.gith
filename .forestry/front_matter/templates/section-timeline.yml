@@ -10,7 +10,7 @@ fields:
     config:
       required: true
     label: Title
-    default: Web Developer @ Beacon Digital Marketing
+    default: Web Developer @ Beacon Digital
   - name: date
     type: text
     config:
