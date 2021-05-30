@@ -11,7 +11,9 @@ import {
 } from "./styles";
 import Button from "@components/button";
 
-const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false }) => {
+const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false, content }) => {
+	console.log(content);
+
 	const handleScroll = evt => {
 		evt.preventDefault();
 		const id = evt.target.closest("a").href.split("#")[1];

@@ -2,12 +2,31 @@
 label: Section Introduction
 hide_body: true
 fields:
-- name: header_text
-  type: text
-  config:
-    required: true
-  label: Header Text
-  default: Who am I? (the TL;DR version)
+- name: heading
+  type: field_group
+  config: {}
+  fields:
+  - name: heading_text
+    type: text
+    config:
+      required: true
+    default: Who am I? (the TL;DR version)
+    label: Heading Text
+  - name: heading_level
+    type: select
+    default: '2'
+    config:
+      required: true
+      options:
+      - '1'
+      - '2'
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Heading Level
+  label: Heading
 - name: body_content
   type: textarea
   default: <p>I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
