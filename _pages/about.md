@@ -99,6 +99,6 @@ page_sections:
     icon: Grad
 page_title: About Me | Denny Hong
 page_description: ''
-open_graph_image: "/test-og.png"
+open_graph_image: ''
 
 ---
