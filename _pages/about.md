@@ -16,10 +16,11 @@ page_sections:
   timeline_items:
   - title: Web Developer @ Beacon Digital
     date: December 2020 - Present
-    content: |-
-      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
-      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
-      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+    content: "<ul><li><p>Developing customer-facing frontend UI for various web projects
+      at scale using JavaScript, HTML, and CSS.</p></li><li><p>Developing reusable
+      components &amp; implementing features for internal tools/applications using
+      React, Next.js, and Styled Components.</p></li><li><p>Explorations around DX
+      optimizations, JAM Stack integrations, and Headless CMS.</p></li></ul>"
     technologies:
     - HubSpot
     - WordPress
