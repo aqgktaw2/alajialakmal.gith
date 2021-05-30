@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import { getAllPosts } from "@lib/api";
+import { getAllPosts, getPageBySlug } from "@lib/api";
 import generateRssFeed from "@lib/rss";
 import generateSitemap from "@lib/sitemap";
 import HeroBanner from "@components/sections/heroBanner";
@@ -13,7 +13,9 @@ const RecentSnippets = dynamic(() => import("@components/sections/recentSnippets
 const RecentProjects = dynamic(() => import("@components/sections/recentProjects"));
 
 // Test linting
-const Home = ({ posts, projects, snippets }) => {
+const Home = ({ posts, projects, snippets, pageContent }) => {
+	console.log({ pageContent });
+
 	return (
 		<Fragment>
 			<Meta />
@@ -59,11 +61,14 @@ export async function getStaticProps() {
 	await generateRssFeed();
 	await generateSitemap();
 
+	const pageContent = getPageBySlug({ slug: "index" });
+
 	return {
 		props: {
 			posts,
 			projects,
 			snippets,
+			pageContent,
 		},
 		revalidate: 1,
 	};
