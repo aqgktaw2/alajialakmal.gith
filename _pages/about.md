@@ -97,5 +97,8 @@ page_sections:
     technologies: []
     enable_technologies: false
     icon: Grad
+page_title: About Me | Denny Hong
+page_description: ''
+open_graph_image: ''
 
 ---
