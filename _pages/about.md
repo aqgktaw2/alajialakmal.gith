@@ -38,22 +38,22 @@ page_sections:
     enable_technologies: true
     icon: Globe
   - title: JavaScript Developer @ WRLDS
-    date: September 2020 - December 2020
+    date: Aug 2020 - Nov 2020
     content: "<ul><li><p>Developed reusable UI components for WRLDS's web application
       using React, Next.js, and Sass.</p></li><li><p>Implemented customer-facing features
       such as user authentication, and email notification.</p></li><li><p>Participated
       in deploying a Node.js-based GraphQL API server on AWS EC2.</p></li></ul>"
     technologies:
-    - AWS
-    - GraphQL
-    - NodeJs
-    - Nextjs
-    - Redux
-    - React
-    - Sass
-    - CSS
-    - HTML
     - JavaScript
+    - CSS
+    - Sass
+    - HTML
+    - React
+    - Redux
+    - Nextjs
+    - NodeJs
+    - GraphQL
+    - AWS
     enable_technologies: true
     icon: JavaScript
   - title: Fullstack Development Intern @ Harmonize
