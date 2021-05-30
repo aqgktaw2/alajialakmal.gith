@@ -59,12 +59,9 @@ export const getAllTags = ({ postType }) => {
 };
 
 export const getPageBySlug = ({ slug }) => {
-	console.log({ slug });
 	const fullPath = join("_pages", `${slug}.md`);
-	console.log({ fullPath });
 	const fileContents = fs.readFileSync(fullPath, "utf8");
 
-	// https://github.com/jonschlinkert/gray-matter/issues/62#issuecomment-577628177
 	const { data } = matter(fileContents, {
 		engines: {
 			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),

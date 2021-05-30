@@ -14,8 +14,6 @@ const RecentProjects = dynamic(() => import("@components/sections/recentProjects
 
 // Test linting
 const Home = ({ posts, projects, snippets, pageContent }) => {
-	// console.log({ pageContent });
-
 	return (
 		<Fragment>
 			<Meta />

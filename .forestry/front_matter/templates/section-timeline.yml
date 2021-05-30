@@ -17,6 +17,22 @@ fields:
       required: true
     label: Date
     default: December 2020 - Present
+  - name: icon
+    type: select
+    default: Globe
+    config:
+      required: true
+      options:
+      - Globe
+      - JavaScript
+      - Code
+      - Grad
+      source:
+        type: simple
+        section:
+        file:
+        path:
+    label: Icon
   - name: content
     type: textarea
     default: "<ul><li><p>Developing customer-facing frontend UI for various web projects
@@ -38,8 +54,8 @@ fields:
     type: list
     config:
       use_select: true
-      min: 
-      max: 
+      min:
+      max:
       source:
         type: simple
       options:
@@ -61,7 +77,7 @@ fields:
       field: enable_technologies
       value: true
   config:
-    min: 
-    max: 
-    labelField: 
+    min:
+    max:
+    labelField:
   label: Timeline Items

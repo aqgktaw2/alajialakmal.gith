@@ -29,8 +29,6 @@ const Introduction = ({ noBg = false, content }) => {
 		return false;
 	};
 
-	console.log(toReactComponent(body_content));
-
 	return (
 		<IntroductionSection transparent={noBg}>
 			<IntroductionHeader>

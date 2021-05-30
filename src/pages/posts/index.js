@@ -4,6 +4,7 @@ import { getAllPosts } from "@lib/api";
 import getherAllTags from "@utils/getherAllTags";
 import PostCard from "@components/postCard";
 import Meta from "@components/meta";
+import Heading from "@components/heading";
 
 import {
 	PostsListsing,
@@ -13,8 +14,7 @@ import {
 	PostListingSidebar,
 	PostListingTags,
 	TagLink,
-} from "../../styles/pages/posts";
-import Heading from "@components/heading";
+} from "@styles/pages/posts";
 
 const Posts = ({ allPosts }) => {
 	return (

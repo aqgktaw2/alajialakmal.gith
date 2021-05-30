@@ -3,11 +3,11 @@ page_sections:
   - template: section-introduction
     header_text: About Me
     body_content: I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
-      focusing on delivering <a href="/projects" title="projects" target="_blank">rich
-      &amp; responsive UI experiences</a> for web projects at scale. I am passionate
-      about the JAM Stack, enjoy <a href="/posts" title="posts" target="_blank">writing
-      articles</a> and <a href="/snippets" title="snippets" target="_blank">sharing
-      code snippets</a> with fellow developers.
+      focusing on delivering <a href="/projects" title="projects" target="_blank"><strong><em>rich
+      &amp; responsive UI experiences</em></strong></a> for web projects at scale. I
+      am passionate about the JAM Stack, enjoy <a href="/posts" title="posts" target="_blank"><strong><em>writing
+      articles</em></strong></a> and <a href="/snippets" title="snippets" target="_blank"><strong><em>sharing
+      code snippets</em></strong></a> with fellow developers.
     enable_link: false
     link:
       label: More About Me
@@ -36,6 +36,7 @@ page_sections:
           - HTML
           - JavaScript
         enable_technologies: true
+        icon: Globe
       - title: JavaScript Developer @ WRLDS
         date: September 2020 - December 2020
         content: "<ul><li><p>Developed reusable UI components for WRLDS's web application
@@ -54,6 +55,7 @@ page_sections:
           - HTML
           - JavaScript
         enable_technologies: true
+        icon: JavaScript
       - title: Fullstack Development Intern @ Harmonize
         date: June 2020 - September 2020
         content: <ul><li><p>Developed UI components for "OrgChart" - a web application
@@ -69,6 +71,7 @@ page_sections:
           - HTML
           - JavaScript
         enable_technologies: true
+        icon: Code
       - title: "Graduated from University of Washington \U0001F389"
         date: June 2020
         content: "<p>I graduated from the University of Washington with a bachelor's in
@@ -77,4 +80,5 @@ page_sections:
           a passion for web development and made my first little steps into my career.</p>"
         technologies: []
         enable_technologies: false
+        icon: Grad
 ---

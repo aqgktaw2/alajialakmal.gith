@@ -1,7 +1,6 @@
 import IconGithub from "@components/icons/IconGithub";
 import IconTwitter from "@components/icons/IconTwitter";
 import IconEmail from "@components/icons/IconEmail";
-
 import {
 	IconAws,
 	IconCss,
@@ -18,6 +17,10 @@ import {
 	IconSass,
 	IconShopify,
 	IconWordpress,
+	IconGrad,
+	IconCode,
+	IconJsWhite,
+	IconWeb,
 } from "@components/icons";
 
 export const EXAMPLE_PATH = "blog-starter";
@@ -59,15 +62,22 @@ export const TECH_ICONS = {
 	Sass: <IconSass />,
 	HTML: <IconHtml />,
 	JavaScript: <IconJs />,
-	NextJs: <IconNextjs />,
+	Nextjs: <IconNextjs />,
 	React: <IconReact />,
 	Redux: <IconRedux />,
-	Hubspot: <IconHubspot />,
+	HubSpot: <IconHubspot />,
 	PHP: <IconPhp />,
-	Wordpress: <IconWordpress />,
+	WordPress: <IconWordpress />,
 	Firebase: <IconFirebase />,
 	GraphQL: <IconGraphql />,
 	Shopify: <IconShopify />,
 	NodeJs: <IconNode />,
 	AWS: <IconAws />,
+};
+
+export const TIMELINE_ICONS = {
+	Globe: <IconWeb />,
+	JavaScript: <IconJsWhite />,
+	Code: <IconCode />,
+	Grad: <IconGrad />,
 };
