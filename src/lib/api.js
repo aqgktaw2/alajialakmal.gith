@@ -71,8 +71,6 @@ export const getPageBySlug = ({ slug }) => {
 
 	const { data } = parseMarkdown(pageContent);
 
-	console.log(JSON.stringify(data, null, 2));
-
 	return data;
 };
 
