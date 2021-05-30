@@ -10,6 +10,13 @@ page_sections:
     social_media_url: https://twitter.com/DennyHong3
   - social_media_type: Email
     social_media_url: hong961127@gmail.com
+  social_links:
+  - social_media_type: Github
+    social_media_url: https://github.com/dennyhong96
+  - social_media_type: Twitter
+    social_media_url: https://twitter.com/DennyHong3
+  - social_media_type: Github
+    social_media_url: https://github.com/dennyhong96
 - template: section-introduction
   header_text: Who am I? (the TL;DR version)
   body_content: <p>I'm a web &amp; JavaScript developer based in Seattle, WA. I'm
