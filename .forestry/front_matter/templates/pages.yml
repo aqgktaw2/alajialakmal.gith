@@ -2,6 +2,11 @@
 label: Pages
 hide_body: true
 fields:
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
 - name: page_sections
   type: blocks
   label: Page Sections
