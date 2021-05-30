@@ -2,11 +2,12 @@
 page_sections:
 - template: section-introduction
   header_text: Who am I? (the TL;DR version)
-  body_content: I'm a web & JavaScript developer based in Seattle, WA. I'm currently
-    focusing on delivering [rich & responsive UI experiences](/projects "projects")
-    for web projects at scale. I am passionate about the JAM Stack, enjoy [writing
-    articles](/posts "posts") and [sharing code snippets](/snippets "snippets") with
-    fellow developers.
+  body_content: <p>I'm a web &amp; JavaScript developer based in Seattle, WA. I'm
+    currently focusing on delivering <a href="http://localhost:3000/projects" target="_blank">rich
+    &amp; responsive UI experiences</a> for web projects at scale. I am passionate
+    about the JAM Stack, enjoy <a href="http://localhost:3000/posts" target="_blank">writing
+    articles</a> and <a href="http://localhost:3000/snippets" target="_blank">sharing
+    code snippets</a> with fellow developers.</p>
   link:
     label: More About Me
     url: "/about"
