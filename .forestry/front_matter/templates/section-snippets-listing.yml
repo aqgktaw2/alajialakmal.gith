@@ -14,7 +14,7 @@ fields:
   showOnly:
     field: enable_header
     value: true
-  default: Lastest blog posts
+  default: Lastest Code Snippets
 - name: enable_link
   type: boolean
   label: Enable Link
@@ -28,13 +28,13 @@ fields:
     config:
       required: true
     label: Label
-    default: View More Articles
+    default: View More Snippets
   - name: url
     type: text
     config:
       required: true
     label: URL
-    default: "/posts"
+    default: "/snippets"
   label: Link
   showOnly:
     field: enable_link
