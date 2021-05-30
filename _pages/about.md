@@ -20,6 +20,20 @@ page_sections:
       * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
       * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
       * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+    technologies: []
+  - title: Web Developer @ Beacon Digital Marketing
+    date: December 2020 - Present
+    content: |-
+      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
+      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
+      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+    technologies: []
+  - title: Web Developer @ Beacon Digital Marketing
+    date: December 2020 - Present
+    content: |-
+      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
+      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
+      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
     technologies:
     - HubSpot
     - WordPress
