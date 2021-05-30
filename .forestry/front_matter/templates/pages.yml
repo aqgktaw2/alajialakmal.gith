@@ -8,6 +8,7 @@ fields:
   template_types:
   - section-introduction
   - section-hero-banner
+  - section-posts-listing
   config:
     min: 
     max: 
