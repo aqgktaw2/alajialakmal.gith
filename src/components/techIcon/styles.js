@@ -16,6 +16,8 @@ export const TechIconWrapper = styled.div`
 
 	& > svg {
 		margin: auto;
-		width: 2.75rem;
+		max-width: 2.75rem;
+		max-height: 2.75rem;
+		height: 100%;
 	}
 `;

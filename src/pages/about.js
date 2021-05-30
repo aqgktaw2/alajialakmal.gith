@@ -117,7 +117,7 @@ const About = () => {
 						</StyledTimeline.Item>
 
 						<StyledTimeline.Item Icon={<IconGrad />}>
-							<h3>Graduated from University of Washington 🎉</h3>
+							<Heading level={3}>Graduated from University of Washington 🎉</Heading>
 							<p>June 2020</p>
 							<p>
 								I graduated from the University of Washington with a bachelor&apos;s in Information
