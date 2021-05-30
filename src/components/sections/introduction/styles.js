@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-import Link from "@components/link";
 import { StyledContainer } from "@components/container/styles";
 
 export const IntroductionSection = styled.section`
@@ -34,13 +33,6 @@ export const IntroductionInner = styled(StyledContainer)`
 		font-size: 2rem;
 		margin-bottom: 2rem;
 	}
-`;
-
-export const IntroductionLink = styled(Link)`
-	white-space: nowrap;
-	overflow: hidden;
-	font-style: italic;
-	font-weight: 600;
 `;
 
 export const IntroductionLinks = styled.div`

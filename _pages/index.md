@@ -18,20 +18,21 @@ page_sections:
       - social_media_type: Email
         social_media_url: hong961127@gmail.com
   - template: section-introduction
-    heading:
-      heading_text: Who am I? (the TL;DR version)
-      heading_level: "2"
-    body_content: <p>I'm a web &amp; JavaScript developer based in Seattle, WA. I'm
-      currently focusing on delivering <a href="http://localhost:3000/projects" target="_blank">rich
-      &amp; responsive UI experiences</a> for web projects at scale. I am passionate
-      about the JAM Stack, enjoy <a href="http://localhost:3000/posts" target="_blank">writing
-      articles</a> and <a href="http://localhost:3000/snippets" target="_blank">sharing
-      code snippets</a> with fellow developers.</p>
+    header_text: Who am I? (the TL;DR version)
+    body_content: I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
+      focusing on delivering <a href="/projects" title="projects" target="_blank"><strong><em>rich
+      &amp; responsive UI experiences</em></strong></a> for web projects at scale. I
+      am passionate about the JAM Stack, enjoy <a href="/posts" title="posts" target="_blank"><strong><em>writing
+      articles</em></strong></a> and <a href="/snippets" title="snippets" target="_blank"><strong><em>sharing
+      code snippets</em></strong></a> with fellow developers.
     link:
       label: More About Me
       url: "/about"
     enable_link: true
     enable_scroll_to_twitter_spotify_embeds: false
+    heading:
+      heading_text: Who am I? (the TL;DR version)
+      heading_level: "2"
   - template: section-posts-listing
     enable_header: true
     header_text: Lastest blog posts
