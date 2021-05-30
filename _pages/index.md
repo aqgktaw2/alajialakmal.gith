@@ -19,12 +19,12 @@ page_sections:
     social_media_url: hong961127@gmail.com
 - template: section-introduction
   header_text: Who am I? (the TL;DR version)
-  body_content: 'I''m a web &amp; JavaScript developer based in Seattle, WA. I''m
-    currently focusing on delivering <a href="http://localhost:3000/projects" target="_blank">rich
+  body_content: I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
+    focusing on delivering <a href="http://localhost:3000/projects" target="_blank">rich
     &amp; responsive UI experiences</a> for web projects at scale. I am passionate
     about the JAM Stack, enjoy <a href="http://localhost:3000/posts" target="_blank">writing
     articles</a> and <a href="http://localhost:3000/snippets" target="_blank">sharing
-    code snippets</a> with fellow developers. '
+    code snippets</a> with fellow developers.
   link:
     label: More About Me
     url: "/about"
