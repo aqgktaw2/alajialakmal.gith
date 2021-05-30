@@ -3,11 +3,11 @@ page_sections:
 - template: section-introduction
   header_text: About Me
   body_content: I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
-    focusing on delivering <a href="/projects" title="projects" target="_blank"><strong><em>rich
-    &amp; responsive UI experiences</em></strong></a> for web projects at scale. I
-    am passionate about the JAM Stack, enjoy <a href="/posts" title="posts" target="_blank"><strong><em>writing
-    articles</em></strong></a> and <a href="/snippets" title="snippets" target="_blank"><strong><em>sharing
-    code snippets</em></strong></a> with fellow developers.
+    focusing on delivering <a href="/projects" title="projects"><strong><em>rich &amp;
+    responsive UI experiences</em></strong></a> for web projects at scale. I am passionate
+    about the JAM Stack, enjoy <a href="/posts" title="posts"><strong><em>writing
+    articles</em></strong></a> and <a href="/snippets" title="snippets"><strong><em>sharing
+    code snippets</em></strong></a> with fellow developers. Hello
   enable_link: false
   link:
     label: More About Me
