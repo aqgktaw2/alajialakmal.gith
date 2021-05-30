@@ -20,5 +20,16 @@ page_sections:
     social_media_url: https://twitter.com/DennyHong3
   - social_media_type: Email
     social_media_url: hong961127@gmail.com
+- template: section-posts-listing
+  enable_header: true
+  header_text: Lastest blog posts
+  enable_link: true
+  link:
+    label: View More Articles
+    url: "/posts"
+  enable_filter: true
+  filter:
+  - JAMStack
+  - JavaScript
 
 ---
