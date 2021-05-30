@@ -29,6 +29,10 @@ fields:
       schema:
         format: markdown
     label: Content
+  - name: enable_technologies
+    type: boolean
+    label: Enable Technologies
+    default: true
   - name: technologies
     type: list
     config:
@@ -52,6 +56,9 @@ fields:
       - GraphQL
       - AWS
     label: Technologies
+    showOnly:
+      field: enable_technologies
+      value: true
   config:
     min: 
     max: 
