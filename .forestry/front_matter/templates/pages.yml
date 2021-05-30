@@ -11,5 +11,4 @@ fields:
     min: 
     max: 
 pages:
-- _pages/index.md
 - _pages/index.md-copy.md
