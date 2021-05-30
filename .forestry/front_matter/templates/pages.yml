@@ -11,8 +11,10 @@ fields:
   - section-posts-listing
   - section-snippets-listing
   - section-projects-listing
+  - section-timeline
   config:
     min: 
     max: 
 pages:
+- _pages/about.md
 - _pages/index.md
