@@ -57,19 +57,19 @@ page_sections:
     enable_technologies: true
     icon: JavaScript
   - title: Fullstack Development Intern @ Harmonize
-    date: June 2020 - September 2020
+    date: May 2020 - Aug 2020
     content: <ul><li><p>Developed UI components for "OrgChart" - a web application
       that helps visualize organizational structures, using React, Redux, and Bootstrap.</p></li><li><p>Developed
       CRUD API endpoints on a Node.js API server.</p></li><li><p>Participated in deploying
       the Node.js API server to AWS Elastic Beanstalk.</p></li></ul>
     technologies:
-    - NodeJs
-    - Redux
-    - React
-    - Sass
-    - CSS
-    - HTML
     - JavaScript
+    - CSS
+    - Sass
+    - HTML
+    - React
+    - Redux
+    - NodeJs
     enable_technologies: true
     icon: Code
   - title: "Graduated from University of Washington \U0001F389"
