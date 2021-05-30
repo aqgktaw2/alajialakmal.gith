@@ -14,7 +14,7 @@ page_sections:
   enable_scroll_to_twitter_spotify_embeds: true
 - template: section-timeline
   timeline_items:
-  - title: Web Developer @ Beacon Digital Marketing
+  - title: Web Developer @ Beacon Digital
     date: December 2020 - Present
     content: |-
       * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
