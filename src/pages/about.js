@@ -19,8 +19,6 @@ import {
 const Embeded = dynamic(() => import("@components/sections/embeded"));
 
 const About = ({ pageContent }) => {
-	console.log(pageContent);
-
 	return (
 		<Fragment>
 			<Meta

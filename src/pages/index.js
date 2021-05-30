@@ -14,11 +14,14 @@ const RecentProjects = dynamic(() => import("@components/sections/recentProjects
 
 // Test linting
 const Home = ({ posts, projects, snippets, pageContent }) => {
-	console.log(pageContent);
-
 	return (
 		<Fragment>
-			<Meta />
+			<Meta
+				title={pageContent?.page_title}
+				description={pageContent?.page_description}
+				ogImage={pageContent?.page_description}
+			/>
+
 			{pageContent?.page_sections.map(section => {
 				switch (section.template) {
 					case "section-hero-banner": {
