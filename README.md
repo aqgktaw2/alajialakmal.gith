@@ -8,15 +8,15 @@
 ## Run the project locally
 
 ```bash
-$ git clone https://github.com/dennyhong96/denny-hong.git
-$ cd denny-hong
+$ git clone https://github.com/dennyhong96/dennyh.me.git my-blog
+$ cd my-blog
 $ npm i
 $ npm run dev
 ```
 
-Create a `.env.local` file similar to [`.env.example`](.env.example).
+Con't forget to create a `.env` file under root, similar to [`.env.example`](.env.example).
 
-## 1-Click Deploy
+## 1-Click Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/dennyhong96/denny-hong)
 
