@@ -14,15 +14,17 @@ page_sections:
   enable_scroll_to_twitter_spotify_embeds: true
 - template: section-timeline
   timeline_items:
-  - title: Fullstack Development Intern @ Harmonize
-    date: June 2020 - September 2020
+  - title: Web Developer @ Beacon Digital Marketing
+    date: December 2020 - Present
     content: |-
-      * Developed UI components for "OrgChart" - a web application that helps visualize organizational structures, using React, Redux, and Bootstrap.
-      * Developed CRUD API endpoints on a Node.js API server.
-      * Participated in deploying the Node.js API server to AWS Elastic Beanstalk.
+      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
+      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
+      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
     technologies:
-    - NodeJs
-    - Redux
+    - HubSpot
+    - WordPress
+    - Firebase
+    - Nextjs
     - React
     - Sass
     - CSS
@@ -39,22 +41,21 @@ page_sections:
     - GraphQL
     - NodeJs
     - Nextjs
+    - Redux
     - React
     - Sass
     - CSS
     - HTML
     - JavaScript
-  - title: Web Developer @ Beacon Digital Marketing
-    date: December 2020 - Present
+  - title: Fullstack Development Intern @ Harmonize
+    date: June 2020 - September 2020
     content: |-
-      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
-      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
-      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+      * Developed UI components for "OrgChart" - a web application that helps visualize organizational structures, using React, Redux, and Bootstrap.
+      * Developed CRUD API endpoints on a Node.js API server.
+      * Participated in deploying the Node.js API server to AWS Elastic Beanstalk.
     technologies:
-    - HubSpot
-    - WordPress
-    - Firebase
-    - Nextjs
+    - NodeJs
+    - Redux
     - React
     - Sass
     - CSS
