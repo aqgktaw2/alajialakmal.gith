@@ -20,6 +20,10 @@ fields:
     schema:
       format: markdown
   label: Body Content
+- name: enable_link
+  type: boolean
+  label: Enable Link
+  default: true
 - name: link
   type: field_group
   config: {}
@@ -37,3 +41,6 @@ fields:
     label: URL
     default: "/about"
   label: Link
+  showOnly:
+    field: enable_link
+    value: true
