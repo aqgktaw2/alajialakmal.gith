@@ -2,7 +2,7 @@
 	"name": "denny-hong",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "next-remote-watch \"{_pages,_posts}/**/*.md\"",
+		"dev": "next-remote-watch {_pages,_posts}/**/*.md",
 		"build": "next build",
 		"start": "next start",
 		"test": "jest --coverage",
