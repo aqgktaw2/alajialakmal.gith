@@ -14,37 +14,32 @@ fields:
     required: true
   label: Position
   default: Web & JavaScript Developer
-- name: social_links
+- name: social_link
   type: field_group_list
   fields:
-  - name: social_link
-    type: field_group
-    config: {}
-    fields:
-    - name: social_media_type
-      type: select
-      default: Github
-      config:
-        required: true
-        options:
-        - Github
-        - Twitter
-        - Email
-        source:
-          type: simple
-          section: 
-          file: 
-          path: 
-      label: Social Media Type
-    - name: url
-      type: text
-      config:
-        required: true
-      label: URL
-      default: https://github.com/dennyhong96
-    label: Social Link
+  - name: social_media_type
+    type: select
+    default: Github
+    config:
+      required: true
+      options:
+      - Github
+      - Twitter
+      - Email
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Social Media Type
+  - name: social_media_url
+    type: text
+    config:
+      required: true
+    label: Social Media URL
+    default: https://github.com/dennyhong96
   config:
     min: 
     max: 
     labelField: 
-  label: Social Links
+  label: Social Link
