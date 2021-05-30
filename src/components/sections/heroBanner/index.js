@@ -17,13 +17,17 @@ import {
 } from "./styles";
 import Heading from "@components/heading";
 
-const HeroBanner = () => {
+const HeroBanner = ({ content }) => {
 	const headingOne = useRef(null);
 	const headingTwo = useRef(null);
 	const illustrationWrapper = useRef(null);
 	const bannerInnerRef = useRef(null);
 	const scrollButtonRef = useRef(null);
 	const socialIconsRef = useRef([]);
+
+	console.log({ content });
+
+	// const {name,content,s} = content;
 
 	useEffect(() => {
 		headingOne.current.innerHTML = headingOne.current.innerText
