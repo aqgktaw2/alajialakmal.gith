@@ -44,5 +44,14 @@ page_sections:
   - JAMStack
   - Nodejs
   - JavsScript
+- template: section-projects-listing
+  enable_header: true
+  header_text: Lastest Projects
+  enable_link: true
+  link:
+    label: View More Projects
+    url: "/projects"
+  enable_filter: false
+  filter: []
 
 ---
