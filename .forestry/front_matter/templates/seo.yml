@@ -1,0 +1,26 @@
+---
+label: SEO
+hide_body: false
+fields:
+- name: page_title
+  type: text
+  config:
+    required: false
+  label: Page Title
+  default: Denny Hong | Web and JavaScript Developer
+- name: page_description
+  type: text
+  config:
+    required: false
+  label: Page Description
+  default: Denny Hong is a web developer and JavaScript developer based in Seattle,
+    WA.
+- name: open_graph_image
+  type: file
+  config:
+    maxSize: 5
+  label: Open Graph Image
+  description: The most frequently recommended resolution for an OG image is 1200
+    pixels x 627 pixels (1.91/1 ratio). At this size, your thumbnail will be big and
+    stand out from the crowd. Just don't exceed the 5MB size limit.
+  default: "/home-ogimg-1.jpg"
