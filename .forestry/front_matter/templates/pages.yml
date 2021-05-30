@@ -9,6 +9,8 @@ fields:
   - section-introduction
   - section-hero-banner
   - section-posts-listing
+  - section-snippets-listing
+  - section-projects-listing
   config:
     min: 
     max: 
