@@ -16,8 +16,8 @@ page_sections:
   social_link:
   - social_media_type: Github
     social_media_url: https://github.com/dennyhong96
-  - social_media_type: Github
-    social_media_url: https://github.com/dennyhong96
+  - social_media_type: Twitter
+    social_media_url: https://twitter.com/DennyHong3
   - social_media_type: Github
     social_media_url: https://github.com/dennyhong96
 
