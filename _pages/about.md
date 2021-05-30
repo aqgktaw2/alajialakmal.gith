@@ -16,10 +16,11 @@ page_sections:
   timeline_items:
   - title: Web Developer @ Beacon Digital
     date: December 2020 - Present
-    content: |-
-      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
-      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
-      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+    content: "<ul><li><p>Developing customer-facing frontend UI for various web projects
+      at scale using JavaScript, HTML, and CSS.</p></li><li><p>Developing reusable
+      components &amp; implementing features for internal tools/applications using
+      React, Next.js, and Styled Components.</p></li><li><p>Explorations around DX
+      optimizations, JAM Stack integrations, and Headless CMS.</p></li></ul>"
     technologies:
     - HubSpot
     - WordPress
@@ -33,10 +34,10 @@ page_sections:
     enable_technologies: true
   - title: JavaScript Developer @ WRLDS
     date: September 2020 - December 2020
-    content: |-
-      * Developed reusable UI components for WRLDS's web application using React, Next.js, and Sass.
-      * Implemented customer-facing features such as user authentication, and email notification.
-      * Participated in deploying a Node.js-based GraphQL API server on AWS EC2.
+    content: "<ul><li><p>Developed reusable UI components for WRLDS's web application
+      using React, Next.js, and Sass.</p></li><li><p>Implemented customer-facing features
+      such as user authentication, and email notification.</p></li><li><p>Participated
+      in deploying a Node.js-based GraphQL API server on AWS EC2.</p></li></ul>"
     technologies:
     - AWS
     - GraphQL
@@ -51,10 +52,10 @@ page_sections:
     enable_technologies: true
   - title: Fullstack Development Intern @ Harmonize
     date: June 2020 - September 2020
-    content: |-
-      * Developed UI components for "OrgChart" - a web application that helps visualize organizational structures, using React, Redux, and Bootstrap.
-      * Developed CRUD API endpoints on a Node.js API server.
-      * Participated in deploying the Node.js API server to AWS Elastic Beanstalk.
+    content: <ul><li><p>Developed UI components for "OrgChart" - a web application
+      that helps visualize organizational structures, using React, Redux, and Bootstrap.</p></li><li><p>Developed
+      CRUD API endpoints on a Node.js API server.</p></li><li><p>Participated in deploying
+      the Node.js API server to AWS Elastic Beanstalk.</p></li></ul>
     technologies:
     - NodeJs
     - Redux
@@ -66,10 +67,10 @@ page_sections:
     enable_technologies: true
   - title: "Graduated from University of Washington \U0001F389"
     date: June 2020
-    content: |-
-      I graduated from the University of Washington with a bachelor's in Information Systems.
-
-      Admittedly, 2020 might not be the greatest year to graduate, but it had made me much stronger mentally. I'm glad I've developed a passion for web development and made my first little steps into my career.
+    content: "<p>I graduated from the University of Washington with a bachelor's in
+      Information Systems.</p><p>Admittedly, 2020 might not be the greatest year to
+      graduate, but it had made me much stronger mentally. I'm glad I've developed
+      a passion for web development and made my first little steps into my career.</p>"
     technologies: []
     enable_technologies: false
 
