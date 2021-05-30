@@ -19,11 +19,28 @@ const Home = ({ posts, projects, snippets, pageContent }) => {
 	return (
 		<Fragment>
 			<Meta />
-			<HeroBanner />
-			<Introduction />
-			<RecentPosts posts={posts} />
-			<RecentSnippets posts={snippets} />
-			<RecentProjects projects={projects} />
+			{pageContent?.page_sections.map(section => {
+				switch (section.template) {
+					case "section-hero-banner": {
+						return <HeroBanner key={section.template} content={section} />;
+					}
+					case "section-introduction": {
+						return <Introduction key={section.template} content={section} />;
+					}
+					case "section-posts-listing": {
+						return <RecentPosts key={section.template} posts={posts} content={section} />;
+					}
+					case "section-snippets-listing": {
+						return <RecentSnippets key={section.template} posts={snippets} content={section} />;
+					}
+					case "section-projects-listing": {
+						return <RecentProjects key={section.template} projects={projects} content={section} />;
+					}
+					default: {
+						return null;
+					}
+				}
+			})}
 		</Fragment>
 	);
 };
@@ -57,11 +74,11 @@ export async function getStaticProps() {
 		postType: "snippets",
 	}).slice(0, 3);
 
+	const pageContent = getPageBySlug({ slug: "index" });
+
 	// Generate RSS Feed and Sitemap
 	await generateRssFeed();
 	await generateSitemap();
-
-	const pageContent = getPageBySlug({ slug: "index" });
 
 	return {
 		props: {
