@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: directory
   path: _pages
@@ -42,7 +42,7 @@ file_template: ":filename:"
 build:
   preview_env:
   - NEXT_PUBLIC_DOMAIN=https://dennyh.me
-  - NEXT_PUBLIC_MAILCHIMP_API_KEY=0d4c5e8d313ba8975cbd8deedde289f6-us19
+  - NEXT_PUBLIC_MAILCHIMP_API_KEY=0d4c5e8d313ba8975cbd8deedde289f6-us19 # Dummy expired key, in order to get forestry preview to work
   - NEXT_PUBLIC_MAILCHIMP_SERVER=us19
   - NEXT_PUBLIC_MAILCHIMP_LIST_ID=000061ca08
   preview_output_directory: ".next"
