@@ -72,6 +72,7 @@ const Introduction = ({ useHeading1 = false, linkToEmbeded = false, noBg = false
 						>
 							<IconTwitter />
 						</Link>
+
 						<Link
 							href="#spotify-embeded"
 							passHref
