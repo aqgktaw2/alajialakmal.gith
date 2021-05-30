@@ -34,10 +34,10 @@ page_sections:
     enable_technologies: true
   - title: JavaScript Developer @ WRLDS
     date: September 2020 - December 2020
-    content: |-
-      * Developed reusable UI components for WRLDS's web application using React, Next.js, and Sass.
-      * Implemented customer-facing features such as user authentication, and email notification.
-      * Participated in deploying a Node.js-based GraphQL API server on AWS EC2.
+    content: "<ul><li><p>Developed reusable UI components for WRLDS's web application
+      using React, Next.js, and Sass.</p></li><li><p>Implemented customer-facing features
+      such as user authentication, and email notification.</p></li><li><p>Participated
+      in deploying a Node.js-based GraphQL API server on AWS EC2.</p></li></ul>"
     technologies:
     - AWS
     - GraphQL
