@@ -1,4 +1,17 @@
 ---
 label: Section Posts Listing
 hide_body: true
-fields: []
+fields:
+- name: enable_header
+  type: boolean
+  label: Enable Header
+  default: true
+- name: header_text
+  type: text
+  config:
+    required: true
+  label: Header Text
+  showOnly:
+    field: enable_header
+    value: true
+  default: Lastest blog posts
