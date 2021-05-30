@@ -1,4 +1,50 @@
 ---
 label: Section Hero Banner
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  default: Denny Hong
+- name: position
+  type: text
+  config:
+    required: true
+  label: Position
+  default: Web & JavaScript Developer
+- name: social_links
+  type: field_group_list
+  fields:
+  - name: social_link
+    type: field_group
+    config: {}
+    fields:
+    - name: social_media_type
+      type: select
+      default: Github
+      config:
+        required: true
+        options:
+        - Github
+        - Twitter
+        - Email
+        source:
+          type: simple
+          section: 
+          file: 
+          path: 
+      label: Social Media Type
+    - name: url
+      type: text
+      config:
+        required: true
+      label: URL
+      default: https://github.com/dennyhong96
+    label: Social Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Social Links
