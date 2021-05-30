@@ -41,5 +41,5 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: social_media_type
   label: Social Link
