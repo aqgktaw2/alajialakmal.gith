@@ -13,7 +13,7 @@ ogImage:
   url: "/assets/projects/dennyh/dennyh.png"
 tags:
 - React
-- NextJs
+- Nextjs
 - Sass
 - NodeJs
 type: projects
