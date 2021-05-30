@@ -12,13 +12,13 @@ author:
 ogImage:
   url: "/assets/projects/cysiv/cover.png"
 tags:
-- JavaScript
-- HTML
-- CSS
-- HubSpot
+  - JavaScript
+  - HTML
+  - CSS
+  - HubSpot
 type: projects
-
 ---
+
 ### [Cysiv](https://www.cysiv.com/)
 
 [Cysiv](https://www.cysiv.com/) is a fast-growing cybersecurity company. In my current role, I am tasked with maintaining and developing new features / UI experiences for Cysiv's multi-language website utilizing my JavaScript, HTML, and CSS skills.

@@ -1,6 +1,8 @@
 import React from "react";
 import HtmlToReact from "html-to-react";
 import Image from "next/image";
+
+import Link from "@components/link";
 import Highlighter from "@components/highlighter";
 
 const htmlToReactParser = new HtmlToReact.Parser();
@@ -45,6 +47,16 @@ const processingInstructions = [
 		},
 		processNode(node, children) {
 			return <Highlighter codeString={children} />;
+		},
+	},
+
+	// Link
+	{
+		shouldProcessNode(node) {
+			return node.type === "tag" && node.name === "a";
+		},
+		processNode(node, children) {
+			return <Link {...node.attribs}>{children}</Link>;
 		},
 	},
 

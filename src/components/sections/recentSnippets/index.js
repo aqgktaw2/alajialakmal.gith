@@ -1,4 +1,5 @@
 import Button from "@components/button";
+import Heading from "@components/heading";
 import Link from "@components/link";
 import Section from "@components/section";
 import SnippetCard from "@components/snippetCard";
@@ -9,7 +10,9 @@ const RecentSnippets = ({ posts, showListingLink = true, title = "Lastest code s
 	return (
 		<Section>
 			<SnippetsHeader>
-				<h2 data-gsap="reveal-bottom">{title}</h2>
+				<Heading level={2} data-gsap="reveal-bottom">
+					{title}
+				</Heading>
 				{showListingLink && (
 					<Link href="/snippets" passHref data-gsap="reveal-bottom" underLine={false}>
 						<Button as="span">View More Snippets</Button>

@@ -58,6 +58,19 @@ export const getAllTags = ({ postType }) => {
 	];
 };
 
+export const getPageBySlug = ({ slug }) => {
+	const fullPath = join("_pages", `${slug}.md`);
+	const fileContents = fs.readFileSync(fullPath, "utf8");
+
+	const { data } = matter(fileContents, {
+		engines: {
+			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
+		},
+	});
+
+	return data;
+};
+
 // Subscribe to newsletter
 export async function subscribe({ email, onSuccess, onError }) {
 	try {

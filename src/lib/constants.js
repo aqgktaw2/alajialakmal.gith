@@ -1,7 +1,6 @@
 import IconGithub from "@components/icons/IconGithub";
 import IconTwitter from "@components/icons/IconTwitter";
 import IconEmail from "@components/icons/IconEmail";
-
 import {
 	IconAws,
 	IconCss,
@@ -14,9 +13,14 @@ import {
 	IconNode,
 	IconPhp,
 	IconReact,
+	IconRedux,
 	IconSass,
 	IconShopify,
 	IconWordpress,
+	IconGrad,
+	IconCode,
+	IconJsWhite,
+	IconWeb,
 } from "@components/icons";
 
 export const EXAMPLE_PATH = "blog-starter";
@@ -39,6 +43,12 @@ export const SOCIAL_ITEMS = [
 	},
 ];
 
+export const SOCIAL_ICON_MAP = {
+	Github: <IconGithub width="3rem" height="3rem" />,
+	Twitter: <IconTwitter width="3rem" height="3rem" />,
+	Email: <IconEmail width="3rem" height="3rem" />,
+};
+
 export const NAV_ITEMS = [
 	{ href: "/", label: "Home" },
 	{ href: "/posts", label: "Blog" },
@@ -52,14 +62,22 @@ export const TECH_ICONS = {
 	Sass: <IconSass />,
 	HTML: <IconHtml />,
 	JavaScript: <IconJs />,
-	NextJs: <IconNextjs />,
+	Nextjs: <IconNextjs />,
 	React: <IconReact />,
-	Hubspot: <IconHubspot />,
+	Redux: <IconRedux />,
+	HubSpot: <IconHubspot />,
 	PHP: <IconPhp />,
-	Wordpress: <IconWordpress />,
+	WordPress: <IconWordpress />,
 	Firebase: <IconFirebase />,
 	GraphQL: <IconGraphql />,
 	Shopify: <IconShopify />,
 	NodeJs: <IconNode />,
 	AWS: <IconAws />,
+};
+
+export const TIMELINE_ICONS = {
+	Globe: <IconWeb />,
+	JavaScript: <IconJsWhite />,
+	Code: <IconCode />,
+	Grad: <IconGrad />,
 };

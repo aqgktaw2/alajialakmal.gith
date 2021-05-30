@@ -12,13 +12,13 @@ author:
 ogImage:
   url: "/assets/projects/dennyh/dennyh.png"
 tags:
-- React
-- Nextjs
-- Sass
-- NodeJs
+  - React
+  - Nextjs
+  - Sass
+  - NodeJs
 type: projects
-
 ---
+
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
 <h3>Table of contents:</h3>

@@ -22,9 +22,9 @@ fields:
       - '2'
       source:
         type: simple
-        section: 
-        file: 
-        path: 
+        section:
+        file:
+        path:
     label: Heading Level
   label: Heading
 - name: body_content

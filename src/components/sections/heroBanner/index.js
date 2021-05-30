@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Link from "next/link";
 
-import { SOCIAL_ITEMS } from "@lib/constants";
+import { SOCIAL_ICON_MAP } from "@lib/constants";
+import Heading from "@components/heading";
 import Illutration from "./illustration";
 
 import {
@@ -14,10 +14,12 @@ import {
 	StyledScrollButton,
 	StyledScrollIcon,
 	StyledScrollArrows,
+	IconLink,
 } from "./styles";
-import Heading from "@components/heading";
 
-const HeroBanner = () => {
+const HeroBanner = ({ content }) => {
+	const { name, position, social_links } = content;
+
 	const headingOne = useRef(null);
 	const headingTwo = useRef(null);
 	const illustrationWrapper = useRef(null);
@@ -125,24 +127,26 @@ const HeroBanner = () => {
 				{/* HEADING TEXT */}
 				<StyledBannerLeft>
 					<Heading level={1}>
-						<span ref={headingOne}>Denny Hong</span>
+						<span ref={headingOne}>{name}</span>
 						<Heading level={2} as="span" forwardedRef={headingTwo}>
-							Web & JavaScript Developer
+							{position}
 						</Heading>
 					</Heading>
 
 					<StyledBannerSocial>
-						{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
-							<Link key={idx} href={href} passHref>
-								<a
-									aria-label={label}
-									target="_blank"
-									rel="noopener noreferrer"
-									ref={appendIconsToRef}
-								>
-									{icon}
-								</a>
-							</Link>
+						{social_links.map(({ social_media_type, social_media_url }) => (
+							<IconLink
+								key={social_media_type}
+								href={social_media_url}
+								passHref
+								aria-label={social_media_type}
+								target="_blank"
+								rel="noopener noreferrer"
+								ref={appendIconsToRef}
+								underLine={false}
+							>
+								{SOCIAL_ICON_MAP[social_media_type]}
+							</IconLink>
 						))}
 					</StyledBannerSocial>
 				</StyledBannerLeft>

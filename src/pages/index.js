@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import { getAllPosts } from "@lib/api";
+import { getAllPosts, getPageBySlug } from "@lib/api";
 import generateRssFeed from "@lib/rss";
 import generateSitemap from "@lib/sitemap";
 import HeroBanner from "@components/sections/heroBanner";
@@ -13,15 +13,32 @@ const RecentSnippets = dynamic(() => import("@components/sections/recentSnippets
 const RecentProjects = dynamic(() => import("@components/sections/recentProjects"));
 
 // Test linting
-const Home = ({ posts, projects, snippets }) => {
+const Home = ({ posts, projects, snippets, pageContent }) => {
 	return (
 		<Fragment>
 			<Meta />
-			<HeroBanner />
-			<Introduction />
-			<RecentPosts posts={posts} />
-			<RecentSnippets posts={snippets} />
-			<RecentProjects projects={projects} />
+			{pageContent?.page_sections.map(section => {
+				switch (section.template) {
+					case "section-hero-banner": {
+						return <HeroBanner key={section.template} content={section} />;
+					}
+					case "section-introduction": {
+						return <Introduction key={section.template} content={section} />;
+					}
+					case "section-posts-listing": {
+						return <RecentPosts key={section.template} posts={posts} content={section} />;
+					}
+					case "section-snippets-listing": {
+						return <RecentSnippets key={section.template} posts={snippets} content={section} />;
+					}
+					case "section-projects-listing": {
+						return <RecentProjects key={section.template} projects={projects} content={section} />;
+					}
+					default: {
+						return null;
+					}
+				}
+			})}
 		</Fragment>
 	);
 };
@@ -55,6 +72,8 @@ export async function getStaticProps() {
 		postType: "snippets",
 	}).slice(0, 3);
 
+	const pageContent = getPageBySlug({ slug: "index" });
+
 	// Generate RSS Feed and Sitemap
 	await generateRssFeed();
 	await generateSitemap();
@@ -64,6 +83,7 @@ export async function getStaticProps() {
 			posts,
 			projects,
 			snippets,
+			pageContent,
 		},
 		revalidate: 1,
 	};

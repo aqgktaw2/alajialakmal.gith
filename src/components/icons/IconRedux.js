@@ -5,8 +5,6 @@ function SvgIconRedux(props) {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			aria-hidden="true"
-			width="1.05em"
-			height="1em"
 			style={{
 				msTransform: "rotate(360deg)",
 				WebkitTransform: "rotate(360deg)",

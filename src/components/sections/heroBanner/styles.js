@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
+import Link from "@components/link";
 import { StyledContainer } from "@components/container/styles";
 import { StyledSection } from "@components/section/styles";
 
@@ -10,6 +11,10 @@ export const StyledCodeBanner = styled(StyledSection)`
 	overflow: hidden;
 	background: var(--color-background);
 	background: radial-gradient(ellipse, rgba(17, 0, 28, 0.25) 5%, rgba(7, 0, 11, 1) 35%);
+
+	@media (max-width: 768px) {
+		min-height: initial;
+	}
 `;
 
 export const StyledBannerInner = styled(StyledContainer)`
@@ -29,6 +34,7 @@ export const StyledBannerInner = styled(StyledContainer)`
 	@media (max-width: 768px) {
 		flex-direction: column;
 		justify-content: center;
+		min-height: initial;
 	}
 `;
 
@@ -76,19 +82,19 @@ export const StyledBannerSocial = styled.div`
 		justify-content: center;
 		margin-left: initial;
 	}
+`;
 
-	a {
-		padding: 1rem;
-		color: var(--color-text);
-		transition: var(--transition-standard);
+export const IconLink = styled(Link)`
+	padding: 1rem;
+	color: var(--color-text);
+	transition: var(--transition-standard);
 
-		&:hover {
-			color: var(--color-highlight);
-		}
+	&:hover {
+		color: var(--color-highlight);
+	}
 
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
+	&:not(:last-child) {
+		margin-right: 1rem;
 	}
 `;
 
