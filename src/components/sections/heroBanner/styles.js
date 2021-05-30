@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
+import Link from "@components/link";
 import { StyledContainer } from "@components/container/styles";
 import { StyledSection } from "@components/section/styles";
 
@@ -81,19 +82,19 @@ export const StyledBannerSocial = styled.div`
 		justify-content: center;
 		margin-left: initial;
 	}
+`;
 
-	a {
-		padding: 1rem;
-		color: var(--color-text);
-		transition: var(--transition-standard);
+export const IconLink = styled(Link)`
+	padding: 1rem;
+	color: var(--color-text);
+	transition: var(--transition-standard);
 
-		&:hover {
-			color: var(--color-highlight);
-		}
+	&:hover {
+		color: var(--color-highlight);
+	}
 
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
+	&:not(:last-child) {
+		margin-right: 1rem;
 	}
 `;
 

@@ -40,6 +40,12 @@ export const SOCIAL_ITEMS = [
 	},
 ];
 
+export const SOCIAL_ICON_MAP = {
+	Github: <IconGithub width="3rem" height="3rem" />,
+	Twitter: <IconTwitter width="3rem" height="3rem" />,
+	Email: <IconEmail width="3rem" height="3rem" />,
+};
+
 export const NAV_ITEMS = [
 	{ href: "/", label: "Home" },
 	{ href: "/posts", label: "Blog" },
