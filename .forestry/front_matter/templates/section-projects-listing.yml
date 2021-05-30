@@ -51,8 +51,8 @@ fields:
     max: 
     source:
       type: documents
-      section: posts
-      file: _posts/posts/intro-to-jam-stack-1-what-is-it-and-why.md
+      section: projects
+      file: _posts/projects/dennyh.md
       path: tags
   label: Filter
   showOnly:
