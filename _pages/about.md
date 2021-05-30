@@ -14,6 +14,13 @@ page_sections:
   enable_scroll_to_twitter_spotify_embeds: true
 - template: section-timeline
   timeline_items:
+  - title: "Graduated from University of Washington \U0001F389"
+    date: June 2020
+    content: |-
+      I graduated from the University of Washington with a bachelor's in Information Systems.
+
+      Admittedly, 2020 might not be the greatest year to graduate, but it had made me much stronger mentally. I'm glad I've developed a passion for web development and made my first little steps into my career.
+    technologies: []
   - title: Web Developer @ Beacon Digital
     date: December 2020 - Present
     content: |-
