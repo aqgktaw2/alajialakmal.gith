@@ -21,8 +21,9 @@ page_sections:
   - title: Software Engineer @ Rethink Labs, Inc.
     date: Apr 2021 - Present
     icon: Code
-    content: "<ul><li><p>Working on improving the frontend UI of the Rethink Files
-      app, focusing on mobile responsiveness and accessibility.</p></li><li><p>Working
+    content: "<ul><li><p>Working on Rethink Files app, a file browser that helps organize,
+      search, and share files across any cloud.</p></li><li><p>Working on improving
+      the frontend UI of the app, focusing on mobile responsiveness and accessibility.</p></li><li><p>Working
       on new API integrations with cloud storage providers/cloud apps such as ownCloud,
       Droplr, Basecamp, and Slack.</p></li></ul>"
     enable_technologies: true
@@ -32,6 +33,7 @@ page_sections:
     - NodeJs
     - JavaScript
     - CSS
+    - HTML
   - title: Web Developer @ Beacon Digital
     date: Nov 2020 - Apr 2021
     content: "<ul><li><p>Developed customer-facing frontend UI for various web projects
