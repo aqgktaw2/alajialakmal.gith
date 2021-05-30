@@ -14,7 +14,7 @@ fields:
     required: true
   label: Position
   default: Web & JavaScript Developer
-- name: social_link
+- name: social_links
   type: field_group_list
   fields:
   - name: social_media_type
@@ -42,4 +42,4 @@ fields:
     min: 
     max: 
     labelField: social_media_type
-  label: Social Link
+  label: Social Links
