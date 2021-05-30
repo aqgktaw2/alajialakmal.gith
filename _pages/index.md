@@ -31,5 +31,18 @@ page_sections:
   filter:
   - JAMStack
   - JavaScript
+- template: section-snippets-listing
+  enable_header: true
+  header_text: Lastest Code Snippets
+  enable_link: true
+  link:
+    label: View More Snippets
+    url: "/snippets"
+  enable_filter: false
+  filter:
+  - CloudFunction
+  - JAMStack
+  - Nodejs
+  - JavsScript
 
 ---
