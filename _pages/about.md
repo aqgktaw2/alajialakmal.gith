@@ -67,10 +67,10 @@ page_sections:
     enable_technologies: true
   - title: "Graduated from University of Washington \U0001F389"
     date: June 2020
-    content: |-
-      I graduated from the University of Washington with a bachelor's in Information Systems.
-
-      Admittedly, 2020 might not be the greatest year to graduate, but it had made me much stronger mentally. I'm glad I've developed a passion for web development and made my first little steps into my career.
+    content: "<p>I graduated from the University of Washington with a bachelor's in
+      Information Systems.</p><p>Admittedly, 2020 might not be the greatest year to
+      graduate, but it had made me much stronger mentally. I'm glad I've developed
+      a passion for web development and made my first little steps into my career.</p>"
     technologies: []
     enable_technologies: false
 
