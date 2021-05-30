@@ -6,7 +6,7 @@ fields:
   type: blocks
   label: Page Sections
   template_types:
-  - test
+  - section-introduction
   - section-hero-banner
   config:
     min: 
