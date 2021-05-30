@@ -1,12 +1,9 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/dennyhong96/denny-hong)
+## Built With
 
-## Overview
-
-- `src/pages/index.js` - Static generated home page
-- `src/pages/posts/*` - Static generated blog posts
-- `src/pages/snippets/*` - Static generated code snippets
-- `src/pages/projects/*` - Static generated projects portfolio
-- `src/pages/about.js` - Static about page
+- Static Site Generator - [Next.js](https://nextjs.org/)
+- Styling Solution - [styled-components](https://styled-components.com/)
+- Headless CMS - [Forestry](https://forestry.io/)
+- Hosting - [Vercel](https://vercel.com)
 
 ## Run the project locally
 
@@ -19,13 +16,11 @@ $ npm run dev
 
 Create a `.env.local` file similar to [`.env.example`](.env.example).
 
-## Built With
+## 1-Click Deploy
 
-- [Next.js](https://nextjs.org/)
-- [Vercel](https://vercel.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/dennyhong96/denny-hong)
 
-StyledComponents Migration TODO:
+#### Migration TODOs:
 
-- Forestry blocks
 - Fix nav item link underlines on small screen
-- Search for TODO
+- Clear TODO commented items
