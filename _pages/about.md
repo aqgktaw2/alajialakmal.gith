@@ -30,7 +30,7 @@ page_sections:
     - CSS
     - HTML
     - JavaScript
-    enable_technologies: false
+    enable_technologies: true
   - title: JavaScript Developer @ WRLDS
     date: September 2020 - December 2020
     content: |-
@@ -48,7 +48,7 @@ page_sections:
     - CSS
     - HTML
     - JavaScript
-    enable_technologies: false
+    enable_technologies: true
   - title: Fullstack Development Intern @ Harmonize
     date: June 2020 - September 2020
     content: |-
@@ -63,7 +63,7 @@ page_sections:
     - CSS
     - HTML
     - JavaScript
-    enable_technologies: false
+    enable_technologies: true
   - title: "Graduated from University of Washington \U0001F389"
     date: June 2020
     content: |-
