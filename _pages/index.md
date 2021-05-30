@@ -10,6 +10,8 @@ page_sections:
   link:
     label: More About Me
     url: "/about"
+  enable_link: true
+  enable_scroll_to_twitter_spotify_embeds: false
 - template: section-hero-banner
   name: Denny Hong
   position: Web & JavaScript Developer

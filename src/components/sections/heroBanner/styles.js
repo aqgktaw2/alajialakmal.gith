@@ -10,6 +10,10 @@ export const StyledCodeBanner = styled(StyledSection)`
 	overflow: hidden;
 	background: var(--color-background);
 	background: radial-gradient(ellipse, rgba(17, 0, 28, 0.25) 5%, rgba(7, 0, 11, 1) 35%);
+
+	@media (max-width: 768px) {
+		min-height: initial;
+	}
 `;
 
 export const StyledBannerInner = styled(StyledContainer)`
@@ -29,6 +33,7 @@ export const StyledBannerInner = styled(StyledContainer)`
 	@media (max-width: 768px) {
 		flex-direction: column;
 		justify-content: center;
+		min-height: initial;
 	}
 `;
 
