@@ -44,3 +44,6 @@ fields:
   showOnly:
     field: enable_link
     value: true
+- name: enable_scroll_to_twitter_spotify_embeds
+  type: boolean
+  label: Enable Scroll To Twitter Spotify Embeds
