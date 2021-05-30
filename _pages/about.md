@@ -3,10 +3,10 @@ page_sections:
 - template: section-introduction
   header_text: About Me
   body_content: I'm a web &amp; JavaScript developer based in Seattle, WA. I'm currently
-    focusing on delivering <a href="http://localhost:3000/projects" target="_blank">rich
+    focusing on delivering <a href="/projects" title="projects" target="_blank">rich
     &amp; responsive UI experiences</a> for web projects at scale. I am passionate
-    about the JAM Stack, enjoy <a href="http://localhost:3000/posts" target="_blank">writing
-    articles</a> and <a href="http://localhost:3000/snippets" target="_blank">sharing
+    about the JAM Stack, enjoy <a href="/posts" title="posts" target="_blank">writing
+    articles</a> and <a href="/snippets" title="snippets" target="_blank">sharing
     code snippets</a> with fellow developers.
   enable_link: false
   link:
