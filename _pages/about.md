@@ -52,10 +52,10 @@ page_sections:
     enable_technologies: true
   - title: Fullstack Development Intern @ Harmonize
     date: June 2020 - September 2020
-    content: |-
-      * Developed UI components for "OrgChart" - a web application that helps visualize organizational structures, using React, Redux, and Bootstrap.
-      * Developed CRUD API endpoints on a Node.js API server.
-      * Participated in deploying the Node.js API server to AWS Elastic Beanstalk.
+    content: <ul><li><p>Developed UI components for "OrgChart" - a web application
+      that helps visualize organizational structures, using React, Redux, and Bootstrap.</p></li><li><p>Developed
+      CRUD API endpoints on a Node.js API server.</p></li><li><p>Participated in deploying
+      the Node.js API server to AWS Elastic Beanstalk.</p></li></ul>
     technologies:
     - NodeJs
     - Redux
