@@ -30,6 +30,9 @@ page_sections:
     url: "/about"
   enable_link: true
   enable_scroll_to_twitter_spotify_embeds: false
+  heading:
+    heading_text: Who am I? (the TL;DR version)
+    heading_level: '2'
 - template: section-posts-listing
   enable_header: true
   header_text: Lastest blog posts
