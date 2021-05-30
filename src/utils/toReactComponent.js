@@ -1,6 +1,7 @@
 import React from "react";
 import HtmlToReact from "html-to-react";
 import Image from "next/image";
+
 import Highlighter from "@components/highlighter";
 
 const htmlToReactParser = new HtmlToReact.Parser();
