@@ -56,7 +56,7 @@ export async function getStaticProps({ params }) {
 	const content = await markdownToHtml(post.content || "");
 
 	// List at most 3 related posts
-	const relatedPosts = getAllPosts({
+	const relatedPosts = listAllPosts({
 		fields: [...relatedPostsFields ],
 		postType: "posts",
 	})
@@ -77,7 +77,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 	// List all posts' slugs
-	const posts = getAllPosts({ fields: [ "slug" ], postType: "posts" });
+	const posts = listAllPosts({ fields: [ "slug" ], postType: "posts" });
 
 	return {
 		paths: posts.map(post => {

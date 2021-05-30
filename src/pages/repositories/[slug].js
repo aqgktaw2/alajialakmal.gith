@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 
-import { getAllPosts } from "@lib/api";
+import { listAllPosts } from "@lib/api";
 import SnippetCard from "@components/snippetCard";
 import Meta from "@components/meta";
 import Heading from "@components/heading";
@@ -36,7 +36,7 @@ const Repositories = ({ snippets }) => {
 export default Repositories;
 
 export const getStaticProps = async ({ params }) => {
-	const allSnippets = getAllPosts({
+	const allSnippets = listAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "snippets",
 	});
@@ -51,7 +51,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-	const paths = getAllPosts({
+	const paths = listAllPosts({
 		fields: ["tags"],
 		postType: "snippets",
 	})

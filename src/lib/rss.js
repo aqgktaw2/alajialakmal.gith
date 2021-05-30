@@ -1,7 +1,7 @@
 import fs from "fs";
 import { Feed } from "feed";
 
-import { getAllPosts } from "./api";
+import { listAllPosts } from "./api";
 import markdownToHtml from "./markdownToHtml";
 
 const generateRssFeed = async () => {
@@ -32,12 +32,12 @@ const generateRssFeed = async () => {
 		author,
 	});
 
-	const allBlogPosts = getAllPosts({
+	const allBlogPosts = listAllPosts({
 		fields: ["title", "date", "slug", "excerpt", "content", "type"],
 		postType: "posts",
 	});
 
-	const allSnippets = getAllPosts({
+	const allSnippets = listAllPosts({
 		fields: ["title", "date", "slug", "excerpt", "content", "type"],
 		postType: "snippets",
 	});

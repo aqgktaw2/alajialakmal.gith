@@ -25,24 +25,6 @@ import {
 
 export const EXAMPLE_PATH = "blog-starter";
 
-export const SOCIAL_ITEMS = [
-	{
-		href: "https://github.com/dennyhong96",
-		icon: <IconGithub width="3rem" height="3rem" />,
-		label: "Github",
-	},
-	{
-		href: "https://twitter.com/DennyHong3",
-		icon: <IconTwitter width="3rem" height="3rem" />,
-		label: "Twitter",
-	},
-	{
-		href: "mailto:hong961127@gmail.com",
-		icon: <IconEmail width="3rem" height="3rem" />,
-		label: "Email",
-	},
-];
-
 export const SOCIAL_ICON_MAP = {
 	Github: <IconGithub width="3rem" height="3rem" />,
 	Twitter: <IconTwitter width="3rem" height="3rem" />,
@@ -81,3 +63,21 @@ export const TIMELINE_ICONS = {
 	Code: <IconCode />,
 	Grad: <IconGrad />,
 };
+
+export const FOOTER_SOCIAL_LINKS = [
+	{
+		href: "https://github.com/dennyhong96",
+		icon: <IconGithub width="3rem" height="3rem" />,
+		label: "Github",
+	},
+	{
+		href: "https://twitter.com/DennyHong3",
+		icon: <IconTwitter width="3rem" height="3rem" />,
+		label: "Twitter",
+	},
+	{
+		href: "mailto:hong961127@gmail.com",
+		icon: <IconEmail width="3rem" height="3rem" />,
+		label: "Email",
+	},
+];

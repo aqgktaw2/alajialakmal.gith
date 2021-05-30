@@ -1,31 +1,38 @@
 import fs from "fs";
-import { join } from "path";
+import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import yaml from "js-yaml";
 
-const postsDirectories = {
-	posts: join(process.cwd(), "_posts", "posts"),
-	snippets: join(process.cwd(), "_posts", "snippets"),
-	projects: join(process.cwd(), "_posts", "projects"),
+const DIR_MAP = {
+	posts: path.join(process.cwd(), "_posts", "posts"),
+	snippets: path.join(process.cwd(), "_posts", "snippets"),
+	projects: path.join(process.cwd(), "_posts", "projects"),
+	pages: path.join(process.cwd(), "_pages"),
 };
 
-export function getPostsFilenames(postType) {
-	return fs.readdirSync(postsDirectories[postType]);
+const parseMarkdown = markdown => {
+	// https://github.com/jonschlinkert/gray-matter/issues/62#issuecomment-577628177
+	const { data, content } = matter(markdown, {
+		engines: {
+			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
+		},
+	});
+
+	return { data, content };
+};
+
+export function listPostMarkdownFilenames(postType) {
+	return fs.readdirSync(DIR_MAP[postType]);
 }
 
 export function getPostBySlug({ slug, fields = [], postType }) {
 	// If passed in a filename, need to parse real slug
 	const realSlug = slug.replace(/\.md$/, "");
-	const fullPath = join(postsDirectories[postType], `${realSlug}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	const fullPath = path.join(DIR_MAP[postType], `${realSlug}.md`);
+	const markdown = fs.readFileSync(fullPath, "utf8");
 
-	// https://github.com/jonschlinkert/gray-matter/issues/62#issuecomment-577628177
-	const { data, content } = matter(fileContents, {
-		engines: {
-			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
-		},
-	});
+	const { data, content } = parseMarkdown(markdown);
 
 	return fields.reduce((acc, field) => {
 		field === "slug" && (acc[field] = realSlug);
@@ -36,8 +43,8 @@ export function getPostBySlug({ slug, fields = [], postType }) {
 	}, {});
 }
 
-export function getAllPosts({ fields = [], postType = "posts" }) {
-	const filenames = getPostsFilenames(postType);
+export function listAllPosts({ fields = [], postType = "posts" }) {
+	const filenames = listPostMarkdownFilenames(postType);
 	const posts = filenames
 		.map(filename => getPostBySlug({ slug: filename, fields, postType }))
 		// sort posts by date in descending order
@@ -45,10 +52,10 @@ export function getAllPosts({ fields = [], postType = "posts" }) {
 	return posts;
 }
 
-export const getAllTags = ({ postType }) => {
+export const listAllTags = ({ postType }) => {
 	return [
 		...new Set(
-			getAllPosts({
+			listAllPosts({
 				fields: ["tags"],
 				postType,
 			})
@@ -59,14 +66,10 @@ export const getAllTags = ({ postType }) => {
 };
 
 export const getPageBySlug = ({ slug }) => {
-	const fullPath = join("_pages", `${slug}.md`);
-	const fileContents = fs.readFileSync(fullPath, "utf8");
+	const fullPath = path.join(DIR_MAP.pages, `${slug}.md`);
+	const pageContent = fs.readFileSync(fullPath, "utf8");
 
-	const { data } = matter(fileContents, {
-		engines: {
-			yaml: s => yaml.safeLoad(s, { schema: yaml.JSON_SCHEMA }),
-		},
-	});
+	const { data } = parseMarkdown(pageContent);
 
 	return data;
 };

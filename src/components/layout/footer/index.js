@@ -1,4 +1,4 @@
-import { SOCIAL_ITEMS, NAV_ITEMS } from "@lib/constants";
+import { FOOTER_SOCIAL_LINKS, NAV_ITEMS } from "@lib/constants";
 import SubsribeForm from "@components/subscirbeForm";
 import Heading from "@components/heading";
 import SiteLogo from "@components/siteLogo";
@@ -67,7 +67,7 @@ export default function Footer() {
 						<StyledSiteLinks>
 							<Heading level={2}>Get in touch</Heading>
 							<ul>
-								{SOCIAL_ITEMS.map(({ href, icon, label }, idx) => (
+								{FOOTER_SOCIAL_LINKS.map(({ href, icon, label }, idx) => (
 									<li key={idx}>
 										<Link href={href} passHref target="_blank" rel="noopener noreferrer">
 											<Heading level={3} as="span">

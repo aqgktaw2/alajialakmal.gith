@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { getAllPosts } from "@lib/api";
+import { listAllPosts } from "@lib/api";
 import getherAllTags from "@utils/getherAllTags";
 import SnippetCard from "@components/snippetCard";
 import { IconFolder } from "@components/icons";
@@ -60,7 +60,7 @@ const Snippets = ({ allSnippets }) => {
 export default Snippets;
 
 export const getStaticProps = async () => {
-	const allSnippets = getAllPosts({
+	const allSnippets = listAllPosts({
 		fields: ["title", "excerpt", "coverImage", "date", "author", "ogImage", "tags", "type", "slug"],
 		postType: "snippets",
 	});
