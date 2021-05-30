@@ -1,13 +1,17 @@
 ---
 page_sections:
 - template: test
-  header_text: Who am I? (the TL;DR version)
-  body: I'm a web & JavaScript developer based in Seattle, WA. I'm currently focusing
-    on delivering [rich & responsive UI experiences](/projects "projects") for web
-    projects at scale. I am passionate about the JAM Stack, enjoy [writing articles](/posts
-    "posts") and [sharing code snippets](/snippets "snippets") with fellow developers.
-  link_text: More About Me
-  link_href: "/about"
+  header_text: ''
+  body: ''
+  link_text: ''
+  link_href: ''
+- template: section-hero-banner
+  name: Denny Hong
+  position: Web & JavaScript Developer
+  social_links:
+  - social_link:
+      social_media_type: Github
+      url: https://github.com/dennyhong96
 title: index.md-(copy)
 
 ---
