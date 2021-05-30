@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { IconGrad, IconCode, IconJsWhite, IconWeb } from "@components/icons";
 import Introduction from "@components/sections/introduction";
 import Meta from "@components/meta";
+import Heading from "@components/heading";
 
 import {
 	AboutPage,
@@ -54,7 +55,7 @@ const About = () => {
 				<AboutPageInner>
 					<StyledTimeline>
 						<StyledTimeline.Item Icon={<IconWeb />}>
-							<h3>Web Developer @ Beacon Digital Marketing</h3>
+							<Heading level={3}>Web Developer @ Beacon Digital Marketing</Heading>
 							<p>December 2020 - Present</p>
 							<ul>
 								<li>
@@ -77,7 +78,7 @@ const About = () => {
 						</StyledTimeline.Item>
 
 						<StyledTimeline.Item Icon={<IconJsWhite />}>
-							<h3>JavaScript Developer @ WRLDS</h3>
+							<Heading level={3}>JavaScript Developer @ WRLDS</Heading>
 							<p>September 2020 - December 2020</p>
 							<ul>
 								<li>
@@ -98,7 +99,7 @@ const About = () => {
 						</StyledTimeline.Item>
 
 						<StyledTimeline.Item Icon={<IconCode />}>
-							<h3>Fullstack Development Intern @ Harmonize</h3>
+							<Heading level={3}>Fullstack Development Intern @ Harmonize</Heading>
 							<p>June 2020 - September 2020</p>
 							<ul>
 								<li>
