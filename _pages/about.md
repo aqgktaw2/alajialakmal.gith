@@ -12,6 +12,9 @@ page_sections:
     label: More About Me
     url: "/about"
   enable_scroll_to_twitter_spotify_embeds: true
+  heading:
+    heading_text: About Me
+    heading_level: '1'
 - template: section-timeline
   timeline_items:
   - title: Web Developer @ Beacon Digital
