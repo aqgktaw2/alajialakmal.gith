@@ -36,6 +36,7 @@ page_sections:
     - HTML
     - JavaScript
     enable_technologies: true
+    icon: Globe
   - title: JavaScript Developer @ WRLDS
     date: September 2020 - December 2020
     content: "<ul><li><p>Developed reusable UI components for WRLDS's web application
@@ -54,6 +55,7 @@ page_sections:
     - HTML
     - JavaScript
     enable_technologies: true
+    icon: JavaScript
   - title: Fullstack Development Intern @ Harmonize
     date: June 2020 - September 2020
     content: <ul><li><p>Developed UI components for "OrgChart" - a web application
@@ -69,6 +71,7 @@ page_sections:
     - HTML
     - JavaScript
     enable_technologies: true
+    icon: Code
   - title: "Graduated from University of Washington \U0001F389"
     date: June 2020
     content: "<p>I graduated from the University of Washington with a bachelor's in
@@ -77,5 +80,6 @@ page_sections:
       a passion for web development and made my first little steps into my career.</p>"
     technologies: []
     enable_technologies: false
+    icon: Grad
 
 ---
