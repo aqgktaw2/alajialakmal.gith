@@ -1,4 +1,39 @@
 ---
 label: Section Introduction
 hide_body: true
-fields: []
+fields:
+- name: header_text
+  type: text
+  config:
+    required: true
+  label: Header Text
+  default: Who am I? (the TL;DR version)
+- name: body_content
+  type: textarea
+  default: I'm a web & JavaScript developer based in Seattle, WA. I'm currently focusing
+    on delivering [rich & responsive UI experiences](/projects "projects") for web
+    projects at scale. I am passionate about the JAM Stack, enjoy [writing articles](/posts
+    "posts") and [sharing code snippets](/snippets "snippets") with fellow developers.
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Body Content
+- name: link
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Label
+    default: More About Me
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    default: "/about"
+  label: Link
