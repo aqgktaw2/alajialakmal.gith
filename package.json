@@ -2,7 +2,7 @@
 	"name": "denny-hong",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "next",
+		"dev": "next-remote-watch \"{_pages,_posts}/**/*.md\"",
 		"build": "next build",
 		"start": "next start",
 		"test": "jest --coverage",
@@ -53,6 +53,7 @@
 		"husky": "^4.3.8",
 		"jest": "^26.6.3",
 		"lint-staged": "^10.5.4",
+		"next-remote-watch": "^1.0.0",
 		"prettier": "^2.2.1"
 	},
 	"lint-staged": {
