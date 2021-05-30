@@ -7,7 +7,7 @@ page_sections:
     responsive UI experiences</em></strong></a> for web projects at scale. I am passionate
     about the JAM Stack, enjoy <a href="/posts" title="posts"><strong><em>writing
     articles</em></strong></a> and <a href="/snippets" title="snippets"><strong><em>sharing
-    code snippets</em></strong></a> with fellow developers. Hello
+    code snippets</em></strong></a> with fellow developers.
   enable_link: false
   link:
     label: More About Me
