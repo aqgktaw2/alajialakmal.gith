@@ -1,4 +1,36 @@
 ---
 label: Section Timeline
 hide_body: true
-fields: []
+fields:
+- name: timeline_items
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+    default: Web Developer @ Beacon Digital Marketing
+  - name: date
+    type: text
+    config:
+      required: true
+    label: Date
+    default: December 2020 - Present
+  - name: content
+    type: textarea
+    default: |-
+      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
+      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
+      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Content
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Timeline Items
