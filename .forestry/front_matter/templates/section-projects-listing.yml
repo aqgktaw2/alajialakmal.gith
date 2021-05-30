@@ -1,0 +1,60 @@
+---
+label: Section Projects Listing
+hide_body: true
+fields:
+- name: enable_header
+  type: boolean
+  label: Enable Header
+  default: true
+- name: header_text
+  type: text
+  config:
+    required: true
+  label: Header Text
+  showOnly:
+    field: enable_header
+    value: true
+  default: Lastest blog posts
+- name: enable_link
+  type: boolean
+  label: Enable Link
+  default: true
+- name: link
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Label
+    default: View More Articles
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    default: "/posts"
+  label: Link
+  showOnly:
+    field: enable_link
+    value: true
+- name: enable_filter
+  type: boolean
+  label: Enable Filter
+  default: false
+- name: filter
+  type: list
+  config:
+    use_select: true
+    min:
+    max:
+    source:
+      type: documents
+      section: posts
+      file: _posts/posts/intro-to-jam-stack-1-what-is-it-and-why.md
+      path: tags
+  label: Filter
+  showOnly:
+    field: enable_filter
+    value: true
