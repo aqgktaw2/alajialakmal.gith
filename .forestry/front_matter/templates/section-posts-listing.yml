@@ -15,3 +15,27 @@ fields:
     field: enable_header
     value: true
   default: Lastest blog posts
+- name: enable_link
+  type: boolean
+  label: Enable Link
+  default: true
+- name: link
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: text
+    config:
+      required: true
+    label: Label
+    default: View More Articles
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    default: "/posts"
+  label: Link
+  showOnly:
+    field: enable_link
+    value: true
