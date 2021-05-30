@@ -21,13 +21,22 @@ page_sections:
       * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
       * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
     technologies: []
-  - title: Web Developer @ Beacon Digital Marketing
-    date: December 2020 - Present
+  - title: JavaScript Developer @ WRLDS
+    date: September 2020 - December 2020
     content: |-
-      * Developing customer-facing frontend UI for various web projects at scale using JavaScript, HTML, and CSS.
-      * Developing reusable components & implementing features for internal tools/applications using React, Next.js, and Styled Components.
-      * Explorations around DX optimizations, JAM Stack integrations, and Headless CMS.
-    technologies: []
+      * Developed reusable UI components for WRLDS's web application using React, Next.js, and Sass.
+      * Implemented customer-facing features such as user authentication, and email notification.
+      * Participated in deploying a Node.js-based GraphQL API server on AWS EC2.
+    technologies:
+    - AWS
+    - GraphQL
+    - NodeJs
+    - Nextjs
+    - React
+    - Sass
+    - CSS
+    - HTML
+    - JavaScript
   - title: Web Developer @ Beacon Digital Marketing
     date: December 2020 - Present
     content: |-
