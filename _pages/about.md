@@ -98,7 +98,8 @@ page_sections:
     enable_technologies: false
     icon: Grad
 page_title: About Me | Denny Hong
-page_description: ''
-open_graph_image: ''
+page_description: Denny Hong is a web developer and JavaScript developer based in
+  Seattle, WA.
+open_graph_image: "/home-ogimg.jpg"
 
 ---
