@@ -19,8 +19,7 @@ export const StyledPostBody = styled.div`
 export const StyledPostInner = styled.div`
 	width: 100%;
 	max-width: 850px;
-	padding-left: 4rem;
-	padding-right: 4rem;
+	padding: 4rem 4rem 0 4rem;
 	margin: 0 auto;
 
 	h2 {
