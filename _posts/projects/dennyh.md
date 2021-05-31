@@ -1,8 +1,9 @@
 ---
 title: dennyh.me
-excerpt: At the beginning of 2021, I re-built this site with Next.js, Sass, and Markdown
-  to include blogging functionalities. I want to start sharing my interests and grow
-  my technical communication skills through the process.
+excerpt: At the beginning of 2021, I re-built this site with Jamstack technologies
+  I've come to fall in love with - Next.js, Forestry CMS, and Vercel hosting. I want
+  to start sharing my interests and grow my technical communication skills through
+  documenting my projects, code snippets, and writing blog posts.
 coverImage: "/assets/projects/dennyh/dennyh.png"
 clientUrl: https://dennyh.me
 date: 2021-02-16T02:12:58Z
