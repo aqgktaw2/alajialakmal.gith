@@ -21,7 +21,11 @@ const Embeded = dynamic(() => import("@components/sections/embeded"));
 const About = ({ pageContent }) => {
 	return (
 		<Fragment>
-			<Meta title="About Me | Denny Hong" />
+			<Meta
+				title={pageContent?.page_title}
+				description={pageContent?.page_description}
+				ogImage={pageContent?.page_description}
+			/>
 
 			<AboutPage as="div">
 				{pageContent?.page_sections.map(section => {
