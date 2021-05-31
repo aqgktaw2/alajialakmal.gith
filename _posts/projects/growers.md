@@ -1,5 +1,5 @@
 ---
-title: growers
+title: Growers
 excerpt: Growers is a tech company that helps build stronger relationships between
   ag retailers and their farmers. During my role as a Web Developer at Beacon Digital,
   I was tasked with building out the Growers' new website theme with the Gutenberg
