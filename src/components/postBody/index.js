@@ -7,17 +7,18 @@ export default function PostBody({ content }) {
 
 	useEffect(() => {
 		postBodyRef.current.querySelectorAll("a").forEach(link => {
-			if (link?.getAttribute("href")?.startsWith("#")) {
+			if (link?.getAttribute("href")?.includes("#")) {
 				link.addEventListener("click", function (evt) {
 					evt.preventDefault();
-					const scrollTarget = document.getElementById(
-						link?.getAttribute("href")?.replace("#", ""),
-					);
+
+					const scrollTarget = document.getElementById(link?.getAttribute("href")?.split("#")[1]);
+
 					window.scrollTo({
 						top: scrollTarget?.getBoundingClientRect().top,
 						left: 0,
 						behavior: "smooth",
 					});
+
 					window.history.pushState({}, "", link?.getAttribute("href"));
 				});
 			}
@@ -27,7 +28,6 @@ export default function PostBody({ content }) {
 	return (
 		<StyledPostBody ref={postBodyRef}>
 			<StyledPostInner>{content}</StyledPostInner>
-			{/* <div  dangerouslySetInnerHTML={{ __html: content }} /> */}
 		</StyledPostBody>
 	);
 }

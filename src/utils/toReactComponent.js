@@ -9,19 +9,20 @@ const htmlToReactParser = new HtmlToReact.Parser();
 const processNodeDefinitions = new HtmlToReact.ProcessNodeDefinitions(React);
 
 // TRANSFORM INLINE CSS TO STYLE OBJECT
-// const parseReactStyles = inlineStyles =>
-// 	inlineStyles?.split(";").reduce((acc, cur) => {
-// 		let key = cur.split(":")[0];
-// 		let val = cur.split(":")[1];
-// 		key = key.includes("-")
-// 			? (() => {
-// 					const part1 = key.split("-")[0];
-// 					const part2 = key.split("-")[1];
-// 					return `${part1}${part2.slice(0, 1).toUpperCase()}${part2.slice(1)}`;
-// 			  })()
-// 			: key;
-// 		return { ...acc, [key]: val };
-// 	}, {});
+const parseReactStyles = inlineStyles =>
+	inlineStyles
+		?.split(";")
+		.filter(Boolean)
+		.reduce((acc, cur) => {
+			let [key, val] = cur.split(":");
+			key = key.includes("-")
+				? (() => {
+						const [part1, part2] = key.split("-");
+						return `${part1}${part2.slice(0, 1).toUpperCase()}${part2.slice(1)}`;
+				  })()
+				: key;
+			return { ...acc, [key]: val };
+		}, {}) ?? {};
 
 const processingInstructions = [
 	// PROCESS NEXT IMAGE
@@ -35,7 +36,11 @@ const processingInstructions = [
 					<Image layout="fill" src={node.attribs.src} alt={node.attribs.alt} />
 				</div>
 			) : (
-				<img src={node.attribs.src} alt={node.attribs.alt} />
+				<img
+					src={node.attribs.src}
+					alt={node.attribs.alt}
+					style={parseReactStyles(node.attribs.style)}
+				/>
 			);
 		},
 	},
