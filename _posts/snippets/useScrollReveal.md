@@ -3,7 +3,7 @@ title: useScrollReveal React Hook w/ GSAP
 excerpt: In this Snippet, we are going to build a re-usable useScrollReveal React
   hook that is going to animate any element on scroll.
 coverImage: "/assets/snippets/useScrollReveal/gsap.jpg"
-date: 2021-03-11T05:14:34.929Z
+date: 2021-03-11T05:14:34.929+00:00
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
@@ -23,16 +23,16 @@ type: snippets
 <h3>Table of contents:</h3>
 <ul>
 <li>
-<h5><a href='#What are we building?'>What are we building?</a></h5>
+<h5><a href='#what-are-we-building'>What are we building?</a></h5>
 </li>
 <li>
-<h5><a href="#Why use GSAP to build it?">Why use GSAP to build it?</a></h5>
+<h5><a href="#why-use-gsap-to-build-it">Why use GSAP to build it?</a></h5>
 </li>
 <li>
-<h5><a href="#ScrollTrigger.batch(), gsap.to(), gsap.set()">ScrollTrigger.batch(), gsap.to(), gsap.set()</a></h5>
+<h5><a href="#scrolltriggerbatch-gsapto-gsapset">ScrollTrigger.batch(), gsap.to(), gsap.set()</a></h5>
 </li>
 <li>
-<h5><a href="#Hookify the animation logic">Hookify the animation logic</a></h5>
+<h5><a href="#hookify-the-animation-logic">Hookify the animation logic</a></h5>
 </li>
 <li>
 <h5><a href="#Using our useScrollReveal hook">Using our useScrollReveal hook</a></h5>
@@ -41,10 +41,10 @@ type: snippets
 </blockquote>
 <!-- END ARTICLE OVERVIEW -->
 
-<h2 id="What are we building?">What are we building?</h2>
+<h2 id="what-are-we-building">What are we building?</h2>
 As a web/frontend developer, inevitably you are going to run into some animation requirements. One of the more popular ones falls somewhere along the lines of "revealing elements in a staggered manner when the page loads, then proceed to reveal more elements as the user keeps on scrolling". And with this "Snippet", we are going to build a React hook "useScrollReveal" that you can drop into any future React-based project and get this type of animation behavior.
 
-<h2 id="Why use GSAP to build it?">Why use GSAP to build it?</h2>
+<h2 id="why-use-gsap-to-build-it">Why use GSAP to build it?</h2>
 Now, there are definitely libraries that provide this type of animation out of the box, such as "ScrollReveal", and "AOS". But today we are going to "hand roll"(sort of) a solution ourselves with GSAP (GreenSock Animation Platform). And this is not to "Re-invent" the wheel, there are a few good reasons.
 
 1. GSAP takes care of all the frustrating browser inconsistencies when it comes to animation, such as transform-origin, etc.
@@ -52,7 +52,7 @@ Now, there are definitely libraries that provide this type of animation out of t
 3. GSAP has silky smooth hardware accelerated animation by using JavaScript and requestAnimationFrame() under the hood by default, instead of CSS (of which you need to manually use rules like "transform3d(0,0,0);" to trigger hardware acceleration).
 4. This way you can use all the other great animation/utility features GSAP provides and only needing to import one package/library.
 
-<h2 id="ScrollTrigger.batch(), gsap.to(), gsap.set()">ScrollTrigger.batch(), gsap.to(), gsap.set()</h2>
+<h2 id="scrolltriggerbatch-gsapto-gsapset">ScrollTrigger.batch(), gsap.to(), gsap.set()</h2>
 
 Let's first look at the main tool we'll use, which is the "ScrollTrigger" from GSAP. Its sole purpose is to help minimize the code needed when creating scroll-based animations that are otherwise done with intersection observers or "scroll" event listener.
 
@@ -162,7 +162,7 @@ ScrollTrigger.batch('[data-gsap="reveal-bottom"]', {
 });
 ```
 
-<h2 id="Hookify the animation logic">Hookify the animation logic</h2>
+<h2 id="hookify-the-animation-logic">Hookify the animation logic</h2>
 
 Now we have all the logic for our animation, if you drop this snippet into a vanilla JavaScript project, that should be all you need. But we are working within a React ecosystem, we need to "hookify" this logic. So, let's import "useEffect" hook from React and wrap our animation logic in it -
 
@@ -286,7 +286,7 @@ const useScrollReveal = () => {
 export default useScrollReveal;
 ```
 
-<h2 id="Using our useScrollReveal hook">Using our useScrollReveal hook</h2> With this, we have set up our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "_app.js"
+<h2 id="using-our-usescrollreveal-hook">Using our useScrollReveal hook</h2> With this, we have set up our "useScrollReveal" hook, and we can call the hook at the entry point of our app. Again, for our Next.js project, that's the "_app.js"
 
 ```JavaScript
 export default function MyApp({ Component, pageProps }) {
