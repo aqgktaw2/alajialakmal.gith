@@ -7,18 +7,18 @@ export default function PostBody({ content }) {
 
 	useEffect(() => {
 		postBodyRef.current.querySelectorAll("a").forEach(link => {
-			if (link?.getAttribute("href")?.startsWith("#")) {
+			if (link?.getAttribute("href")?.includes("#")) {
 				link.addEventListener("click", function (evt) {
 					evt.preventDefault();
-					const scrollTarget = document.getElementById(
-						link?.getAttribute("href")?.replace("#", ""),
-					);
+					console.log("clicked");
+					const scrollTarget = document.getElementById(link?.getAttribute("href")?.split("#")[1]);
+
 					window.scrollTo({
-						top: scrollTarget?.getBoundingClientRect().top + 80,
+						top: scrollTarget?.getBoundingClientRect().top,
 						left: 0,
 						behavior: "smooth",
 					});
-					window.history.pushState({}, "", link?.getAttribute("href"));
+					// window.history.pushState({}, "", link?.getAttribute("href"));
 				});
 			}
 		});
