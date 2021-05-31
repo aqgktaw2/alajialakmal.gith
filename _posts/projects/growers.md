@@ -6,7 +6,7 @@ excerpt: Growers is a tech company that helps build stronger relationships betwe
   blocks system from WordPress.
 coverImage: "/growers-full.png"
 clientUrl: https://growers.ag/
-date: 2021-03-07T18:43:31.186+00:00
+date: 2021-04-01T17:43:31Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
