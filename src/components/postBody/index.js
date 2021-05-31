@@ -11,6 +11,7 @@ export default function PostBody({ content }) {
 				link.addEventListener("click", function (evt) {
 					evt.preventDefault();
 					console.log("clicked");
+
 					const scrollTarget = document.getElementById(link?.getAttribute("href")?.split("#")[1]);
 
 					window.scrollTo({
@@ -18,7 +19,8 @@ export default function PostBody({ content }) {
 						left: 0,
 						behavior: "smooth",
 					});
-					// window.history.pushState({}, "", link?.getAttribute("href"));
+
+					window.history.pushState({}, "", link?.getAttribute("href"));
 				});
 			}
 		});
@@ -27,7 +29,6 @@ export default function PostBody({ content }) {
 	return (
 		<StyledPostBody ref={postBodyRef}>
 			<StyledPostInner>{content}</StyledPostInner>
-			{/* <div  dangerouslySetInnerHTML={{ __html: content }} /> */}
 		</StyledPostBody>
 	);
 }
