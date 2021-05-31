@@ -15,6 +15,7 @@ tags:
 - JavaScript
 - HTML
 - CSS
+- Sass
 - HubSpot
 type: projects
 
