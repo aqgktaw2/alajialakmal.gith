@@ -4,7 +4,7 @@ excerpt: In this Snippet, we are going to utilize Mailchimp API to build a cloud
   that you could call on any of your projects where you want your audience to subscribe
   to your newsletter.
 coverImage: "/assets/snippets/mailchimp-subscribe/mailchimp.jpg"
-date: 2021-03-07T00:39:37.956Z
+date: 2021-03-07T00:39:37.956+00:00
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
@@ -23,13 +23,13 @@ type: snippets
 <h3>Table of contents:</h3>
 <ul>
 <li>
-<h5><a href='#Generating a Mailchimp API Key'>Generating a Mailchimp API Key</a></h5>
+<h5><a href='#generating-a-mailchimp-api-key'>Generating a Mailchimp API Key</a></h5>
 </li>
 <li>
 <h5><a href="#Retrieving your audience list_id">Retrieving your audience list_id</a></h5>
 </li>
 <li>
-<h5><a href="#Setting up your cloud function">Setting up your cloud function</a></h5>
+<h5><a href="#setting-up-your-cloud-function">Setting up your cloud function</a></h5>
 </li>
 <li>
 <h5><a href="#Setting up single welcome email">Setting up single welcome email</a></h5>
@@ -43,7 +43,7 @@ type: snippets
 
 In this Snippet, we are going to utilize Mailchimp API to build a cloud function that you could call on any of your projects where you want your audience to subscribe to your newsletter, much like the subscribe form you see at the footer section of this blog.
 
-<h2 id="Generating a Mailchimp API Key">Generating a Mailchimp API Key</h2>
+<h2 id="generating-a-mailchimp-api-key">Generating a Mailchimp API Key</h2>
 
 After you registered a Mailchimp account and first landed on the dashboard, if you are like me, you are probably a bit lost. But don't worry, simply follow these steps to generate your API key.
 
@@ -55,7 +55,7 @@ After you registered a Mailchimp account and first landed on the dashboard, if y
 
 Now you should see the button that lets you create an API key. One part you should note is that we'll also need a Mailchimp server name, which is just the last 4 characters of your API key. For me, it was "us19".
 
-<h2 id="Retrieving your audience list_id">Retrieving your audience list_id</h2>
+<h2 id="retrieving-your-audience-list-id">Retrieving your audience list_id</h2>
 
 Our ultimate goal is to use the Mailchimp "members" API - "Add a member to list" endpoint to subscribe an email to your audience list. However, since an account can have several audience lists, this endpoint needs to know which list you are looking to add the email to.
 
@@ -73,7 +73,7 @@ If you send the request now, Mailchimp should return you the information of all 
 
 At this point, you should have a Mailchimp API key, Mailchimp server name, and a list_id. If you have all three, congrats, we can now move on to the function.
 
-<h2 id="Setting up your cloud function">Setting up your cloud function</h2>
+<h2 id="setting-up-your-cloud-function">Setting up your cloud function</h2>
 
 To keep things secure, the first thing is to set environment variables.
 
@@ -140,7 +140,7 @@ export default async function handler(req, res) {
 
 Head to your Mailchimp Dashboard, click on the "Automation" icon button on the far left of the screen. For our purpose, create a "Single welcome email" that will be triggered every time we subscribe to a new email with our cloud function.
 
-<h2 id="Calling your cloud function">Calling your cloud function</h2>
+<h2 id="calling-your-cloud-function">Calling your cloud function</h2>
 
 Now once we have the cloud function in place, we can call it. For payload, we need to pass it an object with a key named "email" and the email you are looking to subscribe to as value.
 
