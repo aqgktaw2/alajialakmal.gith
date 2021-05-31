@@ -26,16 +26,16 @@ type: snippets
 <h5><a href='#generating-a-mailchimp-api-key'>Generating a Mailchimp API Key</a></h5>
 </li>
 <li>
-<h5><a href="#Retrieving your audience list_id">Retrieving your audience list_id</a></h5>
+<h5><a href="#retrieving-your-audience-list-id">Retrieving your audience list_id</a></h5>
 </li>
 <li>
 <h5><a href="#setting-up-your-cloud-function">Setting up your cloud function</a></h5>
 </li>
 <li>
-<h5><a href="#Setting up single welcome email">Setting up single welcome email</a></h5>
+<h5><a href="#setting-up-single-welcome-email">Setting up single welcome email</a></h5>
 </li>
 <li>
-<h5><a href="#Calling your cloud function">Calling your cloud function</a></h5>
+<h5><a href="#calling-your-cloud-function">Calling your cloud function</a></h5>
 </li>
 </ul>
 </blockquote>
@@ -136,7 +136,7 @@ export default async function handler(req, res) {
 }
 ```
 
-<h2 id="Setting up single welcome email">Setting up single welcome email</h2>
+<h2 id="setting-up-single-welcome-email">Setting up single welcome email</h2>
 
 Head to your Mailchimp Dashboard, click on the "Automation" icon button on the far left of the screen. For our purpose, create a "Single welcome email" that will be triggered every time we subscribe to a new email with our cloud function.
 
