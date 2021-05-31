@@ -35,7 +35,7 @@ type: snippets
 <h5><a href="#hookify-the-animation-logic">Hookify the animation logic</a></h5>
 </li>
 <li>
-<h5><a href="#Using our useScrollReveal hook">Using our useScrollReveal hook</a></h5>
+<h5><a href="#using-our-usescrollreveal-hook">Using our useScrollReveal hook</a></h5>
 </li>
 </ul>
 </blockquote>
