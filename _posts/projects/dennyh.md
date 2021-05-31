@@ -20,29 +20,19 @@ tags:
 type: projects
 
 ---
-<!-- ARTICLE OVERVIEW -->
-<blockquote>
-<h3>Table of contents:</h3>
-<ul>
-<li>
-<h5><a href='#Architecture Choice'>Architecture Choice</a></h5>
-</li>
-<li>
-<h5><a href="#Accessibility">Accessibility</a></h5>
-</li>
-<li>
-<h5><a href="#SEO">SEO</a></h5>
-</li>
-<li>
-<h5><a href="#API Route">API Route</a></h5>
-</li>
-</ul>
-</blockquote>
-<!-- END ARTICLE OVERVIEW -->
+<!-- ARTICLE OVERVIEW --> <blockquote> <h3>Table of contents:</h3> <ul> <li> <h5><a href='#ArchitectureChoice'>Architecture Choice</a></h5> </li>
 
-<h2 id="Architecture Choice">Architecture Choice</h2>
+<li> <h5><a href='#HeadlessCMS'>Headless CMS</a></h5>  </li> <li> <h5><a href="#Accessibility">Accessibility</a></h5> </li> <li> <h5><a href="#SEO">SEO</a></h5> </li> <li> <h5><a href="#APIRoute">API Route</a></h5> </li> </ul> </blockquote> <!-- END ARTICLE OVERVIEW -->
 
-For my site, I basically wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Lastly, I map the blog post data to the page with React. You might notice I also tried to integrate some animation here and there to spice up the experience.
+<h2 id="ArchitectureChoice">Architecture Choice</h2>
+
+For my site, I basically wanted a blog that is accessible, SEO friendly, and has three "post types", being "articles", "snippets", and "projects". At the same time, I want to have fun working on it, so the developer's experience should be enjoyable. To achieve all that, I followed the modern "JAM Stack" architecture. I picked Next.js as my Static Site Generator(SSG). At build time, it is pulling in blog content data from Markdown files with the "getStaticProps" and "getStaticPaths" functions, then using the "frontmatter" library to parse meta information such as "post types" and "post tags". Then, I map the blog post data to the UI with the help of JSX. You might notice I also tried to integrate some animation here and there to spice up the experience.
+
+<h2 id="HeadlessCMS">Headless CMS</h2>
+
+I also integrated Forestry CMS to allow for easier editing experiences. There are generally two flavors of Headless CMS, API-based and Git-based. Forestry falls into the Git-based category. It is essentially a GUI layer over git that reads/writes website contents in markdown format. It gives non-technical website maintainers and content writers the superpower of source control.
+
+![](/forestry-example.png)![](/forestry-example-2.png)
 
 An example of fetching blog article content data at built time -
 
@@ -138,7 +128,7 @@ export default function Meta({
 }
 ```
 
-<h2 id="API Route">API Route</h2>
+<h2 id="APIRoute">API Route</h2>
 
 I also utilized the "API Route" feature of Next.js and built a newsletter subscribe cloud function with Mailchimp's "members" API. I have a detailed ["Code Snippet"](https://dennyh.me/snippets/mailchimp-subscribe) that walks through the steps on how I built it out. Vercel has really made deploying cloud functions in Next.js projects a breeze. (No more configuring API Gateways!😀)
 
