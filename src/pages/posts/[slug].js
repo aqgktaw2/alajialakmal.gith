@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import ErrorPage from "next/error";
 
-import { getPostBySlug, getAllPosts } from "@lib/api";
+import { getPostBySlug, listAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
 import PostArticle from "@components/postArticle";
 import BlogProgress from "@components/blogProgress";
@@ -59,7 +59,7 @@ export async function getStaticProps({ params }) {
 	const content = await markdownToHtml(post.content || "");
 
 	// List at most 3 related posts
-	const relatedPosts = getAllPosts({
+	const relatedPosts = listAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "posts",
 	})
@@ -80,7 +80,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 	// List all posts' slugs
-	const posts = getAllPosts({ fields: ["slug"], postType: "posts" });
+	const posts = listAllPosts({ fields: ["slug"], postType: "posts" });
 
 	return {
 		paths: posts.map(post => {

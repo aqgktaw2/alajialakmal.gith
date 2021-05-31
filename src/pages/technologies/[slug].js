@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { useRouter } from "next/router";
 
-import { getAllPosts } from "@lib/api";
+import { listAllPosts } from "@lib/api";
 import ProjectCard from "@components/projectCard";
 import Meta from "@components/meta";
 import Heading from "@components/heading";
@@ -36,7 +36,7 @@ const Technologies = ({ projects }) => {
 export default Technologies;
 
 export const getStaticProps = async ({ params }) => {
-	const allProjects = getAllPosts({
+	const allProjects = listAllPosts({
 		fields: [
 			"title",
 			"date",
@@ -61,7 +61,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-	const paths = getAllPosts({
+	const paths = listAllPosts({
 		fields: ["tags"],
 		postType: "projects",
 	})

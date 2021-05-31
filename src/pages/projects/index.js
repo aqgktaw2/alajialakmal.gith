@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { getAllPosts } from "@lib/api";
+import { listAllPosts } from "@lib/api";
 import getherAllTags from "@utils/getherAllTags";
 import ProjectCard from "@components/projectCard";
 import Meta from "@components/meta";
@@ -58,7 +58,7 @@ export default Projects;
 
 export async function getStaticProps() {
 	// List all posts
-	const allProjects = getAllPosts({
+	const allProjects = listAllPosts({
 		fields: [
 			"title",
 			"date",

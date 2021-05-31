@@ -1,8 +1,8 @@
-## Built With
+## Built With Jamstack technologies
 
 - Static Site Generator - [Next.js](https://nextjs.org/)
+- Git-based Headless CMS - [Forestry](https://forestry.io/)
 - Styling Solution - [styled-components](https://styled-components.com/)
-- Headless CMS - [Forestry](https://forestry.io/)
 - Hosting - [Vercel](https://vercel.com)
 
 ## Run the project locally
@@ -14,7 +14,7 @@ $ npm i
 $ npm run dev
 ```
 
-Con't forget to create a `.env` file under root, similar to [`.env.example`](.env.example).
+Con't forget to create a `.env.local` file under root, similar to [`.env.example`](.env.example).
 
 ## 1-Click Deploy with Vercel
 

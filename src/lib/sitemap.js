@@ -2,7 +2,7 @@ import fs from "fs";
 import globby from "globby";
 import prettier from "prettier";
 
-import { getAllTags } from "./api";
+import { listAllTags } from "./api";
 
 const generateSitemap = async () => {
 	const prettierConfig = await prettier.resolveConfig(".prettierrc");
@@ -14,9 +14,13 @@ const generateSitemap = async () => {
 	]);
 
 	const listings = ["/posts", "/projects", "/snippets"];
-	const topicPages = getAllTags({ postType: "posts" }).map(tag => `/topics/${tag}`);
-	const repositoriesPages = getAllTags({ postType: "snippets" }).map(tag => `/repositories/${tag}`);
-	const technologiesPages = getAllTags({ postType: "projects" }).map(tag => `/technologies/${tag}`);
+	const topicPages = listAllTags({ postType: "posts" }).map(tag => `/topics/${tag}`);
+	const repositoriesPages = listAllTags({ postType: "snippets" }).map(
+		tag => `/repositories/${tag}`,
+	);
+	const technologiesPages = listAllTags({ postType: "projects" }).map(
+		tag => `/technologies/${tag}`,
+	);
 	pages = [...pages, ...listings, ...topicPages, ...repositoriesPages, ...technologiesPages];
 
 	const sitemap = `

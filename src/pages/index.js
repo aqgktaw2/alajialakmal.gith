@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import { getAllPosts, getPageBySlug } from "@lib/api";
+import { listAllPosts, getPageBySlug } from "@lib/api";
 import generateRssFeed from "@lib/rss";
 import generateSitemap from "@lib/sitemap";
 import HeroBanner from "@components/sections/heroBanner";
@@ -47,12 +47,12 @@ export default Home;
 
 export async function getStaticProps() {
 	// List all posts
-	const posts = getAllPosts({
+	const posts = listAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "posts",
 	}).slice(0, 3);
 
-	const projects = getAllPosts({
+	const projects = listAllPosts({
 		fields: [
 			"title",
 			"date",
@@ -67,7 +67,7 @@ export async function getStaticProps() {
 		postType: "projects",
 	}).slice(0, 2);
 
-	const snippets = getAllPosts({
+	const snippets = listAllPosts({
 		fields: ["title", "date", "slug", "author", "coverImage", "excerpt", "type", "tags"],
 		postType: "snippets",
 	}).slice(0, 3);

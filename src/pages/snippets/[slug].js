@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import ErrorPage from "next/error";
 import { Fragment } from "react";
 
-import { getPostBySlug, getAllPosts } from "@lib/api";
+import { getPostBySlug, listAllPosts } from "@lib/api";
 import markdownToHtml from "@lib/markdownToHtml";
 import PostArticle from "@components/postArticle";
 import BlogProgress from "@components/blogProgress";
@@ -61,7 +61,7 @@ export async function getStaticProps({ params }) {
 	const content = await markdownToHtml(snippet.content || "");
 
 	// List at most 2 related snippets
-	const relatedSnippets = getAllPosts({
+	const relatedSnippets = listAllPosts({
 		fields: ["title", "date", "slug", "author", "content", "ogImage", "coverImage", "tags", "type"],
 		postType: "snippets",
 	})
@@ -86,7 +86,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
 	// List all posts' slugs
-	const snippets = getAllPosts({ fields: ["slug"], postType: "snippets" });
+	const snippets = listAllPosts({ fields: ["slug"], postType: "snippets" });
 
 	return {
 		paths: snippets.map(snippet => {
