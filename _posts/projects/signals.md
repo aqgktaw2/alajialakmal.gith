@@ -1,5 +1,5 @@
 ---
-title: signals-analytics.com
+title: Signals Analytics
 excerpt: Signals Analytics is a tech company that offers a next-generation advanced
   analytics platform that is used by many of the world’s leading consumer brands for
   optimizing their product portfolios. During my role as a Web Developer at Beacon
