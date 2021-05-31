@@ -6,7 +6,7 @@ excerpt: Signals Analytics is a tech company that offers a next-generation advan
   Digital, I was tasked with building out Signals Analytics' website.
 coverImage: "/assets/projects/signals/cover.png"
 clientUrl: https://www.signals-analytics.com/
-date: 2021-03-07T18:43:31.186+00:00
+date: 2021-03-15T17:43:31Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
