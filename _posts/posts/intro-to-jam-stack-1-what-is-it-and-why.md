@@ -1,14 +1,14 @@
 ---
 title: Why JAMstack?
-excerpt: In this article, I go over what "JAM Stack" means, how it works on the high
-  level, and why I've come to love it in plain terms.
+excerpt: In this article, I go over what "JAMstack" means, how it works on a high
+  level, and why I've come to love it.
 coverImage: "/jamstack.png"
 date: 2021-03-06T18:43:31.186+00:00
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
-  url: "/assets/blog/intro-to-jam-stack-1-what-is-it-and-why/cover.jpg"
+  url: "/jamstack.png"
 tags:
 - JavaScript
 - JAMStack
