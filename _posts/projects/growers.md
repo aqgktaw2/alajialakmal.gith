@@ -3,19 +3,20 @@ title: growers
 excerpt: Signals Analytics is a fast-growing business intelligence company. In my
   current role, I'm tasked with maintaining and developing new features / UI experiences
   to scale up their website.
-coverImage: "/assets/projects/signals/cover.png"
-clientUrl: https://www.signals-analytics.com/
+coverImage: "/growers-full.png"
+clientUrl: https://growers.ag/
 date: 2021-03-07T18:43:31.186+00:00
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
-  url: "/assets/projects/signals/cover.png"
+  url: "/growers-full.png"
 tags:
 - JavaScript
 - HTML
 - CSS
-- HubSpot
+- Sass
+- WordPress
 type: projects
 
 ---
