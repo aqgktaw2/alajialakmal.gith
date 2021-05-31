@@ -2,7 +2,7 @@
 title: Intro to JAM Stack 1 - What is it, and why?
 excerpt: In this article, I go over what "JAM Stack" means, how it works on the high
   level, and why I've come to love it in plain terms.
-coverImage: "/assets/blog/intro-to-jam-stack-1-what-is-it-and-why/cover.jpg"
+coverImage: "/jamstack.png"
 date: 2021-03-06T18:43:31.186+00:00
 author:
   name: Denny Hong
