@@ -14,7 +14,7 @@ export default function PostBody({ content }) {
 						link?.getAttribute("href")?.replace("#", ""),
 					);
 					window.scrollTo({
-						top: scrollTarget?.getBoundingClientRect().top,
+						top: scrollTarget?.getBoundingClientRect().top + 80,
 						left: 0,
 						behavior: "smooth",
 					});
