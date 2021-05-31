@@ -1,5 +1,5 @@
 ---
-title: Intro to JAM Stack 1 - What is it, and why?
+title: Why JAMstack?
 excerpt: In this article, I go over what "JAM Stack" means, how it works on the high
   level, and why I've come to love it in plain terms.
 coverImage: "/jamstack.png"
