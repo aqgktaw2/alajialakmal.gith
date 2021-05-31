@@ -12,13 +12,13 @@ author:
 ogImage:
   url: "/assets/projects/signals/cover.png"
 tags:
-  - JavaScript
-  - HTML
-  - CSS
-  - HubSpot
+- JavaScript
+- HTML
+- CSS
+- HubSpot
 type: projects
----
 
+---
 ### [Signals Analytics](https://www.signals-analytics.com/)
 
 [Signals Analytics](https://www.signals-analytics.com/) is a fast-growing business intelligence company. In my current role, I'm tasked with maintaining and developing new features / UI experiences to scale up their website.
@@ -34,3 +34,9 @@ type: projects
 <br>
 
 <img data-process="true" src="/assets/projects/signals/screenshots/resource.png" alt="signals analytics project"/>
+
+![](/signals1.png)
+
+![](/signals2.png)
+
+![](/signals3.png)
