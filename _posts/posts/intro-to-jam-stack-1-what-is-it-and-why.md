@@ -15,32 +15,17 @@ tags:
 type: posts
 
 ---
-<!-- ARTICLE OVERVIEW -->
-<blockquote>
-<h3>Table of contents:</h3>
-<ul>
-<li>
-<h5><a href='#What is the term "JAM Stack"?'>What is the term "JAM Stack"?</a></h5>
-</li>
-<li>
-<h5><a href="#How does JAM Stack work?">How does JAM Stack work?</a></h5>
-</li>
-<li>
-<h5><a href="#Why I love JAM Stack?">Why I love JAM Stack?</a></h5>
-</li>
-</ul>
-</blockquote>
-<!-- END ARTICLE OVERVIEW -->
+<!-- ARTICLE OVERVIEW --> <blockquote> <h3>Table of contents:</h3> <ul> <li> <h5><a href='#what-is-the-term-jam-stack'>What is the term "JAM Stack"?</a></h5> </li> <li> <h5><a href="#how-does-jam-stack-work">How does JAM Stack work?</a></h5> </li> <li> <h5><a href="#why-i-love-jam-stack">Why I love JAM Stack?</a></h5> </li> </ul> </blockquote> <!-- END ARTICLE OVERVIEW -->
 
 <!-- WHAT IS JAM STACK -->
-<h2 id='#What is the term "JAM Stack"?'>What is the term "JAM Stack"?</h2>
+<h2 id='what-is-the-term-jam-stack'>What is the term "JAM Stack"?</h2>
 
 Let's talk about the term "JAM Stack" first. You most likely already know JAM Stack stands for JavaScript, API, and Markups. In that sense, you may find it doesn't really feel like one of those "stacks" we commonly refer to. When one talks about JAM Stack, he/she is typically not referring to a specific combination of technologies, such as LAMP (Linux, Apache, MySQL, PHP), or MERN (MongoDB, Express, React, Node). JAM Stack is a much broader term, it's rather a technique/architecture choice of which you could utilize to build performant and robust websites/web apps.
 
 <!-- END WHAT IS JAM STACK -->
 
 <!-- HOW DOES JAM STACK WORK -->
-<h2 id="How does JAM Stack work?">How does JAM Stack work?</h2>
+<h2 id="how-does-jam-stack-work">How does JAM Stack work?</h2>
 
 So, what's the technique, and what's so special about this type of architecture? Well, let's first think about the following events.
 
@@ -53,11 +38,11 @@ So, what's the technique, and what's so special about this type of architecture?
 
 For a traditional monolith website, take a traditional WordPress site, for instance. The above events happen on the server at "request time" - meaning right after whenever a user requests to view the website. So before the user could view the markup, the server needs to finish computation on those 4 steps. Let's see how a JAMStack site differs from this.
 
-For JAM Stack sites, those events happen at the "build time" - when the website codebase is being built/compiled, either locally on a developer's machine, or on a server. This means, they first happen before the website is even available for the world to view. Later on, they may happen again, and periodically whenever developers make edits to the codebase, or new content entries arrive from the CMSs, thus the site needs to be rebuilt. 
+For JAM Stack sites, those events happen at the "build time" - when the website codebase is being built/compiled, either locally on a developer's machine, or on a server. This means, they first happen before the website is even available for the world to view. Later on, they may happen again, and periodically whenever developers make edits to the codebase, or new content entries arrive from the CMSs, thus the site needs to be rebuilt.
 
 ### CDN Hosted Markup
 
-Now let's dig a bit more into event 4 - "Send over the markup to user's browser". This event works a bit differently for JAM Stack sites. As I mentioned, the static markup is built in advance. So in order to make it available to users at a later time when the request hits, the markup is typically put on a CDN/Edge Network. The key takeaway is that it doesn't involve any server computation between a user sends a request to view the website, and the markup is sent over to his/her browser. 
+Now let's dig a bit more into event 4 - "Send over the markup to user's browser". This event works a bit differently for JAM Stack sites. As I mentioned, the static markup is built in advance. So in order to make it available to users at a later time when the request hits, the markup is typically put on a CDN/Edge Network. The key takeaway is that it doesn't involve any server computation between a user sends a request to view the website, and the markup is sent over to his/her browser.
 
 ### JavaScript & API
 
@@ -72,7 +57,7 @@ At this point, if you are like me, you are probably wondering about this - Does 
 <!-- END HOW DOES JAM STACK WORK -->
 
 <!-- WHY I LOVE JAM STACK -->
-<h2 id="Why I love JAM Stack?">Why I love JAM Stack?</h2>
+<h2 id="why-i-love-jam-stack">Why I love JAM Stack?</h2>
 
 Now we know what JAM Stack is and have a general idea of how it works. Let's talk about its advantages and why I came to love this architectural choice. As mentioned, the key difference between a JAM Stack site and a traditional monolith website is that your server is not involved in any type of way when a user requests to view a JAM Stack website. Given that, I think it's easy for us to come to an agreement on the following advantages:
 
