@@ -30,11 +30,11 @@ For my site, I basically wanted a blog that is accessible, SEO friendly, and has
 
 <h2 id="HeadlessCMS">Headless CMS</h2>
 
-I also integrated Forestry CMS to allow for easier editing experiences. There are generally two flavors of Headless CMS, API-based and Git-based. Forestry falls into the Git-based category. It is essentially a GUI layer over git that reads/writes website contents in markdown format. It gives non-technical website maintainers and content writers the superpower of source control.
+I also integrated Forestry CMS to allow for a simplified editing experience. There are generally two flavors of Headless CMSes, API-based and Git-based. Forestry falls into the Git-based category. It is essentially a GUI layer over git that reads/writes website contents in markdown format. It gives non-technical website maintainers and content writers the superpower of source control.
 
 ![](/forestry-example.png)![](/forestry-example-2.png)
 
-An example of fetching blog article content data at built time -
+An example of fetching mardown content data at built time -
 
 ```JavaScript
 export async function getStaticProps({ params }) {
