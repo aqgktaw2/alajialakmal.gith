@@ -14,10 +14,10 @@ const parseReactStyles = inlineStyles =>
 		?.split(";")
 		.filter(Boolean)
 		.reduce((acc, cur) => {
-			let { key, val } = cur.split(":");
+			let [key, val] = cur.split(":");
 			key = key.includes("-")
 				? (() => {
-						const { part1, part2 } = key.split("-");
+						const [part1, part2] = key.split("-");
 						return `${part1}${part2.slice(0, 1).toUpperCase()}${part2.slice(1)}`;
 				  })()
 				: key;
