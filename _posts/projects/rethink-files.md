@@ -1,12 +1,12 @@
 ---
 title: Rethink Files
-excerpt: Growers is a tech company that helps build stronger relationships between
-  ag retailers and their farmers. During my role as a Web Developer at Beacon Digital,
-  I was tasked with building out the Growers' new website theme with the Gutenberg
-  blocks system from WordPress.
-coverImage: "/growers-full.png"
-clientUrl: https://growers.ag/
-date: 2021-04-01T17:43:31Z
+excerpt: Rethink Files is a file browser app that helps organize, search, and share
+  files across any cloud. During my current role as a Software Engineer at Rethink,
+  I am tasked with improving the frontend UI of the app, and adding new cloud storage/cloud
+  app integrations.
+coverImage: "/rethink1.png"
+clientUrl: https://beta.rethinksoftware.com/
+date: 2021-05-31T17:43:31Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
@@ -14,11 +14,11 @@ ogImage:
   url: "/growers-full.png"
 tags:
 - React
+- Nextjs
+- NodeJs
 - JavaScript
-- HTML
 - CSS
-- Sass
-- WordPress
+- HTML
 type: projects
 
 ---
