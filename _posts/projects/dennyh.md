@@ -5,20 +5,20 @@ excerpt: At the beginning of 2021, I re-built this site with Next.js, Sass, and 
   my technical communication skills through the process.
 coverImage: "/assets/projects/dennyh/dennyh.png"
 clientUrl: https://dennyh.me
-date: 2021-03-11T02:12:58.650+00:00
+date: 2021-02-16T02:12:58Z
 author:
   name: Denny Hong
   picture: "/assets/authors/denny-hong.jpeg"
 ogImage:
   url: "/assets/projects/dennyh/dennyh.png"
 tags:
-  - React
-  - Nextjs
-  - Sass
-  - NodeJs
+- React
+- Nextjs
+- Sass
+- NodeJs
 type: projects
----
 
+---
 <!-- ARTICLE OVERVIEW -->
 <blockquote>
 <h3>Table of contents:</h3>
