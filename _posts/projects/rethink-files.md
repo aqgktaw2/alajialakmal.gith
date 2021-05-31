@@ -2,7 +2,7 @@
 title: Rethink Files
 excerpt: Rethink Files is a file browser app that helps organize, search, and share
   files across any cloud. During my current role as a Software Engineer at Rethink,
-  I am tasked with improving the frontend UI of the app, and adding new cloud storage/cloud
+  I am tasked with improving the frontend UI of the app and adding new cloud storage/cloud
   app integrations.
 coverImage: "/rethink1.png"
 clientUrl: https://beta.rethinksoftware.com/
@@ -22,18 +22,38 @@ tags:
 type: projects
 
 ---
-### [Growers](https://growers.ag/ "Growers")
+### [Rethink Files](https://beta.rethinksoftware.com/ "Rethink Files")
 
-Growers is a tech company that helps build stronger relationships between ag retailers and their farmers by enabling farmers to be more informed about products and services than ever before. During my role as a Web Developer at Beacon Digital, I was tasked with building out the Growers' new website theme with the Gutenberg blocks system from WordPress. With the power of React, I developed over 30 custom Gutenberg blocks, ranging from the most common patterns such as "2 Column Richtext Block", to some more advanced dynamic blocks such as a filterable and sortable "Recent Events Block". This brand new component-based approach of theme development not only makes the code more manageable but also enables non-technical website maintainers to make regular updates with an intuitive visual interface that is almost a 1:1 preview of the production website.
+Rethink Files is a file browser app that helps organize, search, and share files across any cloud.
 
-<br>
+During my current role as a Software Engineer at Rethink Labs, Inc., I am tasked with improving the frontend UI of the Next.js app, focusing on mobile responsiveness, accessibility, and design consistency. Some of my frontend work solves the major pain point of users not being able to use the app's full potential on their mobile devices. 
 
-![growers project](/growers1.png "growers project")
-
-<br>
-
-![growers project](/growers2.png "growers project")
+At the same time, I am also working on new API integrations with cloud storage providers/cloud apps such as ownCloud, Droplr, Basecamp, and Slack.
 
 <br>
 
-![](/growers3-1.png)
+![Rethink Files](/rethink1.png "Rethink Files")
+
+<br>
+
+![Rethink Files](/rethink2.png "Rethink Files")
+
+<br>
+
+![Rethink Files](/rethink3.png "Rethink Files")
+
+<br>
+
+<img src="/rethink4.jpg" alt="Rethink Files" style="width:100%;max-width:400px;margin:0 auto;">
+
+<br>
+
+<img src="/rethink5.jpg" alt="Rethink Files" style="width:100%;max-width:400px;margin:0 auto;">
+
+<br>
+
+<img src="/rethink6.jpg" alt="Rethink Files" style="width:100%;max-width:400px;margin:0 auto;">
+
+<br>
+
+<img src="/rethink7.jpg" alt="Rethink Files" style="width:100%;max-width:400px;margin:0 auto;">
