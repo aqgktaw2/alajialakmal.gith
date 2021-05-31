@@ -10,7 +10,6 @@ export default function PostBody({ content }) {
 			if (link?.getAttribute("href")?.includes("#")) {
 				link.addEventListener("click", function (evt) {
 					evt.preventDefault();
-					console.log("clicked");
 
 					const scrollTarget = document.getElementById(link?.getAttribute("href")?.split("#")[1]);
 
