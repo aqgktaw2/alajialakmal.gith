@@ -28,7 +28,7 @@ export const StyledPostCover = styled.div`
 		left: 0;
 		background: radial-gradient(
 			ellipse,
-			rgba(38, 0, 62, 0.85) 0%,
+			rgba(38, 0, 62, 0.95) 0%,
 			rgba(7, 0, 11, 0.95) 35%,
 			rgba(7, 0, 11, 1) 75%
 		);
