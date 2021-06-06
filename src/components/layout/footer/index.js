@@ -15,6 +15,7 @@ import {
 	StyledSiteLinks,
 	StyledFooterBottom,
 	FeedLink,
+	StyledSocialLinkContent,
 } from "./styles";
 
 const FEED_LINKS = [
@@ -70,9 +71,9 @@ export default function Footer() {
 								{FOOTER_SOCIAL_LINKS.map(({ href, icon, label }, idx) => (
 									<li key={idx}>
 										<Link href={href} passHref target="_blank" rel="noopener noreferrer">
-											<Heading level={3} as="span">
+											<StyledSocialLinkContent level={3} as="span">
 												{icon} {label}
-											</Heading>
+											</StyledSocialLinkContent>
 										</Link>
 									</li>
 								))}

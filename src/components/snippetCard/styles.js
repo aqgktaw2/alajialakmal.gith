@@ -1,3 +1,4 @@
+import { StyledHeading } from "@components/heading/styles";
 import styled from "styled-components";
 
 export const StyledSnippetCard = styled.div`
@@ -44,4 +45,8 @@ export const StyledSnippetInfo = styled.div`
 	width: 100%;
 	background-color: rgba(7, 0, 11, 0.5);
 	text-align: center;
+`;
+
+export const SnippetHeading = styled(StyledHeading)`
+	margin: 0.5rem 0;
 `;
