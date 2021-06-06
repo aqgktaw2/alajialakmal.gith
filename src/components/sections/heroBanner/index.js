@@ -40,31 +40,32 @@ const HeroBanner = ({ content }) => {
 		const tl = gsap.timeline({
 			defaults: { ease: "elastic.out(1.15,0.85)", duration: 1.5 },
 		});
+
 		tl.set(headingOne.current.querySelectorAll("span"), {
 			display: "inline-block",
-			opacity: 0,
-			y: 65,
+			autoAlpha: 0,
+			y: 75,
 		})
 			.set(headingTwo.current.querySelectorAll("span"), {
 				display: "inline-block",
-				opacity: 0,
-				y: 55,
+				autoAlpha: 0,
+				y: 75,
 			})
 			.set(illustrationWrapper.current, {
 				x: -75,
 				y: 75,
 				scale: 0.85,
-				opacity: 0,
+				autoAlpha: 0,
 			})
-			.set(socialIconsRef.current, { y: 50, opacity: 0, transition: "initial" })
-			.set(scrollButtonRef.current, { opacity: 0 })
-			.set(bannerInnerRef.current, { opacity: 1 })
+			.set(socialIconsRef.current, { y: 75, autoAlpha: 0, transition: "initial" })
+			.set(scrollButtonRef.current, { autoAlpha: 0 })
+			.set(bannerInnerRef.current, { autoAlpha: 1 })
 			.to(
 				illustrationWrapper.current,
 				{
 					x: 0,
 					y: 0,
-					opacity: 1,
+					autoAlpha: 1,
 					scale: 1,
 					duration: 3,
 					clearProps: "all",
@@ -81,15 +82,15 @@ const HeroBanner = ({ content }) => {
 							.to(illustrationWrapper.current, { x: 15, y: -15, rotate: "-1deg" });
 					},
 				},
-				0.65,
+				0.1,
 			)
-			.to(headingOne.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.08 }, 0.75)
-			.to(headingTwo.current.querySelectorAll("span"), { y: 0, opacity: 1, stagger: 0.05 }, 1.65)
+			.to(headingOne.current.querySelectorAll("span"), { y: 0, autoAlpha: 1, stagger: 0.05 }, 0.1)
+			.to(headingTwo.current.querySelectorAll("span"), { y: 0, autoAlpha: 1, stagger: 0.035 }, 0.9)
 			.to(
 				socialIconsRef.current,
 				{
 					y: 0,
-					opacity: 1,
+					autoAlpha: 1,
 					stagger: 0.15,
 					onComplete() {
 						socialIconsRef.current.forEach(
@@ -97,9 +98,9 @@ const HeroBanner = ({ content }) => {
 						);
 					},
 				},
-				3.1,
+				2,
 			)
-			.to(scrollButtonRef.current, { opacity: 1 }, "-=1.05");
+			.to(scrollButtonRef.current, { autoAlpha: 1 }, "-=1");
 	}, []);
 
 	const appendIconsToRef = el => {
