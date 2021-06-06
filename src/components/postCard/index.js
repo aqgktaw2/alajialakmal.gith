@@ -1,9 +1,9 @@
-// import Image from "next/image";
-
 import formatDate from "@utils/formatDate";
 import Heading from "@components/heading";
 import Author from "@components/author";
 import Link from "@components/link";
+import Image from "@components/Image";
+import InvisibleText from "@components/invisibleText";
 
 import {
 	StyledPostCard,
@@ -12,7 +12,6 @@ import {
 	StyledCardTags,
 	TagLink,
 } from "./styles";
-import Image from "@components/Image";
 
 const PostCard = ({ post, authorSize = "" }) => {
 	return (
@@ -42,8 +41,8 @@ const PostCard = ({ post, authorSize = "" }) => {
 					</Heading>
 				</StyledCardTags>
 
-				<Link href={`/posts/${post.slug}`} passHref>
-					Read More
+				<Link href={`/posts/${post.slug}`} passHref aria-label={`Read more about ${post.title}`}>
+					Read more <InvisibleText>about ${post.title}</InvisibleText>
 				</Link>
 			</StyledCardBottom>
 		</StyledPostCard>
