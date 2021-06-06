@@ -12,7 +12,7 @@ page_sections:
   link:
     label: More About Me
     url: "/about"
-  enable_scroll_to_twitter_spotify_embeds: true
+  enable_scroll_to_twitter_spotify_embeds: false
   heading:
     heading_text: About Me
     heading_level: '1'
