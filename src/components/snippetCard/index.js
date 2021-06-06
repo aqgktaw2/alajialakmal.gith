@@ -1,10 +1,14 @@
 import Link from "next/link";
-// import Image from "next/image";
 
-import Heading from "@components/heading";
 import { Blob1, Blob2, Blob3, Blob4, Blob5, Blob6 } from "@components/blobs";
 
-import { StyledSnippetCard, StyledShape, StyledSnippetBody, StyledSnippetInfo } from "./styles";
+import {
+	StyledSnippetCard,
+	StyledShape,
+	StyledSnippetBody,
+	StyledSnippetInfo,
+	SnippetHeading,
+} from "./styles";
 import Image from "@components/Image";
 
 const shapes = [
@@ -26,7 +30,7 @@ const SnippetCard = ({ post }) => {
 					<Image aspectRatio={1 / 1} src={post.coverImage} alt={`Image for ${post.title}`} />
 
 					<StyledSnippetInfo>
-						<Heading level={3}>{post.title}</Heading>
+						<SnippetHeading level={3}>{post.title}</SnippetHeading>
 					</StyledSnippetInfo>
 				</StyledSnippetBody>
 			</Link>

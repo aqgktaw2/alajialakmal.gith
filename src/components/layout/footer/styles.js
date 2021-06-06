@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Link from "@components/link";
 
 import { StyledContainer } from "@components/container/styles";
+import { StyledHeading } from "@components/heading/styles";
 
 export const StyledFooter = styled.footer`
 	--waves-lower-height: 475px;
@@ -103,6 +104,16 @@ export const FeedLink = styled(Link)`
 	align-items: center;
 
 	svg {
+		margin-right: 0.5rem;
+	}
+`;
+
+export const StyledSocialLinkContent = styled(StyledHeading)`
+	display: flex;
+	align-items: center;
+	margin: 0;
+
+	& > svg {
 		margin-right: 0.5rem;
 	}
 `;

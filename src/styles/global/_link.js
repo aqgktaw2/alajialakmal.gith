@@ -7,6 +7,7 @@ export default css`
 		text-decoration: none;
 		outline: 2px solid transparent;
 		transition: var(--transition-standard);
+		display: inline-block;
 
 		&:visited {
 			color: var(--color-text);
