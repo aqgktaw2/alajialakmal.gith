@@ -5,9 +5,9 @@ import { listAllPosts, getPageBySlug } from "@lib/api";
 import generateRssFeed from "@lib/rss";
 import generateSitemap from "@lib/sitemap";
 import HeroBanner from "@components/sections/heroBanner";
-import Introduction from "@components/sections/introduction";
 import Meta from "@components/meta";
 
+const Introduction = dynamic(() => import("@components/sections/introduction"));
 const RecentPosts = dynamic(() => import("@components/sections/recentPosts"));
 const RecentSnippets = dynamic(() => import("@components/sections/recentSnippets"));
 const RecentProjects = dynamic(() => import("@components/sections/recentProjects"));

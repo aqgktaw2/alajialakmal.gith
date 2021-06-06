@@ -1,6 +1,9 @@
-import Link from "@components/link";
-
 import useWindowResize from "@hooks/useWindowResize";
+import Link from "@components/link";
+import Heading from "@components/heading";
+import Button from "@components/button";
+import TechIcon from "@components/techIcon";
+import InvisibleText from "@components/invisibleText";
 import { IconExternal } from "@components/icons";
 
 import {
@@ -12,9 +15,6 @@ import {
 	InfoLink,
 	TechLink,
 } from "./styles";
-import Heading from "@components/heading";
-import Button from "@components/button";
-import TechIcon from "@components/techIcon";
 
 const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, tags } }) => {
 	const {
@@ -49,7 +49,9 @@ const ProjectCard = ({ project: { title, slug, coverImage, excerpt, clientUrl, t
 					</StyledProjectTech>
 
 					<Link href={`/projects/${slug}`} passHref underLine={false}>
-						<Button as="span">Read More</Button>
+						<Button as="span">
+							Read More <InvisibleText>about ${title}</InvisibleText>
+						</Button>
 					</Link>
 				</StyledProjectActions>
 			</StyledProjectInfo>

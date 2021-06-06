@@ -31,13 +31,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en" prefix="og: https://ogp.me/ns#">
 				<Head>
-					{/* Global site tag (gtag.js) - Google Analytics */}
-					<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPQRKZ0NV1"></script>
-					<script async src="/scripts/ga.js" />
-
-					{/* Hotjar */}
-					<script async src="/scripts/hotjar.js" />
-
 					{/* IOS Translucent Status Bar */}
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
@@ -182,6 +175,13 @@ export default class MyDocument extends Document {
 				<body>
 					<Main />
 					<NextScript />
+
+					{/* Global site tag (gtag.js) - Google Analytics */}
+					<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPQRKZ0NV1" />
+					<script async src="/scripts/ga.js" />
+
+					{/* Hotjar */}
+					<script async src="/scripts/hotjar.js" />
 				</body>
 			</Html>
 		);
